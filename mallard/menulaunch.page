@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:ui="http://projectmallard.org/experimental/ui/" type="topic" id="menulaunch">
+  <info>
+    <link type="guide" xref="index"/>
+    <desc>Run applications on powerful HBS Grid compute nodes using desktop menus</desc>
+    <credit type="author">
+      <name>Ista Zahn, ©President &amp; Fellows of Harvard College</name>
+      <email>izahn@hbs.edu</email>
+      <years>2020</years>
+      <copyright>President &amp; Fellows of Harvard College.</copyright>
+    </credit>
+  </info>
+  <links type="section"/>
+  <title>Launch Applications from the Desktop</title>
+
+  <p>You can run applications on <link href="https://www.hbs.edu/research-computing-services/resources/compute-cluster/">powerful HBS Grid compute nodes</link>
+  by connecting to the HBS grid via <app>NoMachine</app>, <link xref="quickstart">enabling technology preview features</link>,
+  and clicking one of the application icons under the <gui>Applications</gui> or <gui>Activities</gui>menus.</p>
+
+  <p>The application launchers make it easy to run an application with the resources (e.g., CPUs, RAM, GPU) you specify.
+  If your resource requirements are low (currently <em>4GB RAM</em> and <em>1 CPU</em>) the launcher will start the
+  application on a low-resource <em>login node</em>. If your resource requirements are higher, the launchers start
+  your application on a high-powered <em>compute node</em>. This allows you to easily run compute and/or memory intensive
+  applications with just a few mouse clicks!</p>
+
+  <section id="basic">
+    <title>Basic launcher options</title>
+
+    <p>Each application will open a dialog where you can configure your environment and resource requirements.
+    Please keep in mind that the system <em>reserves the resources you select</em>, e.g., CPUs used by your job become
+    unavailable for other users. Don't be shy about using resources, but please don't go overboard and reserve way more
+    then you need just because you can.</p>
+
+    <p>The application launchers are meant to be intuitive and easy to use. Most of the fields should be
+    self-explanatory, e.g., there is a numeric field for memory (RAM) in Gigabytes, and another for the
+    number of CPUs needed. As a convenience you can select a starting directory. </p>
+
+    <p><em style="strong">Click the video thumbnail below</em> to watch an application launcher demonstration:</p>
+
+    <ui:overlay width="250" height="150">
+      <media type="video" src="launchers.webm" width="100%">
+      </media>
+    </ui:overlay>
+  </section>
+
+  <section id="advanced">
+    <title>Advanced launcher options</title>
+
+    <p>If you need to use an older software environment you can do so using the <gui>Software environment version</gui> dialog.
+    Usually there is no need to use an environment other than the default; the purpose of this mechanism is to give you
+    a fallback in case an update breaks your code, or in case you need to reproduce an old analysis using a specific software
+    environment. As a corollary to that, it is a good idea to note the software environment version when you start a new project
+    so you will know which environment to switch back to if needed. The software and versions available in each environment are
+    documented in <link xref="environments"/>.</p>
+    
+    <p>Some application launchers have a <gui>Pre-submission command</gui> field. This allows you to
+    run an arbitrary <app>bash</app> command immediately before submitting the job. For example, you can use it to set
+    <link href="https://www.redhat.com/sysadmin/linux-environment-variables">environment variables</link> or activate
+    <link href="https://docs.conda.io/en/latest/">conda environments</link>.</p>
+  </section>
+  
+  <section id="limits">
+    <title>Handling system limits</title>
+
+    <p>In some cases the desktop launchers will down-grade your request to the maximum available if your request exceeds the
+    system specified limits. There are both <em>user-level</em>, <em>queue-level</em> and <em>job-level</em> limits on the resources
+    that are available to you:</p>
+
+    <list>
+      <item><p>You are limited to <em>3 concurrent interactive jobs</em>.</p></item>
+      <item><p>You are limited to a total of <em>24 CPUs</em> allocated to interactive jobs at any given time.</p></item>
+      <item><p>Interactive jobs are limited to 12 CPUs for up to 24 hours, or 4 CPUs for up to 72 hours.</p></item>
+    </list>
+
+    <p>As a practical example of these limits, if you try request 12 CPUs and runtime greater than 24 hours the system will not be able to meet
+    your request. In that case it will offer to give you 4 CPUS (the maximum available for jobs running more than 24 hours).</p>
+
+    <p>More information about queue-level limits can is available in the <link xref="commandline#queues">command line documentation</link>.</p>
+
+    <p>The HBS grid usually has substantial computational resources available, but sometimes an unusually large number of users
+    are trying to use a lot of resources at the same time. In this case resources may become scarce and you may not be able to access
+    the resources you need.</p>
+
+    <p>You can get a quick overview of the state of the cluster using the "HBS Grid available resources utility", available in the
+    applications menu. This will give you a sense of the current activity on the cluster, and a rough idea of the resources
+    currently available to you.</p>
+
+    <p><em style="strong">Click the video thumbnail below</em> to watch a demonstration of the available resources utility:</p>
+
+    <ui:overlay width="250" height="150">
+      <media type="video" src="jobfail.webm" width="100%">
+      </media>
+    </ui:overlay>
+  </section>
+
+  <section id="batch">
+    <title>Starting batch jobs</title>
+
+    <p>The graphical menu-based launchers documented in this section are a quick and convenient way to run interactive applications on
+    powerful compute nodes. In the case where you wish to run many such jobs you may find it more convenient to run <em>batch</em> jobs.
+    There is a <app>HBS Grid Batch Submission Utility</app> in the application menu that provides basic batch submission capabilities.
+    For more advanced use refer to the <link xref="commandline">command line documentation</link>.</p>
+  </section>
+</page>

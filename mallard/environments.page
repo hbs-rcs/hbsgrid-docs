@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="environments">
+  <info>
+    <link type="guide" xref="index"/>
+    <desc>Learn about available software and how to run different software versions</desc>
+    <credit type="author">
+      <name>Ista Zahn, ©President &amp; Fellows of Harvard College</name>
+      <email>izahn@hbs.edu</email>
+      <years>2020, 2021</years>
+      <copyright>President &amp; Fellows of Harvard College.</copyright>
+    </credit>   
+  </info>
+  <links type="section"/>
+  <title>Software Applications and Environments</title>
+
+  <p>RCS installs and maintains software applications and environments on the HBS Grid. A wide base of system
+  libraries like <app>ImageMagick</app> and <app>Tesseract</app> are available, allowing you to do
+  <em>image processing</em> and <em>optical character recognition</em> in <app>R</app> (among many other things).
+  A wide selection of graphical desktop applications for math, statistics, data analysis, data management,
+  communication, manuscript preparation, and system configuration are also available.</p>
+
+  <section id="software">
+    <title>Available applications and programs</title>
+
+    <p>This section lists software available on the HBS Grid. While we try to keep this information updated, this list
+    is not exhaustive.</p>
+
+    <list>
+      <item>
+        <p><link href="https://www.anaconda.com/products/individual">Anaconda </link>
+        Python distribution with many data science, machine learning, and deep learning
+        libraries including</p>
+        <list style = "compact">
+          <item><p><link href="https://pandas.pydata.org/">Pandas</link></p></item>
+          <item><p><link href="https://matplotlib.org/">Matplotlib</link></p></item>
+          <item><p><link href="https://www.tensorflow.org/">TensorFlow</link></p></item>
+          <item><p><link href="https://keras.io/">Keras</link></p></item>
+          <item><p><link href="https://pytorch.org/">PyTorch</link></p></item>
+          <item><p><link href="https://opencv.org/">OpenCV</link></p></item>
+          <item><p>and many  more!</p></item>
+        </list>
+      </item>
+      <item>
+        <p><link href="https://dbeaver.io/">DBeaver </link>
+        Universal Database Tool</p>
+      </item>      
+      <item>
+        <p><link href="https://atom.io/">Atom </link>
+        A hackable text editor for the 21st Century</p>
+      </item>
+      <item>
+        <p><link href="https://www.eclipse.org/">Eclipse </link>,
+        The Leading Open Platform for Professional Developers</p>
+      </item>
+      <item>
+        <p><link href="https://www.gnu.org/software/emacs/">Emacs</link>,
+        an extensible, customizable, free/libre text editor</p>
+      </item>
+      <item>
+        <p><link href="https://glueviz.org/">Glue</link>
+        for multi-dimensional linked-data exploration</p>
+      </item>
+      <item>
+        <p><link href="https://www.gnu.org/software/octave/index">GNU Octave</link>
+        scientific programming language</p>
+      </item>
+      <item>
+        <p><link href="https://www.google.com/earth/versions/">Google Earth Pro</link>
+        a GIS visualization platform</p>
+      </item>
+      <item>
+        <p><link href="https://www.vim.org/download.php">gVim </link>
+        the ubiquitous text editor</p>
+      </item>
+      <item>
+        <p><link href="https://inkscape.org/">Inkscape</link>,
+        a free and open source vector graphics editor</p>
+      </item>      
+      <item>
+        <p><link href="https://julialang.org">Julia</link>,
+        a fresh approach to technical computing</p>
+      </item>
+      <item>
+        <p><link href="https://www.libreoffice.org/">Libreoffice</link>,
+        a free and powerful office suite</p>
+      </item>      
+      <item>
+        <p><link href="https://www.jetbrains.com/pycharm/">Pycharm</link>;
+        The Python IDE for Professional Developers</p>
+      </item>
+      <item>
+        <p><link href="https://www.qgis.org">QGIS</link>
+        free and open source Geographic Information System</p>
+      </item>      
+      <item>
+        <p><link href="https://r-project.org">R</link>
+        platform and environment for statistical computing, with hundreds of popular packages including</p>
+        <list style = "compact">
+          <item><p><link href="https://www.tidyverse.org/">tidyverse</link></p></item>
+          <item><p><link href="http://r-datatable.com/">data.table</link></p></item>
+          <item><p><link href="https://r-spatial.github.io/sf/">sf</link></p></item>
+          <item><p><link href="https://arrow.apache.org/docs/r/">arrow</link></p></item>
+          <item><p><link href="https://keras.rstudio.com/"></link></p></item>
+          <item><p><link href="https://docs.ropensci.org/tesseract/">tesseract</link></p></item>
+          <item><p><link href="https://facebook.github.io/prophet/">prophet</link></p></item>
+          <item><p><link href="http://www.quantmod.com/">quantmod</link></p></item>        
+          <item><p>and many  more!</p></item>
+        </list>
+      </item>
+      <item>
+        <p><link href="https://rstudio.com/products/rstudio/">RStudio</link>
+        an integrated development environment (IDE) for R</p>
+      </item>      
+      <item>
+        <p><link href="https://www.spyder-ide.org/">Spyder</link>
+        the scientific Python development environment</p>
+      </item>      
+      <item>
+        <p><link href="https://tug.org/texlive/">TeX Live</link>,
+        a high-quality typesetting system</p>
+      </item>      
+      <item>
+        <p><link href="https://code.visualstudio.com/">VSCode</link>;
+        "Code editing. Redefined."</p>
+      </item>
+      <item>
+        <p><link href="https://www.zotero.org/">Zotero</link>,
+        a free, easy-to-use tool to help you collect, organize, cite, and share research</p>
+      </item>
+      <item>
+        <p>Launchers for running other grid software, including</p>
+        <list style = "compact">
+          <item><p><link href="https://www.wolfram.com/mathematica/">Mathematica</link></p></item>
+          <item><p><link href="https://www.mathworks.com/">Matlab</link></p></item>
+          <item><p><link href="https://www.sas.com/">SAS</link></p></item>
+          <item><p><link href="https://www.stata.com/">Stata</link></p></item>
+        </list>
+      </item>
+      <item>
+        <p>Command-line programs and utilities, including</p>
+        <list style = "compact">
+          <item><p><link href="https://github.com/junegunn/fzf">fzf</link> command-line fuzzy finder </p></item>
+          <item><p><link href="https://github.com/BurntSushi/ripgrep">ripgrep</link> a fast line-oriented search tool</p></item>
+          <item><p><link href="https://github.com/sharkdp/fd">fd</link> a simple, fast and user-friendly alternative to 'find'</p></item>
+          <item><p><link href="https://rclone.org/">rclone</link> syncs your files to cloud storage</p></item>
+          <item><p><link href="https://degauss.org/geocoder/">DeGAUSS geocoder</link> a geocoder that relies on offline TIGER/Line data useful for geocoding private health information</p></item>
+          <item><p><link href="https://tldr.sh/">tldr</link> simplified and community-driven man pages</p></item>
+          <item><p><link href="https://github.com/jarun/nnn">nnn</link> the unorthodox terminal file manager</p></item>
+          <item><p><link href="https://fishshell.com/">fish</link> finally, a command line shell for the 90s</p></item>
+          <item><p>and many more!</p></item>
+        </list>
+      </item>
+      <item>
+        <p>Utilities for viewing HBS Grid resources and configuring the HBS Grid environment</p>
+      </item>
+    </list>
+  </section>
+  
+  <section id="environments">
+    <title>Software environment versions</title>
+    
+    <p>Each time we update our software environments we preserve previous versions so that you can roll back for
+    reproducibility or if your code stops working after an update. This section details the specific software
+    environment versions available.</p>
+
+    <p>As an illustration of the benefits of preserving historical software environments, imagine that you
+    have a python project and that your <app>pandas</app> code no longer works with the latest <app>pandas</app>
+    release in the current software environment. In that case you can start <app>Spyder</app> and revert to a previous
+    software environment in order to run your analysis using an older version of <app>pandas</app>.
+    The screen-shot below shows how to use the <em>Software environment version</em> selector to run and older version of <app>python</app>.</p>
+
+    <media type="image" src="images/switchEnvironment.png"/>
+
+    <p>Software environments are named following a <em>rcs_year.version</em> scheme. For example, the first environment
+    released in 2021 is named <em>rcs_2021.01</em>. The list below shows you key information about each environment,
+    including a command that you can run from the terminal to get a detailed software version list.</p>
+  </section>
+
+  <section id="rcs_2021.06">
+    <title>rcs_2021.06</title>
+
+    <p>The <app>rcs_2021.06</app> environment will be released in May 2021. It includes updated
+    <app>Octave</app>, <app>Python</app>, <app>QGIS</app>, <app>R</app>, <app>Stata</app>, and other software.
+    Key software versions included in this environment are listed below.</p>
+
+    <list>
+      <item><p>CUDAtoolkit 11.2</p></item>
+      <item><p>Spyder 5.0</p></item>
+      <item><p>Texlive 2021</p></item>
+      <item><p>Emacs 27.2</p></item>
+      <item><p>Julia 1.6.1</p></item>
+      <item><p>Jupyterlab 3.0</p></item>
+      <item><p>Mathematica 12</p></item>
+      <item><p>Matlab R2021a</p></item>
+      <item><p>Numpy 1.20</p></item>
+      <item><p>Octave 6.2</p></item>
+      <item><p>Pandas 1.2</p></item>
+      <item><p>Python 3.9</p></item>
+      <item><p>Pytorch 1.8</p></item>
+      <item><p>QGIS 3.18</p></item>
+      <item><p>R 4.0</p></item>
+      <item><p>R-tidyverse 1.3</p></item>
+      <item><p>SAS 9.4</p></item>
+      <item><p>Stata 17</p></item>
+      <item><p>Tensorflow 2.4</p></item>
+    </list>
+
+    <p>For complete environment details, open a terminal and run
+    <cmd>conda env export -n rcs_2021.06</cmd></p>
+  </section>
+  
+  <section id="rcs_2021.03">
+    <title>rcs_2021.03</title>
+
+    <p>The <app>rcs_2021.03</app> environment was released in March 2021. It includes updated
+    <app>Octave</app>, <app>Python</app>, <app>QGIS</app>, <app>R</app>, <app>Stata</app>, and other software.
+    Key software versions included in this environment are listed below.</p>
+
+    <list>
+      <item><p>CUDAtoolkit 10.1</p></item>
+      <item><p>Emacs 27.1</p></item>
+      <item><p>Julia 1.5.3</p></item>
+      <item><p>Jupyterlab 3.0</p></item>
+      <item><p>Mathematica 12</p></item>
+      <item><p>Matlab R2020a</p></item>
+      <item><p>Numpy 1.20</p></item>
+      <item><p>Octave 6.2</p></item>
+      <item><p>Pandas 1.2</p></item>
+      <item><p>Python 3.8</p></item>
+      <item><p>Pytorch 1.7</p></item>
+      <item><p>QGIS 3.16</p></item>
+      <item><p>R 4.0</p></item>
+      <item><p>R-tidyverse 1.3</p></item>
+      <item><p>SAS 9.4</p></item>
+      <item><p>Stata 16</p></item>
+      <item><p>Tensorflow 2.2</p></item>
+    </list>
+
+    <p>For complete environment details, open a terminal and run
+    <cmd>conda env export -n rcs_2021.03</cmd></p>
+  </section>
+
+  <section id="rcs_2020.01">
+    <title>rcs_2020.01</title>
+
+    <p>The <app>rcs_2020.01</app> environment was released in March 2020. It includes updated
+    <app>Octave</app>, <app>Python</app>, <app>QGIS</app>, <app>R</app>, <app>Stata</app>, and other software.
+    Key software versions included in this environment are listed below.</p>
+
+    <list>
+      <item><p>CUDAtoolkit 10.1</p></item>
+      <item><p>Emacs 27.1</p></item>
+      <item><p>Julia 1.5.3</p></item>
+      <item><p>Jupyterlab 2</p></item>
+      <item><p>Mathematica 12</p></item>
+      <item><p>Matlab R2019a</p></item>
+      <item><p>Numpy 1.19</p></item>
+      <item><p>Octave 6.2</p></item>
+      <item><p>Pandas 1.2</p></item>
+      <item><p>Python 3.7</p></item>
+      <item><p>R 3.6</p></item>
+      <item><p>R-tidyverse 1.2</p></item>
+      <item><p>SAS 9.4</p></item>
+      <item><p>Stata 15</p></item>
+      <item><p>Tensorflow 2.2</p></item>
+    </list>
+
+    <p>For complete environment details, open a terminal and run
+    <cmd>conda env export -n rcs_2020.01</cmd></p>
+  </section>
+</page>

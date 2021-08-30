@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:ui="http://projectmallard.org/experimental/ui/" type="guide" id="index">
+  <info>
+    <credit type="author">
+      <name>Ista Zahn, ©President &amp; Fellows of Harvard College</name>
+      <email>izahn@g.harvard.edu</email>
+      <years>2020</years>
+      <copyright>President &amp; Fellows of Harvard College.</copyright>
+    </credit>
+  </info>
+  <title>User Guide to HBS Grid Software Environments Technology Preview</title>
+  
+  <p>Harvard Business School runs a computing cluster called the
+  <link href="https://www.hbs.edu/research-computing-services/resources/compute-cluster/">HBS Grid</link>.
+  As of Spring 2021 the HBS Grid has about 620 CPUs, 9 TB of RAM, 200 TB of storage, and high-end
+  GPUs useful for modern <em>deep learning</em>. HBS <link href="https://www.hbs.edu/research-computing-services">Research Computing Services</link>
+  is building powerful and user-friendly tools and environments to bring the computing power of the HBS Grid
+  to a wider community of HBS users. Our environments include a wide range of software including <app>Matlab</app>,
+  <app>R</app>, <app>Python</app>, <app>Stata</app>, and hundreds of other popular programs. These
+  environments are in active development and are currently available as a <em>Technology Preview</em> for testing.</p>
+
+  <p> You can <em style="strong">click the video thumbnail below</em> to watch a short demonstration of our software environment.</p>
+  <ui:overlay width="250" height="150">
+    <media type="video" src="intro.webm" width="100%">
+    </media>
+  </ui:overlay>
+  
+  <section>
+    <title>User testing and project status</title>
+    <p>We are currently conducting user testing and assessing the possibility of making this software more widely available.
+    The environment is generally stable but the software documented here remains <em>a technology preview</em> and
+    <em>any and all use is at your own risk</em>.</p>
+
+    <p>If you find that something doesn't work as expected, of if you have a feature request, we would love to know about it so we can
+    fix it! Bug reports and feature requests are important contributions to this project and are always welcome and encouraged. You can either
+    open an issue at <link href="https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues">https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues</link>
+    or email us your feedback and suggestions at <em>research@hbs.edu</em>.</p>
+  </section>
+  
+</page>

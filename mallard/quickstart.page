@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:ui="http://projectmallard.org/experimental/ui/"
+      type="topic" id="quickstart">
+  <info>
+    <link type="guide" xref="index" group="#first" />
+    <desc>Get started by enabling HBS grid Technology Preview features (<em style="strong">Start here!</em>)</desc>
+    <credit type="author">
+      <name>Ista Zahn, ©President &amp; Fellows of Harvard College</name>
+      <email>izahn@hbs.edu</email>
+      <years>2020, 2021</years>
+      <copyright>President &amp; Fellows of Harvard College.</copyright>
+    </credit>    
+  </info>
+  <links type="section"/>
+  
+  <title>Quick Start</title>
+
+  <p>The technology preview software and environments described in this documentation are not enabled on the <link href="https://grid.rcs.hbs.org">HBS Grid</link>
+  by default. This guide show you how to connect to the HBS Grid and enable them.</p>
+  
+  <section id="prereq">
+    <title>Prerequisites</title>
+
+    <p><em style="strong">Skip this section if you are already using the HBS Grid and know how to connect using <app>NoMachine</app></em>.</p>
+
+    <p>To get started you must have an
+    <link href="https://www.hbs.edu/research-computing-services/resources/compute-cluster/request-an-account.aspx">HBS Grid account</link>
+    and be connected to the HBS network, either directly if you are on-campus or
+    <link href="https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf"> connect via VPN</link> otherwise.
+    You must also have the
+    <link href="https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client">NoMachine Enterprise Client</link>
+    remote desktop application installed on your computer.</p>
+
+  </section>
+  <section id="connect">
+    <title>Connect and enable software environments</title>
+
+    <p>Once you have an account and are connected to the HBS network, follow this simple procedure to enable our in-development
+    research computing environment:</p>
+    
+    <steps>
+      <item>
+        <p>Log in to the HBS Grid by using <link href="https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client">NoMachine</link> to connect to host <gui>hbsgrid-nx.hbs.edu</gui>.</p>
+      </item>
+      <item>
+        <p>Open a <app>Terminal</app> in <app>NoMachine</app>: <gui>Applications => Favorites => Terminal</gui>.</p>
+      </item>
+      <item>
+        <p>Run</p>
+        <p><cmd>/usr/local/app/rcs_bin/techpreview-dev/enable.sh &amp; exit</cmd></p>
+        <p>to open the grid configuration utility (you can copy/paste from the documentation to your Terminal).</p>
+      </item>
+      <item>
+        <p>Select the <gui>Technology Preview</gui> environment in the welcome dialog and click <gui>OK</gui>.</p>
+      </item>
+    </steps>
+    
+    <p><em style="strong">Click the video thumbnail below</em> for a video demonstrating these steps.</p>
+
+    <ui:overlay width="250" height="150">
+      <media type="video" src="enable.webm" width="100%">
+      </media>
+    </ui:overlay>
+
+    <p>A selection of our most popular applications are available in the favorites list pinned to the task-bar.
+    Additional application launchers can be found in the <em>Applications</em> menu or by searching in
+    <em>Activities</em>. You can <em style="strong">add applications to your favorites list </em> by
+    <gui>right-clicking</gui> and selecting <gui> Add to Favorites</gui>.</p>
+  </section>
+
+  <section id="nextsteps">
+    <title>Next steps</title>
+    <p>It is our hope that this environment will be intuitive and user-friendly, and you are encouraged
+    to start exploring the available software and tools. If you are doing real work you will probably
+    want to refer to <link xref="syncfiles"/> to learn how to get your data onto the HBS Grid.
+    Additional reference documentation is available if you need it, including the <link xref="menulaunch"/>
+    and <link xref="commandline"/> sections.</p>
+
+    <p> If you run into any problems please let us know by opening an issue at 
+    <link href="https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues"/> so we can fix them! You may also find the <link xref="trouble"/> section helpful.</p>
+  </section>
+</page>
