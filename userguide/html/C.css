@@ -1310,14 +1310,14 @@ a.linkdiv:hover {
   text-decoration: none;
   background-color: rgb(241,246,253);
 }
-a.linkdiv > span.title {
+a.linkdiv span.title {
   display: block;
   margin: 0;
   font-size: 1em;
   font-weight: bold;
   color: inherit;
 }
-a.linkdiv > span.desc {
+a.linkdiv span.desc {
   display: block;
   margin: 0.2em 0 0 0;
   color: rgb(75,75,73);

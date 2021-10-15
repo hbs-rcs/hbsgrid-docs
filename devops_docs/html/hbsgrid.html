@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Deployment on the HBS Grid &#8212; HBS Grid Software Environment Technology Preview  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -62,7 +62,7 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -186,8 +186,6 @@ For example, you can create a new <code class="docutils literal notranslate"><sp
 <span class="n">vim</span> <span class="n">Makefile</span> <span class="c1">## change ENVNAME to rcs_2100.01 and quit</span>
 <span class="n">git</span> <span class="n">commmit</span> <span class="o">-</span><span class="n">m</span><span class="s2">&quot;deploy rcs_2100.01&quot;</span>
 <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">rcs_2100</span><span class="mf">.01</span>
-<span class="c1">## copy singularity images</span>
-<span class="n">cp</span> <span class="o">../</span><span class="n">rcs_2021</span><span class="mf">.03</span><span class="o">/</span><span class="n">containers</span><span class="o">/*.</span><span class="n">sif</span> <span class="n">containers</span><span class="o">/</span>
 <span class="c1">## create the new environment</span>
 <span class="n">cd</span> <span class="o">../</span><span class="n">rcs_2100</span><span class="mf">.01</span>
 <span class="n">make</span> <span class="o">-</span><span class="n">n</span> <span class="nb">all</span> <span class="c1">## dry run, should not run any scripts/install_*</span>
@@ -210,7 +208,7 @@ For example, you can create a new <code class="docutils literal notranslate"><sp
       &copy;President & Fellows of Harvard College.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

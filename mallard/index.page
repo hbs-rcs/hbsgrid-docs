@@ -32,9 +32,10 @@
     <em>any and all use is at your own risk</em>.</p>
 
     <p>If you find that something doesn't work as expected, of if you have a feature request, we would love to know about it so we can
-    fix it! Bug reports and feature requests are important contributions to this project and are always welcome and encouraged. You can either
-    open an issue at <link href="https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues">https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues</link>
-    or email us your feedback and suggestions at <em>research@hbs.edu</em>.</p>
+    fix or improve it. Bug reports and feature requests are important contributions to this project and are always welcome and encouraged! You can either
+    start a discussion at <link href="https://github.com/hbs-rcs/hbsgrid-docs/discussions">https://github.com/hbs-rcs/hbsgrid-docs/discussions</link>
+    or create an issue report at <link href="https://github.com/hbs-rcs/hbsgrid-docs/issues">https://github.com/hbs-rcs/hbsgrid-docs/issues</link>.
+    We are building a friendly and welcoming community of HBS Grid users and we invite you to join us using the links above.</p>
   </section>
   
 </page>

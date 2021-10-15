@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Dev-ops Docs &#8212; HBS Grid Software Environment Technology Preview  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -68,7 +68,7 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -110,9 +110,9 @@ improve these environments. <strong>Users should instead refer to the</strong>
 <a class="reference external" href="../../userguide/html/">User Guide</a>.</p>
 <section id="general-approach">
 <h2>General approach<a class="headerlink" href="#general-approach" title="Permalink to this headline">¶</a></h2>
-<p>We have used the Conda package manager, singularity containers, and ad hoc installation
+<p>We have used the Conda package manager, and ad hoc installation
 of additional software to constitute modern data science and productivity software stacks.
-The heaving lifting is done by <em>conda</em>, with <em>Singularity</em> and locally build software filling
+The heaving lifting is done by <em>conda</em>, with locally built software filling
 in the gaps.</p>
 <p>The conda environments are named <em>rcs_&lt;date&gt;.&lt;version&gt;</em>. The basic idea here is that when we
 update the system we just create a new conda environment and increment the <em>&lt;version&gt;</em> number.
@@ -121,8 +121,8 @@ reasons, while providing up-to-date software stacks for new projects. Because co
 of strategies to avoid duplication, new environments usually require relatively little storage space
 (though of course this depends on how much has changed relative to existing environments).</p>
 <p>The conda-forge ecosystem is large and active, but there are still some programs that are not available
-there. In that case we either 1. install pre-built binaries directly from upstream projects, 2. build and
-install it locally, or 3. make it available via Singularity. An ongoing goal is to move as much as
+there. In that case we either install pre-built binaries directly from upstream projects, or build and
+install it locally. An ongoing goal is to move as much as
 possible into conda in order to take advantage of automatic updates, package de-duplication, and other
 features provided by the conda ecosystem.</p>
 <p>This project also provides launcher scripts and desktop files providing GUIs to start interactive LSF jobs on
@@ -133,50 +133,36 @@ clicking on a <em>.do</em> file in the file browser.</p>
 </section>
 <section id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<p>The <strong>build requirements</strong> on the host system mostly common and easily available on most Linux distributions.
+<p>The <strong>build requirements</strong> on the host system are easily available on most Linux distributions.
 They are:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.gnu.org/software/make/">make</a></p></li>
 <li><p><a class="reference external" href="https://www.gnu.org/software/coreutils/">coreutils</a></p></li>
 <li><p><a class="reference external" href="https://www.freedesktop.org/wiki/Software/xdg-utils/">xdg-utils</a> ,</p></li>
-<li><p><a class="reference external" href="https://sylabs.io/singularity/">singularity</a></p></li>
 <li><p><a class="reference external" href="https://git-scm.com/">git</a></p></li>
 <li><p><a class="reference external" href="http://www.gnu.org/software/findutils/">findutils</a></p></li>
 <li><p><a class="reference external" href="http://www.gnu.org/software/bc/">bc</a></p></li>
-<li><p><a class="reference external" href="https://www.mesa3d.org/">libgl</a></p></li>
-<li><p><a class="reference external" href="https://rsync.samba.org/">rsync</a></p></li>
 <li><p><a class="reference external" href="https://www.gnu.org/software/bash/">bash</a></p></li>
-<li><p><a class="reference external" href="https://www.gnu.org/software/make/">make</a></p></li>
-<li><p><a class="reference external" href="http://www.info-zip.org/UnZip.html">unzip</a></p></li>
-<li><p><a class="reference external" href="http://www.gnu.org/software/tar/">tar</a></p></li>
 <li><p><a class="reference external" href="http://www.gnu.org/software/cpio/">cpio</a></p></li>
 <li><p><a class="reference external" href="http://www.x.org">mkfontdir</a></p></li>
 <li><p><a class="reference external" href="http://freedesktop.org/Software/shared-mime-info">shared-mime-info</a></p></li>
 <li><p><a class="reference external" href="https://wiki.gnome.org/Projects/dconf">dconf</a></p></li>
 <li><p><a class="reference external" href="http://www.rpm.org/">rpm2cpio</a> or <a class="reference external" href="https://github.com/dowjones/rpm-extract">rmpextract</a></p></li>
-<li><p><a class="reference external" href="https://github.com/thkukuk/libnsl">libnsl</a></p></li>
 <li><p><a class="reference external" href="https://www.gnu.org/software/wget/">wget</a></p></li>
-<li><p><a class="reference external" href="https://lmod.readthedocs.io/en/latest/">lmod &gt;= 7.6</a></p></li>
 </ul>
 <p>These build dependencies can generally be installed using your Linux distribution package manager.
 For example, on Fedora use</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dnf install mesa-libGL-devel cpio rpm tar unzip Lmod make <span class="se">\</span>
-    dconf libnsl bc xdg-utils singularity git rsync bash <span class="se">\</span>
-    wget shared-mime-info findutils xorg-x11-font-utils
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dnf install cpio rpm make dconf bc xdg-utils bash <span class="se">\</span>
+    wget shared-mime-info xorg-x11-font-utils
 </pre></div>
 </div>
 <p>Everything else should be bootstrapped and built using conda environments.</p>
-<p>Note that many Linux systems ship with really old <strong>lmod</strong>, e.g., Ubuntu 2020.04 has
-version 6.6 (released in 2016). Sorry for the hassle, but you will need a more recent (&gt;=
-7.6) lmod. Fedora is a good option is you are running in docker or similar container, or
-if you are setting up a new system to install on, otherwise you can follow the instructions at
-<a class="reference external" href="https://lmod.readthedocs.io/en/latest/030_installing.html">https://lmod.readthedocs.io/en/latest/030_installing.html</a></p>
 <p>Additional dependencies are needed to build the documentation, namely
 <a class="reference external" href="https://www.sphinx-doc.org/en/master/">sphinx</a> and <a class="reference external" href="http://projectmallard.org/">mallard</a>.</p>
 <p>Run-time dependencies additionally include
 <a class="reference external" href="https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_welcome/lsf_welcome.html">LSF</a> and
 <a class="reference external" href="https://www.gnome.org/">GNOME 3</a>. We are interested in generalizing this to work with other
-schedulers and /or desktop environments, but this has not yet been attempted.</p>
+schedulers and /or desktop environments, but this has not yet been attempted. User namespaces must be enabled; on older Linux distributions you may need to turn them on. A good set of instructions for doing this is available at <a class="reference external" href="https://sylabs.io/guides/3.8/admin-guide/user_namespace.html">https://sylabs.io/guides/3.8/admin-guide/user_namespace.html</a></p>
 <p>A few things will only work correctly on
 <a class="reference external" href="https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">RHEL 7</a>, e.g., the
 version of RStudio installed is the one built for RHEL 7. It would be good to fully support running on
@@ -288,7 +274,7 @@ directory.</p>
       &copy;President & Fellows of Harvard College.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

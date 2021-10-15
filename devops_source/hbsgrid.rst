@@ -117,8 +117,6 @@ For example, you can create a new ``rcs_2100.01`` release as follows:
    vim Makefile ## change ENVNAME to rcs_2100.01 and quit
    git commmit -m"deploy rcs_2100.01"
    git push origin rcs_2100.01
-   ## copy singularity images 
-   cp ../rcs_2021.03/containers/*.sif containers/
    ## create the new environment
    cd ../rcs_2100.01
    make -n all ## dry run, should not run any scripts/install_*

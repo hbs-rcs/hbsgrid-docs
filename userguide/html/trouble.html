@@ -22,11 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <li class="links "><a href="trouble.html#trouble" title="Basic troubleshooting steps">Basic troubleshooting steps</a></li>
 <li class="links "><a href="trouble.html#bugs" title="Known bugs and work-arounds">Known bugs and work-arounds</a></li>
 <li class="links "><a href="trouble.html#disable" title="Disabling the technology preview">Disabling the technology preview</a></li>
-<li class="links "><a href="trouble.html#support" title="Support and feedback">Support and feedback</a></li>
 </ul></div></div></div>
-<p class="p">The software documented here is <span class="em">under active development</span> and may break 
-  or cause other problems. If things go wrong please let us know by opening an issue at 
-  <span class="link"><a href="https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues" title="https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues">https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues</a></span> so we can fix it.</p>
+<p class="p">The software documented here is <span class="em">under active development</span> and may break or cause other problems.
+  Bug reports and feature requests are important contributions to this project and are always welcome and encouraged! You can either
+  start a discussion at <span class="link"><a href="https://github.com/hbs-rcs/hbsgrid-docs/discussions" title="https://github.com/hbs-rcs/hbsgrid-docs/discussions">https://github.com/hbs-rcs/hbsgrid-docs/discussions</a></span>
+  or create an issue report at <span class="link"><a href="https://github.com/hbs-rcs/hbsgrid-docs/issues" title="https://github.com/hbs-rcs/hbsgrid-docs/issues">https://github.com/hbs-rcs/hbsgrid-docs/issues</a></span>.
+  We are building a friendly and welcoming community of HBS Grid users and we invite you to join us using the links above.</p>
 </div>
 <section id="trouble"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title"><span class="title">Basic troubleshooting steps</span></h2></div>
@@ -51,28 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="p">You can avoid having your job killed by staying within the system and job limits. These limits are described in more detail in
       <span class="link"><a href="menulaunch.html#limits" title="Handling system limits">Handling system limits</a></span> and <span class="link"><a href="commandline.html#queues" title="Interactive and batch queue limits">Interactive and batch queue limits</a></span>.</p>
 </div></div>
-</div></section><section id="fileassociations"><div class="inner">
-<div class="hgroup pagewide"><h3 class="title"><span class="title">File associations broken when desktop icons are enabled</span></h3></div>
-<div class="region"><div class="contents pagewide">
-<p class="p">A known bug currently previents file associations from working properly when <span class="gui">desktop icons</span> are enabled
-      or when the <span class="app">Files</span> application is auto-started. A work-around is to disable desktop icons following these steps:</p>
-<div class="steps"><div class="inner"><div class="region"><ol class="steps">
-<li class="steps"><p class="p">Open the <span class="gui">Tweaks</span> application from the <span class="gui">Applications</span> menu or by searching in <span class="gui">Activities</span>.</p></li>
-<li class="steps"><p class="p">Under the <span class="gui">Desktop</span> tab on the left, ensure that <span class="gui">Show Icons</span> is toggled off.</p></li>
-<li class="steps"><p class="p">Under the <span class="gui">Startup Applications</span> tab, ensure that <span class="app">Files</span> does not appear in the list of auto-started applications.</p></li>
-<li class="steps"><p class="p"><span class="em">Terminate</span> your <span class="app">NoMachine</span> desktop session and start a new one.</p></li>
-</ol></div></div></div>
-<p class="p"><span class="em-bold em">Click the video thumbnail below</span> for a video demonstrating these steps.</p>
-<div class="links-tile">
-<a href="no_nautilus_autostart.webm" class="ui-overlay"><span class="links-tile-img"><video src="no_nautilus_autostart.webm" width="250"></video></span></a><div class="ui-overlay"><div class="inner">
-<a href="#" class="ui-overlay-close" title="Close">⨯</a><div class="contents"><div class="media media-video"><div class="inner">
-<video src="no_nautilus_autostart.webm" preload="auto" class="media media-block" width="100%"></video><div class="media-controls media-controls-video">
-<button class="media-play" data-play-label="Play" data-pause-label="Pause" value="Play"><svg width="20" height="20" class="media-play"><polygon points="5,4 5,16 15,10" class="yelp-svg-fill"></polygon></svg><svg width="20" height="20" class="media-pause"><rect x="4" y="4" width="4" height="12" class="yelp-svg-fill"></rect><rect x="12" y="4" width="4" height="12" class="yelp-svg-fill"></rect></svg></button><input type="range" class="media-range" value="0"><span class="media-time"><span class="media-current">0:00</span><span class="media-duration">-:--</span></span>
-</div>
-</div></div></div>
-</div></div>
-</div>
-</div></div>
 </div></section>
 </div>
 </div></section><section id="disable"><div class="inner">
@@ -84,17 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="p">Selecting the <span class="gui">Stable/Standard</span> option under <span class="em">HBS Grid launcher style</span>
     will mostly restore your system to the original state. To ensure that your environment is
     completely reset terminate your NoMachine session and start a new one.</p>
-</div></div>
-</div></section><section id="support"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title"><span class="title">Support and feedback</span></h2></div>
-<div class="region"><div class="contents pagewide">
-<p class="p">It is our hope that the software "Technology Preview" described here will be useful and help make
-    the HBS Grid more user-friendly. If you do run into issues we would love to hear about 
-    them so we can make this software better. You can email us at 
-    <span class="link"><a href="mailto:research@hbs.edu" title="Send email to ‘research@hbs.edu’.">mailto:research@hbs.edu</a></span>, or open an issue at 
-    <span class="link"><a href="https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues" title="https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues">https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues</a></span> with a description of
-    what didn't work. Feature requests are also appreciated!</p>
-<p class="p">Happy computing!</p>
 </div></div>
 </div></section><section class="links" role="navigation"><div class="inner">
 <div class="hgroup pagewide"></div>

@@ -40,7 +40,7 @@
     
     <steps>
       <item>
-        <p>Log in to the HBS Grid by using <link href="https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client">NoMachine</link> to connect to host <gui>hbsgrid-nx.hbs.edu</gui>.</p>
+        <p>Log in to the HBS Grid by using <link href="https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client">NoMachine</link> to connect to host <gui>hbsgrid-nx.hbs.edu</gui></p>
       </item>
       <item>
         <p>Open a <app>Terminal</app> in <app>NoMachine</app>: <gui>Applications => Favorites => Terminal</gui>.</p>

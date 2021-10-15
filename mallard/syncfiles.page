@@ -15,14 +15,12 @@
   <title>Mount Drives and Copy Data</title>
 
   <p>The HBS Grid is primarily used for data analysis, machine learning, data wrangling, and data visualization.
-  Usually this means that <em>you need to copy or sync your data to the HBS Grid</em> in order to do your work. There
-  are many ways to accomplish this; only the most effective and least complicated methods of accessing your data on
-  the HBS Grid are described here.</p>
+  Usually this means that <em>you need to copy or sync your data to the HBS Grid</em> in order to do your work.</p>
   
   <section id="mount">
     <title>Access local files from <app>NoMachine</app> login nodes</title>
 
-    <p><app>NoMachine</app> offers a very simple and effective method for mounting your local file system on the HBS Grid.
+    <p><app>NoMachine</app> makes it easy to mount your local file system on the HBS Grid login node.
     This is useful for reading documentation, scripts, and other small files without needing to physically copy anything to the HBS Grid.
     Note that <em>this method will only make files accessible from the <link xref="commandline#overview">login nodes</link></em>;
     for <link xref="commandline#overview">compute node</link> access you will need to copy your files to the HBS grid as described in

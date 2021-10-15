@@ -13,15 +13,10 @@
   <links type="section"/>
   <title>Launch Applications from the Desktop</title>
 
-  <p>You can run applications on <link href="https://www.hbs.edu/research-computing-services/resources/compute-cluster/">powerful HBS Grid compute nodes</link>
-  by connecting to the HBS grid via <app>NoMachine</app>, <link xref="quickstart">enabling technology preview features</link>,
-  and clicking one of the application icons under the <gui>Applications</gui> or <gui>Activities</gui>menus.</p>
-
-  <p>The application launchers make it easy to run an application with the resources (e.g., CPUs, RAM, GPU) you specify.
-  If your resource requirements are low (currently <em>4GB RAM</em> and <em>1 CPU</em>) the launcher will start the
-  application on a low-resource <em>login node</em>. If your resource requirements are higher, the launchers start
-  your application on a high-powered <em>compute node</em>. This allows you to easily run compute and/or memory intensive
-  applications with just a few mouse clicks!</p>
+  <p>You can run applications on <link href="https://www.hbs.edu/research-computing-services/resources/compute-cluster/"> powerful
+  HBS Grid compute nodes</link> by connecting to the HBS grid via <app>NoMachine</app>, <link xref="quickstart"> enabling technology preview features</link>,
+  and clicking one of the application icons under the <gui>Applications</gui> or <gui>Activities</gui> menus.
+  This allows you to easily run compute and/or memory intensive applications with just a few mouse clicks!</p>
 
   <section id="basic">
     <title>Basic launcher options</title>
@@ -29,7 +24,9 @@
     <p>Each application will open a dialog where you can configure your environment and resource requirements.
     Please keep in mind that the system <em>reserves the resources you select</em>, e.g., CPUs used by your job become
     unavailable for other users. Don't be shy about using resources, but please don't go overboard and reserve way more
-    then you need just because you can.</p>
+    then you need just because you can. Specific resource requirements depend on the nature of the job, but as a rough
+    guide <em style="strong">we recommend requesting RAM 4-10 times the size of your data</em>. For example, if you have
+    a 6 Gb <code>.csv</code> file you may wish to request 24GB of memory or so.</p>
 
     <p>The application launchers are meant to be intuitive and easy to use. Most of the fields should be
     self-explanatory, e.g., there is a numeric field for memory (RAM) in Gigabytes, and another for the

@@ -13,10 +13,12 @@
   <links type="section"/>
   <title>Troubleshooting</title>
 
-  <p>The software documented here is <em>under active development</em> and may break 
-  or cause other problems. If things go wrong please let us know by opening an issue at 
-  <link href="https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues"/> so we can fix it.</p>
-
+  <p>The software documented here is <em>under active development</em> and may break or cause other problems.
+  Bug reports and feature requests are important contributions to this project and are always welcome and encouraged! You can either
+  start a discussion at <link href="https://github.com/hbs-rcs/hbsgrid-docs/discussions">https://github.com/hbs-rcs/hbsgrid-docs/discussions</link>
+  or create an issue report at <link href="https://github.com/hbs-rcs/hbsgrid-docs/issues">https://github.com/hbs-rcs/hbsgrid-docs/issues</link>.
+  We are building a friendly and welcoming community of HBS Grid users and we invite you to join us using the links above.</p>
+ 
   <section id="trouble">
     <title>Basic troubleshooting steps</title>
 
@@ -41,35 +43,6 @@
       <p>You can avoid having your job killed by staying within the system and job limits. These limits are described in more detail in
       <link xref="menulaunch#limits"/> and <link xref="commandline#queues"/>.</p>
     </section>
-    
-    <section id="fileassociations">
-      <title>File associations broken when desktop icons are enabled</title>
-      
-      <p>A known bug currently previents file associations from working properly when <gui>desktop icons</gui> are enabled
-      or when the <app>Files</app> application is auto-started. A work-around is to disable desktop icons following these steps:</p>
-
-      <steps>
-        <item>
-          <p>Open the <gui>Tweaks</gui> application from the <gui>Applications</gui> menu or by searching in <gui>Activities</gui>.</p>
-        </item>
-        <item>
-          <p>Under the <gui>Desktop</gui> tab on the left, ensure that <gui>Show Icons</gui> is toggled off.</p>
-        </item>
-        <item>
-          <p>Under the <gui>Startup Applications</gui> tab, ensure that <app>Files</app> does not appear in the list of auto-started applications.</p>
-        </item>
-        <item>
-          <p><em>Terminate</em> your <app>NoMachine</app> desktop session and start a new one.</p>
-        </item>      
-      </steps>
-
-      <p><em style="strong">Click the video thumbnail below</em> for a video demonstrating these steps.</p>
-
-      <ui:overlay width="250" height="150">
-        <media type="video" src="no_nautilus_autostart.webm" width="100%">
-        </media>
-      </ui:overlay>
-    </section>
 
   </section>
   <section id="disable">
@@ -84,16 +57,4 @@
     completely reset terminate your NoMachine session and start a new one.</p>
   </section>
 
-  <section id="support">
-    <title>Support and feedback</title>
-
-    <p>It is our hope that the software "Technology Preview" described here will be useful and help make
-    the HBS Grid more user-friendly. If you do run into issues we would love to hear about 
-    them so we can make this software better. You can email us at 
-    <link href="mailto:research@hbs.edu"/>, or open an issue at 
-    <link href="https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues"/> with a description of
-    what didn't work. Feature requests are also appreciated!</p>
-
-    <p>Happy computing!</p>
-  </section>
 </page>

@@ -16,9 +16,9 @@ improve these environments. **Users should instead refer to the**
 General approach
 ----------------
 
-We have used the Conda package manager, singularity containers, and ad hoc installation
+We have used the Conda package manager, and ad hoc installation
 of additional software to constitute modern data science and productivity software stacks.
-The heaving lifting is done by *conda*, with *Singularity* and locally build software filling
+The heaving lifting is done by *conda*, with locally built software filling
 in the gaps.
 
 The conda environments are named *rcs_<date>.<version>*. The basic idea here is that when we
@@ -29,8 +29,8 @@ of strategies to avoid duplication, new environments usually require relatively 
 (though of course this depends on how much has changed relative to existing environments).
 
 The conda-forge ecosystem is large and active, but there are still some programs that are not available
-there. In that case we either 1. install pre-built binaries directly from upstream projects, 2. build and
-install it locally, or 3. make it available via Singularity. An ongoing goal is to move as much as
+there. In that case we either install pre-built binaries directly from upstream projects, or build and
+install it locally. An ongoing goal is to move as much as
 possible into conda in order to take advantage of automatic updates, package de-duplication, and other
 features provided by the conda ecosystem.
 
@@ -44,30 +44,22 @@ clicking on a *.do* file in the file browser.
 Requirements
 ------------
 
-The **build requirements** on the host system mostly common and easily available on most Linux distributions.
+The **build requirements** on the host system are easily available on most Linux distributions.
 They are:
 
 - `make <https://www.gnu.org/software/make/>`_
 - `coreutils <https://www.gnu.org/software/coreutils/>`_
 - `xdg-utils <https://www.freedesktop.org/wiki/Software/xdg-utils/>`_ ,
-- `singularity <https://sylabs.io/singularity/>`_
 - `git <https://git-scm.com/>`_
 - `findutils <http://www.gnu.org/software/findutils/>`_
 - `bc <http://www.gnu.org/software/bc/>`_
-- `libgl <https://www.mesa3d.org/>`_
-- `rsync <https://rsync.samba.org/>`_
 - `bash <https://www.gnu.org/software/bash/>`_
-- `make <https://www.gnu.org/software/make/>`_
-- `unzip <http://www.info-zip.org/UnZip.html>`_
-- `tar <http://www.gnu.org/software/tar/>`_
 - `cpio <http://www.gnu.org/software/cpio/>`_
 - `mkfontdir <http://www.x.org>`_  
 - `shared-mime-info <http://freedesktop.org/Software/shared-mime-info>`_
 - `dconf <https://wiki.gnome.org/Projects/dconf>`_
-- `rpm2cpio <http://www.rpm.org/>`_ or `rmpextract <https://github.com/dowjones/rpm-extract>`_
-- `libnsl <https://github.com/thkukuk/libnsl>`_
+- `rpm2cpio <http://www.rpm.org/>`_ or `rmpextract <https://github.com/dowjones/rpm-extract>`__
 - `wget <https://www.gnu.org/software/wget/>`_
-- `lmod >= 7.6 <https://lmod.readthedocs.io/en/latest/>`_
 
 These build dependencies can generally be installed using your Linux distribution package manager.
 For example, on Fedora use
@@ -75,18 +67,11 @@ For example, on Fedora use
 .. code-block:: bash
 
        
-       dnf install mesa-libGL-devel cpio rpm tar unzip Lmod make \
-           dconf libnsl bc xdg-utils singularity git rsync bash \
-           wget shared-mime-info findutils xorg-x11-font-utils 
+       dnf install cpio rpm make dconf bc xdg-utils bash \
+           wget shared-mime-info xorg-x11-font-utils 
 
 
 Everything else should be bootstrapped and built using conda environments.
-
-Note that many Linux systems ship with really old **lmod**, e.g., Ubuntu 2020.04 has
-version 6.6 (released in 2016). Sorry for the hassle, but you will need a more recent (>=
-7.6) lmod. Fedora is a good option is you are running in docker or similar container, or
-if you are setting up a new system to install on, otherwise you can follow the instructions at
-https://lmod.readthedocs.io/en/latest/030_installing.html
 
 Additional dependencies are needed to build the documentation, namely
 `sphinx <https://www.sphinx-doc.org/en/master/>`_ and `mallard <http://projectmallard.org/>`_.
@@ -94,7 +79,7 @@ Additional dependencies are needed to build the documentation, namely
 Run-time dependencies additionally include
 `LSF <https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_welcome/lsf_welcome.html>`_ and
 `GNOME 3 <https://www.gnome.org/>`_. We are interested in generalizing this to work with other
-schedulers and /or desktop environments, but this has not yet been attempted.
+schedulers and /or desktop environments, but this has not yet been attempted. User namespaces must be enabled; on older Linux distributions you may need to turn them on. A good set of instructions for doing this is available at https://sylabs.io/guides/3.8/admin-guide/user_namespace.html
 
 A few things will only work correctly on
 `RHEL 7 <https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux>`_, e.g., the

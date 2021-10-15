@@ -27,7 +27,7 @@ userguide/html/index.html: $(MALLARD_FILES)
 	yelp-build html -o userguide/html mallard
 
 fun:
-	gource --seconds-per-day 1 --user-image-dir devops_source/_static/fun/ -1280x720 -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libvpx -b:v 10000K gource.webm
+	gource --seconds-per-day .25 --user-image-dir devops_source/_static/fun/ -1280x720 -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libvpx -b:v 10000K gource.webm
 	mv gource.webm devops_source/_static/fun/gource.webm
 	echo "" > devops_source/stats.rst
 	echo "Project file statistics" >> devops_source/stats.rst
