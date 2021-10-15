@@ -13,12 +13,17 @@
   <links type="section"/>
   <title>Support and Troubleshooting</title>
 
-  <p>The software documented here is <em>under active development</em> and may break or cause other problems.
-  Bug reports and feature requests are important contributions to this project and are always welcome and encouraged! You can either
-  start a discussion at <link href="https://github.com/hbs-rcs/hbsgrid-docs/discussions">https://github.com/hbs-rcs/hbsgrid-docs/discussions</link>
-  or create an issue report at <link href="https://github.com/hbs-rcs/hbsgrid-docs/issues">https://github.com/hbs-rcs/hbsgrid-docs/issues</link>.
-  We are building a friendly and welcoming community of HBS Grid users and we invite you to join us using the links above.</p>
- 
+  <section id="community">
+    <title>Issue reports and community discussion</title>
+
+    <p>The software documented here is <em>under active development</em> and may break or cause other problems.
+    Bug reports and feature requests are important contributions to this project and are always welcome and encouraged! You can either
+    start a discussion at <link href="https://github.com/hbs-rcs/hbsgrid-docs/discussions">https://github.com/hbs-rcs/hbsgrid-docs/discussions</link>
+    or create an issue report at <link href="https://github.com/hbs-rcs/hbsgrid-docs/issues">https://github.com/hbs-rcs/hbsgrid-docs/issues</link>.
+    We are building a friendly and welcoming community of HBS Grid users and we invite you to join us using the links above.</p>
+
+  </section>
+    
   <section id="trouble">
     <title>Basic troubleshooting steps</title>
 
