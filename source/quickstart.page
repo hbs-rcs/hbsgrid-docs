@@ -76,7 +76,7 @@
     Additional reference documentation is available if you need it, including the <link xref="menulaunch"/>
     and <link xref="commandline"/> sections.</p>
 
-    <p> If you run into any problems please let us know by opening an issue at 
-    <link href="https://code.harvard.edu/HBS/rcs__cluster_software_modules/issues"/> so we can fix them! You may also find the <link xref="trouble"/> section helpful.</p>
+    <p> If you run into any problems please let us know by posting at
+    <link href="https://github.com/hbs-rcs/hbsgrid-docs/discussions"/> and letting us know so we can fix them! You may also find the <link xref="trouble"/> section helpful.</p>
   </section>
 </page>
