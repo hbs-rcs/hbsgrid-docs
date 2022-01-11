@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="contents pagewide">
 <div role="navigation" class="links sectionlinks"><div class="inner"><div class="region"><ul>
 <li class="links "><a href="environments.html#environments" title="Software environment versions">Software environment versions</a></li>
-<li class="links "><a href="environments.html#rcs_2021.12" title="rcs_2021.12">rcs_2021.12</a></li>
+<li class="links "><a href="environments.html#rcs_2022.01" title="rcs_2022.01">rcs_2022.01</a></li>
 <li class="links "><a href="environments.html#rcs_2021.06" title="rcs_2021.06">rcs_2021.06</a></li>
 <li class="links "><a href="environments.html#rcs_2021.03" title="rcs_2021.03">rcs_2021.03</a></li>
 <li class="links "><a href="environments.html#rcs_2020.01" title="rcs_2020.01">rcs_2020.01</a></li>
@@ -47,35 +47,42 @@ document.addEventListener('DOMContentLoaded', function() {
     released in 2021 is named <span class="em">rcs_2021.01</span>. The list below shows you key information about each environment,
     including a command that you can run from the terminal to get a detailed software version list.</p>
 </div></div>
-</div></section><section id="rcs_2021.12"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title"><span class="title">rcs_2021.12</span></h2></div>
+</div></section><section id="rcs_2022.01"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">rcs_2022.01</span></h2></div>
 <div class="region"><div class="contents pagewide">
-<p class="p">The <span class="app">rcs_2021.12</span> environment was released in December 2021. It includes updated
+<p class="p">The <span class="app">rcs_2022.01</span> environment was released in December 2021. It includes updated
     <span class="app">Python</span>, <span class="app">R</span>, <span class="app">Octave</span>, <span class="app">Tensorflow</span>, <span class="app">Pytorch</span> and other software.
     Key software versions included in this environment are listed below.</p>
 <div class="list"><div class="inner"><div class="region"><ul class="list">
-<li class="list"><p class="p">CUDAtoolkit 11.2</p></li>
-<li class="list"><p class="p">Spyder 5.1</p></li>
+<li class="list"><p class="p">CUDAtoolkit 11.5</p></li>
+<li class="list"><p class="p">Spyder 5.2</p></li>
 <li class="list"><p class="p">Texlive 2021</p></li>
 <li class="list"><p class="p">Emacs 27.2</p></li>
-<li class="list"><p class="p">Julia 1.6.3</p></li>
-<li class="list"><p class="p">Jupyterlab 3.2</p></li>
-<li class="list"><p class="p">Mathematica 12</p></li>
-<li class="list"><p class="p">Matlab R2021a</p></li>
+<li class="list"><p class="p">Julia 1.7.0</p></li>
+<li class="list"><p class="p">Jupyterlab 3.10</p></li>
 <li class="list"><p class="p">Numpy 1.21</p></li>
-<li class="list"><p class="p">Octave 6.3</p></li>
+<li class="list"><p class="p">Octave 6.4</p></li>
 <li class="list"><p class="p">Pandas 1.3</p></li>
 <li class="list"><p class="p">Python 3.9</p></li>
-<li class="list"><p class="p">Pytorch 1.9</p></li>
+<li class="list"><p class="p">Pytorch 1.10</p></li>
 <li class="list"><p class="p">QGIS 3.18</p></li>
 <li class="list"><p class="p">R 4.1</p></li>
-<li class="list"><p class="p">R-tidyverse 1.3</p></li>
-<li class="list"><p class="p">SAS 9.4</p></li>
-<li class="list"><p class="p">Stata 17</p></li>
-<li class="list"><p class="p">Tensorflow 2.6</p></li>
+<li class="list"><p class="p">Tensorflow 2.7</p></li>
 </ul></div></div></div>
+<p class="p"> A large number of new packages and applications are now available, including `JASP`, `Cytoscape`, `duckdb`,
+    `texminer` `dedupe` `awscli`, `snakemake`, `nextflow` and many more.</p>
+<p class="p">In this release we have dropped support for several infrequently used programs:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p">OCRfeeder -- use gImageReader for OCR instead</p></li>
+<li class="list"><p class="p">Gephi -- replaced by Cytoscape for network visualization</p></li>
+<li class="list"><p class="p">PSPP -- replaced by JASP, a modern statistics GUI that uses R under the hood</p></li>
+<li class="list"><p class="p">Meld -- use Diffuse for graphical text comparison</p></li>
+</ul></div></div></div>
+<p class="p">VirtualBox image available for
+    <span class="link"><a href="https://www.dropbox.com/s/amxfzx0anwkf7kn/Kobayashi_Research_Computing_Desktop_2022.01.ova?dl=0" title="https://www.dropbox.com/s/amxfzx0anwkf7kn/Kobayashi_Research_Computing_Desktop_2022.01.ova?dl=0">download from Dropbox</a></span>
+    and can be imported and run locally for convenience, reproducibility, or testing purposes.</p>
 <p class="p">For complete environment details, open a terminal and run
-    <span class="cmd">conda env export -n rcs_2021.12</span></p>
+    <span class="cmd">conda env export -n rcs_2022.01</span></p>
 </div></div>
 </div></section><section id="rcs_2021.06"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title"><span class="title">rcs_2021.06</span></h2></div>

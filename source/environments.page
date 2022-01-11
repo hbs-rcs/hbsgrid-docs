@@ -39,37 +39,47 @@
     including a command that you can run from the terminal to get a detailed software version list.</p>
   </section>
 
-  <section id="rcs_2021.12">
-    <title>rcs_2021.12</title>
+  <section id="rcs_2022.01">
+    <title>rcs_2022.01</title>
 
-    <p>The <app>rcs_2021.12</app> environment was released in December 2021. It includes updated
+    <p>The <app>rcs_2022.01</app> environment was released in December 2021. It includes updated
     <app>Python</app>, <app>R</app>, <app>Octave</app>, <app>Tensorflow</app>, <app>Pytorch</app> and other software.
     Key software versions included in this environment are listed below.</p>
 
     <list>
-      <item><p>CUDAtoolkit 11.2</p></item>
-      <item><p>Spyder 5.1</p></item>
+      <item><p>CUDAtoolkit 11.5</p></item>
+      <item><p>Spyder 5.2</p></item>
       <item><p>Texlive 2021</p></item>
       <item><p>Emacs 27.2</p></item>
-      <item><p>Julia 1.6.3</p></item>
-      <item><p>Jupyterlab 3.2</p></item>
-      <item><p>Mathematica 12</p></item>
-      <item><p>Matlab R2021a</p></item>
+      <item><p>Julia 1.7.0</p></item>
+      <item><p>Jupyterlab 3.10</p></item>
       <item><p>Numpy 1.21</p></item>
-      <item><p>Octave 6.3</p></item>
+      <item><p>Octave 6.4</p></item>
       <item><p>Pandas 1.3</p></item>
       <item><p>Python 3.9</p></item>
-      <item><p>Pytorch 1.9</p></item>
+      <item><p>Pytorch 1.10</p></item>
       <item><p>QGIS 3.18</p></item>
       <item><p>R 4.1</p></item>
-      <item><p>R-tidyverse 1.3</p></item>
-      <item><p>SAS 9.4</p></item>
-      <item><p>Stata 17</p></item>
-      <item><p>Tensorflow 2.6</p></item>
+      <item><p>Tensorflow 2.7</p></item>
     </list>
 
+    <p> A large number of new packages and applications are now available, including `JASP`, `Cytoscape`, `duckdb`,
+    `texminer` `dedupe` `awscli`, `snakemake`, `nextflow` and many more.</p>
+
+    <p>In this release we have dropped support for several infrequently used programs:</p>
+    <list>
+      <item><p>OCRfeeder -- use gImageReader for OCR instead</p></item>
+      <item><p>Gephi -- replaced by Cytoscape for network visualization</p></item>
+      <item><p>PSPP -- replaced by JASP, a modern statistics GUI that uses R under the hood</p></item>
+      <item><p>Meld -- use Diffuse for graphical text comparison</p></item>
+    </list>
+
+    <p>VirtualBox image available for
+    <link href="https://www.dropbox.com/s/amxfzx0anwkf7kn/Kobayashi_Research_Computing_Desktop_2022.01.ova?dl=0">download from Dropbox</link>
+    and can be imported and run locally for convenience, reproducibility, or testing purposes.</p>
+
     <p>For complete environment details, open a terminal and run
-    <cmd>conda env export -n rcs_2021.12</cmd></p>
+    <cmd>conda env export -n rcs_2022.01</cmd></p>
   </section>
   
   <section id="rcs_2021.06">
