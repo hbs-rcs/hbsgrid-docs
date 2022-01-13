@@ -42,7 +42,7 @@
   <section id="rcs_2022.01">
     <title>rcs_2022.01</title>
 
-    <p>The <app>rcs_2022.01</app> environment was released in December 2021. It includes updated
+    <p>The <app>rcs_2022.01</app> environment was released in January 2021. It includes updated
     <app>Python</app>, <app>R</app>, <app>Octave</app>, <app>Tensorflow</app>, <app>Pytorch</app> and other software.
     Key software versions included in this environment are listed below.</p>
 
@@ -63,8 +63,8 @@
       <item><p>Tensorflow 2.7</p></item>
     </list>
 
-    <p> A large number of new packages and applications are now available, including `JASP`, `Cytoscape`, `duckdb`,
-    `texminer` `dedupe` `awscli`, `snakemake`, `nextflow` and many more.</p>
+    <p> A large number of new packages and applications are now available, including <app>JASP</app>, <app>Cytoscape</app>, <app>duckdb</app>,
+    <app>texminer</app> <app>dedupe</app> <app>awscli</app>, <app>snakemake</app>, <app>nextflow</app> and many more.</p>
 
     <p>In this release we have dropped support for several infrequently used programs:</p>
     <list>
