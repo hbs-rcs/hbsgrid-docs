@@ -42,38 +42,201 @@
   <section id="rcs_2022.01">
     <title>rcs_2022.01</title>
 
-    <p>The <app>rcs_2022.01</app> environment was released in January 2021. It includes updated
-    <app>Python</app>, <app>R</app>, <app>Octave</app>, <app>Tensorflow</app>, <app>Pytorch</app> and other software.
-    Key software versions included in this environment are listed below.</p>
+    <p> After more than 6 months of hard work, the <link href="https://hbs-rcs.github.io/hbsgrid-docs/">HBS grid
+    technology preview software environment</link> version 2022.01 was released in January 2022!</p>
+
+    <p>This environment <em style="strong">remains a technology preview and any and all use is at your
+    own risk</em>.</p>
+    <p>The <em>technology preview</em> software environment is a
+    user-friendly set of software and utilities designed to make data
+    science and statistics easier for HBS Grid users. If you have not yet
+    done so, you can try it by following the
+    <link href="https://hbs-rcs.github.io/hbsgrid-docs/quickstart.html">quick-start
+    guide</link>. If you are already using the <em>technology
+    preview</em> environment you will be prompted to upgrade next
+    time you log in to the HBS Grid. As always you can continue using
+    previous versions if needed, as described in the
+    <link href="https://hbs-rcs.github.io/hbsgrid-docs/environments.html#environments">environments
+    documentation</link>.</p>
+
+    <p>In this release we have added a large number of
+    <em style="strong">new statistics and data science
+    applications</em> and packages, including:</p>
 
     <list>
-      <item><p>CUDAtoolkit 11.5</p></item>
-      <item><p>Spyder 5.2</p></item>
-      <item><p>Texlive 2021</p></item>
-      <item><p>Emacs 27.2</p></item>
-      <item><p>Julia 1.7.0</p></item>
-      <item><p>Jupyterlab 3.10</p></item>
-      <item><p>Numpy 1.21</p></item>
-      <item><p>Octave 6.4</p></item>
-      <item><p>Pandas 1.3</p></item>
-      <item><p>Python 3.9</p></item>
-      <item><p>Pytorch 1.10</p></item>
-      <item><p>QGIS 3.18</p></item>
-      <item><p>R 4.1</p></item>
-      <item><p>Tensorflow 2.7</p></item>
+      <item>
+        <p>
+          <link href="https://jasp-stats.org/">JASP</link>, a free
+          menu-driven statistics application similar to SPSS
+        </p>
+      </item>
+      <item>
+        <p>
+          <link href="https://cytoscape.org/">Cytoscape</link>, an
+          open source software platform for visualizing complex networks,
+        </p>
+      </item>
+      <item>
+        <p>
+          <link href="https://duckdb.org/">DuckDB</link>, an
+          in-process SQL OLAP database management system
+        </p>
+      </item>
+      <item>
+        <p>
+          <link href="https://www.rtextminer.com/">texminer</link>,
+          functions for text mining and topic modeling in R
+        </p>
+      </item>
+      <item>
+        <p>
+          <link href="https://docs.dedupe.io/en/latest/">Dedupe</link>,
+          a library that uses machine learning to perform de-duplication and
+          entity resolution in Python
+        </p>
+      </item>
+      <item>
+        <p>
+          <link href="https://aws.amazon.com/cli/">awscli</link>, a
+          unified tool to manage your AWS services
+        </p>
+      </item>
+      <item>
+        <p>
+          <link href="https://snakemake.readthedocs.io/en/stable/">snakemake</link>,
+          a workflow management system to create reproducible and scalable
+          data analyses
+        </p>
+      </item>
     </list>
-
-    <p> A large number of new packages and applications are now available, including <app>JASP</app>, <app>Cytoscape</app>, <app>duckdb</app>,
-    <app>texminer</app> <app>dedupe</app> <app>awscli</app>, <app>snakemake</app>, <app>nextflow</app> and many more.</p>
-
-    <p>In this release we have dropped support for several infrequently used programs:</p>
+    <p>
+      and many many more!
+    </p>
+    <p>
+      If you find a software program that you need is not yet available
+      please
+      <link href="https://github.com/hbs-rcs/hbsgrid-docs/discussions">let
+      us know</link> and we will try to install it for you.
+    </p>
+    <p>
+      The 2022.01 release also brings a huge number of application and
+      package updates, including:
+    </p>
     <list>
-      <item><p>OCRfeeder -- use gImageReader for OCR instead</p></item>
-      <item><p>Gephi -- replaced by Cytoscape for network visualization</p></item>
-      <item><p>PSPP -- replaced by JASP, a modern statistics GUI that uses R under the hood</p></item>
-      <item><p>Meld -- use Diffuse for graphical text comparison</p></item>
+      <item>
+        <p>
+          Python updated to 3.9.9
+        </p>
+      </item>
+      <item>
+        <p>
+          R updated to 4.1.1
+        </p>
+      </item>
+      <item>
+        <p>
+          Octave updaed to 6.4
+        </p>
+      </item>
+      <item>
+        <p>
+          Julia updated to 1.7.1
+        </p>
+      </item>
+      <item>
+        <p>
+          RStudio updated to 2021.09.1
+        </p>
+      </item>
+      <item>
+        <p>
+          Spyder updated to 5.2.1
+        </p>
+      </item>
+      <item>
+        <p>
+          LibreOffice updated to 7.1.8
+        </p>
+      </item>
+      <item>
+        <p>
+          VSCode updated to 1.63.2
+        </p>
+      </item>
+      <item>
+        <p>
+          Emacs updated to 27.2
+        </p>
+      </item>
+      <item>
+        <p>
+          Arrow (C++, R and Python) updated to 6.0
+        </p>
+      </item>
+      <item>
+        <p>
+          Tensorflow updated to 2.7
+        </p>
+      </item>
+      <item>
+        <p>
+          PyTorch updated to 1.10.0
+        </p>
+      </item>
+      <item>
+        <p>
+          CUDA toolkit updated to 11.5.0
+        </p>
+      </item>
+      <item>
+        <p>
+          Jupyterlab updated to 3.10
+        </p>
+      </item>
+      <item>
+        <p>
+          MKL updated to 2021.4.0
+        </p>
+      </item>
     </list>
-
+    <p>
+      and hundreds of others.
+    </p>
+    <p>
+      In this release we have also dropped support for several infrequently
+      used programs:
+    </p>
+    <list>
+      <item>
+        <p>
+          OCRfeeder -- use gImageReader for OCR instead
+        </p>
+      </item>
+      <item>
+        <p>
+          Gephi -- replaced by Cytoscape for network visualization
+        </p>
+      </item>
+      <item>
+        <p>
+          PSPP -- replaced by JASP, a modern statistics GUI that uses R
+          under the hood
+        </p>
+      </item>
+      <item>
+        <p>
+          Meld -- use Diffuse for graphical text comparisony
+        </p>
+      </item>
+    </list>
+    <p>
+      <link href="https://hbs-rcs.github.io/hbsgrid-docs/">Documentation
+      is available on line</link> or via the <em>HBS Grid
+      help</em> application on the Grid. If you have any difficulties
+      or feature requests please
+      <link href="https://github.com/hbs-rcs/hbsgrid-docs/discussions">reach
+      out on the discussion forum</link>.
+    </p>
     <p>VirtualBox image available for
     <link href="https://www.dropbox.com/s/amxfzx0anwkf7kn/Kobayashi_Research_Computing_Desktop_2022.01.ova?dl=0">download from Dropbox</link>
     and can be imported and run locally for convenience, reproducibility, or testing purposes.</p>

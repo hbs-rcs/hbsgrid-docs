@@ -50,34 +50,146 @@ document.addEventListener('DOMContentLoaded', function() {
 </div></section><section id="rcs_2022.01"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title"><span class="title">rcs_2022.01</span></h2></div>
 <div class="region"><div class="contents pagewide">
-<p class="p">The <span class="app">rcs_2022.01</span> environment was released in January 2021. It includes updated
-    <span class="app">Python</span>, <span class="app">R</span>, <span class="app">Octave</span>, <span class="app">Tensorflow</span>, <span class="app">Pytorch</span> and other software.
-    Key software versions included in this environment are listed below.</p>
+<p class="p"> After more than 6 months of hard work, the <span class="link"><a href="https://hbs-rcs.github.io/hbsgrid-docs/" title="https://hbs-rcs.github.io/hbsgrid-docs/">HBS grid
+    technology preview software environment</a></span> version 2022.01 was released in January 2022!</p>
+<p class="p">This environment <span class="em-bold em">remains a technology preview and any and all use is at your
+    own risk</span>.</p>
+<p class="p">The <span class="em">technology preview</span> software environment is a
+    user-friendly set of software and utilities designed to make data
+    science and statistics easier for HBS Grid users. If you have not yet
+    done so, you can try it by following the
+    <span class="link"><a href="https://hbs-rcs.github.io/hbsgrid-docs/quickstart.html" title="https://hbs-rcs.github.io/hbsgrid-docs/quickstart.html">quick-start
+    guide</a></span>. If you are already using the <span class="em">technology
+    preview</span> environment you will be prompted to upgrade next
+    time you log in to the HBS Grid. As always you can continue using
+    previous versions if needed, as described in the
+    <span class="link"><a href="https://hbs-rcs.github.io/hbsgrid-docs/environments.html#environments" title="https://hbs-rcs.github.io/hbsgrid-docs/environments.html#environments">environments
+    documentation</a></span>.</p>
+<p class="p">In this release we have added a large number of
+    <span class="em-bold em">new statistics and data science
+    applications</span> and packages, including:</p>
 <div class="list"><div class="inner"><div class="region"><ul class="list">
-<li class="list"><p class="p">CUDAtoolkit 11.5</p></li>
-<li class="list"><p class="p">Spyder 5.2</p></li>
-<li class="list"><p class="p">Texlive 2021</p></li>
-<li class="list"><p class="p">Emacs 27.2</p></li>
-<li class="list"><p class="p">Julia 1.7.0</p></li>
-<li class="list"><p class="p">Jupyterlab 3.10</p></li>
-<li class="list"><p class="p">Numpy 1.21</p></li>
-<li class="list"><p class="p">Octave 6.4</p></li>
-<li class="list"><p class="p">Pandas 1.3</p></li>
-<li class="list"><p class="p">Python 3.9</p></li>
-<li class="list"><p class="p">Pytorch 1.10</p></li>
-<li class="list"><p class="p">QGIS 3.18</p></li>
-<li class="list"><p class="p">R 4.1</p></li>
-<li class="list"><p class="p">Tensorflow 2.7</p></li>
+<li class="list"><p class="p">
+          <span class="link"><a href="https://jasp-stats.org/" title="https://jasp-stats.org/">JASP</a></span>, a free
+          menu-driven statistics application similar to SPSS
+        </p></li>
+<li class="list"><p class="p">
+          <span class="link"><a href="https://cytoscape.org/" title="https://cytoscape.org/">Cytoscape</a></span>, an
+          open source software platform for visualizing complex networks,
+        </p></li>
+<li class="list"><p class="p">
+          <span class="link"><a href="https://duckdb.org/" title="https://duckdb.org/">DuckDB</a></span>, an
+          in-process SQL OLAP database management system
+        </p></li>
+<li class="list"><p class="p">
+          <span class="link"><a href="https://www.rtextminer.com/" title="https://www.rtextminer.com/">texminer</a></span>,
+          functions for text mining and topic modeling in R
+        </p></li>
+<li class="list"><p class="p">
+          <span class="link"><a href="https://docs.dedupe.io/en/latest/" title="https://docs.dedupe.io/en/latest/">Dedupe</a></span>,
+          a library that uses machine learning to perform de-duplication and
+          entity resolution in Python
+        </p></li>
+<li class="list"><p class="p">
+          <span class="link"><a href="https://aws.amazon.com/cli/" title="https://aws.amazon.com/cli/">awscli</a></span>, a
+          unified tool to manage your AWS services
+        </p></li>
+<li class="list"><p class="p">
+          <span class="link"><a href="https://snakemake.readthedocs.io/en/stable/" title="https://snakemake.readthedocs.io/en/stable/">snakemake</a></span>,
+          a workflow management system to create reproducible and scalable
+          data analyses
+        </p></li>
 </ul></div></div></div>
-<p class="p"> A large number of new packages and applications are now available, including <span class="app">JASP</span>, <span class="app">Cytoscape</span>, <span class="app">duckdb</span>,
-    <span class="app">texminer</span> <span class="app">dedupe</span> <span class="app">awscli</span>, <span class="app">snakemake</span>, <span class="app">nextflow</span> and many more.</p>
-<p class="p">In this release we have dropped support for several infrequently used programs:</p>
+<p class="p">
+      and many many more!
+    </p>
+<p class="p">
+      If you find a software program that you need is not yet available
+      please
+      <span class="link"><a href="https://github.com/hbs-rcs/hbsgrid-docs/discussions" title="https://github.com/hbs-rcs/hbsgrid-docs/discussions">let
+      us know</a></span> and we will try to install it for you.
+    </p>
+<p class="p">
+      The 2022.01 release also brings a huge number of application and
+      package updates, including:
+    </p>
 <div class="list"><div class="inner"><div class="region"><ul class="list">
-<li class="list"><p class="p">OCRfeeder -- use gImageReader for OCR instead</p></li>
-<li class="list"><p class="p">Gephi -- replaced by Cytoscape for network visualization</p></li>
-<li class="list"><p class="p">PSPP -- replaced by JASP, a modern statistics GUI that uses R under the hood</p></li>
-<li class="list"><p class="p">Meld -- use Diffuse for graphical text comparison</p></li>
+<li class="list"><p class="p">
+          Python updated to 3.9.9
+        </p></li>
+<li class="list"><p class="p">
+          R updated to 4.1.1
+        </p></li>
+<li class="list"><p class="p">
+          Octave updaed to 6.4
+        </p></li>
+<li class="list"><p class="p">
+          Julia updated to 1.7.1
+        </p></li>
+<li class="list"><p class="p">
+          RStudio updated to 2021.09.1
+        </p></li>
+<li class="list"><p class="p">
+          Spyder updated to 5.2.1
+        </p></li>
+<li class="list"><p class="p">
+          LibreOffice updated to 7.1.8
+        </p></li>
+<li class="list"><p class="p">
+          VSCode updated to 1.63.2
+        </p></li>
+<li class="list"><p class="p">
+          Emacs updated to 27.2
+        </p></li>
+<li class="list"><p class="p">
+          Arrow (C++, R and Python) updated to 6.0
+        </p></li>
+<li class="list"><p class="p">
+          Tensorflow updated to 2.7
+        </p></li>
+<li class="list"><p class="p">
+          PyTorch updated to 1.10.0
+        </p></li>
+<li class="list"><p class="p">
+          CUDA toolkit updated to 11.5.0
+        </p></li>
+<li class="list"><p class="p">
+          Jupyterlab updated to 3.10
+        </p></li>
+<li class="list"><p class="p">
+          MKL updated to 2021.4.0
+        </p></li>
 </ul></div></div></div>
+<p class="p">
+      and hundreds of others.
+    </p>
+<p class="p">
+      In this release we have also dropped support for several infrequently
+      used programs:
+    </p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p">
+          OCRfeeder -- use gImageReader for OCR instead
+        </p></li>
+<li class="list"><p class="p">
+          Gephi -- replaced by Cytoscape for network visualization
+        </p></li>
+<li class="list"><p class="p">
+          PSPP -- replaced by JASP, a modern statistics GUI that uses R
+          under the hood
+        </p></li>
+<li class="list"><p class="p">
+          Meld -- use Diffuse for graphical text comparisony
+        </p></li>
+</ul></div></div></div>
+<p class="p">
+      <span class="link"><a href="https://hbs-rcs.github.io/hbsgrid-docs/" title="https://hbs-rcs.github.io/hbsgrid-docs/">Documentation
+      is available on line</a></span> or via the <span class="em">HBS Grid
+      help</span> application on the Grid. If you have any difficulties
+      or feature requests please
+      <span class="link"><a href="https://github.com/hbs-rcs/hbsgrid-docs/discussions" title="https://github.com/hbs-rcs/hbsgrid-docs/discussions">reach
+      out on the discussion forum</a></span>.
+    </p>
 <p class="p">VirtualBox image available for
     <span class="link"><a href="https://www.dropbox.com/s/amxfzx0anwkf7kn/Kobayashi_Research_Computing_Desktop_2022.01.ova?dl=0" title="https://www.dropbox.com/s/amxfzx0anwkf7kn/Kobayashi_Research_Computing_Desktop_2022.01.ova?dl=0">download from Dropbox</a></span>
     and can be imported and run locally for convenience, reproducibility, or testing purposes.</p>
