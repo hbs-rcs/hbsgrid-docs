@@ -20,12 +20,22 @@
   may be new to you. Learning a few simple rules and techniques is needed in order to work safely in our environment.</p>
   
   <section id="directories">
-    <title>File storage and permissions</title>
+    <title>File ownership and permissions</title>
     <p>There are three main locations for storing data on the HBS Grid, as described in <link xref="syncfiles"/>.
-    Care must be taken especially when storing data outside your home folder or project space, because <em>/scratch</em>,
-    <em>/tmp</em> and other shared storage areas are <em> accessible by all users on the system</em>!
-    When using <em>/scratch</em> or other shared storage you must ensure that the file and directory
-    permissions are set correctly. Follow these steps to change file permissions using the <app>Files</app> application:</p>
+    For collaborative projects use a <em>project space</em> (
+    <link href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u">request one</link>
+    if needed) and ensure that ownership and group permissions are set correctly. Each project has an associated group that includes
+    the HBS Grid users who have access to that project space.</p>
+
+    <note style="tip">
+        <p>Care must be taken especially when storing data outside your home folder or project space, because <em>/scratch</em>,
+        <em>/tmp</em> and other shared storage areas are <em> accessible by all users on the system</em>!
+        When using <em>/scratch</em> or other shared storage you must ensure that the file and directory
+        permissions are set correctly.</p>
+    </note> 
+
+    <p>Usually you will want group members to have read and write permission for project space files.
+    Follow these steps to change file permissions using the <app>Files</app> application:</p>
 
     <steps>
       <item>
