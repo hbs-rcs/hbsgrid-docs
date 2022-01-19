@@ -65,12 +65,14 @@
     <p>Refer to the <link href="https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en">Official GNOME documentation</link>
     for details</p>
     
-    <p>Permissions can also be set from the command line using <cmd>chmod</cmd>.For example </p>
-    <p>
-      <cmd>chmod go-rwx ~/project1/data</cmd>
-    </p>
-    <p>removes <cmd>r</cmd>ead, <cmd>w</cmd>write e<cmd>x</cmd>ecute permissions for <cmd>g</cmd>roup and <cmd>o</cmd>thers.
-    Refer to <cmd>man chmod</cmd> for details.</p>
+    <note style="tip">
+      <p>Ownership and permissions can also be set from the command line using <cmd>chown</cmd> and <cmd>chmod</cmd>. For example </p>
+      <p>
+        <cmd>chmod go-rwx ~/project1/data</cmd>
+      </p>
+      <p>removes <cmd>r</cmd>ead, <cmd>w</cmd>write e<cmd>x</cmd>ecute permissions for <cmd>g</cmd>roup and <cmd>o</cmd>thers.
+      Refer to <cmd>tldr chmod</cmd> and <cmd>tldr chown</cmd> for details.</p>
+    </note>
   </section>
   
   <section id="services">
