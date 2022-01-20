@@ -23,10 +23,11 @@
     <p>There are three main locations for storing data on the HBS Grid, as described in <link xref="syncfiles"/>.
     For collaborative projects use a <em>project space</em> (
     <link href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u">request one</link>
-    if needed) and ensure that ownership and group permissions are set correctly. Each project has an associated group that includes
-    the HBS Grid users who have access to that project space. Group membership must currently be done by a system administrator. Use the
+    if needed).</p>
+    <p>Each project has an associated group that includes
+    the HBS Grid users who have access to that project space. Changing group membership must currently be done by a system administrator; use the
     <link href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u">change request form</link>
-    to add or remove people from a project space group.</p>
+    to request a change.</p>
   </section>
   <section id="directories">
     <title>File ownership and permissions</title>
