@@ -27,51 +27,61 @@
     if needed) and ensure that ownership and group permissions are set correctly. Each project has an associated group that includes
     the HBS Grid users who have access to that project space.</p>
 
-    <note style="tip">
-        <p>Care must be taken especially when storing data outside your home folder or project space, because <em>/scratch</em>,
-        <em>/tmp</em> and other shared storage areas are <em> accessible by all users on the system</em>!
-        When using <em>/scratch</em> or other shared storage you must ensure that the file and directory
-        permissions are set correctly.</p>
-    </note> 
+    <p>You will almost always want group members to have read and write permission for project space files. You can view and set permissions using the <app>File Browser</app>
+    or from the command line using the <app>Terminal</app>.</p>
+    <section id="permfrombrowser">
+      <title>Set permissions using the file browser</title>
+      <p>Follow these steps to change file permissions using the <app>Files</app> application:</p>
 
-    <p>Usually you will want group members to have read and write permission for project space files.
-    Follow these steps to change file permissions using the <app>Files</app> application:</p>
+      <steps>
+        <item>
+          <p>Open the <app>Files</app> application from the <gui>Applications menu</gui> from <gui>Activites search</gui></p>
+        </item>
+        <item>
+          <p>Locate the file or folder you wish to modify, <gui>right-click</gui> on it and select <gui>Properties</gui></p>
+        </item>
+        <item>
+          <p>Select the <gui>Permissions</gui> tab in file properties dialog</p>
+        </item>
+        <item>
+          <p>If you wish to change permissions for all files in a directory, click the <gui>Change Permissions for Enclosed Files</gui> button.</p>
+        </item>      
+        <item>
+          <p>Select appropriate <em>access</em> levels for <gui>Owner</gui> (you), <gui>Group</gui>, and <gui>Others</gui>.</p>
+        </item>
+      </steps>
 
-    <steps>
-      <item>
-        <p>Open the <app>Files</app> application from the <gui>Applications menu</gui> from <gui>Activites search</gui></p>
-      </item>
-      <item>
-        <p>Locate the file or folder you wish to modify, <gui>right-click</gui> on it and select <gui>Properties</gui></p>
-      </item>
-      <item>
-        <p>Selct the <gui>Permissions</gui> tab in file properties dialog</p>
-      </item>
-      <item>
-        <p>If you wish to change permissions for all files in a directory, click the <gui>Change Permissions for Enclosed Files</gui> button.</p>
-      </item>      
-      <item>
-        <p>Select appropriate <em>access</em> levels for <gui>Owner</gui> (you), <gui>Group</gui>, and <gui>Others</gui>.</p>
-      </item>
-    </steps>
+      <p>Click the image below to see these steps visually:</p>
 
-    <p>Click the image below to see these steps visually:</p>
+      <ui:overlay width="250" height="150">
+        <media type="video" src="permissions.webm" width="100%">
+        </media>
+      </ui:overlay>
 
-    <ui:overlay width="250" height="150">
-      <media type="video" src="permissions.webm" width="100%">
-      </media>
-    </ui:overlay>
-
-    <p>Refer to the <link href="https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en">Official GNOME documentation</link>
-    for details</p>
-    
-    <note style="tip">
-      <p>Ownership and permissions can also be set from the command line using <cmd>chown</cmd> and <cmd>chmod</cmd>. For example </p>
+      <p>Refer to the <link href="https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en">Official GNOME documentation</link>
+      for details.</p>
+    </section>
+    <section id="permfromterm">
+      <title>Set ownership and permissions using the command line</title>
+      <p><em style="strong">Permissions</em> can alternatively be set from the command line using <cmd>chown</cmd> and <cmd>chmod</cmd>. For example </p>
       <p>
-        <cmd>chmod go-rwx ~/project1/data</cmd>
+        <cmd>chmod -R g+rwx project1/data</cmd>
       </p>
-      <p>removes <cmd>r</cmd>ead, <cmd>w</cmd>write e<cmd>x</cmd>ecute permissions for <cmd>g</cmd>roup and <cmd>o</cmd>thers.
-      Refer to <cmd>tldr chmod</cmd> and <cmd>tldr chown</cmd> for details.</p>
+      <p>says "<cmd>R</cmd>ecursivly to <cmd>g</cmd>roup members add <cmd>r</cmd>ead, <cmd>w</cmd>rite and e<cmd>x</cmd>ecute permissions to <cmd>project1/data</cmd> and everything in it".
+      Refer to <cmd>tldr chmod</cmd> for more permissions examples and to <cmd> man chmod</cmd> for details.</p>
+      <p><em style="strong">Group ownership</em> can be set from the command line using <cmd>chgrp</cmd>.For example </p>
+      <p>
+        <cmd>chgrp -R my_project_group project1/data</cmd>
+      </p>
+      <p>says "<cmd>R</cmd>ecursivly make my_project_group the group owner of <cmd>project1/data</cmd> and everything in it".
+      Refer to <cmd>tldr chgrp</cmd> for more examples and to <cmd>man chgrp</cmd> for details.</p>
+    </section>
+
+    <note style="tip">
+      <p>Care must be taken especially when storing data outside your home folder or project space, because <em>/scratch</em>,
+      <em>/tmp</em> and other shared storage areas are <em> accessible by all users on the system</em>!
+      When using <em>/scratch</em> or other shared storage you must ensure that the file and directory
+      permissions are set correctly.</p>
     </note>
   </section>
   

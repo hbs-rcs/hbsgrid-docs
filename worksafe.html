@@ -29,29 +29,24 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <section id="directories"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title"><span class="title">File ownership and permissions</span></h2></div>
-<div class="region"><div class="contents pagewide">
+<div class="region">
+<div class="contents pagewide">
 <p class="p">There are three main locations for storing data on the HBS Grid, as described in <span class="link"><a href="syncfiles.html" title="Mount Drives and Copy Data">Mount Drives and Copy Data</a></span>.
     For collaborative projects use a <span class="em">project space</span> (
     <span class="link"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u" title="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u">request one</a></span>
     if needed) and ensure that ownership and group permissions are set correctly. Each project has an associated group that includes
     the HBS Grid users who have access to that project space.</p>
-<div class="note note-tip" title="Tip">
-<svg height="24" width="24" version="1.1">
- <g>
-  <path class="yelp-svg-fill" style="color-rendering:auto;text-decoration-color:#000000;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;block-progression:tb;text-decoration-line:none;text-decoration-style:solid;image-rendering:auto;white-space:normal;text-indent:0;text-transform:none" d="m12 2c-3.8541 0-7 3.1459-7 7 0 1.823 0.4945 3.139 1.1641 4.133 0.6695 0.994 1.4328 1.671 2.039 2.471 0.0882 0.116 0.1749 0.656 0.2071 1.32 0.016 0.332 0.0133 0.68 0.1894 1.119 0.0881 0.22 0.2439 0.478 0.5059 0.672 0.2619 0.194 0.6028 0.285 0.8945 0.285h4c0.583 0 1.204-0.478 1.402-0.908 0.199-0.43 0.217-0.793 0.244-1.137 0.056-0.688 0.138-1.319 0.211-1.441 0.549-0.916 1.304-2.009 1.94-3.114 0.636-1.104 1.203-2.199 1.203-3.4 0-3.8541-3.146-7-7-7zm0 2c2.773 0 5 2.2267 5 5 0 0.456-0.359 1.401-0.936 2.402-0.111 0.195-0.246 0.399-0.369 0.598h-7.8825c-0.4871-0.728-0.8125-1.519-0.8125-3 0-2.7733 2.2267-5 5-5z"></path>
-  <path class="yelp-svg-fill" d="m9 20a0.5 0.5 0 0 0 -0.5 0.5 0.5 0.5 0 0 0 0.5 0.5h6a0.5 0.5 0 0 0 0.5 -0.5 0.5 0.5 0 0 0 -0.5 -0.5h-6zm0 2a0.5 0.5 0 0 0 -0.5 0.5 0.5 0.5 0 0 0 0.5 0.5h6a0.5 0.5 0 0 0 0.5 -0.5 0.5 0.5 0 0 0 -0.5 -0.5h-6z"></path>
- </g>
-</svg><div class="inner"><div class="region"><div class="contents"><p class="p">Care must be taken especially when storing data outside your home folder or project space, because <span class="em">/scratch</span>,
-        <span class="em">/tmp</span> and other shared storage areas are <span class="em"> accessible by all users on the system</span>!
-        When using <span class="em">/scratch</span> or other shared storage you must ensure that the file and directory
-        permissions are set correctly.</p></div></div></div>
+<p class="p">You will almost always want group members to have read and write permission for project space files. You can view and set permissions using the <span class="app">File Browser</span>
+    or from the command line using the <span class="app">Terminal</span>.</p>
 </div>
-<p class="p">Usually you will want group members to have read and write permission for project space files.
-    Follow these steps to change file permissions using the <span class="app">Files</span> application:</p>
+<section id="permfrombrowser"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">Set permissions using the file browser</span></h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="p">Follow these steps to change file permissions using the <span class="app">Files</span> application:</p>
 <div class="steps"><div class="inner"><div class="region"><ol class="steps">
 <li class="steps"><p class="p">Open the <span class="app">Files</span> application from the <span class="gui">Applications menu</span> from <span class="gui">Activites search</span></p></li>
 <li class="steps"><p class="p">Locate the file or folder you wish to modify, <span class="gui">right-click</span> on it and select <span class="gui">Properties</span></p></li>
-<li class="steps"><p class="p">Selct the <span class="gui">Permissions</span> tab in file properties dialog</p></li>
+<li class="steps"><p class="p">Select the <span class="gui">Permissions</span> tab in file properties dialog</p></li>
 <li class="steps"><p class="p">If you wish to change permissions for all files in a directory, click the <span class="gui">Change Permissions for Enclosed Files</span> button.</p></li>
 <li class="steps"><p class="p">Select appropriate <span class="em">access</span> levels for <span class="gui">Owner</span> (you), <span class="gui">Group</span>, and <span class="gui">Others</span>.</p></li>
 </ol></div></div></div>
@@ -66,23 +61,26 @@ document.addEventListener('DOMContentLoaded', function() {
 </div></div>
 </div>
 <p class="p">Refer to the <span class="link"><a href="https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en" title="https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en">Official GNOME documentation</a></span>
-    for details</p>
-<div class="note note-tip" title="Tip">
-<svg height="24" width="24" version="1.1">
- <g>
-  <path class="yelp-svg-fill" style="color-rendering:auto;text-decoration-color:#000000;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;block-progression:tb;text-decoration-line:none;text-decoration-style:solid;image-rendering:auto;white-space:normal;text-indent:0;text-transform:none" d="m12 2c-3.8541 0-7 3.1459-7 7 0 1.823 0.4945 3.139 1.1641 4.133 0.6695 0.994 1.4328 1.671 2.039 2.471 0.0882 0.116 0.1749 0.656 0.2071 1.32 0.016 0.332 0.0133 0.68 0.1894 1.119 0.0881 0.22 0.2439 0.478 0.5059 0.672 0.2619 0.194 0.6028 0.285 0.8945 0.285h4c0.583 0 1.204-0.478 1.402-0.908 0.199-0.43 0.217-0.793 0.244-1.137 0.056-0.688 0.138-1.319 0.211-1.441 0.549-0.916 1.304-2.009 1.94-3.114 0.636-1.104 1.203-2.199 1.203-3.4 0-3.8541-3.146-7-7-7zm0 2c2.773 0 5 2.2267 5 5 0 0.456-0.359 1.401-0.936 2.402-0.111 0.195-0.246 0.399-0.369 0.598h-7.8825c-0.4871-0.728-0.8125-1.519-0.8125-3 0-2.7733 2.2267-5 5-5z"></path>
-  <path class="yelp-svg-fill" d="m9 20a0.5 0.5 0 0 0 -0.5 0.5 0.5 0.5 0 0 0 0.5 0.5h6a0.5 0.5 0 0 0 0.5 -0.5 0.5 0.5 0 0 0 -0.5 -0.5h-6zm0 2a0.5 0.5 0 0 0 -0.5 0.5 0.5 0.5 0 0 0 0.5 0.5h6a0.5 0.5 0 0 0 0.5 -0.5 0.5 0.5 0 0 0 -0.5 -0.5h-6z"></path>
- </g>
-</svg><div class="inner"><div class="region"><div class="contents">
-<p class="p">Ownership and permissions can also be set from the command line using <span class="cmd">chown</span> and <span class="cmd">chmod</span>. For example </p>
-<p class="p">
-        <span class="cmd">chmod go-rwx ~/project1/data</span>
-      </p>
-<p class="p">removes <span class="cmd">r</span>ead, <span class="cmd">w</span>write e<span class="cmd">x</span>ecute permissions for <span class="cmd">g</span>roup and <span class="cmd">o</span>thers.
-      Refer to <span class="cmd">tldr chmod</span> and <span class="cmd">tldr chown</span> for details.</p>
-</div></div></div>
-</div>
+      for details.</p>
 </div></div>
+</div></section><section id="permfromterm"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">Set ownership and permissions using the command line</span></h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="p"><span class="em-bold em">Permissions</span> can alternatively be set from the command line using <span class="cmd">chown</span> and <span class="cmd">chmod</span>. For example </p>
+<p class="p">
+        <span class="cmd">chmod -R g+rwx project1/data</span>
+      </p>
+<p class="p">says "<span class="cmd">R</span>ecursivly to <span class="cmd">g</span>roup members add <span class="cmd">r</span>ead, <span class="cmd">w</span>rite and e<span class="cmd">x</span>ecute permissions to <span class="cmd">project1/data</span> and everything in it".
+      Refer to <span class="cmd">tldr chmod</span> for more permissions examples and to <span class="cmd"> man chmod</span> for details.</p>
+<p class="p"><span class="em-bold em">Group ownership</span> can be set from the command line using <span class="cmd">chgrp</span>.For example </p>
+<p class="p">
+        <span class="cmd">chgrp -R my_project_group project1/data</span>
+      </p>
+<p class="p">says "<span class="cmd">R</span>ecursivly make my_project_group the group owner of <span class="cmd">project1/data</span> and everything in it".
+      Refer to <span class="cmd">tldr chgrp</span> for more examples and to <span class="cmd">man chgrp</span> for details.</p>
+</div></div>
+</div></section>
+</div>
 </div></section><section id="services"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title"><span class="title">Avoid running services like <span class="app">jupyter</span> notebooks without protection</span></h2></div>
 <div class="region"><div class="contents pagewide"><p class="p">Some applications are designed to run as local servers that you connect to using a web browser or other client.
