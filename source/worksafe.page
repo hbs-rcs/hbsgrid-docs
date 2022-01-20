@@ -67,13 +67,14 @@
       <p>
         <cmd>chmod -R g+rwx project1/data</cmd>
       </p>
-      <p>says "<cmd>R</cmd>ecursivly to <cmd>g</cmd>roup members add <cmd>r</cmd>ead, <cmd>w</cmd>rite and e<cmd>x</cmd>ecute permissions to <cmd>project1/data</cmd> and everything in it".
+      <p>says "<cmd>R</cmd>ecursively for <cmd>g</cmd>roup members, add <cmd>r</cmd>ead, <cmd>w</cmd>rite and e<cmd>x</cmd>ecute permissions to <cmd>project1/data</cmd> and everything in it".
       Refer to <cmd>tldr chmod</cmd> for more permissions examples and to <cmd> man chmod</cmd> for details.</p>
-      <p><em style="strong">Group ownership</em> can be set from the command line using <cmd>chgrp</cmd>.For example </p>
+      <p><em style="strong">Group ownership</em> can be set from the command line using <cmd>chgrp</cmd>.For example opening the <app>Terminal</app>
+      application and running</p>
       <p>
         <cmd>chgrp -R my_project_group project1/data</cmd>
       </p>
-      <p>says "<cmd>R</cmd>ecursivly make my_project_group the group owner of <cmd>project1/data</cmd> and everything in it".
+      <p>says "<cmd>R</cmd>ecursively make <cmd>my_project_group</cmd> the group owner of <cmd>project1/data</cmd> and everything in it".
       Refer to <cmd>tldr chgrp</cmd> for more examples and to <cmd>man chgrp</cmd> for details.</p>
     </section>
 
@@ -83,6 +84,13 @@
       When using <em>/scratch</em> or other shared storage you must ensure that the file and directory
       permissions are set correctly.</p>
     </note>
+    <section id="groupmembership">
+      <title>Project group membership</title>
+      <p>Project group membership determines who belongs to a project group and can access the project storage space on the HBS Grid.
+      Group membership must currently be done by a system administrator. Use the
+      <link href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u">change request form</link>
+      to add or remove people from a project space group.</p>
+    </section>
   </section>
   
   <section id="services">
