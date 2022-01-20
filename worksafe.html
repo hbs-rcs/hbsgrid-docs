@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="region">
 <div class="contents pagewide">
 <div role="navigation" class="links sectionlinks"><div class="inner"><div class="region"><ul>
+<li class="links "><a href="worksafe.html#projectgroups" title="Projects and group membership">Projects and group membership</a></li>
 <li class="links "><a href="worksafe.html#directories" title="File ownership and permissions">File ownership and permissions</a></li>
 <li class="links "><a href="worksafe.html#services" title="Avoid running services like jupyter notebooks without protection">Avoid running services like <span class="app">jupyter</span> notebooks without protection</a></li>
 </ul></div></div></div>
@@ -27,18 +28,20 @@ document.addEventListener('DOMContentLoaded', function() {
   Most of us usually work on desktop or laptop computers on which we are the only user, and so these considerations
   may be new to you. Learning a few simple rules and techniques is needed in order to work safely in our environment.</p>
 </div>
-<section id="directories"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title"><span class="title">File ownership and permissions</span></h2></div>
-<div class="region">
-<div class="contents pagewide">
-<p class="p">There are three main locations for storing data on the HBS Grid, as described in <span class="link"><a href="syncfiles.html" title="Mount Drives and Copy Data">Mount Drives and Copy Data</a></span>.
+<section id="projectgroups"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">Projects and group membership</span></h2></div>
+<div class="region"><div class="contents pagewide"><p class="p">There are three main locations for storing data on the HBS Grid, as described in <span class="link"><a href="syncfiles.html" title="Mount Drives and Copy Data">Mount Drives and Copy Data</a></span>.
     For collaborative projects use a <span class="em">project space</span> (
     <span class="link"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u" title="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u">request one</a></span>
     if needed) and ensure that ownership and group permissions are set correctly. Each project has an associated group that includes
-    the HBS Grid users who have access to that project space.</p>
-<p class="p">You will almost always want group members to have read and write permission for project space files. You can view and set permissions using the <span class="app">File Browser</span>
-    or from the command line using the <span class="app">Terminal</span>.</p>
-</div>
+    the HBS Grid users who have access to that project space. Group membership must currently be done by a system administrator. Use the
+    <span class="link"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u" title="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u">change request form</a></span>
+    to add or remove people from a project space group.</p></div></div>
+</div></section><section id="directories"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">File ownership and permissions</span></h2></div>
+<div class="region">
+<div class="contents pagewide"><p class="p">For project space files you will almost always want group members to have read and write permission. You can view and set permissions using the <span class="app">File Browser</span>
+    or from the command line using the <span class="app">Terminal</span>.</p></div>
 <section id="permfrombrowser"><div class="inner">
 <div class="hgroup pagewide"><h3 class="title"><span class="title">Set permissions using the file browser</span></h3></div>
 <div class="region"><div class="contents pagewide">
@@ -80,12 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="p">says "<span class="cmd">R</span>ecursively make <span class="cmd">my_project_group</span> the group owner of <span class="cmd">project1/data</span> and everything in it".
       Refer to <span class="cmd">tldr chgrp</span> for more examples and to <span class="cmd">man chgrp</span> for details.</p>
 </div></div>
-</div></section><section id="groupmembership"><div class="inner">
-<div class="hgroup pagewide"><h3 class="title"><span class="title">Project group membership</span></h3></div>
-<div class="region"><div class="contents pagewide"><p class="p">Project group membership determines who belongs to a project group and can access the project storage space on the HBS Grid.
-      Group membership must currently be done by a system administrator. Use the
-      <span class="link"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u" title="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u">change request form</a></span>
-      to add or remove people from a project space group.</p></div></div>
 </div></section>
 </div>
 </div></section><section id="services"><div class="inner">

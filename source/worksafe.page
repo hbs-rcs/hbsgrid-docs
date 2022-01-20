@@ -18,16 +18,19 @@
   <em>only authorized users can access your files</em> and that you <em>do not monopolize shared resources</em>.
   Most of us usually work on desktop or laptop computers on which we are the only user, and so these considerations
   may be new to you. Learning a few simple rules and techniques is needed in order to work safely in our environment.</p>
-  
-  <section id="directories">
-    <title>File ownership and permissions</title>
+  <section id="projectgroups">
+    <title>Projects and group membership</title>
     <p>There are three main locations for storing data on the HBS Grid, as described in <link xref="syncfiles"/>.
     For collaborative projects use a <em>project space</em> (
     <link href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u">request one</link>
     if needed) and ensure that ownership and group permissions are set correctly. Each project has an associated group that includes
-    the HBS Grid users who have access to that project space.</p>
-
-    <p>You will almost always want group members to have read and write permission for project space files. You can view and set permissions using the <app>File Browser</app>
+    the HBS Grid users who have access to that project space. Group membership must currently be done by a system administrator. Use the
+    <link href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u">change request form</link>
+    to add or remove people from a project space group.</p>
+  </section>
+  <section id="directories">
+    <title>File ownership and permissions</title>
+    <p>For project space files you will almost always want group members to have read and write permission. You can view and set permissions using the <app>File Browser</app>
     or from the command line using the <app>Terminal</app>.</p>
     <section id="permfrombrowser">
       <title>Set permissions using the file browser</title>
@@ -84,13 +87,6 @@
       When using <em>/scratch</em> or other shared storage you must ensure that the file and directory
       permissions are set correctly.</p>
     </note>
-    <section id="groupmembership">
-      <title>Project group membership</title>
-      <p>Project group membership determines who belongs to a project group and can access the project storage space on the HBS Grid.
-      Group membership must currently be done by a system administrator. Use the
-      <link href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u">change request form</link>
-      to add or remove people from a project space group.</p>
-    </section>
   </section>
   
   <section id="services">
