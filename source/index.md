@@ -13,7 +13,7 @@ You can click the video thumbnail below to watch a short demonstration of our
 software environment.
 
 <video width="70%" controls>
-  <source src="media/intro.webm" type="video/webm">
+  <source src="../media/intro.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
 

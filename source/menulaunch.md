@@ -32,7 +32,7 @@ Click the video thumbnail below to watch an application launcher
 demonstration:
 
 <video width="70%" controls>
-  <source src="media/launchers.webm" type="video/webm">
+  <source src="../media/launchers.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
 
@@ -92,7 +92,7 @@ Click the video thumbnail below to watch a demonstration of the
 available resources utility:
 
 <video width="70%" controls>
-  <source src="media/jobfail.webm" type="video/webm">
+  <source src="../media/jobfail.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
 

@@ -46,7 +46,7 @@ simple procedure to enable our in-development research computing environment:
 
 The video below demonstrates these steps visually.
 <video width="80%" controls>
-  <source src="media/enable.webm" type="video/webm">
+  <source src="../media/enable.webm" type="video/webm">
 Your browser does not support the video tag.
 </video> 
 
