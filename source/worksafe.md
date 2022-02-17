@@ -138,12 +138,13 @@ Some applications are designed to run as local servers that you connect
 to using a web browser or other client. On a single-user machine that
 may be relatively safe, but in a multi-user environment you need to take
 extra care to ensure that you don't start services that other users on
-the HBS Grid can connect to. For example, running an unprotected
+the HBS Grid can connect to. 
 
-*Jupyter* notebook can give other users the ability to connect to your
-service and execute arbitrary commands as you! Fortunately jupyter
-notebooks are token protected by default, and you can password protect
-them if you wish. The key thing is that you must be aware of any
-services you are running and you must understand how those services are
-protected against unwanted access by other users on the HBS Grid. The
-simple rule is **if you don't know if or how a service is protected, don't use it**!
+For example, running an unprotected *Jupyter* notebook can give other
+users the ability to connect to your service and execute arbitrary
+commands as you! Fortunately jupyter notebooks are token protected by
+default, and you can password protect them if you wish. The key thing
+is that you must be aware of any services you are running and you must
+understand how those services are protected against unwanted access by
+other users on the HBS Grid. The simple rule is **if you don't know if
+or how a service is protected, don't use it**!
