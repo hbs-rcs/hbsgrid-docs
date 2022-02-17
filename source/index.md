@@ -51,9 +51,7 @@ If you find that something doesn\'t work as expected, of if you have a
 feature request, we would love to know about it so we can fix or improve
 it. Bug reports and feature requests are important contributions to this
 project and are always welcome and encouraged! You can either start a
-discussion at
-
-<https://github.com/hbs-rcs/hbsgrid-docs/discussions> or create an issue
+discussion at <https://github.com/hbs-rcs/hbsgrid-docs/discussions> or create an issue
 report at <https://github.com/hbs-rcs/hbsgrid-docs/issues>. We are building a
 friendly and welcoming community of HBS Grid users and we invite you to
 join us using the links above.
