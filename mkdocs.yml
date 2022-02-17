@@ -1,6 +1,7 @@
 site_name: 'HBS Grid Software Environments Technology Preview User Guide'
 site_url: 'https://hbs-rcs.github.io/hbsgrid-docs/'
 repo_url: 'https://github.com/hbs-rcs/hbsgrid-docs'
+remote_branch: 'main'
 docs_dir: 'source'
 site_dir: 'docs'
 theme:
