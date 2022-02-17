@@ -1,0 +1,36 @@
+site_name: 'HBS Grid Software Environments Technology Preview User Guide'
+site_url: 'https://hbs-rcs.github.io/hbsgrid-docs/'
+repo_url: 'https://github.com/hbs-rcs/hbsgrid-docs'
+docs_dir: 'source'
+site_dir: 'docs'
+theme:
+  name: material
+  features:
+    - toc.integrate
+    - navigation.instant
+  palette:
+    scheme: hbs
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+    - admonition
+    - attr_list
+    - def_list
+    - tables
+    - pymdownx.details
+    - pymdownx.superfences
+    - mdx_gh_links:
+        user: mkdocs
+        repo: mkdocs
+
+nav:
+    - Overview: 'index.md'
+    - ⮊ &nbsp;&nbsp;Get Started: 'quickstart.md'
+    - 🚀 &nbsp;&nbsp;Run Desktop Applications: 'menulaunch.md'
+    - 🗘 &nbsp;&nbsp;Copy and Sync Files: 'syncfiles.md'
+    - 👥 &nbsp;&nbsp;Collaborate and Share: 'worksafe.md'
+    - ┃> &nbsp;Use the Command-line: 'commandline.md'
+    - 📦 &nbsp;&nbsp;Use Software Versions: 'environments.md'
+    - 🦺 &nbsp;&nbsp;Support and Troubleshooting: 'trouble.md'
+copyright: Copyright &copy; President & Fellows of Harvard College.
