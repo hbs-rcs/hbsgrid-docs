@@ -81,8 +81,9 @@ tldr chmod
 ```
 for more permissions examples and to
 ```
-man chmod for details.
+man chmod
 ```
+for details.
 
 Group ownership can be set from the command line using `chgrp`. For example opening the
 *Terminal* application and running
