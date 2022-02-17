@@ -49,16 +49,13 @@ local drive as described above, and then use *grsync* to sync files from the
 
 ??? info "Grid storage overview (click here for details)"
     Because you must physically copy data to the HBS Grid in order to access
-    it from the
-     
-    [compute nodes](commandline.md#overview), you
-    have to decide where to put it. There are three options:.
-     
+    it from the [compute nodes](commandline.md#overview), you
+    have to decide where to put it. There are three options:
+    
     Home directory
-    :   A
-        Home directory was created at
-        /export/home/\<group>/\<username> when you requested your account.
-        Your home folder has limited storage capacity is accessible only by
+    :   A Home directory was created at
+        `/export/home/<group>/<username>` when you requested your account.
+        Your home folder has limited storage capacity and is accessible only by
         you.
      
     Project spaces
@@ -67,27 +64,21 @@ local drive as described above, and then use *grsync* to sync files from the
         HBS Grid users working on that project. You can request a new
         project space using the
         [new project space request
-        form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u "https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u")
-        and you can request modifications to an existing project space using
-        the
+        form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u)
+        and you can request modifications to an existing project space using the
         [change request
-        form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u "https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u").
-        See
-        [Projects and group
-        membership](worksafe.md#projectgroups")
+        form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u).
+        See [Projects and group membership](worksafe.md#projectgroups")
         for details.
      
     Scratch storage
-    :   Files may be temporarily stored in
-        scratch storage, available at
-        /export/scratch. As them name implies, scratch storage is
+    :   Files may be temporarily stored in scratch storage, available at
+        `/export/scratch`. As them name implies, scratch storage is
         appropriate only for temporary short-term storage. Files stored in
-        /export/scratch and not backed up and will be deleted after 60 days.
-        Scratch storage is a
-        shared resource accessible to all users on the HBS Grid;
-        make sure you
-        [set permissions on your files
-        accordingly](worksafe.md).
+        `/export/scratch` and not backed up and will be deleted after 60 days.
+        Scratch storage is a shared resource accessible to all users on the HBS Grid;
+        make sure you[set permissions on your files accordingly](worksafe.md).
+
 
 !!! example "Follow these steps to sync data from your local machine to the HBS Grid"
     1.  Log in to the HBS Grid and connect your local drive using

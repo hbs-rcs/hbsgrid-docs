@@ -14,15 +14,47 @@ our environment.
 ## Projects and group membership
 
 There are three main locations for storing data on the HBS Grid, as
-described in[Mount Drives and Copy Data](syncfiles.md). For collaborative
-projects use a project space ([request
-one](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u "https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u") if needed).
+described below. 
+
+!!! info "Grid storage overview"
+    
+    Home directory
+    :   A Home directory was created at
+        `/export/home/<group>/<username>` when you requested your account.
+        Your home folder has limited storage capacity and is accessible only by
+        you.
+     
+    Project spaces
+    :   Project spaces are directories created for particular projects.
+        Project space directories are usually shared and accessible by all
+        HBS Grid users working on that project. You can request a new
+        project space using the
+        [new project space request
+        form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u)
+        and you can request modifications to an existing project space using the
+        [change request
+        form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u).
+        See [Projects and group membership](worksafe.md#projectgroups")
+        for details.
+     
+    Scratch storage
+    :   Files may be temporarily stored in scratch storage, available at
+        `/export/scratch`. As them name implies, scratch storage is
+        appropriate only for temporary short-term storage. Files stored in
+        `/export/scratch` and not backed up and will be deleted after 60 days.
+        Scratch storage is a shared resource accessible to all users on the HBS Grid;
+        make sure you[set permissions on your files accordingly](worksafe.md).
+
+
+For collaborative projects, use a *project space* 
+([request one](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u) 
+if needed).
 
 Each project has an associated group that includes the HBS Grid users
 who have access to that project space. Changing group membership must
 currently be done by a system administrator; use the
-
-[change request form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u "https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u") to request a change.
+[change request form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u) 
+to request a change.
 
 ## File ownership and permissions
 
