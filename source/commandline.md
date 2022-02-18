@@ -7,14 +7,14 @@ LSF is a large and complex set of tools; our goal here is to give you just enoug
 information so that you can use it to run jobs on our system, without overwhelming
 you with details and options.
 
-!!! note
+## Jobs submission basics
+
+!!! note inline end
     This software environment includes [robust graphical tools](menulaunch.md)
     that reduce the need to use the command line for many interactive tasks. This
     section is for those who prefer the command line, either for aesthetic reasons or
     because they need to submit batch jobs or carry out complex operations that cannot 
     be easily performed using graphical menu-driven tools.
-
-## Jobs submission basics
 
 LSF provides `bsub`, a command-line program for running applications on powerful remote
 computers. For example, you can use
