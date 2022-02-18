@@ -16,7 +16,7 @@ available as a *Technology Preview* for testing.
     [**🚀 &nbsp;&nbsp;Run Applications from the Desktop**](menulaunch.md)  
     Run applications on powerful HBS Grid compute nodes using desktop menus
      
-    [***🗘 &nbsp;&nbsp;Copy and Sync Files*](syncfiles.md)  
+    [**🗘 &nbsp;&nbsp;Copy and Sync Files**](syncfiles.md)  
     Mount or copy data from local drives or cloud storage to the HBS Grid
      
     [**👥 &nbsp;&nbsp;Collaborate and Share Safely and Securely**](worksafe.md)  
