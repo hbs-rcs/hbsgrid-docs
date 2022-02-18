@@ -15,7 +15,7 @@ integrate other software including Matlab, Stata, and SAS.
 
 ## Documentation
 
-Documentation is available in the [user guide](https://hbs-rcs.github.io/hbsgrid-docs/userguide/html/userguide/html).
+Documentation is available in the [user guide](https://hbs-rcs.github.io/hbsgrid-docs/).
 
 ## Discussion, feature suggestions etc.
 
