@@ -34,14 +34,14 @@ make the basics of bsub clear:
 -   The rest of the command (`R` in this case) is the command that will be run on
     the remote machine.
 
-??? info "Compute cluster basics (click to expand)"
+!!! info "<a name='compute-cluster-basics'>Compute cluster basics</a>"
     When you first log in to the HBS Grid using *NoMachine* or *ssh* you are running
     on what we call a "login node". The *login nodes* do not have substantial CPU or
     RAM available. All computationally intensive processes should be run on what we
     call "compute nodes". A diagram of the HBS Grid architecture helps make this
     clear:
      
-    ![](imgs/griddiagram.png){.media .media-block}
+    ![Diagram showing that the login nodes are used to access storage and compute node resources](imgs/griddiagram.png){.media-small}
      
     As this diagram shows, the primary purpose of the *login nodes* is to serve as a hub 
     for launching jobs on powerful compute nodes. You can do that from the command line 

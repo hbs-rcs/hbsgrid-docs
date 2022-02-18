@@ -6,16 +6,17 @@ wrangling, and data visualization. Usually this means that
 
 ## Access local files from *NoMachine* login nodes
 
+!!! info inline end ""
+     
+    This makes files accessible from the [login nodes](commandline.md#compute-cluster-basics) 
+    but not from the [compute nodes](commandline.md#compute-cluster-basics). For that you need to 
+    [copy your files to the HBS Grid](syncfiles.md#sync-data-fromto-local-storage).
+
 NoMachine makes it easy to mount your local file system on the HBS Grid
 login node. This is useful for reading documentation, scripts, and other
 small files without needing to physically copy anything to the HBS Grid.
-
-!!! info inline end 
-     
-    Note that this method will only make files accessible from the [login
-    nodes](commandline.md); for [compute node](commandline.md) access you
-    will need to copy your files to the HBS grid as described in the next
-    section below.
+</br>
+&nbsp;
 
 !!! example "Mount your local file system to the HBS Grid:"
      

@@ -426,14 +426,14 @@ make the basics of bsub clear:</p>
 <li>The rest of the command (<code>R</code> in this case) is the command that will be run on
     the remote machine.</li>
 </ul>
-<details class="info">
-<summary>Compute cluster basics (click to expand)</summary>
+<div class="admonition info">
+<p class="admonition-title"><a name='compute-cluster-basics'>Compute cluster basics</a></p>
 <p>When you first log in to the HBS Grid using <em>NoMachine</em> or <em>ssh</em> you are running
 on what we call a "login node". The <em>login nodes</em> do not have substantial CPU or
 RAM available. All computationally intensive processes should be run on what we
 call "compute nodes". A diagram of the HBS Grid architecture helps make this
 clear:</p>
-<p><img alt="" class="media media-block" src="../imgs/griddiagram.png" /></p>
+<p><img alt="Diagram showing that the login nodes are used to access storage and compute node resources" class="media-small" src="../imgs/griddiagram.png" /></p>
 <p>As this diagram shows, the primary purpose of the <em>login nodes</em> is to serve as a hub 
 for launching jobs on powerful compute nodes. You can do that from the command line 
 using bsub or from the desktop menu using application launchers.</p>
@@ -443,7 +443,7 @@ For example, you may wish to run python to work out a small code example, or use
 locate to find a file you were working on. These low-resource activities can and
 should be done on the login node. The important thing to remember is that bsub is
 used to run commands on powerful compute nodes.</p>
-</details>
+</div>
 <h2 id="resource-requirements">Resource requirements</h2>
 <p>The <code>bsub</code> command allows you to specify <em>RAM</em> and <em>CPU</em> requirements for your job via the <code>-M</code> and <code>-n</code> arguments. For example, you can run a python job with 50 GB of RAM
 and 4 CPUs with</p>
