@@ -288,6 +288,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#handling-resource-contention" class="md-nav__link">
+    Handling resource contention
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#starting-batch-jobs" class="md-nav__link">
     Starting batch jobs
   </a>
@@ -396,30 +403,33 @@
 
   <h1>🚀 &nbsp;&nbsp;Run Desktop Applications</h1>
 
-<p>The HBS Grid makes it easy to run applications with the memory and compute
-capacity you need for your research.</p>
-<hr />
 <p>You can run applications on <a href="https://www.hbs.edu/research-computing-services/resources/compute-cluster/">powerful HBS Grid compute
 nodes</a>
 by connecting to the HBS grid via NoMachine, <a href="../quickstart/">enabling technology
 preview features</a>, and clicking one of the application
-icons under the Applications or Activities menus. This allows you to
+icons under the <strong>Applications</strong> or <strong>Activities</strong> menus. This allows you to
 easily run compute and/or memory intensive applications with just a
 few mouse clicks!</p>
+<hr />
 <h2 id="basic-launcher-options">Basic launcher options</h2>
 <p>Each application will open a dialog where you can configure your
-environment and resource requirements. Please keep in mind that the
-system reserves the resources you select, e.g., CPUs used by your job
-become unavailable for other users. Don't be shy about using
-resources, but please don't go overboard and reserve way more then you
-need just because you can. Specific resource requirements depend on
-the nature of the job, but as a rough guide we recommend requesting
-RAM 4-10 times the size of your data. For example, if you have a 6 Gb
-.csv file you may wish to request 24GB of memory or so. The
-application launchers are meant to be intuitive and easy to use. Most
-of the fields should be self-explanatory, e.g., there is a numeric
-field for memory (RAM) in Gigabytes, and another for the number of
-CPUs needed. As a convenience you can select a starting directory.</p>
+environment and resource requirements.</p>
+<div class="admonition info inline end">
+<p class="admonition-title">Info</p>
+<p>Please keep in mind that <strong>the system reserves the resources you select</strong>,
+e.g., CPUs used by your job become unavailable for other users. Don't
+be shy about using resources, but please don't go overboard and
+reserve way more then you need just because you can.</p>
+</div>
+<p>The application launchers are meant to be intuitive and easy to use.
+Most of the fields should be self-explanatory, e.g., there is a
+numeric field for memory (RAM) in Gigabytes, and another for the
+number of CPUs needed. As a convenience you can select a starting
+directory.</p>
+<p>Specific resource requirements depend on the nature of the job, but as
+a rough guide <strong>we recommend requesting RAM 4-10 times the size of your data</strong>. 
+For example, if you have a 6 Gb .csv file you may wish to
+request 24GB of memory or so. </p>
 <p>Click the video thumbnail below to watch an application launcher
 demonstration:</p>
 <video width="70%" controls>
@@ -428,20 +438,23 @@ Your browser does not support the video tag.
 </video>
 
 <h2 id="advanced-launcher-options">Advanced launcher options</h2>
+<div class="admonition info inline end">
+<p class="admonition-title">Info</p>
+<p>It is a good idea to note the current software environment version when you
+start a new project so you will know which environment to switch back
+to if needed.</p>
+</div>
 <p>If you need to use an older software environment you can do so using
-the Software environment version dialog. Usually there is no need to
-use an environment other than the default; the purpose of this
-mechanism is to give you a fallback in case an update breaks your
-code, or in case you need to reproduce an old analysis using a
-specific software environment. As a corollary to that, it is a good
-idea to note the software environment version when you start a new
-project so you will know which environment to switch back to if
-needed. The software and versions available in each environment are
+the <em>software environment version</em> dialog. <strong>Usually there is no need to
+use an environment other than the default</strong>; the purpose of this
+mechanism is to make it easy to reproduce an old analysis using a
+specific software environment. </p>
+<p>The software and versions available in each environment are
 documented in <a href="../environments/">Software Applications and
-Environments</a>. Some application launchers have a
-Pre-submission command field. This allows you to run an arbitrary bash
-command immediately before submitting the job. For example, you can
-use it to set <a href="https://www.redhat.com/sysadmin/linux-environment-variables">environment
+Environments</a>. </p>
+<p>Some application launchers have a Pre-submission command field. This
+allows you to run an arbitrary bash command immediately before
+submitting the job. For example, you can use it to set <a href="https://www.redhat.com/sysadmin/linux-environment-variables">environment
 variables</a>
 or activate <a href="https://docs.conda.io/en/latest/">conda environments</a>.</p>
 <h2 id="handling-system-limits">Handling system limits</h2>
@@ -466,14 +479,15 @@ There are both user-level, queue-level and job-level limits on the resources tha
 runtime greater than 24 hours the system will not be able to meet your
 request. In that case it will offer to give you 4 CPUS (the maximum
 available for jobs running more than 24 hours).</p>
-<p>More information about queue-level limits can is available in the <a href="../commandline/">command line
+<p>More information about queue-level limits can be found in the <a href="../commandline/">command line
 documentation</a>.</p>
+<h2 id="handling-resource-contention">Handling resource contention</h2>
 <p>The HBS grid usually has substantial computational resources available,
 but sometimes an unusually large number of users are trying to use a lot
 of resources at the same time. In this case resources may become scarce
 and you may not be able to access the resources you need.</p>
-<p>You can get a quick overview of the state of the cluster using the "HBS
-Grid available resources utility", available in the applications menu.
+<p>You can get a quick overview of the state of the cluster using the 
+<em>HBS Grid available resources</em> utility, available in the applications menu.
 This will give you a sense of the current activity on the cluster, and a
 rough idea of the resources currently available to you.</p>
 <p>Click the video thumbnail below to watch a demonstration of the

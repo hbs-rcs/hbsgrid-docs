@@ -7,7 +7,7 @@ guide show you how to connect to the HBS Grid and enable them.
 
 ## Prerequisites
 
-!!! note
+!!! note inline end
 
     Skip this section if you are already using the HBS Grid and know how to connect
     using NoMachine. 

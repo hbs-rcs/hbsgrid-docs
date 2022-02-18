@@ -1,26 +1,23 @@
-You can Copy or move your data to the HBS grid using convenient desktop applications.
-
----
-
 The HBS Grid is primarily used for data analysis, machine learning, data
 wrangling, and data visualization. Usually this means that 
 **you need to copy or sync your data to the HBS Grid in order to do your work**.
+
+---
 
 ## Access local files from *NoMachine* login nodes
 
 NoMachine makes it easy to mount your local file system on the HBS Grid
 login node. This is useful for reading documentation, scripts, and other
 small files without needing to physically copy anything to the HBS Grid.
-Note that
 
-this method will only make files accessible from the [login
-nodes](commandline.md); for [compute node](commandline.md) access you
-will need to copy your files to the HBS grid as described in the next
-section below
+!!! info inline end 
+     
+    Note that this method will only make files accessible from the [login
+    nodes](commandline.md); for [compute node](commandline.md) access you
+    will need to copy your files to the HBS grid as described in the next
+    section below.
 
-!!! example
-    Follow these simple steps to mount your local file system to the HBS
-    Grid:
+!!! example "Mount your local file system to the HBS Grid:"
      
     1.  Log in to the HBS Grid by using
         [NoMachine](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client")
@@ -80,7 +77,7 @@ local drive as described above, and then use *grsync* to sync files from the
         make sure you[set permissions on your files accordingly](worksafe.md).
 
 
-!!! example "Follow these steps to sync data from your local machine to the HBS Grid"
+!!! example "Sync data from your local machine to the HBS Grid"
     1.  Log in to the HBS Grid and connect your local drive using
         NoMachine as described above.
      
@@ -118,7 +115,7 @@ there. While the HBS Grid does not offer native *Dropbox*, *OneDrive*,
 or other cloud storage clients, you can use `rclone` to perform on-demand 
 data synchronization with all major cloud storage providers.
 
-!!! example "Follow these steps to sync your data from a cloud provider to the HBS Grid:"
+!!! example "Sync your data from a cloud provider to the HBS Grid:"
 
     1.  Log in to the HBS Grid and connect your local drive using
         *NoMachine* as described above.

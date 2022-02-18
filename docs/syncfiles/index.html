@@ -396,24 +396,23 @@
 
   <h1>🗘 &nbsp;&nbsp;Copy and Sync Files</h1>
 
-<p>You can Copy or move your data to the HBS grid using convenient desktop applications.</p>
-<hr />
 <p>The HBS Grid is primarily used for data analysis, machine learning, data
 wrangling, and data visualization. Usually this means that 
 <strong>you need to copy or sync your data to the HBS Grid in order to do your work</strong>.</p>
+<hr />
 <h2 id="access-local-files-from-nomachine-login-nodes">Access local files from <em>NoMachine</em> login nodes</h2>
 <p>NoMachine makes it easy to mount your local file system on the HBS Grid
 login node. This is useful for reading documentation, scripts, and other
-small files without needing to physically copy anything to the HBS Grid.
-Note that</p>
-<p>this method will only make files accessible from the <a href="../commandline/">login
+small files without needing to physically copy anything to the HBS Grid.</p>
+<div class="admonition info inline end">
+<p class="admonition-title">Info</p>
+<p>Note that this method will only make files accessible from the <a href="../commandline/">login
 nodes</a>; for <a href="../commandline/">compute node</a> access you
 will need to copy your files to the HBS grid as described in the next
-section below</p>
+section below.</p>
+</div>
 <div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Follow these simple steps to mount your local file system to the HBS
-Grid:</p>
+<p class="admonition-title">Mount your local file system to the HBS Grid:</p>
 <ol>
 <li>Log in to the HBS Grid by using
     <a href="https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client&quot;">NoMachine</a>
@@ -471,7 +470,7 @@ make sure you<a href="../worksafe/">set permissions on your files accordingly</a
 </dl>
 </details>
 <div class="admonition example">
-<p class="admonition-title">Follow these steps to sync data from your local machine to the HBS Grid</p>
+<p class="admonition-title">Sync data from your local machine to the HBS Grid</p>
 <ol>
 <li>
 <p>Log in to the HBS Grid and connect your local drive using
@@ -513,7 +512,7 @@ there. While the HBS Grid does not offer native <em>Dropbox</em>, <em>OneDrive</
 or other cloud storage clients, you can use <code>rclone</code> to perform on-demand 
 data synchronization with all major cloud storage providers.</p>
 <div class="admonition example">
-<p class="admonition-title">Follow these steps to sync your data from a cloud provider to the HBS Grid:</p>
+<p class="admonition-title">Sync your data from a cloud provider to the HBS Grid:</p>
 <ol>
 <li>
 <p>Log in to the HBS Grid and connect your local drive using

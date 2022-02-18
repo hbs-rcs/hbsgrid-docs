@@ -1,16 +1,9 @@
-Harvard Business School runs a computing cluster called the [HBS
-Grid](https://www.hbs.edu/research-computing-services/resources/compute-cluster/).
-As of Spring 2021 the HBS Grid has about 620 CPUs, 9 TB of RAM, 200 TB of
-storage, and high-end GPUs useful for modern deep learning. HBS [Research
-Computing Services](https://www.hbs.edu/research-computing-services) is building
-powerful and user-friendly tools and environments to bring the computing power
-of the HBS Grid to a wider community of HBS users. Our environments include a
-wide range of software including Matlab, R, Python, Stata, and hundreds of other
-popular programs. These environments are in active development and are currently
-available as a *Technology Preview* for testing.
+# **HBS [Research Computing Services](https://www.hbs.edu/research-computing-services) is building powerful and user-friendly tools and environments to bring the computing power of the HBS Grid to a wider community of HBS users. Our environments include a wide range of software including *Julia*, *Matlab*, *Python*, *R*,* Stata*, and hundreds of other popular programs**
 
-You can click the video thumbnail below to watch a short demonstration of our
-software environment.
+These environments are in active development and are currently
+available as a *Technology Preview* for testing. You can click the
+video thumbnail below to watch a short demonstration of our software
+environment.
 
 <video width="70%" controls>
   <source src="media/intro.webm" type="video/webm">
