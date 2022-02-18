@@ -1,9 +1,7 @@
-You can use the command line to run large numbers of batch jobs in parallel
-
----
-
 The HBS Grid uses [IBM Spectrum LSF](https://www.ibm.com/docs/en/spectrum-lsf) to
 run applications on powerful remote computers.
+
+---
 
 LSF is a large and complex set of tools; our goal here is to give you just enough
 information so that you can use it to run jobs on our system, without overwhelming
