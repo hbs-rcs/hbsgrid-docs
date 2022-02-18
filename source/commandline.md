@@ -44,15 +44,15 @@ make the basics of bsub clear:
     ![Diagram showing that the login nodes are used to access storage and compute node resources](imgs/griddiagram.png){.media-small}
      
     As this diagram shows, the primary purpose of the *login nodes* is to serve as a hub 
-    for launching jobs on powerful compute nodes. You can do that from the command line 
-    using bsub or from the desktop menu using application launchers.
+    for launching jobs on powerful *compute nodes*. You can do that from the command line 
+    using `bsub` or [from the desktop menu using application launchers](menulaunch.md).
     
-    You may sometimes wish to run applications on the login node, and this is
+    You may sometimes wish to run applications on the *login node*, and this is
     perfectly fine as long as you are not using it for computationally intensive work.
-    For example, you may wish to run python to work out a small code example, or use
-    locate to find a file you were working on. These low-resource activities can and
-    should be done on the login node. The important thing to remember is that bsub is
-    used to run commands on powerful compute nodes.
+    For example, you may wish to run `ipython` to work out a small code example, or use
+    `locate` to find a file you were working on. These low-resource activities can and
+    should be done on the *login node*. The important thing to remember is that **`bsub` is
+    used to run commands on powerful compute nodes**.
 
 ## Resource requirements
 
