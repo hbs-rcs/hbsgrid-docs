@@ -19,7 +19,7 @@ installed and ready to use**. If that expectation is ever broken please
 put in a request using our [discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
 or [issue tracker](https://github.com/hbs-rcs/hbsgrid-docs/issues).
 
-## Software environment versions
+## Using older software environments
 
 Each time we update our software environments we preserve previous
 versions so that you can roll back for reproducibility or if your code
@@ -42,6 +42,10 @@ For example, the first environment released in 2021 is named
 `rcs_2021.01`. The list below shows you key information about each
 environment, including a command that you can run from the terminal to
 get a detailed software version list.
+
+## Software environment versions
+
+Current and historical software environments are described below.
 
 ### rcs_2022.01
 
