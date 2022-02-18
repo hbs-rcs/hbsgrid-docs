@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#share-and-collaborate-safely-and-securely" class="md-skip">
+        <a href="#projects-and-group-membership" class="md-skip">
           Skip to content
         </a>
       
@@ -172,7 +172,9 @@
                     
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="HBS Grid Software Environments Technology Preview User Guide" class="md-nav__button md-logo" aria-label="HBS Grid Software Environments Technology Preview User Guide" data-md-component="logo">
       
@@ -295,13 +297,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#share-and-collaborate-safely-and-securely" class="md-nav__link">
-    Share and Collaborate Safely and Securely
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#projects-and-group-membership" class="md-nav__link">
     Projects and group membership
   </a>
@@ -402,78 +397,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#share-and-collaborate-safely-and-securely" class="md-nav__link">
-    Share and Collaborate Safely and Securely
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#projects-and-group-membership" class="md-nav__link">
-    Projects and group membership
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#file-ownership-and-permissions" class="md-nav__link">
-    File ownership and permissions
-  </a>
-  
-    <nav class="md-nav" aria-label="File ownership and permissions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-permissions-using-the-file-browser" class="md-nav__link">
-    Set permissions using the file browser
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-ownership-and-permissions-using-the-command-line" class="md-nav__link">
-    Set ownership and permissions using the command line
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avoid-running-services-like-jupyter-notebooks-without-protection" class="md-nav__link">
-    Avoid running services like Jupyter notebooks without protection
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -487,50 +410,18 @@
   <h1>👥 &nbsp;&nbsp;Collaborate and Share</h1>
 
 <p>The HBS Grid is a multi-user environment shared by many people. Because
-of this you should ensure that only authorized users can access your files 
-and that you do not monopolize shared resources.</p>
+of this you must take care to ensure that only authorized project members 
+can access your files.</p>
 <hr />
-<h2 id="share-and-collaborate-safely-and-securely">Share and Collaborate Safely and Securely</h2>
-<p>Most of us usually work on desktop or laptop computers on which we are
-the only user, and so these considerations may be new to you. Learning
-a few simple rules and techniques is needed in order to work safely in
-our environment.</p>
 <h2 id="projects-and-group-membership">Projects and group membership</h2>
-<p>There are three main locations for storing data on the HBS Grid, as
-described below. </p>
-<div class="admonition info">
-<p class="admonition-title">Grid storage overview</p>
-<dl>
-<dt>Home directory</dt>
-<dd>A Home directory was created at
-<code>/export/home/&lt;group&gt;/&lt;username&gt;</code> when you requested your account.
-Your home folder has limited storage capacity and is accessible only by
-you.</dd>
-<dt>Project spaces</dt>
-<dd>Project spaces are directories created for particular projects.
-Project space directories are usually shared and accessible by all
-HBS Grid users working on that project. You can request a new
-project space using the
-<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u">new project space request
-form</a>
-and you can request modifications to an existing project space using the
-<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u">change request
-form</a>.
-See <a href="./#projectgroups&quot;">Projects and group membership</a>
-for details.</dd>
-<dt>Scratch storage</dt>
-<dd>Files may be temporarily stored in scratch storage, available at
-<code>/export/scratch</code>. As them name implies, scratch storage is
-appropriate only for temporary short-term storage. Files stored in
-<code>/export/scratch</code> and not backed up and will be deleted after 60 days.
-Scratch storage is a shared resource accessible to all users on the HBS Grid;
-make sure you<a href="./">set permissions on your files accordingly</a>.</dd>
-</dl>
+<div class="admonition info inline end">
+<p class="admonition-title">Info</p>
+<p>For more information about storage options refer to the 
+<a href="../syncfiles/#storageoverview">file transfer documentation</a>.</p>
 </div>
-<p>For collaborative projects, use a <em>project space</em> 
+<p>For collaborative projects in which more than one person needs access, you must use a <em>project space</em>
 (<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u">request one</a> 
-if needed).</p>
-<p>Each project has an associated group that includes the HBS Grid users
+if needed). Each project has an associated group that includes the HBS Grid users
 who have access to that project space. Changing group membership must
 currently be done by a system administrator; use the
 <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u">change request form</a> 
@@ -541,25 +432,14 @@ have read and write permission. You can view and set permissions using
 the <em>File Browser</em> or from the command line using the <em>Terminal</em>.</p>
 <h3 id="set-permissions-using-the-file-browser">Set permissions using the file browser</h3>
 <div class="admonition example">
-<p class="admonition-title">Follow these steps to change file permissions using the *Files( application:</p>
+<p class="admonition-title">Follow these steps to change file permissions using the <em>Files</em> application</p>
 <ol>
-<li>Open the
-    Files application from the
-    Applications menu from
-    Activites search</li>
-<li>Locate the file or folder you wish to modify,
-    right-click on it and select
-    Properties</li>
-<li>Select the
-    Permissions tab in file properties dialog</li>
-<li>If you wish to change permissions for all files in a directory,
-    click the
-    Change Permissions for Enclosed Files button.</li>
-<li>Select appropriate
-    access levels for
-    Owner (you),
-    Group, and
-    Others.</li>
+<li>Open the <em>Files</em> application from the <em>Applications menu</em> or <em>Activites</em> search</li>
+<li>Locate the file or folder you wish to modify, right-click on it and select <em>Properties</em></li>
+<li>Select the <em>Permissions</em> tab in file properties dialog</li>
+<li>If you wish to change permissions for all files in a directory, click the
+    <em>Change Permissions for Enclosed Files</em> button.</li>
+<li>Select appropriate access levels for <em>Owner</em> (you), <em>Group</em>, and <em>Others</em>.</li>
 </ol>
 </div>
 <p>Click the image below to see these steps visually:</p>
@@ -568,7 +448,7 @@ the <em>File Browser</em> or from the command line using the <em>Terminal</em>.<
 Your browser does not support the video tag.
 </video>
 
-<p>Refer to the <a href="https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en" title="https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en">Official GNOME
+<p>Refer to the <a href="https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en" title="https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en">official GNOME
 documentation</a>
 for details.</p>
 <h3 id="set-ownership-and-permissions-using-the-command-line">Set ownership and permissions using the command line</h3>
@@ -576,26 +456,17 @@ for details.</p>
 <code>chmod</code>. For example </p>
 <p><div class="highlight"><pre><span></span><code>chmod -R g+rwx project1/data
 </code></pre></div>
-says "Recursively for <strong>g</strong>roup members, add <strong>r</strong>ead, <strong>w</strong>rite 
-and <strong>e</strong>xecute permissions to project1/data and everything in it". </p>
-<p>Refer to
-<div class="highlight"><pre><span></span><code>tldr chmod
-</code></pre></div>
-for more permissions examples and to
-<div class="highlight"><pre><span></span><code>man chmod
-</code></pre></div>
+says "<strong>R</strong>ecursively for <strong>g</strong>roup members, add <strong>r</strong>ead, <strong>w</strong>rite 
+and <strong>e</strong>xecute permissions to <code>project1/data</code> and everything in it". 
+Refer to <code>tldr chmod</code> for more permissions examples and to <code>man chmod</code>
 for details.</p>
 <p>Group ownership can be set from the command line using <code>chgrp</code>. For example opening the
 <em>Terminal</em> application and running
 <div class="highlight"><pre><span></span><code>chgrp -R my_project_group project1/data
 </code></pre></div>
-says "Recursively make <em>my_project_group</em> the group owner of <em>project1/data</em> and everything in it". 
-Refer to
-<div class="highlight"><pre><span></span><code>tldr chgrp
-</code></pre></div>
-for more examples and to
-<div class="highlight"><pre><span></span><code>man chgrp for details.
-</code></pre></div></p>
+says "<strong>R</strong>ecursively make <em>my_project_group</em> the group owner of <code>project1/data</code> and everything in it". 
+Refer to <code>tldr chgrp</code> for more examples and to <code>man</code> chgrp for details.
+```</p>
 <h2 id="avoid-running-services-like-jupyter-notebooks-without-protection">Avoid running services like Jupyter notebooks without protection</h2>
 <p>Some applications are designed to run as local servers that you connect
 to using a web browser or other client. On a single-user machine that
@@ -679,7 +550,7 @@ or how a service is protected, don't use it</strong>!</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.instant", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
     
     
       <script src="../assets/javascripts/bundle.5a9542cf.min.js"></script>

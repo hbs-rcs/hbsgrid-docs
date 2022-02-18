@@ -1,56 +1,19 @@
 The HBS Grid is a multi-user environment shared by many people. Because
-of this you should ensure that only authorized users can access your files 
-and that you do not monopolize shared resources.
+of this you must take care to ensure that only authorized project members 
+can access your files.
 
 ---
 
-## Share and Collaborate Safely and Securely
-
-Most of us usually work on desktop or laptop computers on which we are
-the only user, and so these considerations may be new to you. Learning
-a few simple rules and techniques is needed in order to work safely in
-our environment.
 
 ## Projects and group membership
 
-There are three main locations for storing data on the HBS Grid, as
-described below. 
+!!! info inline end
+    For more information about storage options refer to the 
+    [file transfer documentation](syncfiles.md#storageoverview).
 
-!!! info "Grid storage overview"
-    
-    Home directory
-    :   A Home directory was created at
-        `/export/home/<group>/<username>` when you requested your account.
-        Your home folder has limited storage capacity and is accessible only by
-        you.
-     
-    Project spaces
-    :   Project spaces are directories created for particular projects.
-        Project space directories are usually shared and accessible by all
-        HBS Grid users working on that project. You can request a new
-        project space using the
-        [new project space request
-        form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u)
-        and you can request modifications to an existing project space using the
-        [change request
-        form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u).
-        See [Projects and group membership](worksafe.md#projectgroups")
-        for details.
-     
-    Scratch storage
-    :   Files may be temporarily stored in scratch storage, available at
-        `/export/scratch`. As them name implies, scratch storage is
-        appropriate only for temporary short-term storage. Files stored in
-        `/export/scratch` and not backed up and will be deleted after 60 days.
-        Scratch storage is a shared resource accessible to all users on the HBS Grid;
-        make sure you[set permissions on your files accordingly](worksafe.md).
-
-
-For collaborative projects, use a *project space* 
+For collaborative projects in which more than one person needs access, you must use a *project space*
 ([request one](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u) 
-if needed).
-
-Each project has an associated group that includes the HBS Grid users
+if needed). Each project has an associated group that includes the HBS Grid users
 who have access to that project space. Changing group membership must
 currently be done by a system administrator; use the
 [change request form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u) 
@@ -64,25 +27,14 @@ the *File Browser* or from the command line using the *Terminal*.
 
 ### Set permissions using the file browser
 
-!!! example "Follow these steps to change file permissions using the *Files( application:"
+!!! example "Follow these steps to change file permissions using the *Files* application"
     
-    1.  Open the
-        Files application from the
-        Applications menu from
-        Activites search
-    2.  Locate the file or folder you wish to modify,
-        right-click on it and select
-        Properties
-    3.  Select the
-        Permissions tab in file properties dialog
-    4.  If you wish to change permissions for all files in a directory,
-        click the
-        Change Permissions for Enclosed Files button.
-    5.  Select appropriate
-        access levels for
-        Owner (you),
-        Group, and
-        Others.
+    1.  Open the *Files* application from the *Applications menu* or *Activites* search
+    2.  Locate the file or folder you wish to modify, right-click on it and select *Properties*
+    3.  Select the *Permissions* tab in file properties dialog
+    4.  If you wish to change permissions for all files in a directory, click the
+        *Change Permissions for Enclosed Files* button.
+    5.  Select appropriate access levels for *Owner* (you), *Group*, and *Others*.
 
 Click the image below to see these steps visually:
 
@@ -91,8 +43,7 @@ Click the image below to see these steps visually:
 Your browser does not support the video tag.
 </video>
 
-
-Refer to the [Official GNOME
+Refer to the [official GNOME
 documentation](https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en "https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en")
 for details.
 
@@ -104,17 +55,9 @@ Ownership and permissions can alternatively be set from the command line using `
 ```
 chmod -R g+rwx project1/data
 ```
-says "Recursively for **g**roup members, add **r**ead, **w**rite 
-and **e**xecute permissions to project1/data and everything in it". 
-
-Refer to
-```
-tldr chmod
-```
-for more permissions examples and to
-```
-man chmod
-```
+says "**R**ecursively for **g**roup members, add **r**ead, **w**rite 
+and **e**xecute permissions to `project1/data` and everything in it". 
+Refer to `tldr chmod` for more permissions examples and to `man chmod`
 for details.
 
 Group ownership can be set from the command line using `chgrp`. For example opening the
@@ -122,14 +65,8 @@ Group ownership can be set from the command line using `chgrp`. For example open
 ```
 chgrp -R my_project_group project1/data
 ```
-says "Recursively make *my_project_group* the group owner of *project1/data* and everything in it". 
-Refer to
-```
-tldr chgrp
-```
-for more examples and to
-```
-man chgrp for details.
+says "**R**ecursively make *my_project_group* the group owner of `project1/data` and everything in it". 
+Refer to `tldr chgrp` for more examples and to `man` chgrp for details.
 ```
 
 ## Avoid running services like Jupyter notebooks without protection

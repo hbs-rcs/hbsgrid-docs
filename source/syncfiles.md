@@ -44,38 +44,30 @@ The easiest way to do this for files on your local machine is to mount your
 local drive as described above, and then use *grsync* to sync files from the 
 *NoMachine* mount to the HBS Grid.
 
-??? info "Grid storage overview (click here for details)"
-    Because you must physically copy data to the HBS Grid in order to access
-    it from the [compute nodes](commandline.md#overview), you
-    have to decide where to put it. There are three options:
-    
-    Home directory
-    :   A Home directory was created at
-        `/export/home/<group>/<username>` when you requested your account.
-        Your home folder has limited storage capacity and is accessible only by
-        you.
-     
-    Project spaces
-    :   Project spaces are directories created for particular projects.
-        Project space directories are usually shared and accessible by all
-        HBS Grid users working on that project. You can request a new
-        project space using the
-        [new project space request
-        form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u)
-        and you can request modifications to an existing project space using the
-        [change request
-        form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u).
-        See [Projects and group membership](worksafe.md#projectgroups")
-        for details.
-     
-    Scratch storage
-    :   Files may be temporarily stored in scratch storage, available at
-        `/export/scratch`. As them name implies, scratch storage is
-        appropriate only for temporary short-term storage. Files stored in
-        `/export/scratch` and not backed up and will be deleted after 60 days.
-        Scratch storage is a shared resource accessible to all users on the HBS Grid;
-        make sure you[set permissions on your files accordingly](worksafe.md).
+Because you must physically copy data to the HBS Grid in order to access
+it from the [compute nodes](commandline.md#overview), you
+have to decide where to put it. There are three options: *home directory*, 
+*project space*, or *scratch storage*.
 
+!!! info "<a name="storageoverview">HBS Grid storage overview</a>"
+    
+    A **home directory** was created at `/export/home/<group>/<username>` 
+    when you requested your account. Your home folder has limited storage 
+    capacity and is accessible only by you.
+     
+    **Project spaces** are directories that are shared and accessible by all
+    HBS Grid users working on that project. You can request a new
+    project space using the
+    [new project space request form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u)
+    and you can request modifications to an existing project space using the
+    [change request form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u).
+     
+    **Scratch storage** is available at `/export/scratch`. It is appropriate only for temporary, 
+    short-term storage. Files are not backed up and will be deleted after 60 days.
+    Scratch storage is a shared resource accessible to all users on the HBS Grid;
+    make sure you [set permissions on your files accordingly](worksafe.md).
+
+Once you have decided where to store your files on the HBS Grid you can follow the steps below to transfer them.
 
 !!! example "Sync data from your local machine to the HBS Grid"
     1.  Log in to the HBS Grid and connect your local drive using
@@ -94,6 +86,11 @@ local drive as described above, and then use *grsync* to sync files from the
         run button in the upper-right corner of the
         grsync application.
 
+Note that transferring many small files is much slower than transferring
+a small number of large files. You may find it faster to compress
+folders with many small files into `.zip` or `.tar` archives, transfer those, 
+and decompress/extract them on the other end.
+
 Click the image below for a demonstration showing how to sync your data
 from a local drive to the HBS Grid:
 
@@ -102,11 +99,6 @@ from a local drive to the HBS Grid:
 Your browser does not support the video tag.
 </video>
 
-
-Note that transferring many small files is much slower than transferring
-a small number of large files. You may find it faster to compress
-folders with many small files into `.zip` or `.tar` archives, transfer those, 
-and decompress/extract them on the other end.
 
 ## Sync data from/to cloud storage (OneDrive,Dropbox etc.)
 
@@ -139,8 +131,6 @@ data synchronization with all major cloud storage providers.
   <source src="../media/rclone.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
-
-## Help and support
 
 If you run into any problems please let us know by posting at
 <https://github.com/hbs-rcs/hbsgrid-docs/discussions> and letting us

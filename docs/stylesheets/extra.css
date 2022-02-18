@@ -1,8 +1,14 @@
 .md-grid {
   max-width: 1000px; 
 }
+
+.quicklinks {
+    font-size: 120% !important;
+}
+
 [data-md-color-scheme="hbs"] {
   --md-primary-fg-color:        #48c4b7;
+  --md-accent-fg-color:         #a41034;
   --md-primary-fg-color--light: #a41034;
   --md-primary-fg-color--dark:  #000000;
 }

@@ -172,7 +172,9 @@
                     
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="HBS Grid Software Environments Technology Preview User Guide" class="md-nav__button md-logo" aria-label="HBS Grid Software Environments Technology Preview User Guide" data-md-component="logo">
       
@@ -300,13 +302,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#help-and-support" class="md-nav__link">
-    Help and support
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -382,58 +377,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#access-local-files-from-nomachine-login-nodes" class="md-nav__link">
-    Access local files from NoMachine login nodes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sync-data-fromto-local-storage" class="md-nav__link">
-    Sync data from/to local storage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sync-data-fromto-cloud-storage-onedrivedropbox-etc" class="md-nav__link">
-    Sync data from/to cloud storage (OneDrive,Dropbox etc.)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#help-and-support" class="md-nav__link">
-    Help and support
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -487,38 +430,27 @@ This means that you will usually want to copy or sync your data to the HBS Grid.
 The easiest way to do this for files on your local machine is to mount your 
 local drive as described above, and then use <em>grsync</em> to sync files from the 
 <em>NoMachine</em> mount to the HBS Grid.</p>
-<details class="info">
-<summary>Grid storage overview (click here for details)</summary>
 <p>Because you must physically copy data to the HBS Grid in order to access
 it from the <a href="../commandline/#overview">compute nodes</a>, you
-have to decide where to put it. There are three options:</p>
-<dl>
-<dt>Home directory</dt>
-<dd>A Home directory was created at
-<code>/export/home/&lt;group&gt;/&lt;username&gt;</code> when you requested your account.
-Your home folder has limited storage capacity and is accessible only by
-you.</dd>
-<dt>Project spaces</dt>
-<dd>Project spaces are directories created for particular projects.
-Project space directories are usually shared and accessible by all
+have to decide where to put it. There are three options: <em>home directory</em>, 
+<em>project space</em>, or <em>scratch storage</em>.</p>
+<div class="admonition info">
+<p class="admonition-title"><a name="storageoverview">HBS Grid storage overview</a></p>
+<p>A <strong>home directory</strong> was created at <code>/export/home/&lt;group&gt;/&lt;username&gt;</code> 
+when you requested your account. Your home folder has limited storage 
+capacity and is accessible only by you.</p>
+<p><strong>Project spaces</strong> are directories that are shared and accessible by all
 HBS Grid users working on that project. You can request a new
 project space using the
-<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u">new project space request
-form</a>
+<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u">new project space request form</a>
 and you can request modifications to an existing project space using the
-<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u">change request
-form</a>.
-See <a href="../worksafe/#projectgroups&quot;">Projects and group membership</a>
-for details.</dd>
-<dt>Scratch storage</dt>
-<dd>Files may be temporarily stored in scratch storage, available at
-<code>/export/scratch</code>. As them name implies, scratch storage is
-appropriate only for temporary short-term storage. Files stored in
-<code>/export/scratch</code> and not backed up and will be deleted after 60 days.
+<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u">change request form</a>.</p>
+<p><strong>Scratch storage</strong> is available at <code>/export/scratch</code>. It is appropriate only for temporary, 
+short-term storage. Files are not backed up and will be deleted after 60 days.
 Scratch storage is a shared resource accessible to all users on the HBS Grid;
-make sure you<a href="../worksafe/">set permissions on your files accordingly</a>.</dd>
-</dl>
-</details>
+make sure you <a href="../worksafe/">set permissions on your files accordingly</a>.</p>
+</div>
+<p>Once you have decided where to store your files on the HBS Grid you can follow the steps below to transfer them.</p>
 <div class="admonition example">
 <p class="admonition-title">Sync data from your local machine to the HBS Grid</p>
 <ol>
@@ -545,6 +477,10 @@ make sure you<a href="../worksafe/">set permissions on your files accordingly</a
 </li>
 </ol>
 </div>
+<p>Note that transferring many small files is much slower than transferring
+a small number of large files. You may find it faster to compress
+folders with many small files into <code>.zip</code> or <code>.tar</code> archives, transfer those, 
+and decompress/extract them on the other end.</p>
 <p>Click the image below for a demonstration showing how to sync your data
 from a local drive to the HBS Grid:</p>
 <video width="70%" controls>
@@ -552,10 +488,6 @@ from a local drive to the HBS Grid:</p>
 Your browser does not support the video tag.
 </video>
 
-<p>Note that transferring many small files is much slower than transferring
-a small number of large files. You may find it faster to compress
-folders with many small files into <code>.zip</code> or <code>.tar</code> archives, transfer those, 
-and decompress/extract them on the other end.</p>
 <h2 id="sync-data-fromto-cloud-storage-onedrivedropbox-etc">Sync data from/to cloud storage (OneDrive,Dropbox etc.)</h2>
 <p>If your data is in cloud storage you may wish to sync it directly from
 there. While the HBS Grid does not offer native <em>Dropbox</em>, <em>OneDrive</em>,
@@ -593,7 +525,6 @@ data synchronization with all major cloud storage providers.</p>
 Your browser does not support the video tag.
 </video>
 
-<h2 id="help-and-support">Help and support</h2>
 <p>If you run into any problems please let us know by posting at
 <a href="https://github.com/hbs-rcs/hbsgrid-docs/discussions">https://github.com/hbs-rcs/hbsgrid-docs/discussions</a> and letting us
 know so we can fix them! You may also find the <a href="../trouble/">Support and Troubleshooting</a>
@@ -667,7 +598,7 @@ section helpful.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.instant", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
     
     
       <script src="../assets/javascripts/bundle.5a9542cf.min.js"></script>
