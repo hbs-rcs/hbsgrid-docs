@@ -1,14 +1,11 @@
-This section outlines the software available on the system and shows
-you how to run specific software versions.
-
----
-
-## Available software
-
 A huge range of software applications, utilities, and libraries are
 installed and configured for you. Whether you need *Rstudio* or
 *Spyder*, *Julia* running in *VSCode*, popular R or Python packages,
 of fully configured *Jupyter Notebooks*, we have you covered.
+
+---
+
+## Available software
 
 The list of installed software is so large we make no effort to
 enumerate everything here, but you can always get an up-to-date list
