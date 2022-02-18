@@ -83,7 +83,7 @@ request. In that case it will offer to give you 4 CPUS (the maximum
 available for jobs running more than 24 hours).
 
 More information about queue-level limits can be found in the [command line
-documentation](commandline.md).
+documentation](commandline.md#queue-characteristics).
 
 ## Handling resource contention
 The HBS grid usually has substantial computational resources available,

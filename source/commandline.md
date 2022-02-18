@@ -110,7 +110,7 @@ runs an interactive *Stata* application.
     `-Is` arguments. For example we used `-q short` for batch and `-q short_int` for 
     interactive. Interactive jobs must also include the `-Is` option.
 
-Queues have other characteristics in addition to the batch vs.
+<a name='queue-characteristics'>Queues have other characteristics</a> in addition to the batch vs.
 interactive distinction. These include the maximum run time and maximum
 number of CPUs that can be reserved per job. These queue-level limits
 are summarized in the table below.
