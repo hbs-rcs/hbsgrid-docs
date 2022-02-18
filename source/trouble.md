@@ -29,8 +29,7 @@ Users are often surprised to find that their application just
 disappears, often after running for several hours or days. Usually this
 happens because your application was killed by the system after
 exceeding a time or memory limit. For example, jobs running in the
-
-short interactive queue are limited to a maximum runtime of 24 hours.
+*short interactive queue* are limited to a maximum runtime of 24 hours.
 After 24 hours your job will be killed without warning or notice.
 Similarly, the system will kill your job if it tries to use more memory
 than you requested when you started the job.
@@ -38,7 +37,7 @@ than you requested when you started the job.
 You can avoid having your job killed by staying within the system and
 job limits. These limits are described in more detail in 
 [Handling system limits](menulaunch.md#handling-system-limits) and
-[Interactive and batch queue limits](commandline.md##interactive-and-batch-queue-limits).
+[Interactive and batch queue limits](commandline.md#interactive-and-batch-queue-limits).
 
 ### Disabling the technology preview
 

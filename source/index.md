@@ -48,7 +48,7 @@ of making this software more widely available. The environment is
 generally stable but the software documented here 
 **remains a technology preview and any and all use is at your own risk**.
 
-If you find that something doesn\'t work as expected, of if you have a
+If you find that something doesn't work as expected, of if you have a
 feature request, we would love to know about it so we can fix or improve
 it. Bug reports and feature requests are important contributions to this
 project and are always welcome and encouraged! You can either start a
