@@ -21,6 +21,7 @@ markdown_extensions:
     - admonition
     - attr_list
     - def_list
+    - meta
     - tables
     - pymdownx.details
     - pymdownx.superfences
