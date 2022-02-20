@@ -19,7 +19,10 @@ nav:
         - ' &nbsp; ': 'tutorials/usecases.md'
         - Large data in R: 'tutorials/large_data_R.md'
         - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
-    - Support: 'support/trouble.md'
+    - Support:
+        - Trouble-shooting: 'support/trouble.md'
+        - Discussion Forum: 'https://github.com/hbs-rcs/hbsgrid-docs/discussions/'
+        - Bug Reports: 'https://github.com/hbs-rcs/hbsgrid-docs/issues/'
 
 
 theme:
