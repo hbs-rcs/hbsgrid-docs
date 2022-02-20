@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://hbs-rcs.github.io/hbsgrid-docs/blog/</loc>
+         <lastmod>2022-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://hbs-rcs.github.io/hbsgrid-docs/support/trouble/</loc>
          <lastmod>2022-02-20</lastmod>
          <changefreq>daily</changefreq>

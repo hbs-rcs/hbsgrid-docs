@@ -23,6 +23,7 @@ nav:
         - Trouble-shooting: 'support/trouble.md'
         - Discussion Forum: 'https://github.com/hbs-rcs/hbsgrid-docs/discussions/'
         - Bug Reports: 'https://github.com/hbs-rcs/hbsgrid-docs/issues/'
+    - Blog: 'blog.md'
 
 
 theme:
