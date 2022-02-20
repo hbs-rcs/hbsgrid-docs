@@ -19,9 +19,7 @@ nav:
         - ' &nbsp; ': 'tutorials/usecases.md'
         - Large data in R: 'tutorials/large_data_R.md'
         - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
-    - Support:
-        - 'support/trouble.md'
-        - 'support/discussion.md'
+    - Support: 'support/trouble.md'
 
 
 theme:
