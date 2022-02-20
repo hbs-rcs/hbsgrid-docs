@@ -5,12 +5,32 @@ edit_uri: 'edit/main/source/'
 remote_branch: 'main'
 docs_dir: 'source'
 site_dir: 'docs'
+
+nav:
+    - Home: 'index.md'
+    - User Guide:
+        - ⮊ &nbsp;&nbsp;Get Started: 'userguide/quickstart.md'
+        - 🚀 &nbsp;&nbsp;Run Desktop Applications: 'userguide/menulaunch.md'
+        - 🗘 &nbsp;&nbsp;Copy and Sync Files: 'userguide/syncfiles.md'
+        - 👥 &nbsp;&nbsp;Collaborate and Share: 'userguide/worksafe.md'
+        - ┃> &nbsp;Use the Command-line: 'userguide/commandline.md'
+        - 📦 &nbsp;&nbsp;Use Software Versions: 'userguide/environments.md'
+    - Tutorials:
+        - ' &nbsp; ': 'tutorials/usecases.md'
+        - Large data in R: 'tutorials/large_data_R.md'
+        - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
+    - Support:
+        - 'support/trouble.md'
+        - 'support/discussion.md'
+
+
 theme:
   name: material
   features:
     - toc.integrate
     - navigation.instant
-    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
   palette:
     scheme: hbs
 extra_css:
@@ -22,19 +42,12 @@ markdown_extensions:
     - def_list
     - meta
     - tables
+    - toc:
+        toc_depth: 2
     - pymdownx.details
     - pymdownx.superfences
     - mdx_gh_links:
         user: mkdocs
         repo: mkdocs
 
-nav:
-    - Overview: 'index.md'
-    - ⮊ &nbsp;&nbsp;Get Started: 'quickstart.md'
-    - 🚀 &nbsp;&nbsp;Run Desktop Applications: 'menulaunch.md'
-    - 🗘 &nbsp;&nbsp;Copy and Sync Files: 'syncfiles.md'
-    - 👥 &nbsp;&nbsp;Collaborate and Share: 'worksafe.md'
-    - ┃> &nbsp;Use the Command-line: 'commandline.md'
-    - 📦 &nbsp;&nbsp;Use Software Versions: 'environments.md'
-    - 🦺 &nbsp;&nbsp;Support and Troubleshooting: 'trouble.md'
 copyright: Copyright &copy; President & Fellows of Harvard College.

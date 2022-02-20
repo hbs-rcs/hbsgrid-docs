@@ -1,0 +1,1114 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://hbs-rcs.github.io/hbsgrid-docs/tutorials/large_data_R/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.11">
+    
+    
+      
+        <title>Large data in R - HBS Grid Software Environments Technology Preview User Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50e68009.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="hbs" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#large-data-in-r-tools-and-techniques" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="HBS Grid Software Environments Technology Preview User Guide" class="md-header__button md-logo" aria-label="HBS Grid Software Environments Technology Preview User Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HBS Grid Software Environments Technology Preview User Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Large data in R
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hbs-rcs/hbsgrid-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../userguide/quickstart/" class="md-tabs__link">
+        User Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../usecases/" class="md-tabs__link md-tabs__link--active">
+        Tutorials
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../support/trouble/" class="md-tabs__link">
+        Support
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HBS Grid Software Environments Technology Preview User Guide" class="md-nav__button md-logo" aria-label="HBS Grid Software Environments Technology Preview User Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    HBS Grid Software Environments Technology Preview User Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hbs-rcs/hbsgrid-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../userguide/quickstart/" class="md-nav__link">
+        ⮊ &nbsp;&nbsp;Get Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../userguide/menulaunch/" class="md-nav__link">
+        🚀 &nbsp;&nbsp;Run Desktop Applications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../userguide/syncfiles/" class="md-nav__link">
+        🗘 &nbsp;&nbsp;Copy and Sync Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../userguide/worksafe/" class="md-nav__link">
+        👥 &nbsp;&nbsp;Collaborate and Share
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../userguide/commandline/" class="md-nav__link">
+        ┃> &nbsp;Use the Command-line
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../userguide/environments/" class="md-nav__link">
+        📦 &nbsp;&nbsp;Use Software Versions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usecases/" class="md-nav__link">
+         &nbsp; 
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Large data in R
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Large data in R
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-and-example-data" class="md-nav__link">
+    Set Up and Example Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nature-and-scope-of-the-problem-what-is-large-data" class="md-nav__link">
+    Nature and Scope of the Problem: What is Large Data?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-example" class="md-nav__link">
+    Problem example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-strategies-and-principles" class="md-nav__link">
+    General strategies and principles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution-example" class="md-nav__link">
+    Solution example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-turn" class="md-nav__link">
+    Your turn!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PythonWebScrape/" class="md-nav__link">
+        Web Scraping in Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Support" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/trouble/" class="md-nav__link">
+        Trouble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/discussion/" class="md-nav__link">
+        Discussion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/hbs-rcs/hbsgrid-docs/edit/main/source/tutorials/large_data_R.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="large-data-in-r-tools-and-techniques">Large Data in R: Tools and Techniques</h1>
+<p>Updated December 06, 2021</p>
+<h2 id="set-up-and-example-data">Set Up and Example Data</h2>
+<p>The examples and exercises require R and several R packages, including
+<code>tidyverse</code>, <code>data.table</code>, <code>arrow</code>, and <code>duckdb</code>. This software is all 
+installed and ready to use on the HBS Grid. If running elsewhere make sure
+these required software programs are installed before proceeding.</p>
+<p>You can download and extract the data used in the examples and exercises from
+<a href="https://www.dropbox.com/s/vbodicsu591o7lf/original_csv.zip?dl=1">https://www.dropbox.com/s/vbodicsu591o7lf/original_csv.zip?dl=1</a> (this
+is a 1.3Gb zip file). These data record for-hire vehicle (aka “ride
+sharing”) trips in NYC in 2020. Each row contains the record of a trip
+and the variable descriptions can be found in
+<a href="https://www1.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_hvfhs.pdf">https://www1.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_hvfhs.pdf</a></p>
+<h2 id="nature-and-scope-of-the-problem-what-is-large-data">Nature and Scope of the Problem: What is Large Data?</h2>
+<p>Most popular data analysis software is designed to operate on data
+stored in random access memory (aka just “memory” or “RAM”). This makes
+modifying and copying data very fast and convenient, until you start
+working with data that is too large for your computer’s memory system.
+At that point you have two options: get a bigger computer or modify your
+workflow to process the data more carefully and efficiently. This
+workshop focuses on option two, using the <code>arrow</code> and <code>duckdb</code> packages
+in R to work with data without necessarily loading it all into memory at
+once.</p>
+<p>A common definition of “big data” is “data that is too big to process
+using traditional software”. We can use the term “large data” as a
+broader category of “data that is big enough that you have to pay
+attention to processing it efficiently”.</p>
+<p>In a typical (traditional) program, we start with data on disk, in some
+format. We read it in to memory, do some stuff to it on the CPU, store
+the results of that stuff back in memory, then write those results back
+to disk so they can be available for the future, as depicted below.</p>
+<p><img alt="Flow of Data in A Program" src="../imgs/ComputerDataFlow.png" /> The reason
+most data analysis software is designed to process data this way is
+because “doing some stuff” is much much faster in RAM than it is if you
+have to read values from disk every time you need them. The downside is
+that RAM is much more expensive than disk storage, and typically
+available in smaller quantities. Memory can only hold so much data and
+we must either stay under that limit or buy more memory.</p>
+<h2 id="problem-example">Problem example</h2>
+<p>Grounding our discussion in a concrete problem example will help make
+things clear. <strong>I want to know how many Lyft rides were taken in New
+York City during 2020</strong>. The data is publicly available as documented at
+<a href="https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page">https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page</a> and I
+have made a subset available on dropbox as described in the Setup
+section above for convenience. Documentation can be found at
+<a href="https://www1.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_hvfhs.pdf">https://www1.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_hvfhs.pdf</a></p>
+<p>In order to demonstrate large data problems and solutions I’m going to
+artificially limit my system to 4Gb of memory. This will allow us to
+quickly see what happens when we reach the memory limit, and to look at
+solutions to that problem without waiting for our program to read in
+hundreds of Gb of data. (There is no need to follow along with this
+step, the purpose is just to make sure we all know what happens when you
+run out of memory.)</p>
+<p>Start by looking at the file names and sizes:</p>
+<div class="highlight"><pre><span></span><code><span class="n">fhvhv_csv_files</span> <span class="o">&lt;-</span> <span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;original_csv&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">full.names</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+<span class="nf">data.frame</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="n">fhvhv_csv_files</span><span class="p">,</span> <span class="n">size_Mb</span> <span class="o">=</span> <span class="nf">file.size</span><span class="p">(</span><span class="n">fhvhv_csv_files</span><span class="p">)</span> <span class="o">/</span> <span class="m">1024</span><span class="o">^</span><span class="m">2</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>##                                               file   size_Mb
+## 1  original_csv/2020/01/fhvhv_tripdata_2020-01.csv 1243.4975
+## 2  original_csv/2020/02/fhvhv_tripdata_2020-02.csv 1313.2442
+## 3  original_csv/2020/03/fhvhv_tripdata_2020-03.csv  808.5597
+## 4  original_csv/2020/04/fhvhv_tripdata_2020-04.csv  259.5806
+## 5  original_csv/2020/05/fhvhv_tripdata_2020-05.csv  366.5430
+## 6  original_csv/2020/06/fhvhv_tripdata_2020-06.csv  454.5977
+## 7  original_csv/2020/07/fhvhv_tripdata_2020-07.csv  599.2560
+## 8  original_csv/2020/08/fhvhv_tripdata_2020-08.csv  667.6880
+## 9  original_csv/2020/09/fhvhv_tripdata_2020-09.csv  728.5463
+## 10 original_csv/2020/10/fhvhv_tripdata_2020-10.csv  798.4743
+## 11 original_csv/2020/11/fhvhv_tripdata_2020-11.csv  698.0638
+## 12 original_csv/2020/12/fhvhv_tripdata_2020-12.csv  700.6804
+</code></pre>
+<p>We can already guess based on these file sizes that with only 4 Gb of
+RAM available we’re going to have a problem.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="n">fhvhv_data</span> <span class="o">&lt;-</span> <span class="nf">map</span><span class="p">(</span><span class="n">fhvhv_csv_files</span><span class="p">,</span> <span class="n">read_csv</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">bind_rows</span><span class="p">(</span><span class="n">show_col_types</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>## Error in eval(expr, envir, enclos): cannot allocate vector of size 7.6 Mb
+</code></pre>
+<p>Perhaps you’ve seen similar messages before. Basically it means that we
+don’t have enough memory available to hold the data we want to work
+with. I previously ran the code chunk above with more memory and found
+that it required just over 16 Gb. How can we work with data when we only
+have 1/4 of the memory requirement available?</p>
+<p><img alt="The Evergiven" src="../imgs/bigboat.png" /> <em>An example of a large object
+causing a bottleneck</em></p>
+<h2 id="general-strategies-and-principles">General strategies and principles</h2>
+<p>Part of the problem with our first attempt is that CSV files do not make
+it easy to quickly read subsets or select columns. In this section we’ll
+spend some time identifying strategies for working with large data and
+identify some tools that make it easy to implement those strategies.</p>
+<h3 id="use-a-fast-binary-data-storage-format-that-enables-reading-data-subsets">Use a fast binary data storage format that enables reading data subsets</h3>
+<p>CSVs, TSVs, and similar <em>delimited files</em> are all <em>text-based formats</em>
+that are typically used to store tabular data. Other more general
+text-based data storage formats are in wide use as well, including XML
+and JSON. These text-based formats have the advantage of being both
+human and machine readable, but text is a relatively inefficient way to
+store data, and loading it into memory requires a time-consuming parsing
+process to separate out the fields and records.</p>
+<p>As an alternative to text-based data storage formats, <em>binary formats</em>
+have the advantage of being more space efficient on disk and faster to
+read. They often employ advanced compression techniques, store metadata,
+and allow fast selective access to data subsets. These substantial
+advantages come at the cost of human readability; you cannot easily
+inspect the contents of binary data files directly. If you are concerned
+with reducing memory use or data processing time this is probably a
+trade-off you are happy to make.</p>
+<p>The <code>parquet</code> binary storage format is among the best currently
+available. Support in R is provided by the <code>arrow</code> package. In a moment
+we’ll see how we can use the <code>arrow</code> package to dramatically reduce the
+time it takes to get data from disk to memory and back.</p>
+<h3 id="partition-the-data-on-disk-to-facilitate-chunked-access-and-computation">Partition the data on disk to facilitate chunked access and computation</h3>
+<p>Memory requirements can be reduced by partitioning the data and
+computation into chunks, running each one sequentially, and combining
+the results at the end. It is common practice to partition the data on
+disk storage to make this computational strategy more natural and
+efficient. For example, the taxi data is already partitioned by year and
+month.</p>
+<h3 id="only-read-in-the-data-you-need">Only read in the data you need</h3>
+<p>If we think carefully about it we’ll see that our previous attempt to
+process the taxi data by reading in all the data at once was wasteful.
+Not all the rows are Lyft rides, and the only column I really need is
+the one that tells me if the ride was operated by Lyft or not. I can
+perform the computation I need by only reading in that one column, and
+only the rows for which the <code>hvfhs_license_num</code> column is equal to
+<code>HV0005</code> (Lyft).</p>
+<h3 id="use-streaming-data-tools-and-algorithms">Use streaming data tools and algorithms</h3>
+<p>It’s all fine and good to say “only read the data you need”, but how do
+you actually do that? Unless you have full control over the data
+collection and storage process, chances are good that your data provider
+included a bunch of stuff you don’t need. The key is to find a data
+selection and filtering tool that works in a streaming fashion so that
+you can access subsets without ever loading data you don’t need into
+memory. Both the <code>arrow</code> and <code>duckdb</code> R packages support this type of
+workflow and can dramatically reduce the time and hardware requirements
+for many computations.</p>
+<p>Moreover, processing data in a streaming fashion without needing to load
+it into memory is a general technique that can be applied to other tasks
+as well. For example the <code>duckdb</code> package allows you to carry out data
+aggregation in a streaming fashion, meaning that you can compute summary
+statistics for data that is too large to fit in memory.</p>
+<h3 id="avoid-unnecessarily-storing-or-duplicating-data-in-memory">Avoid unnecessarily storing or duplicating data in memory</h3>
+<p>It is also important to pay some attention to storing and processing
+data efficiently once we have it loaded in memory. R likes to make
+copies of the data, and while it does try to avoid unnecessary
+duplication this process can be unpredictable. At a minimum you can
+remove or avoid storing intermediate results you don’t need and take
+care not to make copies of your data structures unless you have to. The
+<code>data.table</code> package additionally makes it easier to efficiently modify
+R data objects in-place, reducing the risk of accidentally or
+unknowingly duplicating large data structures.</p>
+<h3 id="technique-summary">Technique summary</h3>
+<p>We’ve accumulated a list of helpful techniques! To review:</p>
+<ul>
+<li>Use a fast binary data storage format that enables reading data
+    subsets</li>
+<li>Partition the data on disk to facilitate chunked access and
+    computation</li>
+<li>Only read in the data you need</li>
+<li>Use streaming data tools and algorithms</li>
+<li>Avoid unnecessarily storing or duplicating data in memory</li>
+</ul>
+<h2 id="solution-example">Solution example</h2>
+<p>Now that we have some theoretical foundations to build on we can start
+putting these techniques into practice. Using the techniques identified
+above will allow us to overcome the memory limitation we ran up against
+before, and finally answer the question “<strong>How many Lyft rides were
+taken in New York City during 2020?</strong>”?</p>
+<h3 id="convert-csv-to-parquet">Convert .csv to parquet</h3>
+<p>The first step is to take the slow and inefficient text-based data
+provided by the city of New York and convert it to parquet using the
+<code>arrow</code> package. This is a one-time up-front cost that may be expensive
+in terms of time and/or computational resources. If you plan to work
+with the data a lot it will be well worth it because it allows
+subsequent reads to be faster and more memory efficient.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">arrow</span><span class="p">)</span>
+
+<span class="nf">if</span><span class="p">(</span><span class="o">!</span><span class="nf">dir.exists</span><span class="p">(</span><span class="s">&quot;converted_parquet&quot;</span><span class="p">))</span> <span class="p">{</span>
+
+  <span class="nf">dir.create</span><span class="p">(</span><span class="s">&quot;converted_parquet&quot;</span><span class="p">)</span>
+
+  <span class="c1">## this doesn&#39;t yet read the data in, it only creates a connection</span>
+  <span class="n">csv_ds</span> <span class="o">&lt;-</span> <span class="nf">open_dataset</span><span class="p">(</span><span class="s">&quot;original_csv&quot;</span><span class="p">,</span> 
+                         <span class="n">format</span> <span class="o">=</span> <span class="s">&quot;csv&quot;</span><span class="p">,</span>
+                         <span class="n">partitioning</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;year&quot;</span><span class="p">,</span> <span class="s">&quot;month&quot;</span><span class="p">))</span>
+
+  <span class="c1">## this reads each csv file in the csv_ds dataset and converts it to a .parquet file</span>
+  <span class="nf">write_dataset</span><span class="p">(</span><span class="n">csv_ds</span><span class="p">,</span> 
+                <span class="s">&quot;converted_parquet&quot;</span><span class="p">,</span> 
+                <span class="n">format</span> <span class="o">=</span> <span class="s">&quot;parquet&quot;</span><span class="p">,</span>
+                <span class="n">partitioning</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;year&quot;</span><span class="p">,</span> <span class="s">&quot;month&quot;</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This conversion is relatively easy (even with limited memory) because
+the data provider is already using one of our strategies, i.e., they
+partitioned the data by year/month. This allows us to convert each file
+one at a time, without ever needing to read in all the data at once.</p>
+<p>We also took care to preserve the <code>year/month</code> partition into
+sub-directories. We improved on the implementation by using what is
+known as “hive-style” partitioning, i.e., including both the variable
+names and values in the directory names. This is convenient because it
+makes it easy for <code>arrow</code> (and other tools that recognize the hive
+partitioning standard) to automatically recognize the partitions.</p>
+<p>We can look at the converted files and compare the naming scheme and
+storage requirements to the original CSV data.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">fhvhv_csv_files</span> <span class="o">&lt;-</span> <span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;original_csv&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">full.names</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">fhvhv_files</span> <span class="o">&lt;-</span> <span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;converted_parquet&quot;</span><span class="p">,</span> <span class="n">full.names</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">recursive</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+
+<span class="nf">data.frame</span><span class="p">(</span><span class="n">csv_file</span> <span class="o">=</span> <span class="n">fhvhv_csv_files</span><span class="p">,</span> 
+           <span class="n">parquet_file</span> <span class="o">=</span> <span class="n">fhvhv_files</span><span class="p">,</span> 
+           <span class="n">csv_size_Mb</span> <span class="o">=</span> <span class="nf">file.size</span><span class="p">(</span><span class="n">fhvhv_csv_files</span><span class="p">)</span> <span class="o">/</span> <span class="m">1024</span><span class="o">^</span><span class="m">2</span><span class="p">,</span> 
+           <span class="n">parquet_size_Mb</span> <span class="o">=</span> <span class="nf">file.size</span><span class="p">(</span><span class="n">fhvhv_files</span><span class="p">)</span> <span class="o">/</span> <span class="m">1024</span><span class="o">^</span><span class="m">2</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>                                                                 CSV        Parquet
+                  csv_file                       parquet_file    size_Mb    size_Mb
+fhvhv_tripdata_2020-01.csv   year=2020/month=1/part-0.parquet  1243.4975  190.26387
+fhvhv_tripdata_2020-02.csv  year=2020/month=10/part-0.parquet  1313.2442  125.17837
+fhvhv_tripdata_2020-03.csv  year=2020/month=11/part-0.parquet   808.5597  110.92144
+fhvhv_tripdata_2020-04.csv  year=2020/month=12/part-0.parquet   259.5806  111.67697
+fhvhv_tripdata_2020-05.csv   year=2020/month=2/part-0.parquet   366.5430  198.87074
+fhvhv_tripdata_2020-06.csv   year=2020/month=3/part-0.parquet   454.5977  127.53637
+fhvhv_tripdata_2020-07.csv   year=2020/month=4/part-0.parquet   599.2560   48.32047
+fhvhv_tripdata_2020-08.csv   year=2020/month=5/part-0.parquet   667.6880   64.17768
+fhvhv_tripdata_2020-09.csv   year=2020/month=6/part-0.parquet   728.5463   76.45972
+fhvhv_tripdata_2020-10.csv   year=2020/month=7/part-0.parquet   798.4743   97.99151
+fhvhv_tripdata_2020-11.csv   year=2020/month=8/part-0.parquet   698.0638  107.80694
+fhvhv_tripdata_2020-12.csv   year=2020/month=9/part-0.parquet   700.6804  115.25221
+</code></pre></div>
+As expected, the binary parquet storage format is much more compact than
+the text-based CSV format. This is one reason that reading parquet data
+is so much faster:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">## tidyverse csv reader</span>
+<span class="nf">system.time</span><span class="p">(</span><span class="nf">invisible</span><span class="p">(</span><span class="n">readr</span><span class="o">::</span><span class="nf">read_csv</span><span class="p">(</span><span class="n">fhvhv_csv_files</span><span class="p">[[</span><span class="m">1</span><span class="p">]],</span> <span class="n">show_col_types</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)))</span>
+</code></pre></div>
+<pre><code>##    user  system elapsed 
+##  79.982   6.362  31.824
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">## arrow package parquet reader</span>
+<span class="nf">system.time</span><span class="p">(</span><span class="nf">invisible</span><span class="p">(</span><span class="nf">read_parquet</span><span class="p">(</span><span class="n">fhvhv_files</span><span class="p">[[</span><span class="m">1</span><span class="p">]])))</span>
+</code></pre></div>
+<pre><code>##    user  system elapsed 
+##   5.761   2.226  22.533
+</code></pre>
+<h3 id="read-and-count-lyft-records-with-arrow">Read and count Lyft records with arrow</h3>
+<p>The <code>arrow</code> package makes it easy to read and process only the data we
+need for a particular calculation. It allows us to use the partitioned
+data directories we created earlier as a single dataset and to query it
+using the <code>dplyr</code> verbs many R users are already familiar with.</p>
+<p>Start by creating a dataset representation from the partitioned data
+directory:</p>
+<div class="highlight"><pre><span></span><code><span class="n">fhvhv_ds</span> <span class="o">&lt;-</span> <span class="nf">open_dataset</span><span class="p">(</span><span class="s">&quot;converted_parquet&quot;</span><span class="p">,</span>
+                         <span class="n">schema</span> <span class="o">=</span> <span class="nf">schema</span><span class="p">(</span><span class="n">hvfhs_license_num</span><span class="o">=</span><span class="nf">string</span><span class="p">(),</span>
+                                         <span class="n">dispatching_base_num</span><span class="o">=</span><span class="nf">string</span><span class="p">(),</span>
+                                         <span class="n">pickup_datetime</span><span class="o">=</span><span class="nf">string</span><span class="p">(),</span>
+                                         <span class="n">dropoff_datetime</span><span class="o">=</span><span class="nf">string</span><span class="p">(),</span>
+                                         <span class="n">PULocationID</span><span class="o">=</span><span class="nf">int64</span><span class="p">(),</span>
+                                         <span class="n">DOLocationID</span><span class="o">=</span><span class="nf">int64</span><span class="p">(),</span>
+                                         <span class="n">SR_Flag</span><span class="o">=</span><span class="nf">int64</span><span class="p">(),</span>
+                                         <span class="n">year</span><span class="o">=</span><span class="nf">int32</span><span class="p">(),</span>
+                                         <span class="n">month</span><span class="o">=</span><span class="nf">int32</span><span class="p">()))</span>
+</code></pre></div>
+<p>Because we have hive-style directory names <code>open_dataset</code> automatically
+recognizes the partitions. Note that usually we do not need to manually
+specify the <code>schema</code>, we do so here to work around an issue with
+<code>duckdb</code> support.</p>
+<p>Importantly, <code>open_dataset</code> doesn’t actually read the data into memory.
+It just opens a connection to the dataset and makes it easy for us to
+query it. Finally, we can compute the number of NYC Lyft trips in 2020,
+even on a machine with limited memory:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">,</span> <span class="n">warn.conflicts</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+
+<span class="n">fhvhv_ds</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="n">hvfhs_license_num</span> <span class="o">==</span> <span class="s">&quot;HV0005&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">select</span><span class="p">(</span><span class="n">hvfhs_license_num</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">collect</span><span class="p">()</span> <span class="o">%&gt;%</span>
+  <span class="nf">summarize</span><span class="p">(</span><span class="n">total_Lyft_trips</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
+</code></pre></div>
+<pre><code>## # A tibble: 1 × 1
+##   total_Lyft_trips
+##              &lt;int&gt;
+## 1         37250101
+</code></pre>
+<p>Note that <code>arrow</code> datasets do not support <code>summarize</code> natively, that is
+why we call <code>collect</code> first to actually read in the data.</p>
+<p>The <code>arrow</code> package makes it fast and easy to query on-disk data and
+read in only the fields and records needed for a particular computation.
+This is a tremendous improvement over the typical R workflow, and may
+well be all you need to start using your large datasets more quickly and
+conveniently, even on modest hardware.</p>
+<h3 id="efficiently-query-taxi-data-with-duckdb">Efficiently query taxi data with duckdb</h3>
+<p>If you need even more speed and convenience you can use the <code>duckdb</code>
+package. It allows you to query the same parquet datasets partitioned on
+disk as we did above. You can use either SQL statements via the <code>DBI</code>
+package or tidyverse style verbs using <code>dbplyr</code>. Let’s see how it works.</p>
+<p>First we create a <code>duckdb</code> table from our <code>arrow</code> dataset.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">duckdb</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+
+<span class="n">con</span> <span class="o">&lt;-</span> <span class="n">DBI</span><span class="o">::</span><span class="nf">dbConnect</span><span class="p">(</span><span class="n">duckdb</span><span class="o">::</span><span class="nf">duckdb</span><span class="p">())</span>
+<span class="n">fhvhv_tbl</span> <span class="o">&lt;-</span> <span class="nf">to_duckdb</span><span class="p">(</span><span class="n">fhvhv_ds</span><span class="p">,</span> <span class="n">con</span><span class="p">,</span> <span class="s">&quot;fhvhv&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>The <code>duckdb</code> table can be queried using tidyverse style verbs or SQL.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">## number of Lyft trips, tidyverse style</span>
+<span class="n">fhvhv_tbl</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="n">hvfhs_license_num</span> <span class="o">==</span> <span class="s">&quot;HV0005&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">select</span><span class="p">(</span><span class="n">hvfhs_license_num</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">count</span><span class="p">()</span>
+</code></pre></div>
+<pre><code>## # Source:   lazy query [?? x 1]
+## # Database: duckdb_connection
+##          n
+##      &lt;dbl&gt;
+## 1 37250101
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">## number of Lyft trips, SQL style</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">dbSendQuery</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="s">&quot;SELECT COUNT(*) FROM fhvhv WHERE hvfhs_license_num==&#39;HV0005&#39;;&quot;</span><span class="p">)</span>
+<span class="nf">dbFetch</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>##   count_star()
+## 1     37250101
+</code></pre>
+<p>The main advantages of <code>duckdb</code> are that it has full SQL support,
+supports aggregating data in a streaming fashion, allows you to set
+memory limits, and is optimized for speed. The way I think about the
+relationship between <code>arrow</code> and <code>duckdb</code> is that <code>arrow</code> is primarily
+about reading and writing data as fast and efficiently as possible, with
+some built-in analysis capabilities, while <code>duckdb</code> is a database engine
+with more complete data manipulation and aggregation capabilities.</p>
+<p>It can be instructive to compare <code>arrow</code> and <code>duckdb</code> capabilities and
+performance using a slightly more complicated example. Here we compute a
+grouped average using <code>arrow</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">system.time</span><span class="p">({</span><span class="n">fhvhv_ds</span> <span class="o">%&gt;%</span>
+    <span class="nf">filter</span><span class="p">(</span><span class="n">hvfhs_license_num</span> <span class="o">==</span> <span class="s">&quot;HV0005&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">select</span><span class="p">(</span><span class="n">hvfhs_license_num</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">group_by</span><span class="p">(</span><span class="n">hvfhs_license_num</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">collect</span><span class="p">()</span> <span class="o">%&gt;%</span>
+    <span class="nf">summarize</span><span class="p">(</span><span class="n">avg</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="nf">print</span><span class="p">()})</span>
+</code></pre></div>
+<pre><code>## # A tibble: 1 × 2
+##   hvfhs_license_num   avg
+##   &lt;chr&gt;             &lt;dbl&gt;
+## 1 HV0005             6.10
+
+##    user  system elapsed 
+##  19.456   4.064  14.254
+</code></pre>
+<p>note that we use <code>collect</code> to read the data into memory before the
+<code>summarize</code> step because <code>arrow</code> does not support aggregating in a
+streaming fashion.</p>
+<p>Here is the same query using <code>duckdb</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">system.time</span><span class="p">({</span><span class="n">fhvhv_tbl</span> <span class="o">%&gt;%</span>
+    <span class="nf">filter</span><span class="p">(</span><span class="n">hvfhs_license_num</span> <span class="o">==</span> <span class="s">&quot;HV0005&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">select</span><span class="p">(</span><span class="n">hvfhs_license_num</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">group_by</span><span class="p">(</span><span class="n">hvfhs_license_num</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">summarize</span><span class="p">(</span><span class="n">avg</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="nf">print</span><span class="p">()})</span>
+</code></pre></div>
+<pre><code>## # Source:   lazy query [?? x 2]
+## # Database: duckdb_connection
+##   hvfhs_license_num   avg
+##   &lt;chr&gt;             &lt;dbl&gt;
+## 1 HV0005             6.10
+
+##    user  system elapsed 
+##  18.766   1.251   8.984
+</code></pre>
+<p>note that it is slightly faster, and we don’t need to read as much data
+into memory because <code>duckdb</code> supports aggregating in a streaming
+fashion. This capability is very powerful because it allows us to
+perform computations on data that is too big to fit into memory.</p>
+<h2 id="your-turn">Your turn!</h2>
+<p>Now that you understand some of the basic techniques for working with
+large data and have seen an example, you can start to apply what you’ve
+learned. Using the same taxi data, try answering the following
+questions:</p>
+<ul>
+<li>What percentage of trips are made by Lyft?</li>
+<li>In which month did Lyft log the most trips?</li>
+</ul>
+<p>Documentation for these data can be found at
+<a href="https://www1.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_hvfhs.pdf">https://www1.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_hvfhs.pdf</a></p>
+<h2 id="additional-resources">Additional resources</h2>
+<ul>
+<li><a href="https://arrow.apache.org/docs/r/">Arrow R package documentation</a></li>
+<li><a href="https://arrow.apache.org/docs/python/">Arrow Python package
+    documentation</a></li>
+<li><a href="https://duckdb.org/docs/">DuckDB documentation</a></li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../usecases/" class="md-footer__link md-footer__link--prev" aria-label="Previous:  &amp;nbsp; " rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+               &nbsp; 
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../PythonWebScrape/" class="md-footer__link md-footer__link--next" aria-label="Next: Web Scraping in Python" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Web Scraping in Python
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; President & Fellows of Harvard College.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a9542cf.min.js"></script>
+      
+    
+  </body>
+</html>

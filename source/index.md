@@ -10,25 +10,25 @@ These environments are in active development and are currently
 available as a *Technology Preview* for testing.
 
 !!! quicklinks
-    [**⮊ &nbsp;&nbsp;Get started by enabling HBS grid Technology Preview features**](quickstart.md)  
+    [**⮊ &nbsp;&nbsp;Get started by enabling HBS grid Technology Preview features**](userguide/quickstart.md)  
     Start here!
      
-    [**🚀 &nbsp;&nbsp;Run Applications from the Desktop**](menulaunch.md)  
+    [**🚀 &nbsp;&nbsp;Run Applications from the Desktop**](userguide/menulaunch.md)  
     Run applications on powerful HBS Grid compute nodes using desktop menus
      
-    [**🗘 &nbsp;&nbsp;Copy and Sync Files**](syncfiles.md)  
+    [**🗘 &nbsp;&nbsp;Copy and Sync Files**](userguide/syncfiles.md)  
     Mount or copy data from local drives or cloud storage to the HBS Grid
      
-    [**👥 &nbsp;&nbsp;Collaborate and Share Safely and Securely**](worksafe.md)  
+    [**👥 &nbsp;&nbsp;Collaborate and Share Safely and Securely**](userguide/worksafe.md)  
     Learn how to work safely and securely in a multi-user environment
      
-    [**📦 &nbsp;&nbsp;Use Software Versions**](environments.md)  
+    [**📦 &nbsp;&nbsp;Use Software Versions**](userguide/environments.md)  
     Learn about available software and how to run different software versions
      
-    [**┃> &nbsp;Use the Command-line**](commandline.md)  
+    [**┃> &nbsp;Use the Command-line**](userguide/commandline.md)  
     Run jobs on powerful HBS Grid compute nodes from the terminal
      
-    [**🦺 &nbsp;&nbsp;Support and Troubleshooting**](trouble.md)  
+    [**🦺 &nbsp;&nbsp;Support and Troubleshooting**](support/trouble.md)  
     What to do if things don't work as expected
 
 
