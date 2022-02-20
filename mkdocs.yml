@@ -20,9 +20,11 @@ nav:
         - Large data in R: 'tutorials/large_data_R.md'
         - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
     - Support:
-        - Trouble-shooting: 'support/trouble.md'
+        - Troubleshooting: 'support/trouble.md'
         - Discussion Forum: 'https://github.com/hbs-rcs/hbsgrid-docs/discussions/'
         - Bug Reports: 'https://github.com/hbs-rcs/hbsgrid-docs/issues/'
+        - Account and Service Requests: 'support/requests.md'
+        - Contact Us: 'support/contact.md'
     - Blog: 'blog.md'
 
 
@@ -33,6 +35,7 @@ theme:
     - navigation.instant
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.top
   palette:
     scheme: hbs
 extra_css:
