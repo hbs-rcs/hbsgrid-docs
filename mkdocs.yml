@@ -19,6 +19,7 @@ nav:
         - ' &nbsp; ': 'tutorials/usecases.md'
         - Large data in R: 'tutorials/large_data_R.md'
         - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
+        - NLP in Python: 'tutorials/nlp_with_python.md'
     - Support:
         - Troubleshooting: 'support/trouble.md'
         - Discussion Forum: 'https://github.com/hbs-rcs/hbsgrid-docs/discussions/'
