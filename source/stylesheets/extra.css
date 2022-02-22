@@ -22,3 +22,8 @@ img.media-small {
 
 a.md-tabs__link {color: #000000; opacity: 1.0;}
 a:hover.md-tabs__link {color: #000000; text-decoration: underline;}
+
+a[href*="//"] {
+    background: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png)     center right no-repeat;
+    padding-right: 13px;
+}

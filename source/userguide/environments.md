@@ -16,8 +16,8 @@ conda list
 
 **Start with the expectation that all the software you need is already
 installed and ready to use**. If that expectation is ever broken please
-put in a request using our [discussion forum🔗](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
-or [issue tracker🔗](https://github.com/hbs-rcs/hbsgrid-docs/issues).
+put in a request using our [discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
+or [issue tracker](https://github.com/hbs-rcs/hbsgrid-docs/issues).
 
 ## Using older software environments
 
@@ -67,27 +67,27 @@ the [environments documentation](environments.md).
 In this release we have added a large number of new statistics and
 data science applications and packages, including:
 
--   [JASP🔗](https://jasp-stats.org/ "https://jasp-stats.org/"), a free
+-   [JASP](https://jasp-stats.org/ "https://jasp-stats.org/"), a free
     menu-driven statistics application similar to SPSS
--   [Cytoscape🔗](https://cytoscape.org/ "https://cytoscape.org/"), an
+-   [Cytoscape](https://cytoscape.org/ "https://cytoscape.org/"), an
     open source software platform for visualizing complex networks,
--   [DuckDB🔗](https://duckdb.org/ "https://duckdb.org/"), an in-process
+-   [DuckDB](https://duckdb.org/ "https://duckdb.org/"), an in-process
     SQL OLAP database management system
--   [texminer🔗](https://www.rtextminer.com/ "https://www.rtextminer.com/"),
+-   [texminer](https://www.rtextminer.com/ "https://www.rtextminer.com/"),
     functions for text mining and topic modeling in R
--   [Dedupe🔗](https://docs.dedupe.io/en/latest/ "https://docs.dedupe.io/en/latest/"),
+-   [Dedupe](https://docs.dedupe.io/en/latest/ "https://docs.dedupe.io/en/latest/"),
     a library that uses machine learning to perform de-duplication and
     entity resolution in Python
--   [awscli🔗](https://aws.amazon.com/cli/ "https://aws.amazon.com/cli/"),
+-   [awscli](https://aws.amazon.com/cli/ "https://aws.amazon.com/cli/"),
     a unified tool to manage your AWS services
--   [snakemake🔗](https://snakemake.readthedocs.io/en/stable/ "https://snakemake.readthedocs.io/en/stable/"),
+-   [snakemake](https://snakemake.readthedocs.io/en/stable/ "https://snakemake.readthedocs.io/en/stable/"),
     a workflow management system to create reproducible and scalable
     data analyses
 
 and many many more!
 
 If you find a software program that you need is not yet available please
-[let us know🔗](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
+[let us know](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
 and we will try to install it for you.
 
 The 2022.01 release also brings a huge number of application and package
@@ -122,9 +122,9 @@ used programs:
 
 [Documentation is available on line](https://hbs-rcs.github.io/hbsgrid-docs/)
 or via the *HBS Grid help* application on the Grid. If you have any difficulties or
-feature requests please [reach out on the discussion forum🔗](https://github.com/hbs-rcs/hbsgrid-docs/discussions).
+feature requests please [reach out on the discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions).
 
-VirtualBox image available for [download from Dropbox🔗](https://www.dropbox.com/s/amxfzx0anwkf7kn/Kobayashi_Research_Computing_Desktop_2022.01.ova?dl=0)
+VirtualBox image available for [download from Dropbox](https://www.dropbox.com/s/amxfzx0anwkf7kn/Kobayashi_Research_Computing_Desktop_2022.01.ova?dl=0)
 and can be imported and run locally for convenience, reproducibility, or
 testing purposes.
 

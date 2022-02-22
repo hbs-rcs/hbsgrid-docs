@@ -1,6 +1,6 @@
 
 The technology preview software and environments described in this documentation
-are not enabled on the [HBS Grid🔗](https://grid.rcs.hbs.org) by default. This
+are not enabled on the [HBS Grid](https://grid.rcs.hbs.org) by default. This
 guide show you how to connect to the HBS Grid and enable them.
 
 ---
@@ -15,9 +15,9 @@ guide show you how to connect to the HBS Grid and enable them.
 To get started you must have an
 [HBS Grid account](../support/requests.md)
 and be connected to the HBS network, either directly if you are on-campus or
-[connect via VPN🔗](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
+[connect via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
 otherwise. You must also have the 
-[NoMachine Enterprise Client🔗](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)
+[NoMachine Enterprise Client](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)
 remote desktop application installed on your computer.
 
 ## Connect and enable software environments
@@ -28,7 +28,7 @@ simple procedure to enable our in-development research computing environment:
 !!! example
 
     1.  Log in to the HBS Grid by using
-        [NoMachine🔗](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)
+        [NoMachine](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)
         to connect to hosthbsgrid-nx.hbs.edu
      
     2.  Open a Terminal in NoMachine:
@@ -66,6 +66,6 @@ Applications from the Desktop](menulaunch.md) and [Start Jobs from the
 Terminal](commandline.md) sections.
 
 If you run into any problems please let us know by posting at
-<https://github.com/hbs-rcs/hbsgrid-docs/discussions>🔗  and letting us know so we
+<https://github.com/hbs-rcs/hbsgrid-docs/discussions>  and letting us know so we
 can fix them! You may also find the [Support and Troubleshooting](../support/trouble.md)
 section helpful.

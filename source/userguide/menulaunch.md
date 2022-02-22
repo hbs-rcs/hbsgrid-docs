@@ -59,8 +59,8 @@ Environments](environments.md).
 Some application launchers have a Pre-submission command field. This
 allows you to run an arbitrary bash command immediately before
 submitting the job. For example, you can use it to set [environment
-variables🔗](https://www.redhat.com/sysadmin/linux-environment-variables)
-or activate [conda environments🔗](https://docs.conda.io/en/latest/).
+variables](https://www.redhat.com/sysadmin/linux-environment-variables)
+or activate [conda environments](https://docs.conda.io/en/latest/).
 
 ## Handling system limits
 

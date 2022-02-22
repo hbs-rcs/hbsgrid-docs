@@ -44,7 +44,7 @@ Your browser does not support the video tag.
 </video>
 
 Refer to the [official GNOME
-documentation🔗](https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en)
+documentation](https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en)
 for details.
 
 ### Set ownership and permissions using the command line

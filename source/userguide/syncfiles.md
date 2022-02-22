@@ -133,7 +133,7 @@ Your browser does not support the video tag.
 </video>
 
 If you run into any problems please let us know by posting at
-<https://github.com/hbs-rcs/hbsgrid-docs/discussions>🔗 and letting us
+<https://github.com/hbs-rcs/hbsgrid-docs/discussions> and letting us
 know so we can fix them! You may also find the [Support and Troubleshooting](../support/trouble.md)
 section helpful.
 o
