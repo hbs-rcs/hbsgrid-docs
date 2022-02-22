@@ -58,10 +58,9 @@ have to decide where to put it. There are three options: *home directory*,
      
     **Project spaces** are directories that are shared and accessible by all
     HBS Grid users working on that project. You can request a new
-    project space using the
-    [new project space request form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u)
+    project space using the [new project space request form](../support/requests.md)
     and you can request modifications to an existing project space using the
-    [change request form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u).
+    [change request form](../support/requests.md).
      
     **Scratch storage** is available at `/export/scratch`. It is appropriate only for temporary, 
     short-term storage. Files are not backed up and will be deleted after 60 days.
@@ -134,6 +133,7 @@ Your browser does not support the video tag.
 </video>
 
 If you run into any problems please let us know by posting at
-<https://github.com/hbs-rcs/hbsgrid-docs/discussions> and letting us
+<https://github.com/hbs-rcs/hbsgrid-docs/discussions>🔗 and letting us
 know so we can fix them! You may also find the [Support and Troubleshooting](../support/trouble.md)
 section helpful.
+o

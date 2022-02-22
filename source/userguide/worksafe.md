@@ -12,11 +12,11 @@ can access your files.
     [file transfer documentation](syncfiles.md#storageoverview).
 
 For collaborative projects in which more than one person needs access, you must use a *project space*
-([request one](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u) 
+([request one](../support/requests.md) 
 if needed). Each project has an associated group that includes the HBS Grid users
 who have access to that project space. Changing group membership must
 currently be done by a system administrator; use the
-[change request form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u) 
+[change request form](../support/requests.md) 
 to request a change.
 
 ## File ownership and permissions
@@ -44,7 +44,7 @@ Your browser does not support the video tag.
 </video>
 
 Refer to the [official GNOME
-documentation](https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en "https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en")
+documentation🔗](https://help.gnome.org/users/gnome-help/stable/nautilus-file-properties-permissions.html.en)
 for details.
 
 ### Set ownership and permissions using the command line

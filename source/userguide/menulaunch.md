@@ -1,5 +1,5 @@
 You can run applications on [powerful HBS Grid compute
-nodes](https://www.hbs.edu/research-computing-services/resources/compute-cluster/)
+nodes](commandline.md#compute-cluster-basics)
 by connecting to the HBS grid via NoMachine, [enabling technology
 preview features](quickstart.md), and clicking one of the application
 icons under the **Applications** or **Activities** menus. This allows you to
@@ -59,8 +59,8 @@ Environments](environments.md).
 Some application launchers have a Pre-submission command field. This
 allows you to run an arbitrary bash command immediately before
 submitting the job. For example, you can use it to set [environment
-variables](https://www.redhat.com/sysadmin/linux-environment-variables)
-or activate [conda environments](https://docs.conda.io/en/latest/).
+variables🔗](https://www.redhat.com/sysadmin/linux-environment-variables)
+or activate [conda environments🔗](https://docs.conda.io/en/latest/).
 
 ## Handling system limits
 

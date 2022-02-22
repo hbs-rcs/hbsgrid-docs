@@ -1,4 +1,5 @@
-The HBS Grid uses [IBM Spectrum LSF](https://www.ibm.com/docs/en/spectrum-lsf) 
+
+The HBS Grid uses [IBM Spectrum LSF🔗](https://www.ibm.com/docs/en/spectrum-lsf) 
 to run applications on powerful remote computers. LSF is a large and complex 
 set of tools; our goal here is to give you just enough information so that you
 can use it to run jobs on our system, without overwhelming you with details and
@@ -61,7 +62,7 @@ bsub -q short_int -M 50G -n 4 -Is python
 ```
 
 Knowing just these arguments to `bsub` will take you a long way. There is 
-[much more to know about bsub](https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_command_ref/bsub.heading_options.1.html),
+[much more to know about bsub🔗](https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_command_ref/bsub.heading_options.1.html),
 but these basics will get you started.
 
 ## Interactive and batch queue limits
@@ -135,7 +136,7 @@ and set it up for you.
 
 In order to facilitate reproducible research and analysis we preserve old software
 environments so that you can switch back to them later if needed. These older
-environments can be loaded using [Lmod](https://lmod.readthedocs.io/en/latest/010_user.html).
+environments can be loaded using [Lmod🔗](https://lmod.readthedocs.io/en/latest/010_user.html).
 
 Running
 ```
@@ -220,4 +221,4 @@ ml -rcs_2021.03
 ```
 will unload it.
 
-Detailed [Lmod documentation is available here](https://lmod.readthedocs.io/en/latest/) and you can learn more about the environments available on the HBS Grid in the [Environments documentation](environments.md).
+Detailed [Lmod documentation is available here🔗](https://lmod.readthedocs.io/en/latest/) and you can learn more about the environments available on the HBS Grid in the [Environments documentation](environments.md).
