@@ -5,6 +5,10 @@ output:
   github_document:
     toc: true
 date: "Updated `r format(Sys.Date(), '%B %d, %Y')`"
+
+tags:
+  - R
+  - Large data
 ---
 
 ## Environment Set Up

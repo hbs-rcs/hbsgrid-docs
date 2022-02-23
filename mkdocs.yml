@@ -16,7 +16,7 @@ nav:
         - ┃> &nbsp;Use the Command-line: 'userguide/commandline.md'
         - 📦 &nbsp;&nbsp;Use Software Versions: 'userguide/environments.md'
     - Tutorials:
-        - ' &nbsp; ': 'tutorials/usecases.md'
+        - Topic list: 'tutorials.md'
         - Large data in R: 'tutorials/large_data_R.md'
         - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
         - NLP in Python: 'tutorials/nlp_with_python.md'
@@ -24,8 +24,8 @@ nav:
         - Troubleshooting: 'support/trouble.md'
         - Account and Service Requests: 'support/requests.md'
         - Contact Us: 'support/contact.md'
-        - Discussion Forum🔗: 'https://github.com/hbs-rcs/hbsgrid-docs/discussions/'
-        - Bug Reports🔗: 'https://github.com/hbs-rcs/hbsgrid-docs/issues/'
+        - Discussion Forum: 'https://github.com/hbs-rcs/hbsgrid-docs/discussions/'
+        - Bug Reports: 'https://github.com/hbs-rcs/hbsgrid-docs/issues/'
     - Blog: 'blog.md'
 
 
@@ -58,5 +58,9 @@ markdown_extensions:
     - pymdownx.emoji:
         emoji_generator: !!python/name:materialx.emoji.to_svg
         emoji_index: !!python/name:materialx.emoji.twemoji
+
+plugins:
+  - tags:
+      tags_file: tutorials.md
 
 copyright: Copyright &copy; President & Fellows of Harvard College.

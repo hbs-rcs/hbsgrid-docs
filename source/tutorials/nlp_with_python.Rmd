@@ -10,6 +10,11 @@ jupyter:
     display_name: Python 3 (ipykernel)
     language: python
     name: python3
+
+tags:
+    - Python
+    - NLP
+    - NLTK
 ---
 
 # Natural Language Processing with Python

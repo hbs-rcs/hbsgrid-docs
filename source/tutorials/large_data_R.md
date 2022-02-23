@@ -1,6 +1,14 @@
+---
+title: "Large Data in R: Tools and Techniques"
+authors: "Ben Sabath\nand\n Ista Zahn\n"
+
+tags:
+  - R
+  - Large data
+---
+
 Large Data in R: Tools and Techniques
 ================
-Updated December 06, 2021
 
 
 ## Set Up and Example Data

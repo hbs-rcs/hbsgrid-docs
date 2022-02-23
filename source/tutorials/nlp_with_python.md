@@ -1,3 +1,9 @@
+---
+tags:
+    - Python
+    - NLP
+    - NLTK
+---
 
 # Natural Language Processing with Python
 
