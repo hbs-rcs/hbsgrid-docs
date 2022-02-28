@@ -9,9 +9,9 @@ site_dir: 'docs'
 nav:
     - Home: 'index.md'
     - User Guide:
-        - ⮊ &nbsp;&nbsp;Get Started: 'userguide/quickstart.md'
+        - 🥇 &nbsp;&nbsp;Get Started: 'userguide/quickstart.md'
         - 🚀 &nbsp;&nbsp;Run Desktop Applications: 'userguide/menulaunch.md'
-        - 🗘 &nbsp;&nbsp;Copy and Sync Files: 'userguide/syncfiles.md'
+        - 🔄 &nbsp;&nbsp;Copy and Sync Files: 'userguide/syncfiles.md'
         - 👥 &nbsp;&nbsp;Collaborate and Share: 'userguide/worksafe.md'
         - ┃> &nbsp;Use the Command-line: 'userguide/commandline.md'
         - 📦 &nbsp;&nbsp;Use Software Versions: 'userguide/environments.md'
