@@ -10,13 +10,13 @@ These environments are in active development and are currently
 available as a *Technology Preview* for testing.
 
 !!! quicklinks
-    [**⮊ &nbsp;&nbsp;Get started by enabling HBS grid Technology Preview features**](userguide/quickstart.md)  
+    [**🥇 &nbsp;&nbsp;Get started by enabling HBS grid Technology Preview features**](userguide/quickstart.md)  
     Start here!
      
     [**🚀 &nbsp;&nbsp;Run Applications from the Desktop**](userguide/menulaunch.md)  
     Run applications on powerful HBS Grid compute nodes using desktop menus
      
-    [**🗘 &nbsp;&nbsp;Copy and Sync Files**](userguide/syncfiles.md)  
+    [**🔄 &nbsp;&nbsp;Copy and Sync Files**](userguide/syncfiles.md)  
     Mount or copy data from local drives or cloud storage to the HBS Grid
      
     [**👥 &nbsp;&nbsp;Collaborate and Share Safely and Securely**](userguide/worksafe.md)  
