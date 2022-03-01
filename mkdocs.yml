@@ -62,5 +62,6 @@ markdown_extensions:
 plugins:
   - tags:
       tags_file: tutorials.md
+  - search
 
 copyright: Copyright &copy; President & Fellows of Harvard College.
