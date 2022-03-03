@@ -29,7 +29,7 @@ simple procedure to enable our in-development research computing environment:
 
     1.  Log in to the HBS Grid by using
         [NoMachine](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)
-        to connect to hosthbsgrid-nx.hbs.edu
+        to connect to host `hbsgrid-nx.hbs.edu`
      
     2.  Open a Terminal in NoMachine:
         *Applications => Favorites => Terminal*
