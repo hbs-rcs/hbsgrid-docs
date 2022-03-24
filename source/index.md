@@ -35,7 +35,7 @@ available as a *Technology Preview* for testing.
 You can click the video thumbnail below to watch a short demonstration
 of our software environment.
 
-<video width="70%" controls>
+<video id="hbsgrid_v3.0_demo" width="70%" controls>
   <source src="userguide/media/intro.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
