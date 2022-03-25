@@ -36,7 +36,7 @@ You can click the video thumbnail below to watch a short demonstration
 of our software environment.
 
 <video id="hbsgrid_v3.0_demo" width="70%" controls>
-  <source src="userguide/media/intro.webm" type="video/webm">
+  <source src="userguide/media/intro.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 

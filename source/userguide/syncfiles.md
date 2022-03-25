@@ -32,7 +32,7 @@ small files without needing to physically copy anything to the HBS Grid.
 Click the image below for a local drive mounting demonstration:
 
 <video width="70%" controls>
-  <source src="../media/datasync.webm" type="video/webm">
+  <source src="../media/datasync.mp4" type="video/webm">
 Your browser does not support the video tag.
 </video>
 
@@ -95,7 +95,7 @@ Click the image below for a demonstration showing how to sync your data
 from a local drive to the HBS Grid:
 
 <video width="70%" controls>
-  <source src="../media/datasync.webm" type="video/webm">
+  <source src="../media/datasync.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
@@ -128,7 +128,7 @@ data synchronization with all major cloud storage providers.
  Click the image below for a quick demonstration showing how to copy files from *Dropbox* to the HBS Grid.
 
 <video width="70%" controls>
-  <source src="../media/rclone.webm" type="video/webm">
+  <source src="../media/rclone.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 

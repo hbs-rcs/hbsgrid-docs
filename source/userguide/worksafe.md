@@ -39,7 +39,7 @@ the *File Browser* or from the command line using the *Terminal*.
 Click the image below to see these steps visually:
 
 <video width="70%" controls>
-  <source src="../media/permissions.webm" type="video/webm">
+  <source src="../media/permissions.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
