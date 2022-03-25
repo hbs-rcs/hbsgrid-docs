@@ -1,10 +1,8 @@
 site_name: 'HBS Grid Technology Preview User Guide'
 site_url: 'https://hbs-rcs.github.io/hbsgrid-docs/'
+copyright: Copyright &copy; President & Fellows of Harvard College.
 repo_url: 'https://github.com/hbs-rcs/hbsgrid-docs'
-edit_uri: 'edit/main/source/'
-remote_branch: 'main'
-docs_dir: 'source'
-site_dir: 'docs'
+docs_dir: 'docs'
 
 nav:
     - Home: 'index.md'
@@ -39,6 +37,10 @@ theme:
     - navigation.top
   palette:
     scheme: hbs
+  extra:
+    version:
+      provider: mike
+
 extra_css:
   - stylesheets/extra.css
 
@@ -63,5 +65,10 @@ plugins:
   - tags:
       tags_file: tutorials.md
   - search
+  - mike:
+      version_selector: false   # set to false to leave out the version selector
+      css_dir: css             # the directory to put the version selector's CSS
+      javascript_dir: js       # the directory to put the version selector's JS
+      canonical_version: null  # the version for <link rel="canonical">; `null`
+                               # uses the version specified via `mike deploy`
 
-copyright: Copyright &copy; President & Fellows of Harvard College.
