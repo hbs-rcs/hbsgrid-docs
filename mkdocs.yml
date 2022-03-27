@@ -37,9 +37,6 @@ theme:
     - navigation.top
   palette:
     scheme: hbs
-  extra:
-    version:
-      provider: mike
 
 extra_css:
   - stylesheets/extra.css
@@ -61,6 +58,10 @@ markdown_extensions:
         emoji_generator: !!python/name:materialx.emoji.to_svg
         emoji_index: !!python/name:materialx.emoji.twemoji
 
+extra:
+  version:
+    provider: mike
+          
 plugins:
   - tags:
       tags_file: tutorials.md
