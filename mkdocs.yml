@@ -93,4 +93,4 @@ markdown_extensions:
 plugins:
   - search
   - mike:
-      version_selector: false   # set to false for now because we only have one version.
+      version_selector: true
