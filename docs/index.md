@@ -1,58 +1,56 @@
----
-hide:
-  - navigation
-  - toc
----
+# Compute Cluster and Data Storage
 
-# **HBS [Research Computing Services](https://www.hbs.edu/research-computing-services) is building powerful and user-friendly tools and environments to bring the computing power of the HBS Grid to a wider community of HBS users. Our environments include a wide range of software including *Julia*, *Matlab*, *Python*, *R*,* Stata*, and hundreds of other popular programs**
+If your desktop or laptop is overheating when trying to work with your
+data, taking days to run a program, or running out of space to store
+your data, consider moving your data processing and storage to the HBS
+computer cluster (aka "the HBSGrid" or "the Grid").
 
-These environments are in active development and are currently
-available as a *Technology Preview* for testing.
+This platform will allow you to scale up your computing, access data
+storage, and utilize large databases to store and process data. While
+the bulk of this page focuses on the HBSGrid, note that there are
+additional research computing environments available to HBS researchers.
 
-!!! quicklinks
-    [**🥇 &nbsp;&nbsp;Get started by enabling HBS grid Technology Preview features**](userguide/quickstart.md)  
-    Start here!
-     
-    [**🚀 &nbsp;&nbsp;Run Applications from the Desktop**](userguide/menulaunch.md)  
-    Run applications on powerful HBS Grid compute nodes using desktop menus
-     
-    [**🔄 &nbsp;&nbsp;Copy and Sync Files**](userguide/syncfiles.md)  
-    Mount or copy data from local drives or cloud storage to the HBS Grid
-     
-    [**👥 &nbsp;&nbsp;Collaborate and Share Safely and Securely**](userguide/worksafe.md)  
-    Learn how to work safely and securely in a multi-user environment
-     
-    [**📦 &nbsp;&nbsp;Use Software Versions**](userguide/environments.md)  
-    Learn about available software and how to run different software versions
-     
-    [**┃> &nbsp;Use the Command-line**](userguide/commandline.md)  
-    Run jobs on powerful HBS Grid compute nodes from the terminal
-     
-    [**🦺 &nbsp;&nbsp;Support and Troubleshooting**](support/trouble.md)  
-    What to do if things don't work as expected
+## [Compute Cluster](compute-cluster/overview.md)
 
+The HBS compute cluster (HBSGrid) is an advanced computing environment
+that provides high-speed, high-capacity computing resources to enable
+HBS researchers to scale up effectively and efficiently conduct
+statistical analysis and programming.
 
-You can click the video thumbnail below to watch a short demonstration
-of our software environment.
+- [Technical Benefits and Features](compute-cluster/techbenefits.md)
+- [Quick Start](compute-cluster/quick-start.md)
+- [Requesting an Account](compute-cluster/request-an-account.md)
+- [Logging in](compute-cluster/logging-in.md)
+- [Copying and Extracting Files](compute-cluster/copying-and-extracting-files.md)
+- [Running Jobs](compute-cluster/running-jobs/overview.md)
+- [Software Tools](compute-cluster/selectingsoftware/conda.md)
 
-<video id="hbsgrid_v3.0_demo" width="70%" controls>
-  <source src="userguide/media/intro.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+## [Data Storage](research-storage/overview.md)
 
+Data storage is available for research projects with HBS members and
+guests, and can be used and accessed independently of the HBSGrid.
 
-**User testing and project status**
+- [Transferring Data](research-storage/accessing-spaces-and-storage.md)
+- [Transferring Data](research-storage/transferring-data.md)
+- [Working with Spaces, Files, and Folders](research-storage/working-with-spaces-files-and-folders.md)
 
-We are currently conducting user testing and assessing the possibility
-of making this software more widely available. The environment is
-generally stable but the software documented here 
-**remains a technology preview and any and all use is at your own risk**.
+## [Database Server](database-server/overview.md)
 
-If you find that something doesn't work as expected, of if you have a
-feature request, we would love to know about it so we can fix or improve
-it. Bug reports and feature requests are important contributions to this
-project and are always welcome and encouraged! You can either start a
-discussion at <https://github.com/hbs-rcs/hbsgrid-docs/discussions> or create an issue
-report at <https://github.com/hbs-rcs/hbsgrid-docs/issues>. We are building a
-friendly and welcoming community of HBS Grid users and we invite you to
-join us using the links above.
+RCS hosts and provides guidance for a database server running MariaDB
+capable of handling large and complex datasets.
+
+- [Configuration Files Recommended for Connecting](database-server/configuration-files-recommended-for-connecting.md)
+- [MySQL Client](database-server/mysql-client.md)
+- [NaviCat](database-server/navicat.md)
+- [NoMachine](database-server/nomachine.md)
+- [ODBC](database-server/odbc.md)
+- [Python](database-server/python.md)
+- [SAS](database-server/sas.md)
+- [Stata](database-server/stata.md)
+- [R](database-server/r.md)
+- [Terminal](database-server/terminal.md)
+
+## [Other Research Computing Environments](other-research-computing-environments.md)
+
+RCS provides guidance on additional computing environments such as
+Harvard FAS RC's Cannon cluster and Amazon Web Services (AWS).

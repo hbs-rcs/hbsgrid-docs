@@ -5,27 +5,50 @@ repo_url: 'https://github.com/hbs-rcs/hbsgrid-docs'
 docs_dir: 'docs'
 
 nav:
-    - Home: 'index.md'
-    - User Guide:
-        - 🥇 &nbsp;&nbsp;Get Started: 'userguide/quickstart.md'
-        - 🚀 &nbsp;&nbsp;Run Desktop Applications: 'userguide/menulaunch.md'
-        - 🔄 &nbsp;&nbsp;Copy and Sync Files: 'userguide/syncfiles.md'
-        - 👥 &nbsp;&nbsp;Collaborate and Share: 'userguide/worksafe.md'
-        - ┃> &nbsp;Use the Command-line: 'userguide/commandline.md'
-        - 📦 &nbsp;&nbsp;Use Software Versions: 'userguide/environments.md'
-    - Tutorials:
-        - Topic list: 'tutorials.md'
-        - Large data in R: 'tutorials/large_data_R.md'
-        - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
-        - NLP in Python: 'tutorials/nlp_with_python.md'
-    - Support:
-        - Troubleshooting: 'support/trouble.md'
-        - Account and Service Requests: 'support/requests.md'
-        - Contact Us: 'support/contact.md'
-        - Discussion Forum: 'https://github.com/hbs-rcs/hbsgrid-docs/discussions/'
-        - Bug Reports: 'https://github.com/hbs-rcs/hbsgrid-docs/issues/'
-    - Blog: 'blog.md'
-
+  - Compute Cluster and Data Storage: 'index.md'
+  - Compute Cluster:
+    - compute-cluster/overview.md
+    - compute-cluster/copying-and-extracting-files.md
+    - compute-cluster/logging-in.md
+    - compute-cluster/quick-start.md
+    - compute-cluster/request-an-account.md
+    - compute-cluster/selectingsoftware/overview.md
+    - compute-cluster/techbenefits.md
+    - Running Jobs:
+      - compute-cluster/running-jobs/overview.md
+      - compute-cluster/running-jobs/guidelines-for-choosing-resources.md
+      - compute-cluster/running-jobs/monitoring.md
+      - compute-cluster/running-jobs/running-a-program-submitting-a-job.md
+      - compute-cluster/running-jobs/scaling-work.md
+    - Selecting Software:
+      - compute-cluster/selectingsoftware/overview.md
+      - compute-cluster/selectingsoftware/conda.md
+      - Machine Learning: compute-cluster/selectingsoftware/ML.md
+      - compute-cluster/selectingsoftware/git.md
+      - compute-cluster/selectingsoftware/julia.md
+      - compute-cluster/selectingsoftware/jupyter.md
+      - compute-cluster/selectingsoftware/r-and-python-hbsgrid.md
+      - compute-cluster/selectingsoftware/rclone.md
+      - compute-cluster/selectingsoftware/sasconnect.md
+      - compute-cluster/selectingsoftware/stata.md
+    - other-research-computing-environments.md
+  - Database Server:
+    - database-server/overview.md
+    - database-server/configuration-files-recommended-for-connecting.md
+    - database-server/mysql-client.md
+    - database-server/navicat.md
+    - database-server/nomachine.md
+    - database-server/odbc.md
+    - database-server/python.md
+    - database-server/r.md
+    - database-server/sas.md
+    - database-server/stata.md
+    - database-server/terminal.md
+  - Research Storage:
+    - research-storage/overview.md
+    - research-storage/accessing-spaces-and-storage.md
+    - research-storage/transferring-data.md
+    - research-storage/working-with-spaces-files-and-folders.md
 
 theme:
   name: material
@@ -45,25 +68,29 @@ extra_css:
   - stylesheets/extra.css
 
 markdown_extensions:
-    - admonition
-    - attr_list
-    - def_list
-    - meta
-    - tables
-    - toc:
-        toc_depth: 2
-    - pymdownx.details
-    - pymdownx.superfences
-    - mdx_gh_links:
-        user: mkdocs
-        repo: mkdocs
-    - pymdownx.emoji:
-        emoji_generator: !!python/name:materialx.emoji.to_svg
-        emoji_index: !!python/name:materialx.emoji.twemoji
+  - admonition
+  - attr_list
+  - def_list
+  - meta
+  - tables
+  - toc:
+      toc_depth: 2
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - mdx_gh_links:
+      user: mkdocs
+      repo: mkdocs
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.details
+
 
 plugins:
-  - tags:
-      tags_file: tutorials.md
   - search
   - mike:
       version_selector: false   # set to false for now because we only have one version.
