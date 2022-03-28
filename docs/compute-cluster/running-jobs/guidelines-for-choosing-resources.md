@@ -17,7 +17,7 @@ for more details on these guidelines.
     -   Check your MAX MEM usage (see below) from past job history, and
         select best fit memory footprint.
     -   A little more difficult, but write custom [LSF job submit
-        commands](running-jobs/running-a-program-submitting-a-job.md#working-with-custom-submission-scripts)
+        commands](running-a-program-submitting-a-job.md#working-with-custom-submission-scripts)
         to closely match memory usage that you need. You\'ll need to do
         this if requiring RAM amounts \> 20 GB, as the default wrapper
         scripts only allow 20 GB RAM allocations as a maximum.
