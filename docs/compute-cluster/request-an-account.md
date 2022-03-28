@@ -26,7 +26,7 @@ receiving the account. Users who do not attend a training session in a
 timely fashion will have their accounts shut off.
 
 It is discouraged to create guest accounts for the sole purpose of
-accessing data. Instead, [other methods of data transfer](/research-computing-services/data-practices/transferring-data/Pages/default.aspx)
+accessing data. Instead, [other methods of data transfer](https://www.hbs.edu/research-computing-services/data-practices/transferring-data/Pages/default.aspx)
 should be followed.
 
 For guest accounts both steps must be followed:

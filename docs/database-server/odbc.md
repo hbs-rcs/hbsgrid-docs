@@ -208,7 +208,7 @@ refer to the appropriate sections for detailed instructions:
     `ODBC Administrator`{.inline style="overflow-x: auto;"} dialog,
     choose the 'User DSN' and click 'Add'**:**
 
-    ![](/research-computing-services/PublishingImages/odbc-mac1.png){style="max-width:500px;"}
+    ![](https://www.hbs.edu/research-computing-services/PublishingImages/odbc-mac1.png){style="max-width:500px;"}
 
     Select the 'Connector/ODBC driver' and click 'OK'. You will be
     presented with the '`Data Source Name`{.inline
@@ -217,7 +217,7 @@ refer to the appropriate sections for detailed instructions:
     optional `Description`{.inline style="overflow-x: auto;"} for the
     DSN**:**
 
-    ![](/research-computing-services/PublishingImages/odbc-mac2.png){style="max-width:500px;"}
+    ![](https://www.hbs.edu/research-computing-services/PublishingImages/odbc-mac2.png){style="max-width:500px;"}
 
     Click "Add" to add a new keyword/value pair to the panel. Please
     configure the following connection parameters:

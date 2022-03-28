@@ -315,7 +315,7 @@ To extract all contents within `subfolder` to a specific folder
 Documentation may be found here: <https://linux.die.net/man/1/unzip>
 
 If neither tool works on your archive / compressed file, then you
-will need to [install software for your use](/research-computing-services/resources/compute-cluster/selectingsoftware.aspx#installing).
+will need to [install software for your use](selectingsoftware/overview.md#installing-software-on-the-hbsgrid).
 
 ### Gunzip
 
@@ -338,4 +338,4 @@ To extract all files within a folder and subfolders
 Documentation may be found here: https://linux.die.net/man/1/gunzip
 
 If neither tool works on your archive / compressed file, then you
-will need to [install software for your use](/research-computing-services/resources/compute-cluster/selectingsoftware.aspx#installing).
+will need to [install software for your use](selectingsoftware/overview.md#installing-software-on-the-hbsgrid).

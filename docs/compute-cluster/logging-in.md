@@ -78,7 +78,7 @@ Follow our instructions to connect to the HBSGrid via a GUI or Terminal.
     :   On the Welcome page, click on "Create a new connection" and
         click \"Continue.\"
 
-        ![](/research-computing-services/PublishingImages/Connection%201.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/PublishingImages/Connection%201.png){style="max-width:500px;"}
 
         On the \"New connect\" screen use the default Protocol setting
         \"NX\" and click \"Continue.\" Next, enter host information for
@@ -86,7 +86,7 @@ Follow our instructions to connect to the HBSGrid via a GUI or Terminal.
         Ensure the checkbox for UDP communication is checked and click
         \"Continue.\"
 
-        ![](/research-computing-services/PublishingImages/Connection%202.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/PublishingImages/Connection%202.png){style="max-width:500px;"}
 
         On the next screen choose \"Password\" selected and click
         \"Continue.\" Next, please check \"Don\'t use a proxy\" check
@@ -97,24 +97,24 @@ Follow our instructions to connect to the HBSGrid via a GUI or Terminal.
         \"Privacy\", and check the option \"Don\'t show other computers
         on the network,\" and click \"Done.\"
 
-        ![](/research-computing-services/PublishingImages/Connection%203.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/PublishingImages/Connection%203.png){style="max-width:500px;"}
 
         Highlight the **hbsgrid-nx.hbs.edu**connection and click
         \"Connect.\"
 
-        ![](/research-computing-services/PublishingImages/Connection%204.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/PublishingImages/Connection%204.png){style="max-width:500px;"}
 
         In the window \"Verify host authenticity\", click \"Yes.\" Next
         enter your username and password. For security purposes, do not
         select \"Save this password.\"
 
-        ![](/research-computing-services/PublishingImages/Connection%205.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/PublishingImages/Connection%205.png){style="max-width:500px;"}
 
         After a few moments, a window will appear for windowing options.
         Click \"New virtual desktop or custom session,\" click \"Create
         a new GNOME virtual desktop" and click \"Continue.\"
 
-        ![](/research-computing-services/PublishingImages/Connection%206.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/PublishingImages/Connection%206.png){style="max-width:500px;"}
 
         On the next few pages leave the default setting and check
         \"Don\'t show this message again.\"
@@ -130,7 +130,7 @@ Follow our instructions to connect to the HBSGrid via a GUI or Terminal.
         corner of the screen a page peel-back icon appears. Click on the
         image of the peel-back.
 
-        ![](/research-computing-services/PublishingImages/Configure%201.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/PublishingImages/Configure%201.png){style="max-width:500px;"}
 
         Next click on \"Display\" and \"Resize remote screen\" and click
         \"Done\" twice. For more details about configuring your display
@@ -143,12 +143,12 @@ Follow our instructions to connect to the HBSGrid via a GUI or Terminal.
         customizing your desktop. For example, to add icons back to your
         NoMachine desktop, launch Tweak Tool
 
-        ![](/research-computing-services/PublishingImages/Configure%202.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/PublishingImages/Configure%202.png){style="max-width:500px;"}
 
         and click on the Desktop left tab (1) and turn on the Icons on
         Desktop option (2):
 
-        ![](/research-computing-services/PublishingImages/Configure%203.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/PublishingImages/Configure%203.png){style="max-width:500px;"}
 
         More information about configuring NoMachine and the Gnome
         desktop are available in our [NoMachine Interface Changes

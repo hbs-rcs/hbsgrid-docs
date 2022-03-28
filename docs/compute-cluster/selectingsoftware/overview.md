@@ -6,7 +6,7 @@ Additional software, including older versions of software, can
 selectively be "turned on" in a user's environment via 
 [software modules](overview.md#software-modules).
 Software not available by default or software modules can be 
-[installed on the HBSGrid](overview.md#installing)
+[installed on the HBSGrid](overview.md#installing-software-on-the-hbsgrid)
 by following the instructions below.
 
 ## Default Software and Environments {#default-software-and-environments}
