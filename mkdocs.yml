@@ -2,7 +2,7 @@ site_name: 'HBS Grid User Guide'
 site_url: 'https://hbs-rcs.github.io/hbsgrid-docs/'
 copyright: Copyright &copy; President & Fellows of Harvard College.
 repo_url: 'https://github.com/hbs-rcs/hbsgrid-docs'
-edit_uri: '/edit/v2.5/docs/'
+edit_uri: '/hbs-rcs/hbsgrid-docs/edit/v2.5/docs/'
 docs_dir: 'docs'
 remote_branch: gh-pages
 
