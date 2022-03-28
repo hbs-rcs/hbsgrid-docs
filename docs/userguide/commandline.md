@@ -17,7 +17,7 @@ options.
 LSF provides `bsub`, a command-line program for running applications on powerful remote
 computers. For example, you can use
 
-``` contents
+``` sh
 bsub -q short_int -Is R
 ```
 
@@ -148,7 +148,7 @@ environments so that you can switch back to them later if needed. These older
 environments can be loaded using [Lmod](https://lmod.readthedocs.io/en/latest/010_user.html).
 
 Running
-```
+``` sh
 ml avail
 ```
 will show you the available environments, named by date and version number.
@@ -221,11 +221,11 @@ You can get detailed information about specific software modules using the
 ```
 
 Finally you can use `ml` to load and unload specific environments.
-```
+``` sh
 ml rcs_2021.03
 ```
 will load the *rcs_2021.03* environment, and 
-```
+``` sh
 ml -rcs_2021.03
 ```
 will unload it.

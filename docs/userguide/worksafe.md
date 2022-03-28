@@ -52,7 +52,7 @@ for details.
 Ownership and permissions can alternatively be set from the command line using `chown` and
 `chmod`. For example 
 
-```
+``` sh
 chmod -R g+rwx project1/data
 ```
 says "**R**ecursively for **g**roup members, add **r**ead, **w**rite 
@@ -62,7 +62,7 @@ for details.
 
 Group ownership can be set from the command line using `chgrp`. For example opening the
 *Terminal* application and running
-```
+``` sh
 chgrp -R my_project_group project1/data
 ```
 says "**R**ecursively make *my_project_group* the group owner of `project1/data` and everything in it". 

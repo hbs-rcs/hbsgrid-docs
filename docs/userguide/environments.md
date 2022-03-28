@@ -10,7 +10,7 @@ of fully configured *Jupyter Notebooks*, we have you covered.
 The list of installed software is so large we make no effort to
 enumerate everything here, but you can always get an up-to-date list
 by opening a *terminal* on the Grid and running
-```
+``` sh
 conda list
 ```
 
@@ -129,7 +129,7 @@ and can be imported and run locally for convenience, reproducibility, or
 testing purposes.
 
 For complete environment details, open a terminal and run
-```
+``` sh
 conda env export -n rcs_2022.01
 ```
 
@@ -161,7 +161,7 @@ environment are listed below.
 
 For complete environment details, open a terminal and run
 
-```
+``` sh
 conda env export -n rcs_2021.06
 ```
 
@@ -191,7 +191,7 @@ environment are listed below.
 
 For complete environment details, open a terminal and run
 
-```
+``` sh
 conda env export -n rcs_2021.03
 ```
 
@@ -219,6 +219,6 @@ environment are listed below.
 
 For complete environment details, open a terminal and run
 
-```
+``` sh
 conda env export -n rcs_2020.01
 ```
