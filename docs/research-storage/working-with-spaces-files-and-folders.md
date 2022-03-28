@@ -97,7 +97,7 @@ email from RCS with the following subject line:
 
 Please first see if you are able to archive any data using the
 instructions
-[here](https:/hbs.edu/research-computing-services/help/technical-how-tos-and-technical-notes/archiving-your-research-files.aspx).
+[here](https://www.hbs.edu/research-computing-services/help/technical-how-tos-and-technical-notes/archiving-your-research-files.aspx).
 If you are unable to clear a significant amount of space, please [send
 an email to
 RCS](mailto:research@hbs.edu?subject=Project%20Space%20Increase) to
@@ -138,4 +138,4 @@ grid storage. The person listed as 'owner' of a file (eg. 'jharvard')
 is the only person who can change the permissions. To change the
 permissions on files, please refer to the document '[Changing
 Permissions on the Research
-Grid](https:/hbs.edu/research-computing-services/help/technical-how-tos-and-technical-notes/changing-permissions-on-the-hbsgrid.aspx)'.
+Grid](https://www.hbs.edu/research-computing-services/help/technical-how-tos-and-technical-notes/changing-permissions-on-the-hbsgrid.aspx)'.

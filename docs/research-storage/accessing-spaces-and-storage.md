@@ -114,7 +114,7 @@ options to access storage.
     ### **FileZilla**
 
     Please see [this
-    document](https://hbs/edu/research-computing-services/Shared%20Documents/Grid/filezilla_install.pdf)
+    document](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/filezilla_install.pdf)
     for using the cross-platform FileZilla GUI file transfer client.
 
     ### **Cyberduck**
