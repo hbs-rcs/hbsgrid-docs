@@ -201,12 +201,12 @@ Follow our instructions to connect to the HBSGrid via a GUI or Terminal.
         `/export/projects/<projectname>`{style="overflow-x: hidden;"}
 
         See our [Research
-        Storage](/research-computing-services/resources/research-storage/Pages/default.aspx)
+        Storage](../research-storage/overview.md)
         instructions for more information on home folders and project
         spaces.
 
         Continue on to our [Running
-        Jobs](/research-computing-services/resources/compute-cluster/running-jobs/Pages/default.aspx)
+        Jobs](running-jobs/overview.md)
         section for instructions on getting work done.
 
         Guest Users can download Putty to gain terminal access to the
@@ -217,28 +217,25 @@ Follow our instructions to connect to the HBSGrid via a GUI or Terminal.
 
     :   1.  Open **Terminal**
         2.  Once the Terminal is open type:
-            `ssh  username@hbsgrid.hbs.edu`{.inline
-            style="overflow-x: hidden;"}
+            `ssh  username@hbsgrid.hbs.edu`
         3.  Your username is the local part of your HBS email address
             (e.g., jharvard) and your password is the same as your HBS
             credentials password
 
         Once logged in successfully, you'll be place in your home
-        directory at `/export/home/<group>/<username>`{.inline
-        style="overflow-x: hidden;"} (e.g.,
-        `/export/home/faculty/jharvard`{style="overflow-x: hidden;"}).
+        directory at `/export/home/<group>/<username>` (e.g.,
+        `/export/home/faculty/jharvard`).
 
         Project spaces are located at
-        `/export/projects/<projectname>`{.inline
-        style="overflow-x: hidden;"}.
+        `/export/projects/<projectname>`.
 
         See our [Research
-        Storage](/research-computing-services/resources/research-storage/Pages/default.aspx)
+        Storage](../research-storage/overview.md)
         instructions for more information on home folders and project
         spaces.
 
         Continue on to our [Running
-        Jobs](/research-computing-services/resources/compute-cluster/running-jobs/Pages/default.aspx)
+        Jobs](running-jobs/overview.md)
         section for instructions on getting work done.
 
     #### Guest Users
@@ -258,7 +255,7 @@ Follow our instructions to connect to the HBSGrid via a GUI or Terminal.
         style="overflow-x: hidden;"}
 
         See our [Research
-        Storage](/research-computing-services/resources/research-storage/Pages/default.aspx)
+        Storage](../research-storage/overview.md)
         instructions for more information on home folders and project
         spaces.
 

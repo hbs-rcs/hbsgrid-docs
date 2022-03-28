@@ -63,28 +63,28 @@ refer to the appropriate sections for detailed instructions:
     Prompt:
 
     `wmic os get osarchitecture`
-    ![](https://hbs.edu/research-computing-services/PublishingImages/windows_odbc1.png)
+    ![](https://www.hbs.edu/research-computing-services/PublishingImages/windows_odbc1.png)
 
     Once you have the system type, please select the appropriate OS
     Version on the MySQL Connector page for the proper installer. In the
     example below we are selecting the MSI Installer for Windows (x86,
     64-bit):
 
-    ![](https://hbs.edu/research-computing-services/PublishingImages/windows_odbc2.png){style="max-width:500px;"}
+    ![](https://www.hbs.edu/research-computing-services/PublishingImages/windows_odbc2.png){style="max-width:500px;"}
 
     For convenience, please select the MSI installer. You might then be
     taken to the "Begin Your Download" page. You do not need to sign
     up for any account. You can simply scroll down to the bottom and
     select "No thanks, just start my download".
 
-    ![](http://hbs.edu/research-computing-services/PublishingImages/windows_odbc3.png){style="max-width:500px;"}
+    ![](https://www.hbs.edu/research-computing-services/PublishingImages/windows_odbc3.png){style="max-width:500px;"}
 
     Once you have downloaded the installer, run it. When asked to select
     Typical, Complete, or Custom, please select Typical. If you do run
     into issues with the Typical download you can come back and select
     Complete. The example here will be based on the Typical install.
 
-    ![](http://hbs.edu/research-computing-services/PublishingImages/windows_odbc4.png){style="max-width:500px;"}
+    ![](https://www.hbs.edu/research-computing-services/PublishingImages/windows_odbc4.png){style="max-width:500px;"}
 
     After the installation has completed, you will need to configure
     your ODBC data sources with the ODBC Administrator. Windows has a
@@ -94,19 +94,19 @@ refer to the appropriate sections for detailed instructions:
     version earlier than Windows 7, you may not have this tool. Instead,
     you will use **32 Bit Administration Tool**.
 
-    ![](http://hbs.edu/research-computing-services/PublishingImages/windows_odbc5.png){style="max-width:500px;"}
+    ![](https://www.hbs.edu/research-computing-services/PublishingImages/windows_odbc5.png){style="max-width:500px;"}
 
     Within the ODBC Administrator window, please verify that the MySQL
     ODBC connector is present under the **Drivers** tab.
 
-    ![](http://hbs.edu/research-computing-services/PublishingImages/windows_odbc6.png){style="max-width:500px;"}
+    ![](https://www.hbs.edu/research-computing-services/PublishingImages/windows_odbc6.png){style="max-width:500px;"}
 
     Next, switch to the **User DSN** tab, click **Add\...**, and then
     select the appropriate MySQL ODBC connector (there may be two
     versions of the driver, **ANSI** and **Unicode**, in which case RCS
     recommends using **ANSI**) followed by clicking on **Finished**.
 
-    ![](https://hbs.edu/research-computing-services/PublishingImages/windows_odbc7.png){style="max-width:500px;"}
+    ![](https://www.hbs.edu/research-computing-services/PublishingImages/windows_odbc7.png){style="max-width:500px;"}
 
     A new window will open to configure your Data Source. Configuring
     your Data Source should be straightforward. The required fields, as
@@ -122,12 +122,12 @@ refer to the appropriate sections for detailed instructions:
     Please be sure to click on **Test** to validate your connection
     settings!
 
-    ![](http://hbs.edu/research-computing-services/PublishingImages/windows_odbc8.png){style="max-width:500px;"}
+    ![](https://www.hbs.edu/research-computing-services/PublishingImages/windows_odbc8.png){style="max-width:500px;"}
 
     Now you should see your newly created Data Source Name under the
     **User DSN** tab. Click OK and you are done!
 
-    ![](http://hbs.edu/research-computing-services/PublishingImages/windows_odbc9.png){style="max-width:500px;"}
+    ![](https://www.hbs.edu/research-computing-services/PublishingImages/windows_odbc9.png){style="max-width:500px;"}
 
 ??? note "Setup Instructions for Mac Users"
     

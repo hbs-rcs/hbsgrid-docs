@@ -56,7 +56,7 @@ Note:
     to your home or project folder any files or folders you wish to keep
     long-term.
 
-Please see our [RCS Policies page](https://hbs.edu/research-computing-services/about-us/terms-of-service/policies.aspx#scratch)
+Please see our [RCS Policies page](https://www.hbs.edu/research-computing-services/about-us/terms-of-service/policies.aspx#scratch)
 for more information about our scratch usage policies.
 
 ## Project Spaces {#project-spaces}
@@ -88,7 +88,7 @@ for useful tips. 
 If you are working with level 3 data or higher, we will ask you to
 submit documentation from the IRB or a Data Usage Agreement (DUA; a
 [sample can be found
-here](https://hbs.edu/research-computing-services/Shared%20Documents/Training/sample_l3_data_usage_agreement.pdf))
+here](https://www.hbs.edu/research-computing-services/Shared%20Documents/Training/sample_l3_data_usage_agreement.pdf))
 so that we can ensure that the project space's security levels are
 appropriately set up. If you are unsure what level your data falls
 under, [please review this page on data
@@ -107,9 +107,9 @@ Inactive project spaces will be backed up and archived only after
 contacting the primary faculty sponsor. Archives are retained for the
 period of time specified by HU or HBS data retention policies, whichever
 is longest. If you would like to unarchive a project space, [contact
-RCS](https://hbs.edu/research-computing-services/contact-us/Pages/default.aspx){target="_blank"}.
+RCS](https://www.hbs.edu/research-computing-services/contact-us/Pages/default.aspx){target="_blank"}.
 
 For information about how to archive your data to an external drive, see
 our [technical note on archiving your research
-files](https://hbs.edu/research-computing-services/help/technical-how-tos-and-technical-notes/archiving-your-research-files.aspx){target="_blank"}.
+files](https://www.hbs.edu/research-computing-services/help/technical-how-tos-and-technical-notes/archiving-your-research-files.aspx){target="_blank"}.
 

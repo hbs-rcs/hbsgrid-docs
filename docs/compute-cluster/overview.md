@@ -31,7 +31,7 @@ including how to choose your resources, monitor and troubleshoot your
 jobs, and scale up your work through techniques such as parallel
 processing.
 
-## [Software Tools](software-tools)
+## [Software Tools](selectingsoftware/overview.md)
 
 Choose your software from those already installed on the HBSGrid, or
 follow our instructions to install software.

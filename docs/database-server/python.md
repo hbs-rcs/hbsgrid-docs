@@ -21,7 +21,7 @@ From your terminal / shell / command line / Anaconda prompt, issue:
 You should see something similar to the following screen shot, which
 indicates that your Python-MySQL connector has successfully installed:
 
-![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/mysql-connector-python.png){style="max-width:650px"}
+![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/mysql-connector-python.png){style="max-width:650px"}
 
 In the case that you run into issues with pip install, you may download
 the MySQL-Python connector directly from:
@@ -29,7 +29,7 @@ the MySQL-Python connector directly from:
 Please make sure you select the correct installer for your system and
 Python version:
 
-![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/windows_mysql_python_connector_install.png){style="max-width:650px"}
+![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/windows_mysql_python_connector_install.png){style="max-width:650px"}
 
 ## .my.cnf {#my.cnf}
 

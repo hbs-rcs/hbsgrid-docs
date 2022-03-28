@@ -13,7 +13,7 @@ some form of version control as a part of best practices for research
 data management, reproducible research, and documenting her/his scripts
 and code changes over the course of a research project (see our [Best
 Practices
-page](https://hbs.edu/research-computing-services/data-practices/general-and-best-data-practices.aspx)).
+page](https://www.hbs.edu/research-computing-services/data-practices/general-and-best-data-practices.aspx)).
 Version control can be used to keep track of versions of a piece of work
 that either a single person is working on, or a shared document.
 

@@ -108,7 +108,7 @@ options to access storage.
     ### SecureFX
 
     Please see [this
-    document](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/securefx_setup_and_transfering_grid_files.pdf)
+    document](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/securefx_setup_and_transfering_grid_files.pdf)
     for using the Windows SecureFX GUI file transfer client.
 
     ### **FileZilla**
@@ -120,7 +120,7 @@ options to access storage.
     ### **Cyberduck**
 
     Please see [this
-    document](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/cyberduck_setup_and_transfering_grid_files.pdf)
+    document](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/cyberduck_setup_and_transfering_grid_files.pdf)
     for using the Mac Cyberduck GUI file transfer client.
 
 ## Accessing Spaces and Storage via Terminal {#accessing-spaces-and-storage-via-terminal}
@@ -147,7 +147,7 @@ The various storage locations can be found at the following Unix paths:
 
 For information about how to transfer data from any given machine to
 these locations, see our [Transferring
-Files](https://hbs.edu/research-computing-services/data-practices/transferring-data/Pages/default.aspx)
+Files](https://www.hbs.edu/research-computing-services/data-practices/transferring-data/Pages/default.aspx)
 or [Copying
-Data](http://hbs.edu/research-computing-services/data-practices/transferring-data/copying-files-from-the-hbsgrid.aspx)
+Data](https://www.hbs.edu/research-computing-services/data-practices/transferring-data/copying-files-from-the-hbsgrid.aspx)
 web pages.)

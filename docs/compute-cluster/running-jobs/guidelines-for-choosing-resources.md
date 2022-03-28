@@ -7,7 +7,7 @@ submissions.
 ## Choosing Your Resources {#choosing-your-resources}
 
 See our [Choosing Resources
-seminar](https://hbs.edu/research-computing-services/Shared%20Documents/Training/choosing_resources.pdf)
+seminar](https://www.hbs.edu/research-computing-services/Shared%20Documents/Training/choosing_resources.pdf)
 for more details on these guidelines.
 
 ??? note "RAM"
@@ -88,7 +88,7 @@ for more details on these guidelines.
         entry](https://www.stata.com/manuals/dmemory.pdf) for memory for
         more information.
 
-        ![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/ram1.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/ram1.png){style="max-width:500px;"}
 
     ??? note "R"
         
@@ -98,7 +98,7 @@ for more details on these guidelines.
         the <http://adv-r.had.co.nz/memory.html> (by Hadley Wickham) for
         more information.
 
-        ![](https://hbs.edu//research-computing-services/Shared%20Documents/Grid/ram2.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu//research-computing-services/Shared%20Documents/Grid/ram2.png){style="max-width:500px;"}
 
     ??? note "Python"
         

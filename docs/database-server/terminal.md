@@ -25,4 +25,4 @@ Once the above mysql command is entered you will be prompted to enter
 your MariaDB password. When you see the **MariaDB \[(none)\]\>** prompt
 you have successfully logged into MariaDB.
 
-![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/mariadb_login.png){style="max-width:650px;"}
+![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/mariadb_login.png){style="max-width:650px;"}

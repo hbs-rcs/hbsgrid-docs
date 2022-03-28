@@ -17,7 +17,7 @@ specify the Data Source Name (**dsn**) as **MariaDB**
 The entire table "sampletable" is loaded into STATA and you can Browse
 it in STATA\'s Data Editor:
 
-![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/windows_stata_odbc3.png){style="max-width:650px;"}
+![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/windows_stata_odbc3.png){style="max-width:650px;"}
 
 If you would like to load data from a table within another database,
 then replace **MyTable** with DATABASE.TABLE (please note the period
@@ -50,7 +50,7 @@ below:
 
 `set odbcmgr unixodbcodbc list`
 
-![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/db-connecting-stata-query-dsn.png){style="max-width:650px;"}
+![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/db-connecting-stata-query-dsn.png){style="max-width:650px;"}
 
 ## Troubleshooting {#troubleshooting}
 
@@ -79,7 +79,7 @@ and run the following command:
 
 `odbc query "MyDataSourceName"`
 
-![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid//research-computing-services/Shared%20Documents/Grid/db-connecting-stata-query-dsn-tables.png){style="max-width:650px;"}
+![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid//research-computing-services/Shared%20Documents/Grid/db-connecting-stata-query-dsn-tables.png){style="max-width:650px;"}
 
 ## Troubleshooting {#troubleshooting-1}
 
@@ -107,7 +107,7 @@ Once you have your ODBC set up you may launch Stata and run the command
 configured. To test that Stata may connect to the MariaDB server, run
 the **odbc query** command:
 
-![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/windows_stata_odbc.png){style="max-width:650px;"}
+![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/windows_stata_odbc.png){style="max-width:650px;"}
 
 The **odbc query** command will query for available tables within your
 database. If you did not provide a database name, then the result with

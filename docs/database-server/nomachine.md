@@ -16,7 +16,7 @@ logged in with NoMachine, then you will need to start a terminal session
 within NoMachine. To do so right-click on the desktop and select **Open
 in Terminal**.
 
-![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/website_db_pic_1.png)
+![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/website_db_pic_1.png)
 
 Within your terminal session, the syntax for running the **mysql**
 client is:
@@ -26,7 +26,7 @@ client is:
 Once you enter the above, you will next be prompted to enter your
 MariaDB password, as shown below:
 
-![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/connectexample_website.png)
+![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/connectexample_website.png)
 
 Once logged in, you should open your working database with the **use**
 command. As an example, the user **pjonak** can open their personal
@@ -34,7 +34,7 @@ database via
 
 `use jharvard;`
 
-![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/mariadb_password_2.png)
+![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/mariadb_password_2.png)
 
 ## Changing Your Password {#changing-your-password}
 

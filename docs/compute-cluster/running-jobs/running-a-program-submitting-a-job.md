@@ -63,7 +63,7 @@ submission scripts.
         when running R. See our [Guidelines for Choosing Resources for
         guidance](guidelines-for-choosing-resources.md).
 
-    ![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/NoMachine1.png){.fluid}\
+    ![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/NoMachine1.png){.fluid}\
 
     If there is a significant delay before your program launches there
     may be no more licenses available, or you may have reached your
@@ -111,7 +111,7 @@ submission scripts.
     style="overflow-x: hidden;"} option when writing a custom job
     submission).
 
-    ![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/CommandLine1.png){style="max-width:650px;"}
+    ![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/CommandLine1.png){style="max-width:650px;"}
 
     Notes: To get help on a given command and its options, include only
     the -h flag with the command.\

@@ -21,7 +21,7 @@ and FAILED:
 -   **FAILED:** Job finished with an exit code other than 0.
 
 Please also see our technote on [Monitoring CPU Usage for your
-Jobs](https://hbs.edu/research-computing-services/help/technical-how-tos-and-technical-notes/monitoring-cpu-usage-of-your-jobs-on-the-hbsgrid.aspx) in
+Jobs](https://www.hbs.edu/research-computing-services/help/technical-how-tos-and-technical-notes/monitoring-cpu-usage-of-your-jobs-on-the-hbsgrid.aspx) in
 order to understand the runtime behavior of your code.
 
 Note: If using the NoMachine NX client, you will need to open a terminal

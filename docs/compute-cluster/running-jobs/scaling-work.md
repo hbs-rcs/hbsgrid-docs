@@ -544,7 +544,7 @@ the HBSGrid cluster.
 
     They could be impressive. But a caveat:
 
-    ![](https://hbs.edu/research-computing-services/Shared%20Documents/Grid/stata_parallelization.png){style="max-width:400px;"}
+    ![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/stata_parallelization.png){style="max-width:400px;"}
 
     With multiple cores, one might expect to achieve the theoretical
     upper bound of doubling the speed by doubling the number of
