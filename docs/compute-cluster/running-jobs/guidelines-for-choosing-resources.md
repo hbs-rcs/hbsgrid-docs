@@ -52,14 +52,21 @@ for more details on these guidelines.
         bjobs or bhist commands, you can write a longer customized
         statement so that only the MAX MEM is output:
 
-        ` [jharvard@rhrcscli01:~]$ bjobs -l | grep -E "Application|IDLE|MAX" Job <144795>, User <rfreeman>, Project <XSTATA>, Application <stata-mp4-30g>, S                                                      IDLE_FACTOR(cputime/runtime):   0.01 MAX MEM: 56 Mbytes;  AVG MEM: 49 Mbytes `
+        ``` bash
+        [jharvard@rhrcscli01:~]$ bjobs -l | grep -E "Application|IDLE|MAX" 
+        Job <144795>, User <rfreeman>, Project <XSTATA>, Application <stata-mp4-30g>, 
+        S      IDLE_FACTOR(cputime/runtime):   0.01 MAX MEM: 56 Mbytes;  AVG MEM: 49 Mbytes
+        ```
 
         The next example can be used to display information for jobs
         that ran since a particular date. Here we will use the
         flags -a (all jobs), -l (long format), and -S (submitted date;
         comma indicates range up to today):
 
-        `[jharvard@rhrcscli01:~]$ bhist -a -l -S 2017/09/1, | grep -E "Application|IDLE|MAX" Job <158502>, User <jharvard>, Project <STATA-SE>, Application <stata-se-5g>, I MAX MEM: 12 Gbytes;  AVG MEM: 12 Mbytes Job <158547>, Job Name <MATLAB>, User <rfreeman>, Project <MATLAB>, Application MAX MEM: 607 Mbytes;  AVG MEM: 511 Mbytes                                  `
+        ``` bash [jharvard@rhrcscli01:~]$ bhist -a -l -S 2017/09/1, | grep -E "Application|IDLE|MAX" 
+        Job <158502>, User <jharvard>, Project <STATA-SE>, Application <stata-se-5g>, I MAX MEM: 12 Gbytes;  AVG MEM: 12 Mbytes Job <158547>, 
+        Job Name <MATLAB>, User <rfreeman>, Project <MATLAB>, Application MAX MEM: 607 Mbytes;  AVG MEM: 511 Mbytes
+        ```
 
     ### Finding the RAM Usage in Programming Environments (e.g., Stata) {#finding-the-ram-usage-in-programming-environments-e.g.-stata}
 

@@ -24,7 +24,7 @@ terminal window:
 
 To learn more about software modules on the HBSGrid, please see our
 general info on [software
-modules](../selectingsoftware/overview.md#modules).
+modules](../selectingsoftware/overview.md#software-modules).
 
 The ML/AI frameworks can be run on the standard compute nodes or on our
 compute node equipped with NVidia GPUs. Please see [GPU

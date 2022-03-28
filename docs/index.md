@@ -30,7 +30,7 @@ statistical analysis and programming.
 Data storage is available for research projects with HBS members and
 guests, and can be used and accessed independently of the HBSGrid.
 
-- [Transferring Data](research-storage/accessing-spaces-and-storage.md)
+- [Accessing Data](research-storage/accessing-spaces-and-storage.md)
 - [Transferring Data](research-storage/transferring-data.md)
 - [Working with Spaces, Files, and Folders](research-storage/working-with-spaces-files-and-folders.md)
 

@@ -32,7 +32,7 @@ Follow our instructions to connect to the HBSGrid via a GUI or Terminal.
 
     Collaborators and guest users can download the VPN Pulse Secure
     software (with two-factor)
-    here for [PC](/research-computing-services/Shared%20Documents/Grid/ps-pulse-win-9.1r9.0-b4983-64bitinstaller.msi) or [Mac](/research-computing-services/Shared%20Documents/Grid/ps-pulse-mac-9.1r9.0-b4983-installer.dmg).
+    here for [PC](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/ps-pulse-win-9.1r9.0-b4983-64bitinstaller.msi) or [Mac](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/ps-pulse-mac-9.1r9.0-b4983-installer.dmg).
 
     Please ensure that the VPN software Pulse Secure has been installed
     as described in the previous step, and that the Duo Mobile app (or
@@ -41,7 +41,7 @@ Follow our instructions to connect to the HBSGrid via a GUI or Terminal.
 
     For connecting to the HBS campus network, please follow the
     appropriate section on the [VPN/DUO Quick Reference
-    Guide](/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf).
+    Guide](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf).
     For example, to connect to the VPN with Duo Mobile \'push\' using
     the smartphone mobile application, please see Section 3, steps 1 and
     5 through 8.
@@ -64,9 +64,9 @@ Follow our instructions to connect to the HBSGrid via a GUI or Terminal.
     [Local Client Installation](#)
 
     :   1.  Please download for
-            [Mac](/research-computing-services/Shared%20Documents/Grid/nomachine_6.12.3_8.zip)
+            [Mac](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/nomachine_6.12.3_8.zip)
             or
-            [PC](/research-computing-services/Shared%20Documents/Grid/nomachine_6.12.3_7.exe)
+            [PC](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/nomachine_6.12.3_7.exe)
             and run the NoMachine version 6 installer application on
             your desktop (use all default settings during the
             installation).
@@ -152,7 +152,7 @@ Follow our instructions to connect to the HBSGrid via a GUI or Terminal.
 
         More information about configuring NoMachine and the Gnome
         desktop are available in our [NoMachine Interface Changes
-        guide](/research-computing-services/Shared%20Documents/Grid/nomachine_interface_changes.pdf).
+        guide](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/nomachine_interface_changes.pdf).
 
 ??? note "Terminal Login to the HBSGrid"
 
@@ -165,24 +165,24 @@ Follow our instructions to connect to the HBSGrid via a GUI or Terminal.
 
         Open SecureCRT and select from the menu File \> Quick Connect.
 
-        ![](/research-computing-services/Shared%20Documents/Grid/scrt1.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/scrt1.png){style="max-width:500px;"}
 
         3\. Enter the hostname information, **hbsgrid.hbs.edu**, your
         username (e.g., jharvard), and click "Connect."
 
-        ![](/research-computing-services/Shared%20Documents/Grid/terminal_login_shot2.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/terminal_login_shot2.png){style="max-width:500px;"}
 
         4\. Several dialogue boxes may come appear; please press \"Yes\"
         or "Allow" for each. When prompted, please enter your HBS
         password.
 
-        ![](/research-computing-services/Shared%20Documents/Grid/terminal_login_shot3.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/terminal_login_shot3.png){style="max-width:500px;"}
 
         If you've logged in successfully, you\'ll see a last login,
         greeting, and quota information, as well as the Unix (bash)
         prompt `researchgrid$`{.inline style="overflow-x: hidden;"}.
 
-        ![](/research-computing-services/Shared%20Documents/Grid/scrt4.png){style="max-width:500px;"}
+        ![](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/scrt4.png){style="max-width:500px;"}
 
         For future logins, after opening SecureCRT, the Sessions Manager
         window pane appears on the left. Double click on

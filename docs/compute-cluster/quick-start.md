@@ -23,9 +23,9 @@ logging in, working with files and software, and running jobs.
 
     If you will be using compute resources on the cluster, please sign
     up for [HBSGrid
-    training](/research-computing-services/training/compute-cluster.md) once
+    training](https://www.hbs.edu/research-computing-services/training/Pages/default.aspx) once
     your account has been created. Our [training
-    materials](/research-computing-services/training/training-materials.md)
+    materials](https://www.hbs.edu/research-computing-services/training/training-materials.aspx)
     are also available to view online for reference.
 
 ??? note "Step 2: Logging In"
@@ -49,7 +49,7 @@ logging in, working with files and software, and running jobs.
     In](logging-in.md) page
     for details. For a useful step-by-step list of instructions for
     connecting to the VPN, see the [VPN Quick Reference
-    Guide.](/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
+    Guide.](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
 
     ### Connecting to the HBSGrid {#connecting-to-the-hbsgrid .kappa .bold2}
 

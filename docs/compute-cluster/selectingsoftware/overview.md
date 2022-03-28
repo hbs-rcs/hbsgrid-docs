@@ -4,7 +4,7 @@ A variety of applications and libraries are supported on the cluster by
 [default](overview.md#default).
 Additional software, including older versions of software, can
 selectively be "turned on" in a user's environment via 
-[software modules](overview.md#modules).
+[software modules](overview.md#software-modules).
 Software not available by default or software modules can be 
 [installed on the HBSGrid](overview.md#installing)
 by following the instructions below.

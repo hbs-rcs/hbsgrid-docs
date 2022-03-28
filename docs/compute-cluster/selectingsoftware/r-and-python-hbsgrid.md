@@ -2,7 +2,7 @@
 
 The HBSGrid uses a combination of Anaconda, miniConda (a slimmed down
 Anaconda), and [software
-modules](overview.md#modules){url="overview.md#modules"}
+modules](overview.md#software-modules)
 to provide feature-rich environments for [R](#r) and [Python](#python) .
 This page briefly discusses need-to-knows for each environment.
 
@@ -18,7 +18,7 @@ scripts](../running-jobs/running-a-program-submitting-a-job.md#default)
 from the NoMachine GUI menus or terminal. These versions and other
 versions of R and RStudio can be accessed using the instructions about
 [software
-modules](overview.md#modules)
+modules](overview.md#software-modules)
 and used in combination with wrapper scripts in the terminal. All
 versions can be accessed via software modules and [custom LSF submission
 scripts](../running-jobs/running-a-program-submitting-a-job.md#custom).
@@ -48,7 +48,7 @@ scripts](../running-jobs/running-a-program-submitting-a-job.md#default)
 from the NoMachine GUI menus or terminal.
 
 Python can be accessed using the instructions about [software
-modules](overview.md#modules)
+modules](overview.md#software-modules)
 and used in combination with wrapper scripts in the terminal. All
 versions can be accessed via software modules and [custom LSF submission
 scripts](../running-jobs/running-a-program-submitting-a-job.md#custom).
@@ -102,7 +102,7 @@ In addition, it's important to note the following:
 -   One no longer needs to install Anaconda/Miniconda in your home
     directory.
 -   With [software
-    modules](overview.md#modules)
+    modules](overview.md#software-modules)
     now on the HBSGrid, module load one of the conda, recent anaconda,
     or default anaconda module files to set up your terminal session for
     using [conda (the package and environment

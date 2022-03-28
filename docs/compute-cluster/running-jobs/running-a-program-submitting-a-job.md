@@ -18,7 +18,7 @@ A variety of software is available on the cluster by
 [default](../selectingsoftware/overview.md#working-with-wrapper-default-submission-scripts).
 These are augmented by an extensive set of software environments
 available through the Lmod [software module
-system](../selectingsoftware/overview.md#modules).
+system](../selectingsoftware/overview.md#software-modules).
 Additionally, we offer users the ability to [install their own
 software](../selectingsoftware/overview.md#installing)
 on the cluster. Please see our documentation on [software

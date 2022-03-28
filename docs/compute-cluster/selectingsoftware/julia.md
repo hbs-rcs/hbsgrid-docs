@@ -17,7 +17,7 @@ little effort, the performance of Julia programs can be comparable to
 traditional statically-typed languages like C or Java.
 
 Julia is installed and accessible via [software
-modules](overview.md#modules)
+modules](overview.md#software-modules)
 in terminal / shell sessions \-- as SSH login sessions or terminal
 windows in the NoMachine/Gnome desktop \-- and require users to submit
 jobs via [custom submission

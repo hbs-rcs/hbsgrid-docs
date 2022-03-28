@@ -13,7 +13,7 @@ options to access storage.
     project spaces using a familiar interface.
 
     1.  [Connect to the HBS
-        VPN](/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
+        VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
         if you are not on the HBS campus or are not using HBS Secure
         Wireless.
 
@@ -131,15 +131,15 @@ HBSGrid via the login node.
 
 The various storage locations can be found at the following Unix paths:
 
-  -----------------------------------| -----------------------------------
-  Home folders                       | `$HOME`, or\
-                                     | `/export/home/role/username`
-                                     | 
-  Project folders                    | `/export/projects/projectname`, or\
-                                     | `/export/projects2/projectname`
-                                     | 
-  Scratch storage                    | `/export/scratch`
-  -----------------------------------| -----------------------------------
+ |------------------------------------|------------------------------------| 
+ | Home folders                       |`$HOME`, or\                        | 
+ |                                    |`/export/home/role/username`        | 
+ |                                    |                                    | 
+ | Project folders                    |`/export/projects/projectname`, or  | 
+ |                                    |`/export/projects2/projectname`     | 
+ |                                    |                                    | 
+ | Scratch storage                    |`/export/scratch`                   | 
+
 
 '`role`' will depend on your position/affiliation at HBS; and
 '`username`' is your account name. Use common Unix commands such as

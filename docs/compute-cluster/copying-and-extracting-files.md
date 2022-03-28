@@ -43,12 +43,12 @@ Filezilla, or Cyberduck.
     #### SecureFX
      
     Windows SecureFX GUI file transfer client implements the SFTP
-    protocol for fast and simple file transfers. Please see [this document for using the Windows SecureFX GUI file transfer client](/research-computing-services/Shared%20Documents/Grid/securefx_setup_and_transfering_grid_files.pdf).
+    protocol for fast and simple file transfers. Please see [this document for using the Windows SecureFX GUI file transfer client](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/securefx_setup_and_transfering_grid_files.pdf).
 
     #### FileZilla
      
     FileZilla is a cross-platform GUI file transfer client. Please see
-    [this document for using the cross-platform FileZilla GUI file transfer client](/research-computing-services/Shared%20Documents/Grid/filezilla_install.pdf){fid="676196"}.
+    [this document for using the cross-platform FileZilla GUI file transfer client](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/filezilla_install.pdf){fid="676196"}.
 
     #### Cyberduck
      

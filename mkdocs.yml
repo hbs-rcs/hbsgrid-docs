@@ -14,7 +14,6 @@ nav:
     - compute-cluster/logging-in.md
     - compute-cluster/quick-start.md
     - compute-cluster/request-an-account.md
-    - compute-cluster/selectingsoftware/overview.md
     - compute-cluster/techbenefits.md
     - Running Jobs:
       - compute-cluster/running-jobs/overview.md
