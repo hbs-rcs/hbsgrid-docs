@@ -3,6 +3,7 @@ site_url: 'https://hbs-rcs.github.io/hbsgrid-docs/'
 copyright: Copyright &copy; President & Fellows of Harvard College.
 repo_url: 'https://github.com/hbs-rcs/hbsgrid-docs'
 docs_dir: 'docs'
+remote_branch: gh-pages
 
 nav:
     - Home: 'index.md'

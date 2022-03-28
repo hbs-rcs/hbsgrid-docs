@@ -23,7 +23,22 @@ img.media-small {
 a.md-tabs__link {color: #000000; opacity: 1.0;}
 a:hover.md-tabs__link {color: #000000; text-decoration: underline;}
 
-a[href*="//"] {
-    background: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png)     center right no-repeat;
-    padding-right: 13px;
+/* a[href*="//"] { */
+/*     background: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png)     center right no-repeat; */
+/*     padding-right: 13px; */
+/* } */
+
+
+[href^="http"]:not([href*="hbs-rcs.github.io/hbsgrid-docs"])::after {
+  content: '(external link)';
+  display: inline-block;
+  width: 0.85em;
+  height: 1em;
+  text-indent: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/44/Icon_External_Link.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px auto;
 }
