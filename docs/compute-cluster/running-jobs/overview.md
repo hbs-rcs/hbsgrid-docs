@@ -56,7 +56,7 @@ Monitoring the progress of your jobs and understanding how to control
 them is essential. This section provides key commands to accomplish
 this, along with guidance on troubleshooting.
 
-[](running-jobs/scaling-work.md){.no-append
+[](scaling-work.md){.no-append
 .no-pdf-hover style="text-decoration:none;"}
 
 ## [Scaling Work](scaling-work.md)
