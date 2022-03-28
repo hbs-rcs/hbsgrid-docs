@@ -36,6 +36,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
+  custom_dir: overrides
   palette:
     scheme: hbs
 
@@ -62,6 +63,7 @@ markdown_extensions:
 extra:
   version:
     provider: mike
+    default: 2.5
           
 plugins:
   - tags:
