@@ -54,6 +54,15 @@ make the basics of bsub clear:
 
 ## Resource requirements
 
+!!! info inline end Please keep in mind that **the system reserves the
+    resources you select**, e.g., CPUs used by your job become
+    unavailable for other users. **Request only 1 CPU** unless you
+    know that you are using code or libraries that were written to run
+    in parallel. Specific memory requirements depend on the nature of
+    the job, but as a rough guide **we recommend requesting RAM 4-10
+    times the size of your data**. For example, if you have a 6 Gb
+    .csv file you may wish to request 24GB of memory or so.
+
 The `bsub` command allows you to specify *RAM* and *CPU* requirements for your job via the `-M` and `-n` arguments. For example, you can run a python job with 50 GB of RAM
 and 4 CPUs with
 

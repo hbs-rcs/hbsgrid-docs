@@ -13,23 +13,20 @@ few mouse clicks!
 Each application will open a dialog where you can configure your
 environment and resource requirements.
 
-!!! info inline end
-    Please keep in mind that **the system reserves the resources you select**,
-    e.g., CPUs used by your job become unavailable for other users. Don't
-    be shy about using resources, but please don't go overboard and
-    reserve way more then you need just because you can.
-
+!!! info inline end Please keep in mind that **the system reserves the
+    resources you select**, e.g., CPUs used by your job become
+    unavailable for other users. **Request only 1 CPU** unless you
+    know that you are using code or libraries that were written to run
+    in parallel. Specific memory requirements depend on the nature of
+    the job, but as a rough guide **we recommend requesting RAM 4-10
+    times the size of your data**. For example, if you have a 6 Gb
+    .csv file you may wish to request 24GB of memory or so.
 
 The application launchers are meant to be intuitive and easy to use.
 Most of the fields should be self-explanatory, e.g., there is a
 numeric field for memory (RAM) in Gigabytes, and another for the
 number of CPUs needed. As a convenience you can select a starting
 directory.
-
-Specific resource requirements depend on the nature of the job, but as
-a rough guide **we recommend requesting RAM 4-10 times the size of your data**. 
-For example, if you have a 6 Gb .csv file you may wish to
-request 24GB of memory or so. 
 
 Click the video thumbnail below to watch an application launcher
 demonstration:

@@ -23,6 +23,9 @@ img.media-small {
 a {color: #a41034;}
 a:hover {color: #a41034; text-decoration: underline;}
 
+.md-typeset a {color: #a41034;}
+.md-typeset a:hover {color: #a41034; text-decoration: underline;}
+
 a.md-tabs__link {color: #000000; opacity: 1.0;}
 a:hover.md-tabs__link {color: #000000; text-decoration: underline;}
 
