@@ -1,9 +1,13 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
+
 # Compute Cluster and Data Storage
 
-If your desktop or laptop is overheating when trying to work with your
-data, taking days to run a program, or running out of space to store
-your data, consider moving your data processing and storage to the HBS
-computer cluster (aka "the HBSGrid" or "the Grid").
+### If your desktop or laptop is overheating when trying to work with your data, taking days to run a program, or running out of space to store your data, consider moving your data processing and storage to the HBS computer cluster (aka "the HBSGrid" or "the Grid").
 
 This platform will allow you to scale up your computing, access data
 storage, and utilize large databases to store and process data. While
