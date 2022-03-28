@@ -13,7 +13,9 @@ few mouse clicks!
 Each application will open a dialog where you can configure your
 environment and resource requirements.
 
-!!! info inline end Please keep in mind that **the system reserves the
+!!! info inline end
+    
+    Please keep in mind that **the system reserves the
     resources you select**, e.g., CPUs used by your job become
     unavailable for other users. **Request only 1 CPU** unless you
     know that you are using code or libraries that were written to run
