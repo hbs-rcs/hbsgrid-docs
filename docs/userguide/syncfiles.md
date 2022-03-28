@@ -58,9 +58,9 @@ have to decide where to put it. There are three options: *home directory*,
      
     **Project spaces** are directories that are shared and accessible by all
     HBS Grid users working on that project. You can request a new
-    project space using the [new project space request form](../support/requests.md)
+    project space using the [new project space request form](../support/account-requests.md)
     and you can request modifications to an existing project space using the
-    [change request form](../support/requests.md).
+    [change request form](../support/project-requests.md).
      
     **Scratch storage** is available at `/export/scratch`. It is appropriate only for temporary, 
     short-term storage. Files are not backed up and will be deleted after 60 days.

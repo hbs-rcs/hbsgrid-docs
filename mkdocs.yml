@@ -22,7 +22,7 @@ nav:
         - NLP in Python: 'tutorials/nlp_with_python.md'
     - Support:
         - Troubleshooting: 'support/trouble.md'
-        - Account and Service Requests: 'support/requests.md'
+        - Account Requests: 'support/account-requests.md'
         - Contact Us: 'support/contact.md'
         - Discussion Forum: 'https://github.com/hbs-rcs/hbsgrid-docs/discussions/'
         - Bug Reports: 'https://github.com/hbs-rcs/hbsgrid-docs/issues/'

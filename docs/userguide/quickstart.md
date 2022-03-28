@@ -13,7 +13,7 @@ guide show you how to connect to the HBS Grid and enable them.
     using NoMachine. 
     
 To get started you must have an
-[HBS Grid account](../support/requests.md)
+[HBS Grid account](../support/account-requests.md)
 and be connected to the HBS network, either directly if you are on-campus or
 [connect via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
 otherwise. You must also have the 

@@ -12,11 +12,11 @@ can access your files.
     [file transfer documentation](syncfiles.md#storageoverview).
 
 For collaborative projects in which more than one person needs access, you must use a *project space*
-([request one](../support/requests.md) 
+([request one](../support/project-requests.md) 
 if needed). Each project has an associated group that includes the HBS Grid users
 who have access to that project space. Changing group membership must
 currently be done by a system administrator; use the
-[change request form](../support/requests.md) 
+[change request form](../support/project-requests.md) 
 to request a change.
 
 ## File ownership and permissions
