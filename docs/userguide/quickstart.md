@@ -40,7 +40,7 @@ simple procedure to enable our in-development research computing environment:
         OK.
 
 The video below demonstrates these steps visually.
-<video width="80%" controls>
+<video width="100%" controls>
   <source src="../media/enable.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video> 
