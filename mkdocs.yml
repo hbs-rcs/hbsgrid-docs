@@ -16,18 +16,18 @@ nav:
     - ┃> &nbsp;Use the Command-line: 'userguide/commandline.md'
     - 📦 &nbsp;&nbsp;Use Software Versions: 'userguide/environments.md'
   - Research Storage & Databases: "storage.md"
-  - Tutorials:
-    - Topic list: 'tutorials.md'
-    - Large data in R: 'tutorials/large_data_R.md'
-    - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
-    - NLP in Python: 'tutorials/nlp_with_python.md'
-  - Support:
+  - Requests & Support:
     - Account Requests: 'support/account-requests.md'
     - Project Requests: 'support/project-requests.md'
     - Troubleshooting: 'support/trouble.md'
     - Contact Us: 'support/contact.md'
     - Discussion Forum: 'https://github.com/hbs-rcs/hbsgrid-docs/discussions/'
     - Bug Reports: 'https://github.com/hbs-rcs/hbsgrid-docs/issues/'
+  - Tutorials:
+    - Topic list: 'tutorials.md'
+    - Large data in R: 'tutorials/large_data_R.md'
+    - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
+    - NLP in Python: 'tutorials/nlp_with_python.md'
   - Blog: 'blog.md'
 
 theme:
