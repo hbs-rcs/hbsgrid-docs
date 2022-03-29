@@ -19,7 +19,7 @@ installed and ready to use**. If that expectation is ever broken please
 put in a request using our [discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
 or [issue tracker](https://github.com/hbs-rcs/hbsgrid-docs/issues).
 
-## Using older software environments
+## Using older software environments from the desktop
 
 Each time we update our software environments we preserve previous
 versions so that you can roll back for reproducibility or if your code
@@ -42,6 +42,98 @@ For example, the first environment released in 2021 is named
 `rcs_2021.01`. The list below shows you key information about each
 environment, including a command that you can run from the terminal to
 get a detailed software version list.
+
+## Using older software environments from the terminal
+
+In order to facilitate reproducible research and analysis we preserve old software
+environments so that you can switch back to them later if needed. These older
+environments can be loaded using [Lmod](https://lmod.readthedocs.io/en/latest/010_user.html).
+
+Running
+``` sh
+ml avail
+```
+will show you the available environments, named by date and version number.
+
+For example, suppose that you have a python project and that your pandas code no
+longer works with the latest pandas release in the current software environment.
+In that case you can revert to a previous software environment and run your
+analysis using an older version of pandas.
+
+You can use the `ml` command from the terminal to *list*, *load*, and *unload* Lmod environment,
+as shown below.
+
+``` contents
+      ml avail
+      
+        -------------- /usr/local/app/rcs_bin/techpreview-dev/modulefiles --------------
+        rcs/rcs_2020.01 (E)    rcs/rcs_2021.01 (E)    rcs/rcs_2021.03 (E,L,D)
+
+
+        Where:
+        D:  Default Module
+        E:  Technology Preview
+        L:  Module is loaded
+        
+        Use "module spider" to find all possible modules.
+        Use "module keyword key1 key2 ..." to search for all possible modules matching
+        any of the "keys".
+```
+
+You can get detailed information about specific software modules using the
+`ml spyder` command:
+
+``` contents
+      module spyder rcs/rcs_2021.03
+      
+        ---------------------------------------------------------------------------
+        rcs: rcs/rcs_2021.03
+        ---------------------------------------------------------------------------
+        Description:
+        Conda environment for research computing
+        
+        Help:
+        Sets up environment for Data Science and Statistical computing.
+        
+        A huge list of software is avalable, including 'python', 'spyder', 'R', 
+        'rstudio', 'emacs', 'vscode', rclone, ripgrep, nnn and much more.
+        
+        Key software versions:
+        
+        libgcc-ng 9
+        cudatoolkit 10.1
+        tensorflow-gpu 2.2
+        python 3.8
+        jupyterlab 3.0
+        numpy 1.20
+        pandas 1.2
+        r-base 4.0
+        r-tidyverse 1.3
+        sas 9.4
+        stata 16
+        octave 6.2
+        mathematica 12
+        matlab R2020a
+        emacs 27.1
+        QGIS 3.16
+        
+        For a detailed software list open a terminal and run 
+        
+        conda env export -n rcs_2021.03
+```
+
+Finally you can use `ml` to load and unload specific environments.
+``` sh
+ml rcs_2021.03
+```
+will load the *rcs_2021.03* environment, and 
+``` sh
+ml -rcs_2021.03
+```
+will unload it.
+
+Detailed [Lmod documentation is available here](https://lmod.readthedocs.io/en/latest/) and you can learn more about the environments available on the HBS Grid in the [Environments documentation](environments.md).
+
 
 ## Software environment versions
 

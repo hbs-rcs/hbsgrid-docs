@@ -7,7 +7,7 @@ options.
 
 ---
 
-!!! note inline end
+!!! info inline end
     This software environment includes [robust graphical tools](menulaunch.md)
     that reduce the need to use the command line for many interactive tasks. This
     section is for those who prefer the command line, either for aesthetic reasons or
@@ -32,7 +32,8 @@ make the basics of bsub clear:
 -   The rest of the command (`R` in this case) is the command that will be run on
     the remote machine.
 
-!!! info "<a name='compute-cluster-basics'>Compute cluster basics</a>"
+<a name='compute-cluster-basics'></a>
+!!! info "Compute cluster basics"
     When you first log in to the HBS Grid using *NoMachine* or *ssh* you are running
     on what we call a "login node". The *login nodes* do not have substantial CPU or
     RAM available. All computationally intensive processes should be run on what we
@@ -52,10 +53,8 @@ make the basics of bsub clear:
     should be done on the *login node*. The important thing to remember is that **`bsub` is
     used to run commands on powerful compute nodes**.
 
-## Resource requirements
 
-!!! info inline end
-    
+!!! important inline end
     Please keep in mind that **the system reserves the
     resources you select**, e.g., CPUs used by your job become
     unavailable for other users. **Request only 1 CPU** unless you
@@ -64,6 +63,8 @@ make the basics of bsub clear:
     the job, but as a rough guide **we recommend requesting RAM 4-10
     times the size of your data**. For example, if you have a 6 Gb
     .csv file you may wish to request 24GB of memory or so.
+
+## Resource requirements
 
 The `bsub` command allows you to specify *RAM* and *CPU* requirements for your job via the `-M` and `-n` arguments. For example, you can run a python job with 50 GB of RAM
 and 4 CPUs with
@@ -136,100 +137,203 @@ are summarized in the table below.
  | sas         | batch                  | no limit   | 4               | 
  | unlimited   | interactive or batch   | no limit   | 4               | 
 
-## Software environments
 
-The available software environments contain a huge selection of graphical and
-terminal-based tools and are described in [Software Applications and
-Environments](environments.md). For the most part you shouldn't need to do
-anything to install or configure these tools -- if there is some software you
-would like that we don't have please get in touch and we'll see if we can install
-and set it up for you.
+## Troubleshooting Jobs and Resources {#troubleshooting-jobs-and-resources}
 
-In order to facilitate reproducible research and analysis we preserve old software
-environments so that you can switch back to them later if needed. These older
-environments can be loaded using [Lmod](https://lmod.readthedocs.io/en/latest/010_user.html).
+A variety of problems can arise when running jobs and applications on
+the HBSGrid. LSF provides command-line tools to monitor and inspect your jobs
+to help you figure out if something goes wrong.
 
-Running
-``` sh
-ml avail
-```
-will show you the available environments, named by date and version number.
-
-For example, suppose that you have a python project and that your pandas code no
-longer works with the latest pandas release in the current software environment.
-In that case you can revert to a previous software environment and run your
-analysis using an older version of pandas.
-
-You can use the `ml` command from the terminal to *list*, *load*, and *unload* Lmod environment,
-as shown below.
-
-``` contents
-      ml avail
-      
-        -------------- /usr/local/app/rcs_bin/techpreview-dev/modulefiles --------------
-        rcs/rcs_2020.01 (E)    rcs/rcs_2021.01 (E)    rcs/rcs_2021.03 (E,L,D)
-
-
-        Where:
-        D:  Default Module
-        E:  Technology Preview
-        L:  Module is loaded
-        
-        Use "module spider" to find all possible modules.
-        Use "module keyword key1 key2 ..." to search for all possible modules matching
-        any of the "keys".
-```
-
-You can get detailed information about specific software modules using the
-`ml spyder` command:
-
-``` contents
-      module spyder rcs/rcs_2021.03
-      
-        ---------------------------------------------------------------------------
-        rcs: rcs/rcs_2021.03
-        ---------------------------------------------------------------------------
-        Description:
-        Conda environment for research computing
-        
-        Help:
-        Sets up environment for Data Science and Statistical computing.
-        
-        A huge list of software is avalable, including 'python', 'spyder', 'R', 
-        'rstudio', 'emacs', 'vscode', rclone, ripgrep, nnn and much more.
-        
-        Key software versions:
-        
-        libgcc-ng 9
-        cudatoolkit 10.1
-        tensorflow-gpu 2.2
-        python 3.8
-        jupyterlab 3.0
-        numpy 1.20
-        pandas 1.2
-        r-base 4.0
-        r-tidyverse 1.3
-        sas 9.4
-        stata 16
-        octave 6.2
-        mathematica 12
-        matlab R2020a
-        emacs 27.1
-        QGIS 3.16
-        
-        For a detailed software list open a terminal and run 
-        
-        conda env export -n rcs_2021.03
-```
-
-Finally you can use `ml` to load and unload specific environments.
-``` sh
-ml rcs_2021.03
-```
-will load the *rcs_2021.03* environment, and 
-``` sh
-ml -rcs_2021.03
-```
-will unload it.
-
-Detailed [Lmod documentation is available here](https://lmod.readthedocs.io/en/latest/) and you can learn more about the environments available on the HBS Grid in the [Environments documentation](environments.md).
+The table below shows a summary of LSF commands. A link to the
+official LSF documentation is included at the bottom of the table.
+Note that JOBID refers to one of the job IDs listed from the generic
+bjobs command or from your log of jobs you've run.
+ 
+<table>
+  <thead>
+    <tr>
+      <th scope="col" style="width:40%">
+        Action
+      </th>
+      <th scope="col" style="width:10%">
+        LSF command
+      </th>
+      <th scope="col" style="width:50%">
+        Example
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <p> Submit a batch (background) script or run and application script </p>
+      </td>
+      <td>
+        <p>
+          <strong><code> bsub</code></strong>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code> bsub runscript.sh</code>
+        </p>
+        <p>
+          <code> bsub -q long matlab -r "myscript"</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> Get an interactive session (shell) or script interactively </p>
+      </td>
+      <td>
+        <p>
+          <strong><code> bsub -Ip</code></strong>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code> bsub -q long_int -Is -W 2:00 /bin/bash</code>
+        </p>
+        <p>
+          <code> bsub -q long_int -Is -W 10 /bin/bash /bin/hostname</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> Kill a job or kill all jobs </p>
+      </td>
+      <td>
+        <p>
+          <strong><code> bkill</code></strong>
+        </p>
+        <p>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code> bkill</code> JOBID
+        </p>
+        <p>
+          <code> bkill 0</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> View current/pending jobs </p>
+        <p> View specific job </p>
+        <p> View details (long format) of job </p>
+      </td>
+      <td>
+        <p>
+          <strong><code> bjobs</code></strong>
+        </p>
+        <p>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code> bjobs</code>
+        </p>
+        <p>
+          <code> bjobs</code> JOBID
+        </p>
+        <p>
+          <code> bjobs -l</code> JOBID
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> View the output and error files of a job </p>
+      </td>
+      <td>
+        <p>
+          <strong><code> bpeek</code></strong>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code> bpeek</code> JOBID
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> View queue status </p>
+        <p> View queue status for all users </p>
+      </td>
+      <td>
+        <p>
+          <strong><code> bqueues</code></strong>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code> bqueues</code>
+        </p>
+        <p>
+          <code> bqueues -u all</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> View recent past job info </p>
+        <p> View list of past jobs (failed or good) from date to now </p>
+        <p> View details (long format) of past job </p>
+        <p>
+        </p>
+      </td>
+      <td>
+        <p>
+          <strong><code> bhist</code></strong>
+        </p>
+        <p>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code> bhist</code> JOBID
+        </p>
+        <p>
+          <code> bhist -a [-n #] -S 2017/09/01,</code>
+        </p>
+        <p>
+          <code> bhist -l [-n #] JOBID</code>
+        </p>
+        <p> Note: The <code> -n</code> option (where n = 0 or 1 - 400) must be used
+          for jobs older than a day or two. This
+          indicates how many jobs lobs to look backwards through. 0 indicates first 100 logs,
+          and may result in the command taking several tens of seconds to return any information.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> Check how busy the cluster is by user </p>
+        <p> View cluster load by several criteria </p>
+      </td>
+      <td>
+        <p>
+          <strong><code> bjobs</code></strong>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code> bjobs -u all</code>
+        </p>
+        <p>
+          <code> bqueues</code>
+          <code> bhosts</code>
+          <code> lsload</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+ 
+See additional commands in the [official LSF
+documentation](https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_welcome/lsf_kc_cmd_ref.html).

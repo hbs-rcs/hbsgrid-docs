@@ -1,4 +1,4 @@
-# Requesting an HBSGrid Account
+# HBS Grid Account Requests
 
 HBS faculty, staff, doctoral students and their guests are eligible
 for HBSGrid accounts.
@@ -69,7 +69,7 @@ information.
 We encourage guest users to view the screencast below to understand
 the onboarding process).
 
-<video width="70%" controls>
+<video width="100%" controls>
   <source src="../media/screencast_project_5_8_20.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>

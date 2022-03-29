@@ -6,16 +6,10 @@ icons under the **Applications** or **Activities** menus. This allows you to
 easily run compute and/or memory intensive applications with just a
 few mouse clicks!
 
----
-
 ## Basic launcher options
 
-Each application will open a dialog where you can configure your
-environment and resource requirements.
-
-!!! info inline end
-    
-    Please keep in mind that **the system reserves the
+!!! important inline end
+    Note that **the system reserves the
     resources you select**, e.g., CPUs used by your job become
     unavailable for other users. **Request only 1 CPU** unless you
     know that you are using code or libraries that were written to run
@@ -23,6 +17,9 @@ environment and resource requirements.
     the job, but as a rough guide **we recommend requesting RAM 4-10
     times the size of your data**. For example, if you have a 6 Gb
     .csv file you may wish to request 24GB of memory or so.
+
+Each application will open a dialog where you can configure your
+environment and resource requirements.
 
 The application launchers are meant to be intuitive and easy to use.
 Most of the fields should be self-explanatory, e.g., there is a
@@ -33,14 +30,14 @@ directory.
 Click the video thumbnail below to watch an application launcher
 demonstration:
 
-<video width="70%" controls>
+<video width="100%" controls>
   <source src="../media/launchers.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
 ## Advanced launcher options
 
-!!! info inline end
+!!! important inline end
     It is a good idea to note the current software environment version when you
     start a new project so you will know which environment to switch back
     to if needed.
@@ -98,7 +95,7 @@ rough idea of the resources currently available to you.
 Click the video thumbnail below to watch a demonstration of the
 available resources utility:
 
-<video width="70%" controls>
+<video width="100%" controls>
   <source src="../media/jobfail.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>

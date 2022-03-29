@@ -31,7 +31,7 @@ small files without needing to physically copy anything to the HBS Grid.
 
 Click the image below for a local drive mounting demonstration:
 
-<video width="70%" controls>
+<video width="100%" controls>
   <source src="../media/datasync.mp4" type="video/webm">
 Your browser does not support the video tag.
 </video>
@@ -50,7 +50,8 @@ it from the [compute nodes](commandline.md#overview), you
 have to decide where to put it. There are three options: *home directory*, 
 *project space*, or *scratch storage*.
 
-!!! info "<a name="storageoverview">HBS Grid storage overview</a>"
+<a name="storageoverview"></a>
+!!! info "HBS Grid storage overview"
     
     A **home directory** was created at `/export/home/<group>/<username>` 
     when you requested your account. Your home folder has limited storage 
@@ -94,7 +95,7 @@ and decompress/extract them on the other end.
 Click the image below for a demonstration showing how to sync your data
 from a local drive to the HBS Grid:
 
-<video width="70%" controls>
+<video width="100%" controls>
   <source src="../media/datasync.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -127,7 +128,7 @@ data synchronization with all major cloud storage providers.
  
  Click the image below for a quick demonstration showing how to copy files from *Dropbox* to the HBS Grid.
 
-<video width="70%" controls>
+<video width="100%" controls>
   <source src="../media/rclone.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>

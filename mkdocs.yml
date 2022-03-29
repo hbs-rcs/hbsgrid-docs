@@ -7,14 +7,15 @@ docs_dir: 'docs'
 remote_branch: gh-pages
 
 nav:
-  - Home: 'index.md'
   - User Guide:
+    - 👋 &nbsp;&nbsp;Welcome to the HBS Grid: 'userguide/welcome.md'
     - 🥇 &nbsp;&nbsp;Get Started: 'userguide/quickstart.md'
     - 🚀 &nbsp;&nbsp;Run Desktop Applications: 'userguide/menulaunch.md'
     - 🔄 &nbsp;&nbsp;Copy and Sync Files: 'userguide/syncfiles.md'
     - 👥 &nbsp;&nbsp;Collaborate and Share: 'userguide/worksafe.md'
     - ┃> &nbsp;Use the Command-line: 'userguide/commandline.md'
     - 📦 &nbsp;&nbsp;Use Software Versions: 'userguide/environments.md'
+  - Research Storage & Databases: "storage.md"
   - Tutorials:
     - Topic list: 'tutorials.md'
     - Large data in R: 'tutorials/large_data_R.md'

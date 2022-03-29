@@ -1,52 +1,52 @@
----
-hide:
-  - navigation
-  - toc
----
-
-# HBS [Research Computing Services](https://www.hbs.edu/research-computing-services) is building powerful and user-friendly tools and environments to bring the computing power of the HBS Grid to a wider community of HBS users. Our environments include a wide range of software including *Julia*, *Matlab*, *Python*, *R*,* Stata*, and hundreds of other popular programs.
+# HBS [Research Computing Services](https://www.hbs.edu/research-computing-services) is building user-friendly environments to bring the massive computing power of the HBS Grid to a wider community of HBS users. Our environments offer a **familiar desktop interface** and hundreds of **configured software applications** including *Julia*, *Matlab*, *Python*, *R*, and *Stata*
 
 The HBS Grid consists of many powerful computers connected by a fast
 network and shared network storage. The computers in our cluster have
 up to 1.4Tb of memory and up to 32 cores per machine. This networked
-cluster of computers provides the backbone HBS's research computing
+cluster of computers provides the backbone of HBS's research computing
 capabilities.
 
 This powerful network of computers can be accessed via user-friendly
 tools and environments, bringing the power of our computing cluster to
-all HBS researchers. 
+all HBS researchers. Using the HBS Grid you can:
+
+- Interactively analyze data too large for local memory.
+- Speed up your analysis using hundreds of CPUs across multiple machines.
+- Access your persistent remote desktop from anywhere with an internet connection.
+- Store, backup, and access large research data.
+- Share data and collaborate with HBS affiliates and guests.
 
 These environments are in active development and are currently
 available as a *Technology Preview* for testing.
 
 !!! quicklinks
-    [**🥇 &nbsp;&nbsp;Get started by enabling HBS grid Technology Preview features**](userguide/quickstart.md)  
+    [**🥇 &nbsp;&nbsp;Get started by enabling HBS grid Technology Preview features**](quickstart.md)  
     Start here!
      
-    [**🚀 &nbsp;&nbsp;Run Applications from the Desktop**](userguide/menulaunch.md)  
+    [**🚀 &nbsp;&nbsp;Run Applications from the Desktop**](menulaunch.md)  
     Run applications on powerful HBS Grid compute nodes using desktop menus
      
-    [**🔄 &nbsp;&nbsp;Copy and Sync Files**](userguide/syncfiles.md)  
+    [**🔄 &nbsp;&nbsp;Copy and Sync Files**](syncfiles.md)  
     Mount or copy data from local drives or cloud storage to the HBS Grid
      
-    [**👥 &nbsp;&nbsp;Collaborate and Share Safely and Securely**](userguide/worksafe.md)  
+    [**👥 &nbsp;&nbsp;Collaborate and Share Safely and Securely**](worksafe.md)  
     Learn how to work safely and securely in a multi-user environment
      
-    [**📦 &nbsp;&nbsp;Use Software Versions**](userguide/environments.md)  
+    [**📦 &nbsp;&nbsp;Use Software Versions**](environments.md)  
     Learn about available software and how to run different software versions
      
-    [**┃> &nbsp;Use the Command-line**](userguide/commandline.md)  
+    [**┃> &nbsp;Use the Command-line**](commandline.md)  
     Run jobs on powerful HBS Grid compute nodes from the terminal
      
-    [**🦺 &nbsp;&nbsp;Support and Troubleshooting**](support/trouble.md)  
+    [**🦺 &nbsp;&nbsp;Support and Troubleshooting**](../support/trouble.md)  
     What to do if things don't work as expected
 
 
 You can click the video thumbnail below to watch a short demonstration
 of our software environment.
 
-<video id="hbsgrid_v3.0_demo" width="70%" controls>
-  <source src="userguide/media/intro.mp4" type="video/mp4">
+<video id="hbsgrid_v3.0_demo" width="100%" controls>
+  <source src="../media/intro.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
