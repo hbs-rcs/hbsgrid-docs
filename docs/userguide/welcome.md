@@ -1,4 +1,4 @@
-# HBS [Research Computing Services](https://www.hbs.edu/research-computing-services) is building user-friendly environments to bring the massive computing power of the HBS Grid to a wider community of HBS users. Our environments offer a **familiar desktop interface** and hundreds of **configured software applications** including *Julia*, *Matlab*, *Python*, *R*, and *Stata*
+# HBS [Research Computing Services](https://www.hbs.edu/research-computing-services) is building user-friendly environments to bring the massive computing power of the HBS Grid to a wider community of HBS users. Our environments offer a **familiar desktop interface** and **configured software applications** including *Julia*, *Jupyterlab*, *Matlab*, *Python*, *R / Rstudio*, *Stata*, *VSCode*, and hundreds of other popular programs
 
 The HBS Grid consists of many powerful computers connected by a fast
 network and shared network storage. The computers in our cluster have
