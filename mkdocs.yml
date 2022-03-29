@@ -88,6 +88,9 @@ markdown_extensions:
   - pymdownx.details
 
 extra:
+  analytics:
+    provider: google
+    property: G-3P5QKSCGVL
   version:
     provider: mike
           
