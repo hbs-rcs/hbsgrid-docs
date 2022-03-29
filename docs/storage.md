@@ -113,10 +113,9 @@ files](https://www.hbs.edu/research-computing-services/help/technical-how-tos-an
 
 ## SQL Databases
 
-RCS hosts a database server running MariaDB v10.3, an open source fork
-of MySQL, to help meet these growing needs. Our MariaDB server is a Red
-Hat 6.5 Linux server with 2x 16 cores hyperthreading processors and a
-total of 4.5TB. To obtain a database account, please fill out the [New
+RCS hosts a database server running MariaDB (an open source fork
+of MySQL) to help meet growing data storage needs.
+To obtain a database account, please fill out the [New
 MariaDB Account Request
 Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUNVlWWUgwM1dCSjdWWllOVEVDQUtCUUVNMS4u).
 RCS also can advise researchers in data storage planning, as well as the
