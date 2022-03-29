@@ -66,6 +66,9 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
 
 extra:
+  analytics:
+    provider: google
+    property: G-3P5QKSCGVL
   version:
     provider: mike
           
