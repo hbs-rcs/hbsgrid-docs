@@ -131,18 +131,17 @@ HBSGrid via the login node.
 
 The various storage locations can be found at the following Unix paths:
 
- |------------------------------------|------------------------------------| 
- | Home folders                       |`$HOME`, or\                        | 
- |                                    |`/export/home/role/username`        | 
- |                                    |                                    | 
- | Project folders                    |`/export/projects/projectname`, or  | 
- |                                    |`/export/projects2/projectname`     | 
- |                                    |                                    | 
- | Scratch storage                    |`/export/scratch`                   | 
+|                 |                                    |
+|-----------------|------------------------------------|
+| Home folders    | `$HOME`, or                        |
+|                 | `/export/home/role/username`       |
+| Project folders | `/export/projects/projectname`, or |
+|                 | `/export/projects2/projectname`    |
+| Scratch storage | `/export/scratch`                  |
 
 
-'`role`' will depend on your position/affiliation at HBS; and
-'`username`' is your account name. Use common Unix commands such as
+`role` will depend on your position/affiliation at HBS; and
+`username` is your account name. Use common Unix commands such as
 `cd path` or `pushd path` to change from one directory to another.
 
 For information about how to transfer data from any given machine to

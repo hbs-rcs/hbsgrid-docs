@@ -1,4 +1,4 @@
-# Transferring Data {#transferring-data}
+# Transferring Data
 
 Transferring data to and from your analysis environments can be
 challenging. We've assembled the information below to help you decide
