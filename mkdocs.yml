@@ -1,6 +1,6 @@
 site_name: 'HBS Grid Technology Preview User Guide'
 site_url: 'https://hbs-rcs.github.io/hbsgrid-docs/'
-copyright: Copyright &copy; President & Fellows of Harvard College.
+copyright: 'Copyright &copy; President & Fellows of Harvard College.'
 repo_url: 'https://github.com/hbs-rcs/hbsgrid-docs'
 edit_uri: '/hbs-rcs/hbsgrid-docs/edit/main/docs/'
 docs_dir: 'docs'
@@ -8,13 +8,13 @@ remote_branch: gh-pages
 
 nav:
   - User Guide:
-    - 👋 &nbsp;&nbsp;Welcome to the HBS Grid: 'userguide/welcome.md'
-    - 🥇 &nbsp;&nbsp;Get Started: 'userguide/quickstart.md'
-    - 🚀 &nbsp;&nbsp;Run Desktop Applications: 'userguide/menulaunch.md'
-    - 🔄 &nbsp;&nbsp;Copy and Sync Files: 'userguide/syncfiles.md'
-    - 👥 &nbsp;&nbsp;Collaborate and Share: 'userguide/worksafe.md'
-    - ┃> &nbsp;Use the Command-line: 'userguide/commandline.md'
-    - 📦 &nbsp;&nbsp;Use Software Versions: 'userguide/environments.md'
+    - 👋 Welcome to the HBS Grid: 'userguide/welcome.md'
+    - 🥇 Get Started: 'userguide/quickstart.md'
+    - 🚀 Run Desktop Applications: 'userguide/menulaunch.md'
+    - 🔄 Copy and Sync Files: 'userguide/syncfiles.md'
+    - 👥 Collaborate and Share: 'userguide/worksafe.md'
+    - 🐚 Use the Command-line: 'userguide/commandline.md'
+    - 📦 Use Software Versions: 'userguide/environments.md'
   - Research Storage & Databases: "storage.md"
   - Requests & Support:
     - Account Requests: 'support/account-requests.md'

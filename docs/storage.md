@@ -1,5 +1,12 @@
-
 # Research Data Storage and Databases
+
+HBS provides storage for active research projects. Research storage is 
+usually used in conjunction with HBS Grid compute and we recommend accessing 
+it via *NoMachine* remote desktop as documented in the [Userguide](userguide/syncfiles.md). 
+
+!!! info inline end
+    Research storage is also accessible [on Windows as a network drive](https://support.microsoft.com/en-gb/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d) at `\\research.hbs.edu` and [via SMB on OSX/Linux](https://support.apple.com/lt-lt/guide/mac-help/mchlp1140/mac#mchlp1265542) 
+    at `smb://research.hbs.edu` and via SSH at `hbsgrid.hbs.edu`.
 
 There are three different sets of storage locations that are available
 for research work, depending on the particular usage patterns, size
@@ -11,8 +18,7 @@ and [project spaces.](storage.md#project-spaces)
 
 By default, when your grid account is created (whether this account is
 used for just storage or storage + compute), a home folder is created as
-well. This is similar to the home folder on your laptop or desktop, but
-more like the home folder you may have on `\\hbsfiles`.
+well.
 
 If you are logging in to the HBSGrid to do work via the NoMachine GUI or
 terminal, you are automatically placed in and are using this home
