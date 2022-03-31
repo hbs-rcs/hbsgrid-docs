@@ -1,7 +1,6 @@
 You can run applications on [powerful HBS Grid compute
 nodes](commandline.md#compute-cluster-basics)
-by connecting to the HBS grid via NoMachine, [enabling technology
-preview features](quickstart.md), and clicking one of the application
+by connecting to the HBS grid via NoMachine and clicking one of the application
 icons under the **Applications** or **Activities** menus. This allows you to
 easily run compute and/or memory intensive applications with just a
 few mouse clicks!

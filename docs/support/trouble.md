@@ -39,14 +39,14 @@ job limits. These limits are described in more detail in
 [Handling system limits](../userguide/menulaunch.md#handling-system-limits) and
 [Interactive and batch queue limits](../userguide/commandline.md#interactive-and-batch-queue-limits).
 
-### Disabling the technology preview
+### Using HBS Grid 2.0 as a fallback
 
-If you wish you can disable technology preview features entirely by
-starting the *HBS Grid configuration* utility and turning off the technology preview
-features, as shown below.
+If you wish you can switch back to the old *HBS Grid 2.5* environment by
+starting the *HBS Grid configuration* utility and selecting *HBS Grid 2.0*
+from the menu as shown below. TODO: update this image.
 
 ![](imgs/GridConfigReset.png){.media .media-block}
 
-Selecting the *Stable/Standard* option under *HBS Grid launcher style*
-will mostly restore your system to the original state. To ensure that your 
-environment is completely reset terminate your NoMachine session and start a new one.
+To ensure that your environment is completely reset, [terminate your
+*NoMachine* session](https://knowledgebase.nomachine.com/AR0100585#:~:text=Disconnecting%20or%20'suspending'%20the%20session,%3E%20Connection%20%2D%3E%20Disconnect)
+and start a new one.

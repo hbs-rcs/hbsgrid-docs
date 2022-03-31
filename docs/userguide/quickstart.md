@@ -1,9 +1,4 @@
-
-The technology preview software and environments described in this documentation
-are not enabled on the [HBS Grid](https://grid.rcs.hbs.org) by default. This
-guide show you how to connect to the HBS Grid and enable them.
-
----
+This guide shows how to quickly get up and running on the HBS Grid.
 
 ## Prerequisites
     
@@ -18,7 +13,7 @@ remote desktop application installed on your computer.
 ## Connect and enable software environments
 
 Once you have an account and are connected to the HBS network, follow this
-simple procedure to enable our in-development research computing environment:
+simple procedure to connect to our research computing environment:
 
 !!! example
 
@@ -26,20 +21,10 @@ simple procedure to enable our in-development research computing environment:
         [NoMachine](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)
         to connect to host `hbsgrid-nx.hbs.edu`
      
-    2.  Open a Terminal in NoMachine:
-        *Applications => Favorites => Terminal*
-     
-    3.  Run
-     
-        `/usr/local/app/rcs_bin/techpreview-dev/enable.sh & exit`
-     
-        to open the grid configuration utility (you can copy/paste from the
-        documentation to your Terminal).
-     
-    4.  Select the *Technology Preview* environment in the welcome dialog and click
-        OK.
+    2.  A welcome dialog will appear asking you to select a computing environment.
+        Choose *HBS Grid 3.0* and click *OK*.
 
-The video below demonstrates these steps visually.
+The video below demonstrates these steps visually TODO: update video.
 <video width="100%" controls>
   <source src="../media/enable.mp4" type="video/mp4">
 Your browser does not support the video tag.

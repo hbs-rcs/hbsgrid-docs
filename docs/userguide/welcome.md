@@ -14,11 +14,8 @@ Using the HBS Grid you can:
 - Store, backup, and access large research data.
 - Share data and collaborate with HBS affiliates and guests.
 
-These environments are in active development and are currently
-available as a *Technology Preview* for testing.
-
 !!! quicklinks
-    [**🥇 &nbsp;&nbsp;Get started by enabling HBS grid Technology Preview features**](quickstart.md)  
+    [**🥇 &nbsp;&nbsp;Get started by connecting to the HBS Grid**](quickstart.md)  
     Start here!
      
     [**🚀 &nbsp;&nbsp;Run Applications from the Desktop**](menulaunch.md)  
@@ -49,18 +46,17 @@ Your browser does not support the video tag.
 </video>
 
 
-**User testing and project status**
+**User feedback and ongoing development**
 
-We are currently conducting user testing and assessing the possibility
-of making this software more widely available. The environment is
-generally stable but the software documented here 
-**remains a technology preview and any and all use is at your own risk**.
-
-If you find that something doesn't work as expected, of if you have a
-feature request, we would love to know about it so we can fix or improve
-it. Bug reports and feature requests are important contributions to this
-project and are always welcome and encouraged! You can either start a
-discussion at <https://github.com/hbs-rcs/hbsgrid-docs/discussions> or create an issue
-report at <https://github.com/hbs-rcs/hbsgrid-docs/issues>. We are building a
-friendly and welcoming community of HBS Grid users and we invite you to
-join us using the links above.
+Our research computing environments are actively developed and
+continuously improving. You can help by reporting any problems of
+letting us know if you have requests for features that are not yet
+supported! If you find that something doesn't work as expected, of if
+you have a feature request, we would love to know about it so we can
+fix or improve it. Bug reports and feature requests are important
+contributions to this project and are always welcome and encouraged!
+You can either start a discussion at
+<https://github.com/hbs-rcs/hbsgrid-docs/discussions> or create an
+issue report at <https://github.com/hbs-rcs/hbsgrid-docs/issues>. We
+are building a friendly and welcoming community of HBS Grid users and
+we invite you to join us using the links above.

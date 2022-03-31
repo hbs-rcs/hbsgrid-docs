@@ -72,7 +72,7 @@ as shown below.
 
         Where:
         D:  Default Module
-        E:  Technology Preview
+        E:  Experimental
         L:  Module is loaded
         
         Use "module spider" to find all possible modules.
