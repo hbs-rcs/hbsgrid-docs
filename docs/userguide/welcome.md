@@ -60,3 +60,6 @@ You can either start a discussion at
 issue report at <https://github.com/hbs-rcs/hbsgrid-docs/issues>. We
 are building a friendly and welcoming community of HBS Grid users and
 we invite you to join us using the links above.
+
+You can also reach out to us directly via email at [research@hbs.edu](mailto:research@hbs.edu).
+Our dedicated support team is always available to assist you.

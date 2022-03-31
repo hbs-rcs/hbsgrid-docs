@@ -85,3 +85,14 @@ is that you must be aware of any services you are running and you must
 understand how those services are protected against unwanted access by
 other users on the HBS Grid. The simple rule is **if you don't know if
 or how a service is protected, don't use it**!
+
+## Help and support 
+
+If you run into any problems please let us know by posting at
+<https://github.com/hbs-rcs/hbsgrid-docs/discussions> and letting us
+know so we can fix them! You may also find the [Support and Troubleshooting](../support/trouble.md)
+section helpful.
+
+You can can also reach out to us directly via email at 
+[research@hbs.edu](mailto:research@hbs.edu).
+Our dedicated support team is always available to assist you.

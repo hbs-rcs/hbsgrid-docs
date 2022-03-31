@@ -168,3 +168,15 @@ file by opening a *Terminal* on the HBS Grid and running this command:
 
 -   [MariaDB Documentation](https://mariadb.com/kb/en/mariadb/documentation/)
 -   [Getting Started with MariaDB](https://mariadb.com/products/get-started)
+
+## Help and support
+
+If you run into any problems please let us know by posting at
+<https://github.com/hbs-rcs/hbsgrid-docs/discussions> and letting us
+know so we can fix them! You may also find the [Support and Troubleshooting](../support/trouble.md)
+section helpful.
+
+You can can also reach out to us directly via email at 
+[research@hbs.edu](mailto:research@hbs.edu).
+Our dedicated support team is always available to assist you.
+

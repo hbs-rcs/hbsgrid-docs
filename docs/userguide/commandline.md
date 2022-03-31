@@ -337,3 +337,15 @@ bjobs command or from your log of jobs you've run.
  
 See additional commands in the [official LSF
 documentation](https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_welcome/lsf_kc_cmd_ref.html).
+
+## Help and support
+
+If you run into any problems please let us know by posting at
+<https://github.com/hbs-rcs/hbsgrid-docs/discussions> and letting us
+know so we can fix them! You may also find the [Support and Troubleshooting](../support/trouble.md)
+section helpful.
+
+You can can also reach out to us directly via email at 
+[research@hbs.edu](mailto:research@hbs.edu).
+Our dedicated support team is always available to assist you.
+

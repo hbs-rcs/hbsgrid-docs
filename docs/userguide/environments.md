@@ -135,6 +135,18 @@ will unload it.
 Detailed [Lmod documentation is available here](https://lmod.readthedocs.io/en/latest/) and you can learn more about the environments available on the HBS Grid in the [Environments documentation](environments.md).
 
 
+## Help and support
+
+If you run into any problems please let us know by posting at
+<https://github.com/hbs-rcs/hbsgrid-docs/discussions> and letting us
+know so we can fix them! You may also find the [Support and Troubleshooting](../support/trouble.md)
+section helpful.
+
+You can can also reach out to us directly via email at 
+[research@hbs.edu](mailto:research@hbs.edu).
+Our dedicated support team is always available to assist you.
+
+
 ## Software environment versions
 
 Current and historical software environments are described below.
