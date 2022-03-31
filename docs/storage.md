@@ -1,12 +1,12 @@
 # Research Data Storage and Databases
 
-HBS provides storage for active research projects. Research storage is 
-usually used in conjunction with HBS Grid compute and we recommend accessing 
-it via *NoMachine* remote desktop as documented in the [Userguide](userguide/syncfiles.md). 
-
 !!! info inline end
     Research storage is also accessible [on Windows as a network drive](https://support.microsoft.com/en-gb/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d) at `\\research.hbs.edu` and [via SMB on OSX/Linux](https://support.apple.com/lt-lt/guide/mac-help/mchlp1140/mac#mchlp1265542) 
     at `smb://research.hbs.edu` and via SSH at `hbsgrid.hbs.edu`.
+
+HBS provides storage for active research projects. Research storage is 
+usually used in conjunction with HBS Grid compute and we recommend accessing 
+it via *NoMachine* remote desktop as documented in the [Userguide](userguide/syncfiles.md). 
 
 There are three different sets of storage locations that are available
 for research work, depending on the particular usage patterns, size
