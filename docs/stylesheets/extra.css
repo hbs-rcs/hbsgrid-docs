@@ -27,16 +27,10 @@ a:hover.md-tabs__link {color: #000000; text-decoration: underline;}
 
 
 [href^="http"]:not([href*="hbs-rcs.github.io/hbsgrid-docs"])::after {
-  content: '(external link)';
-  display: inline-block;
-  width: 0.85em;
-  height: 1em;
-  text-indent: 1em;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/44/Icon_External_Link.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 12px auto;
+    content: ' ';
+    position: relative;
+    top: -0.5em;
+    font-size: 10px;
+    color: #777777;
 }
 
