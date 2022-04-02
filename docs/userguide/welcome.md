@@ -2,11 +2,11 @@
 
 The HBS Grid consists of many powerful computers connected by a fast
 network and shared network storage. These machines have up to 1.4Tb of
-memory and up to 32 cores each and together they provide the backbone
-of HBS's research computing capabilities. This powerful network of
-computers can be accessed via user-friendly tools and environments,
-making the power of our computing cluster accessible to all HBS researchers.
-Using the HBS Grid you can:
+memory and up to 32 cores each and together they are the backbone
+of HBS's research computing capabilities. The HBS Grid can be accessed
+via user-friendly tools and environments, making the power of our
+computing cluster accessible to all HBS researchers. Using the HBS
+Grid you can:
 
 - Interactively analyze data too large for local memory.
 - Speed up your analysis using hundreds of CPUs across multiple machines.
@@ -14,27 +14,25 @@ Using the HBS Grid you can:
 - Store, backup, and access large research data.
 - Share data and collaborate with HBS affiliates and guests.
 
+## Quick start
+
 HBS faculty, staff, doctoral students and their guests are eligible for HBSGrid accounts.
 You can setup your account and connect following the instructions below.
 
 !!! example "Connect to the HBS Grid"
 
     1.  If you do not yet have an HBS Grid account [request one here](../support/account-requests.md).
-    
     2.  Download and install the [NoMachine remote desktop application ](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client) if you do not already have it.
-    
     3.  Connect to the HBS network, either directly if you are on-campus or
-[connect via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
-otherwise.
-
+        [connect via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
+        otherwise.
     4.  Log in to the HBS Grid by using
         [NoMachine](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)
         to connect to host `hbsgrid-nx.hbs.edu`
-     
     5.  A welcome dialog will appear asking you to select a computing environment.
         Choose *HBS Grid 3.0* and click *OK*.
 
-The video below demonstrates these steps visually TODO: update video.
+The video below demonstrates these steps visually.
 <video width="100%" controls>
   <source src="../media/enable.mp4" type="video/mp4">
 Your browser does not support the video tag.
@@ -55,7 +53,7 @@ documentation is available if you need it, including the [Launch
 Applications from the Desktop](menulaunch.md) and [Start Jobs from the
 Terminal](commandline.md) sections.
 
-**User feedback and ongoing development**
+## Feedback and support
 
 Our research computing environments are actively developed and
 continuously improving. You can help by reporting any problems of

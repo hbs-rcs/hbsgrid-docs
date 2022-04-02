@@ -43,7 +43,7 @@ job limits. These limits are described in more detail in
 
 If you wish you can switch back to the old *HBS Grid 2.5* environment by
 starting the *HBS Grid configuration* utility and selecting *HBS Grid 2.0*
-from the menu as shown below. TODO: update this image.
+from the menu as shown below.
 
 ![](imgs/GridConfigReset.png){.media .media-block}
 
