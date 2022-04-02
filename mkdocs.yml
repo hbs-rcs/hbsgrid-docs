@@ -16,6 +16,7 @@ nav:
     - 📦 Use Software Versions: 'userguide/environments.md'
   - Research Storage & Databases: "storage.md"
   - Requests & Support:
+    - Available support services: 'support/overview.md'
     - Account Requests: 'support/account-requests.md'
     - Project Requests: 'support/project-requests.md'
     - Troubleshooting: 'support/trouble.md'
