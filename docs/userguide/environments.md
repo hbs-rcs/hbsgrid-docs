@@ -161,7 +161,7 @@ version 2022.01 was released in January 2022! This environment
 This *technology preview* software environment is a user-friendly set of
 software and utilities designed to make data science and statistics
 easier for HBS Grid users. If you have not yet done so, you can try it
-by following the [quick-start guide](quickstart.md).
+by following the [quick-start guide](welcome.md).
 
 If you are already using the technology preview environment you will
 be prompted to upgrade next time you log in to the HBS Grid. As always

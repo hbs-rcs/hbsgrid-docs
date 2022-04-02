@@ -9,7 +9,6 @@ remote_branch: gh-pages
 nav:
   - User Guide:
     - 👋 Welcome to the HBS Grid: 'userguide/welcome.md'
-    - 🥇 Get Started: 'userguide/quickstart.md'
     - 🚀 Run Desktop Applications: 'userguide/menulaunch.md'
     - 🔄 Copy and Sync Files: 'userguide/syncfiles.md'
     - 👥 Collaborate and Share: 'userguide/worksafe.md'
