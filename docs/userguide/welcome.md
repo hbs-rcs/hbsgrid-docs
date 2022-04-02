@@ -74,4 +74,4 @@ out to us directly via email at
 [research@hbs.edu](mailto:research@hbs.edu).
 
 - If something looks broken or is not working as expected please 
-(open an issue report](https://github.com/hbs-rcs/hbsgrid-docs/issues).
+[open an issue report](https://github.com/hbs-rcs/hbsgrid-docs/issues).
