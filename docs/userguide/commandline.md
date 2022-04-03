@@ -159,11 +159,9 @@ to help you figure out if something goes wrong.
     3. You can also look at any output produced by your job by running  
        `bpeek <JOBID>`
     4. Older jobs may not appear in `bjobs`. In that case you can still get some
-       information by running you can get more information
-       about it by running  
+       information by running  
        `bhist -l <JOBID>`  
-       
-       
+
 Both `bjobs` give you information about the *state* of the job.
 The meaning of these states is as follows:
 
