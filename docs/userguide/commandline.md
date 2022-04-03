@@ -162,19 +162,36 @@ to help you figure out if something goes wrong.
        information by running  
        `bhist -l <JOBID>`  
 
-Both `bjobs` give you information about the *state* of the job.
-The meaning of these states is as follows:
+The `bjobs -l <JOBID>` command give you information about the *state* of the job,
+as defined below.
 
--   **PENDING:** Job is awaiting a slot suitable for the requested
-    resources or you've gone over your limit on resource usage. Jobs
-    with high resource demands may spend significant time PENDING if the
-    compute grid is busy.
--   **RUNNING:** Job is running.
--   **COMPLETED:** Job has finished and the command(s) have returned
-    successfully (i.e., exit code 0).
--   **CANCELLED:** Job has been terminated by the user or administrator
-    using bkill.
--   **FAILED:** Job finished with an exit code other than 0.
+!!! info "Job state definitions"
+    
+    `PENDING`
+     
+    :   Job is awaiting a slot suitable for the requested
+        resources or you've gone over your limit on resource usage. Jobs
+        with high resource demands may spend significant time PENDING if the
+        compute grid is busy.
+        
+    `RUNNING`
+        
+    :   Job is running.
+     
+    `COMPLETED`
+        
+    :    Job has finished and the command(s) have returned
+        successfully (i.e., exit code 0).
+     
+    `CANCELLED`
+        
+    :   Job has been terminated by the user or administrator
+        using `bkill`.
+     
+    `FAILED`
+        
+    :   Job finished with an exit code other than 0.
+
 
 If your job has failed `bjobs` will usually tell you why, but these messages can be cryptic.
 The most common are described below.
