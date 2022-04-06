@@ -25,6 +25,11 @@ a:hover {color: #a41034; text-decoration: underline;}
 a.md-tabs__link {color: #000000; opacity: 1.0;}
 a:hover.md-tabs__link {color: #000000; text-decoration: underline;}
 
+a.md-source {color: #afafaf;}
+a.md-source:hover {color: #eeeeee; text-decoration: none;}
+
+a.md-footer__link {color: #ffffff;}
+a.md-footer__link:hover {color: #eeeeee; text-decoration: none;}
 
 [href^="http"]:not([href*="hbs-rcs.github.io/hbsgrid-docs"])::after {
   content: '(external link)';
