@@ -1,12 +1,12 @@
 # The HBS Grid provides user-friendly environments that make massive computing power accessible to the whole HBS research community. Our environments offer a **familiar desktop interface** and **configured software applications** including *Julia*, *Jupyterlab*, *Matlab*, *Python*, *R / Rstudio*, *Stata*, *VSCode*, and hundreds of other popular programs
 
-The HBS Grid consists of many powerful computers connected by a fast
-network and shared network storage. These machines have up to 1.4Tb of
-memory and up to 32 cores each and together they are the backbone
-of HBS's research computing capabilities. The HBS Grid can be accessed
-via user-friendly tools and environments, making the power of our
-computing cluster accessible to all HBS researchers. Using the HBS
-Grid you can:
+The HBS Grid consists of many computers connected by a fast
+network and shared network storage. These powerful machines have up to 1.4Tb of
+memory and up to 32 cores each, and together they provide the backbone
+of HBS's research computing capabilities. User-friendly tools and environments
+are built on top of this physical and network infrastructure,
+making the power of our computing cluster accessible to all HBS researchers.
+Using the HBS Grid you can:
 
 - Interactively analyze data too large for local memory.
 - Speed up your analysis using hundreds of CPUs across multiple machines.
