@@ -15,7 +15,8 @@ nav:
   - Data & Storage:
       - 🔄 Copy and Sync Files: 'syncfiles.md'
       - 💾 Research Storage & Databases: "storage.md"
-  - Collaborate & Share: 'worksafe.md'
+      - 👥 Collaborate and Share: 'worksafe.md'
+  - Account & Project Requests: 'https://www.hbs.edu/research-computing-services/help/online-requests.aspx'
   - Tutorials:
     - Topic list: 'tutorials.md'
     - Large data in R: 'tutorials/large_data_R.md'
