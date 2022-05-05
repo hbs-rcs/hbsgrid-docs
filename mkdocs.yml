@@ -7,27 +7,22 @@ docs_dir: 'docs'
 remote_branch: gh-pages
 
 nav:
-  - User Guide:
-    - 👋 Welcome to the HBS Grid: 'userguide/welcome.md'
-    - 🚀 Run Desktop Applications: 'userguide/menulaunch.md'
-    - 🔄 Copy and Sync Files: 'userguide/syncfiles.md'
-    - 👥 Collaborate and Share: 'userguide/worksafe.md'
-    - 🐚 Use the Command-line: 'userguide/commandline.md'
-    - 📦 Use Software Versions: 'userguide/environments.md'
-  - Research Storage & Databases: "storage.md"
-  - Requests & Support:
-    - Available support services: 'support/overview.md'
-    - Account Requests: 'support/account-requests.md'
-    - Project Requests: 'support/project-requests.md'
-    - Contact Us: 'support/contact.md'
-    - Discussion Forum: 'https://github.com/hbs-rcs/hbsgrid-docs/discussions/'
-    - Bug Reports: 'https://github.com/hbs-rcs/hbsgrid-docs/issues/'
+  - Start Here: 'index.md'
+  - Software & Environments:
+      - 🚀 Run Desktop Applications: 'menulaunch.md'
+      - 🐚 Use the Command-line: 'commandline.md'
+      - 📦 Use Software Versions: 'environments.md'
+  - Data & Storage:
+      - 🔄 Copy and Sync Files: 'syncfiles.md'
+      - 💾 Research Storage & Databases: "storage.md"
+  - Collaborate & Share: 'worksafe.md'
   - Tutorials:
     - Topic list: 'tutorials.md'
     - Large data in R: 'tutorials/large_data_R.md'
     - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
     - NLP in Python: 'tutorials/nlp_with_python.md'
-  - Blog: 'blog.md'
+  - Blog: 'https://hbs-rcs.github.io/'
+  - HBS RCS Home: 'https://www.hbs.edu/research-computing-services/'
 
 theme:
   name: material
@@ -65,8 +60,6 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
 
 extra:
-  version:
-    provider: mike
   analytics:
     provider: google
     property: G-3P5QKSCGVL
@@ -82,5 +75,3 @@ plugins:
   - tags:
       tags_file: tutorials.md
   - search
-  - mike:
-      version_selector: true
