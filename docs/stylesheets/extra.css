@@ -45,3 +45,7 @@ a.md-footer__link:hover {color: #eeeeee; text-decoration: none;}
   background-size: 10px auto;
 }
 
+nav.md-nav--secondary {
+    padding-left: 1em;
+}
+
