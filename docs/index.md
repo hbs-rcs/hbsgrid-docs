@@ -45,7 +45,7 @@ You can setup your account and connect following the instructions below.
 
 The video below demonstrates these steps visually.
 <video width="100%" controls>
-  <source src="../media/enable.mp4" type="video/mp4">
+  <source src="media/enable.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video> 
 
