@@ -1,5 +1,5 @@
 .md-grid {
-  max-width: 1000px; 
+    max-width: 1000px; 
 }
 
 img.media-small {
@@ -7,10 +7,10 @@ img.media-small {
 }
 
 [data-md-color-scheme="hbs"] {
-  --md-primary-fg-color:        #48c4b7;
-  --md-accent-fg-color:         #a41034;
-  --md-primary-fg-color--light: #a41034;
-  --md-primary-fg-color--dark:  #000000;
+    --md-primary-fg-color:        #48c4b7;
+    --md-accent-fg-color:         #a41034;
+    --md-primary-fg-color--light: #a41034;
+    --md-primary-fg-color--dark:  #000000;
 }
 
 .md-header {background-color: #000000;}
@@ -32,20 +32,32 @@ a.md-footer__link {color: #ffffff;}
 a.md-footer__link:hover {color: #eeeeee; text-decoration: none;}
 
 [href^="http"]:not([href*="hbs-rcs.github.io/hbsgrid-docs"])::after {
-  content: '(external link)';
-  display: inline-block;
-  width: 0.85em;
-  height: 1em;
-  text-indent: 1em;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(/hbsgrid-docs/imgs/up-right-from-square-solid.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px auto;
+    content: '(external link)';
+    display: inline-block;
+    width: 0.85em;
+    height: 1em;
+    text-indent: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: url(/hbsgrid-docs/imgs/up-right-from-square-solid.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px auto;
+}
+
+li.md-nav__item--active:nth-child(2) > nav:nth-child(3) > ul:nth-child(2) > li > a:nth-child(1)::after {
+    content: '>';
+    font-weight: bold;
+}
+
+a.md-nav__link--active:nth-child(3)::after {
+    content: '>';
+    font-weight: bold;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
 }
 
 nav.md-nav--secondary {
-    padding-left: 1em;
+    margin-left: 1.5em;
 }
 
