@@ -45,7 +45,7 @@ a.md-footer__link:hover {color: #eeeeee; text-decoration: none;}
     background-size: 10px auto;
 }
 
-li.md-nav__item--active:nth-child(2) > nav:nth-child(3) > ul:nth-child(2) > li > a:nth-child(1)::after {
+li.md-nav__item--active > nav:nth-child(3) > ul:nth-child(2) > li > a:nth-child(1)::after {
     content: '>';
     font-weight: bold;
 }
