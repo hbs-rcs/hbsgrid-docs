@@ -179,6 +179,14 @@ command creates a job array that runs `Rscript run.R` 100 times:
 bsub -q short -J "myArray[1-100]" Rscript run.R
 ```
 
+!!! important inline end
+    Job arrays are powerful tools and you must take care to use them properly.
+    It is easy to accidentally monopolize system resources, e.g., by running
+    a large array of jobs that reserve more memory (via the `-M` argument) then they need.
+    For example, if each of your 100 jobs reserves 20Gb of memory but only uses 10 you will
+    have **wasted 1Tb of memory**. Please take care to avoid this by matching your resource
+    reservation arguments to the actual resources needed by your program.
+
 Often you will want each job in the array to process a different file
 or use a different parameter value. For this purpose LSF sets the
 `LSB_JOBINDEX` environment variable to the job array index (1-100 in
