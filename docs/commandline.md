@@ -188,7 +188,7 @@ determine the correct inputs or parameter values.
 
 For more details refer to the [LSF job array documentation](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=administration-job-arrays).
 
-## Monitor # troubleshoot {#troubleshooting-jobs-and-resources}
+## Monitor & troubleshoot {#troubleshooting-jobs-and-resources}
 
 A variety of problems can arise when running jobs and applications on
 the HBSGrid. LSF provides command-line tools to monitor and inspect your jobs
