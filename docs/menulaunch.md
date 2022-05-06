@@ -61,7 +61,13 @@ submitting the job. For example, you can use it to set [environment
 variables](https://www.redhat.com/sysadmin/linux-environment-variables)
 or activate [conda environments](https://docs.conda.io/en/latest/).
 
-## Handling system limits
+## System resources & limits
+
+The HBS Grid is configured with limits to prevent any single user from
+monopolizing the available resources. Understanding and working within these
+limits will make your experience on the HBS Grid more productive and enjoyable.
+
+### Configured system limits
 
 In some cases the desktop launchers will down-grade your request to the
 maximum available if your request exceeds the system specified limits.
@@ -84,7 +90,8 @@ available for jobs running more than 24 hours).
 More information about queue-level limits can be found in the [command line
 documentation](commandline.md#queue-characteristics).
 
-## Handling resource contention
+### Available resources and resource contention
+
 The HBS grid usually has substantial computational resources available,
 but sometimes an unusually large number of users are trying to use a lot
 of resources at the same time. In this case resources may become scarce
@@ -103,7 +110,7 @@ available resources utility:
 Your browser does not support the video tag.
 </video>
 
-## Starting batch jobs
+## Run batch jobs
 
 The graphical menu-based launchers documented in this section are a
 quick and convenient way to run interactive applications on powerful

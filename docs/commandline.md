@@ -78,7 +78,7 @@ Knowing just these arguments to `bsub` will take you a long way. There is
 [much more to know about bsub](https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_command_ref/bsub.heading_options.1.html),
 but these basics will get you started.
 
-### Using a GPU
+### Using GPUs
 
 To request GPU resources you must use the `gpu` queue. You must also explicitly
 specify gpu options; using a single dash for the default settings as shown in the
@@ -96,7 +96,7 @@ If you need more control please refer to the [LSF documentation for instructions
 on specifying more advanced GPU resource requirements](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=jobs-submitting-that-require-gpu-resources).
 
 
-## Interactive and batch queue limits
+## Queue characteristics & limits
 
 Machines on the HBS Grid are grouped in **queues** and `bsub` can start jobs in either
 *batch* (background) or *interactive* modes. *Batch* jobs make it easier to run
@@ -157,7 +157,7 @@ are summarized in the table below.
  | unlimited   | interactive or batch   | no limit   | 4               | 
 
 
-## Running many batch jobs in parallel
+## Run batch jobs in parallel
 
 !!! info inline end
     There are language-specific ways to submit job arrays that may be more
@@ -188,7 +188,7 @@ determine the correct inputs or parameter values.
 
 For more details refer to the [LSF job array documentation](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=administration-job-arrays).
 
-## Troubleshooting Jobs and Resources {#troubleshooting-jobs-and-resources}
+## Troubleshoot & Monitor Jobs {#troubleshooting-jobs-and-resources}
 
 A variety of problems can arise when running jobs and applications on
 the HBSGrid. LSF provides command-line tools to monitor and inspect your jobs
