@@ -78,6 +78,24 @@ Knowing just these arguments to `bsub` will take you a long way. There is
 [much more to know about bsub](https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_command_ref/bsub.heading_options.1.html),
 but these basics will get you started.
 
+### Using a GPU
+
+To request GPU resources you must use the `gpu` queue. You must also explicitly
+specify gpu options; using a single dash for the default settings as shown in the
+example below is sufficient for many use cases.
+
+For example,
+
+``` sh
+bsub -q gpu -gpu - -Is R
+```
+will get an interactive R session with access to a GPU (note the trailing
+single dash in `-gpu -`, this uses the default GPU settings).
+
+If you need more control please refer to the [LSF documentation for instructions
+on specifying more advanced GPU resource requirements](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=jobs-submitting-that-require-gpu-resources).
+
+
 ## Interactive and batch queue limits
 
 Machines on the HBS Grid are grouped in **queues** and `bsub` can start jobs in either
@@ -138,6 +156,39 @@ are summarized in the table below.
  | sas         | batch                  | no limit   | 4               | 
  | unlimited   | interactive or batch   | no limit   | 4               | 
 
+
+## Running many batch jobs in parallel
+
+It is often useful to split a big job up into many small pieces and
+run them all simultaneously.This allows you to spread the work out
+across multiple machines on the HBS Grid and can dramatically reduce
+the time needed for your computation. 
+
+!!! info inline end
+    There are language-specific ways to submit job arrays that may be more
+    convenient than the `bsub` job array approach described here. For
+    example, R users may wish to consider
+    [ClusterMQ](https://mschubert.github.io/clustermq/) or
+    [batchtools](https://mllg.github.io/batchtools/), and Python
+    users may find [Dask-jobqueue](https://jobqueue.dask.org/en/latest/index.html)
+    more convenient.
+
+You can use `bsub` job arrays to submit multiple jobs simultaneously.
+For example, the following command creates a job array that runs
+`Rscript run.R` 100 times:
+
+``` sh
+bsub -q short -J "myArray[1-100]" Rscript run.R
+```
+
+Often you will want each job in the array to process a different file
+or use a different parameter value. For this purpose LSF sets the
+`LSB_JOBINDEX` environment variable to the job array index (1-100 in
+the example above). In this case your program (`run.R` in the example
+above) should retrieve this environment variable and use it to
+determine the correct inputs or parameter values.
+
+For more details refer to the [LSF job array documentation](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=administration-job-arrays).
 
 ## Troubleshooting Jobs and Resources {#troubleshooting-jobs-and-resources}
 

@@ -28,6 +28,8 @@ numeric field for memory (RAM) in Gigabytes, and another for the
 number of CPUs needed. As a convenience you can select a starting
 directory.
 
+If your application needs a GPU make sure that you check the *Needs GPU* box.
+
 Click the video thumbnail below to watch an application launcher
 demonstration:
 
