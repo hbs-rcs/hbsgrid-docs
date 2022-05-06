@@ -159,23 +159,21 @@ are summarized in the table below.
 
 ## Running many batch jobs in parallel
 
-It is often useful to split a big job up into many small pieces and
-run them all simultaneously.This allows you to spread the work out
-across multiple machines on the HBS Grid and can dramatically reduce
-the time needed for your computation. 
-
 !!! info inline end
     There are language-specific ways to submit job arrays that may be more
     convenient than the `bsub` job array approach described here. For
     example, R users may wish to consider
     [ClusterMQ](https://mschubert.github.io/clustermq/) or
-    [batchtools](https://mllg.github.io/batchtools/), and Python
+    [batchtools](https://mllg.github.io/batchtools/) and Python
     users may find [Dask-jobqueue](https://jobqueue.dask.org/en/latest/index.html)
     more convenient.
 
-You can use `bsub` job arrays to submit multiple jobs simultaneously.
-For example, the following command creates a job array that runs
-`Rscript run.R` 100 times:
+It is often useful to split a big job up into many small pieces and
+run them all simultaneously.This allows you to spread the work out
+across multiple machines on the HBS Grid and can dramatically reduce
+the time needed for your computation. You can use `bsub` job arrays to
+submit multiple jobs simultaneously. For example, the following
+command creates a job array that runs `Rscript run.R` 100 times:
 
 ``` sh
 bsub -q short -J "myArray[1-100]" Rscript run.R
