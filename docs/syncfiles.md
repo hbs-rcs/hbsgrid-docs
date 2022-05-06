@@ -43,7 +43,9 @@ Your browser does not support the video tag.
 **drives mounted via NoMachine are not accessible by applications running on HBS Grid compute nodes**. 
 This means that you will usually want to copy or sync your data to the HBS Grid. 
 The easiest way to do this for files on your local machine is to mount your 
-local drive as described above, and then use *grsync* to sync files from the 
+local drive 
+[as described above](syncfiles.md#access-local-files-from-nomachine-login-nodes), 
+and then use *grsync* to sync files from the 
 *NoMachine* mount to the HBS Grid.
 
 Because you must physically copy data to the HBS Grid in order to access
@@ -73,7 +75,7 @@ Once you have decided where to store your files on the HBS Grid you can follow t
 
 !!! example "Sync data from your local machine to the HBS Grid"
     1.  Log in to the HBS Grid and connect your local drive using
-        NoMachine as described above.
+        NoMachine [as described above](syncfiles.md#access-local-files-from-nomachine-login-nodes).
      
     2.  Identify the directory on the HBS Grid that you will copy your data
         too, creating it if needed.
