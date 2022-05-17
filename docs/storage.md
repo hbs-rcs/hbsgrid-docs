@@ -129,6 +129,15 @@ building of and interacting with their database.
 
 ### Connecting to your Database {#connecting-to-your-database}
 
+Please contact us at <research@hbs.edu> for connection parameters including
+*USER*, *HOSTNAME*, and *CA Certificates*. Note that some clients 
+(including *DBeaver*) require you to set the *SSL CA Certificate*.
+
+!!! info inline end
+    The *DBeaver* client may prompt you to download a driver to connect to your database.
+    This is usually safe, and drivers will be stored in your home directory, under
+    `~/.local/share/DBeaverData/drivers`
+
 You can connect to your database using any compatible client. If you 
 already have one you like go ahead and use that. Otherwise we recommend
 one of the following:
@@ -138,7 +147,7 @@ one of the following:
 - **Desktop**: [DBeaver](https://dbeaver.io/)
 - **Terminal**: [mycli](https://www.mycli.net/)
 
-Most *MySQL* clients will read connection information from a
+Some *MySQL* clients will read connection information from a
 configuration file found in `~/.my.cnf`. This file is used to store
 connection details to the MariaDB server, such as account details and
 connection parameters. If you don't have this file (on the Grid) you
@@ -153,9 +162,9 @@ with the following details:
           user=jharvard
           password=PASSWORD
 
-Please note that you will substitute **jharvard** and **PASSWORD** with
+Please note that you will substitute *jharvard* and *PASSWORD* with
 your MariaDB username and password. For the other parameters such as
-**HOSTNAME**, please contact us at <research@hbs.edu>.
+*HOSTNAME*, please contact us at <research@hbs.edu>.
 
 Once your **.my.cnf** is ready, move it your home directory and adjust
 file privileges to ensure no one else can read the file. On the Grid or
