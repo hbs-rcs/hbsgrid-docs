@@ -150,7 +150,7 @@ Our dedicated support team is always available to assist you.
 
 Current and historical software environments are described below.
 
-### rcs_2022.01
+### rcs_2022.01 {#rcs_2022.01}
 
 After more than 6 months of hard work, the 
 [HBS grid technology preview software environment](https://hbs-rcs.github.io/hbsgrid-docs/)
@@ -236,7 +236,7 @@ For complete environment details, open a terminal and run
 conda env export -n rcs_2022.01
 ```
 
-### rcs_2021.06
+### rcs_2021.06 {#rcs_2021.06}
 
 The `rcs_2021.06` environment was released in May 2021. It includes updated
 *Octave*, *Python*, *QGIS*, *R*, *Stata*, and other software. Key software versions included in this
@@ -268,7 +268,7 @@ For complete environment details, open a terminal and run
 conda env export -n rcs_2021.06
 ```
 
-### rcs_2021.03
+### rcs_2021.03 {#rcs_2021.03}
 
 The `rcs_2021.03` environment was released in March 2021. It includes updated
 *Octave*, *Python*, *QGIS*, *R*, *Stata*, and other software. Key software versions included in this
@@ -298,7 +298,7 @@ For complete environment details, open a terminal and run
 conda env export -n rcs_2021.03
 ```
 
-### rcs_2020.01
+### rcs_2020.01 {#rcs_2020.01}
 
 The `rcs_2020.01` environment was released in March 2020. It includes updated
 *Octave*, *Python*, *QGIS*, *R*, *Stata*, and other software. Key software versions included in this
