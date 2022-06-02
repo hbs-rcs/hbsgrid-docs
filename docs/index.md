@@ -35,19 +35,6 @@ You can setup your account and connect following the instructions below.
     4.  Log in to the HBS Grid by using
         [NoMachine](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)
         to connect to host `hbsgrid-nx.hbs.edu`
-    5.  Open a Terminal in NoMachine:
-        *Applications => Favorites => Terminal*
-     
-    6.  Run
-     
-        `/usr/local/app/rcs_bin/techpreview-dev/enable.sh & exit`
-     
-        to open the grid configuration utility (you can copy/paste from the
-        documentation to your Terminal).
-     
-    7.  Select the *Technology Preview* environment in the welcome dialog and click
-        OK.
-
 
 The video below demonstrates these steps visually.
 <video width="100%" controls>
