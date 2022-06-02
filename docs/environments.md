@@ -130,7 +130,7 @@ Detailed [Lmod documentation is available here](https://lmod.readthedocs.io/en/l
 
 The instructions given above detail how to use different software environment
 versions on the HBS Grid. You may sometimes need to go a step further than this,
-e.g., go continue your work on another system after you leave HBS, or to provide
+e.g., to continue your work on another system after you leave HBS, or to provide
 reproduction instructions to meet a Journal publication requirement. To do this you
 need to know that 
 *the environments described here are managed using the **conda** package manager on a **Linux** system*. 
