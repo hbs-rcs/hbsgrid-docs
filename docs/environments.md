@@ -136,7 +136,10 @@ need to know that
 *the environments described here are managed using the **conda** package manager on a **Linux** system*. 
 
 You can easily recreate these environments on Linux systems by following the 
-[conda environment recreation] ](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments) or [conda environment sharing](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments) documentation.
+[conda environment recreation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments) 
+or 
+[conda environment sharing](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments) 
+documentation.
 
 In general it is not possible to exactly re-create these environments on Windows or Mac Machines.
 
