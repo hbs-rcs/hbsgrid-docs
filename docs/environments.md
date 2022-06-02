@@ -45,7 +45,7 @@ For example, the first environment released in 2021 is named
 environment, including a command that you can run from the terminal to
 get a detailed software version list.
 
-## ## Select terminal environment
+## Select terminal environment
 
 In order to facilitate reproducible research and analysis we preserve old software
 environments so that you can switch back to them later if needed. These older
