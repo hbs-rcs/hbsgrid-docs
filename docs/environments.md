@@ -135,11 +135,19 @@ reproduction instructions to meet a journal publication requirement. To do this 
 need to know that 
 *the environments described here are managed using the **conda** package manager on a **Linux** system*. 
 
-You can easily recreate these environments on Linux systems by following the 
-[conda environment recreation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments) 
-or 
-[conda environment sharing](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments) 
-documentation.
+You can recreate these environments on Linux systems by following the steps below:
+
+!!! example "Re-create environments on another system"
+    
+    1. Obtain access to a Linux system. If you don't have have a suitable physical computer 
+       you may wish to install one in a virtual machine. 
+       Many [tutorials are available](https://brb.nci.nih.gov/seqtools/installUbuntu.html)
+       to show you how to do this.
+    2. Download the [MambaForge installer](https://github.com/conda-forge/miniforge#mambaforge)
+       and install it on your Linux system.
+    3. Create the [conda package list](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments).
+    4. Copy the package list file to your Linux system and 
+       [use `conda` to re-create the environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments).
 
 In general it is not possible to exactly re-create these environments on Windows or Mac machines.
 You can however examine the package lists and manually create environments with the same versions
