@@ -142,6 +142,8 @@ or
 documentation.
 
 In general it is not possible to exactly re-create these environments on Windows or Mac Machines.
+You can however examine the package lists and manually create environments with the same versions
+of the software needed for your project.
 
 ## Environment versions
 
