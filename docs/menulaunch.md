@@ -110,18 +110,8 @@ available resources utility:
 Your browser does not support the video tag.
 </video>
 
-## Run batch jobs
-
 The graphical menu-based launchers documented in this section are a
 quick and convenient way to run interactive applications on powerful
 compute nodes. In the case where you wish to run many such jobs you
-may find it more convenient to run batch jobs. There is a HBS Grid
-Batch Submission Utility in the application menu that provides basic
-batch submission capabilities. For more advanced use refer to the
-[command line documentation](commandline.md).
-
-## Help and support
-
-If you have any difficulty can reach out to us directly via email at 
-[research@hbs.edu](mailto:research@hbs.edu).
-Our dedicated support team is always available to assist you.
+may find it more convenient to run batch jobs. Refer to the
+[command line documentation](commandline.md) for details.

@@ -68,7 +68,7 @@ says "**R**ecursively make *my_project_group* the group owner of `project1/data`
 Refer to `tldr chgrp` for more examples and to `man` chgrp for details.
 
 
-## Avoid running services like Jupyter notebooks without protection
+## Avoid running services other users can access
 
 Some applications are designed to run as local servers that you connect
 to using a web browser or other client. On a single-user machine that
@@ -84,11 +84,3 @@ is that you must be aware of any services you are running and you must
 understand how those services are protected against unwanted access by
 other users on the HBS Grid. The simple rule is **if you don't know if
 or how a service is protected, don't use it**!
-
-## Help and support 
-
-If you run into any problems please let us know by posting at
-<https://github.com/hbs-rcs/hbsgrid-docs/discussions> and letting us
-know so we can fix them! You can can also reach out to us directly via email at 
-[research@hbs.edu](mailto:research@hbs.edu).
-Our dedicated support team is always available to assist you.
