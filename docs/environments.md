@@ -128,10 +128,10 @@ Detailed [Lmod documentation is available here](https://lmod.readthedocs.io/en/l
 
 ## Reproducing environments
 
-The instructions given above detail how to use different software environment
-versions on the HBS Grid. You may sometimes need to go a step further than this,
+The instructions above show how to use different software environment
+versions *on the HBS Grid*. You may sometimes need to go a step further than this,
 e.g., to continue your work on another system after you leave HBS, or to provide
-reproduction instructions to meet a Journal publication requirement. To do this you
+reproduction instructions to meet a journal publication requirement. To do this you
 need to know that 
 *the environments described here are managed using the **conda** package manager on a **Linux** system*. 
 
@@ -141,9 +141,26 @@ or
 [conda environment sharing](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments) 
 documentation.
 
-In general it is not possible to exactly re-create these environments on Windows or Mac Machines.
+In general it is not possible to exactly re-create these environments on Windows or Mac machines.
 You can however examine the package lists and manually create environments with the same versions
 of the software needed for your project.
+
+
+## Create your own environments
+
+!!! info inline end
+    If you find that the software you need is not available in the standard HBS Grid software environments
+    please consider putting in an installation request using our 
+    [discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
+    or [issue tracker](https://github.com/hbs-rcs/hbsgrid-docs/issues). This will help us maintain
+    consistent environments useful to the whole HBS community.
+
+If you prefer to create and manage your own software environments you may do so using 
+[conda](https://docs.conda.io/projects/conda/en/latest/user-guide). This is the same package manager used
+to maintain the system-wide software environments on the HBS Grid. `conda` has already been installed and
+configured for you on the HBS Grid, making it easy to create and manage your own environments by following the 
+[official conda environment documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments).
+
 
 ## Environment versions
 
