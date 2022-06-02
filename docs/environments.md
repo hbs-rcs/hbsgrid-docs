@@ -21,7 +21,7 @@ installed and ready to use**. If that expectation is ever broken please
 put in a request using our [discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
 or [issue tracker](https://github.com/hbs-rcs/hbsgrid-docs/issues).
 
-## Using older software environments from the desktop
+## Select desktop environment
 
 Each time we update our software environments we preserve previous
 versions so that you can roll back for reproducibility or if your code
@@ -45,7 +45,7 @@ For example, the first environment released in 2021 is named
 environment, including a command that you can run from the terminal to
 get a detailed software version list.
 
-## Using older software environments from the terminal
+## ## Select terminal environment
 
 In order to facilitate reproducible research and analysis we preserve old software
 environments so that you can switch back to them later if needed. These older
@@ -68,13 +68,12 @@ as shown below.
 ``` contents
       ml avail
       
-        -------------- /usr/local/app/rcs_bin/techpreview-dev/modulefiles --------------
-        rcs/rcs_2020.01 (E)    rcs/rcs_2021.01 (E)    rcs/rcs_2021.03 (E,L,D)
-
-
+------------------- /usr/local/app/rcs_bin/grid3/modulefiles -------------------
+   rcs/rcs_2020.01        rcs/rcs_2021.03      rcs/rcs_2021.06
+   rcs/rcs_2022.01 (D,L)  rcs/rcs_2022.06
+   
         Where:
         D:  Default Module
-        E:  Experimental
         L:  Module is loaded
         
         Use "module spider" to find all possible modules.
@@ -85,43 +84,33 @@ as shown below.
 You can get detailed information about specific software modules using the
 `ml spyder` command:
 
+``` sh
+module spyder rcs/rcs_2021.03
+```
+
 ``` contents
-      module spyder rcs/rcs_2021.03
+----------------------------------------------------------------------------
+  rcs: rcs/rcs_2022.01
+----------------------------------------------------------------------------
+    Description:
+      Anaconda environment for research computing
+
+
+    This module can be loaded directly: module load rcs/rcs_2022.01
+
+    Help:
+      Sets up environment for Data Science and Statistical computing.
       
-        ---------------------------------------------------------------------------
-        rcs: rcs/rcs_2021.03
-        ---------------------------------------------------------------------------
-        Description:
-        Conda environment for research computing
-        
-        Help:
-        Sets up environment for Data Science and Statistical computing.
-        
-        A huge list of software is avalable, including 'python', 'spyder', 'R', 
-        'rstudio', 'emacs', 'vscode', rclone, ripgrep, nnn and much more.
-        
-        Key software versions:
-        
-        libgcc-ng 9
-        cudatoolkit 10.1
-        tensorflow-gpu 2.2
-        python 3.8
-        jupyterlab 3.0
-        numpy 1.20
-        pandas 1.2
-        r-base 4.0
-        r-tidyverse 1.3
-        sas 9.4
-        stata 16
-        octave 6.2
-        mathematica 12
-        matlab R2020a
-        emacs 27.1
-        QGIS 3.16
-        
-        For a detailed software list open a terminal and run 
-        
-        conda env export -n rcs_2021.03
+      A huge list of software is avalable, including 'python', 'spyder', 'R', 
+      'rstudio', 'emacs', 'vscode', rclone, ripgrep, nnn and much more.
+      
+      See https://hbs-rcs.github.io/hbsgrid-docs/ for documentation
+      and https://hbs-rcs.github.io/hbsgrid-docs/environments/#rcs_2022.01
+      for version-specific details.
+      
+      For a detailed software list open a terminal and run 
+      
+      conda env export -n rcs_2022.07
 ```
 
 Finally you can use `ml` to load and unload specific environments.
@@ -137,35 +126,29 @@ will unload it.
 Detailed [Lmod documentation is available here](https://lmod.readthedocs.io/en/latest/) and you can learn more about the environments available on the HBS Grid in the [Environments documentation](environments.md).
 
 
-## Help and support
+## Reproducing environments
 
-If you run into any problems please let us know by posting at
-<https://github.com/hbs-rcs/hbsgrid-docs/discussions> and letting us
-know so we can fix them! You can can also reach out to us directly via email at 
-[research@hbs.edu](mailto:research@hbs.edu).
-Our dedicated support team is always available to assist you.
+The instructions given above detail how to use different software environment
+versions on the HBS Grid. You may sometimes need to go a step further than this,
+e.g., go continue your work on another system after you leave HBS, or to provide
+reproduction instructions to meet a Journal publication requirement. To do this you
+need to know that 
+*the environments described here are managed using the **conda** package manager on a **Linux** system*. 
 
+You can easily recreate these environments on Linux systems by following the 
+[conda environment recreation] ](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments) or [conda environment sharing](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments) documentation.
 
-## Software environment versions
+In general it is not possible to exactly re-create these environments on Windows or Mac Machines.
+
+## Environment versions
 
 Current and historical software environments are described below.
 
 ### rcs_2022.01 {#rcs_2022.01}
 
-After more than 6 months of hard work, the 
-[HBS grid technology preview software environment](https://hbs-rcs.github.io/hbsgrid-docs/)
-version 2022.01 was released in January 2022! This environment 
-**remains a technology preview and any and all use is at your own risk**.
-
-This *technology preview* software environment is a user-friendly set of
+This software environment is a user-friendly collection of
 software and utilities designed to make data science and statistics
-easier for HBS Grid users. If you have not yet done so, you can try it
-by following the [quick-start guide](index.md).
-
-If you are already using the technology preview environment you will
-be prompted to upgrade next time you log in to the HBS Grid. As always
-you can continue using previous versions if needed, as described in
-the [environments documentation](environments.md).
+easier for HBS Grid users.
 
 In this release we have added a large number of new statistics and
 data science applications and packages, including:
@@ -227,13 +210,9 @@ used programs:
 or via the *HBS Grid help* application on the Grid. If you have any difficulties or
 feature requests please [reach out on the discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions).
 
-VirtualBox image available for [download from Dropbox](https://www.dropbox.com/s/amxfzx0anwkf7kn/Kobayashi_Research_Computing_Desktop_2022.01.ova?dl=0)
-and can be imported and run locally for convenience, reproducibility, or
-testing purposes.
-
 For complete environment details, open a terminal and run
 ``` sh
-conda env export -n rcs_2022.01
+conda list -n rcs_2022.01
 ```
 
 ### rcs_2021.06 {#rcs_2021.06}

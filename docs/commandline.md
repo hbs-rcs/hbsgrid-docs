@@ -262,12 +262,3 @@ The most common are described below.
 
 For more detailed information refer to the [official LSF
 documentation](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=run-jobs).
-
-## Help and support
-
-If you run into any problems please let us know by posting at
-<https://github.com/hbs-rcs/hbsgrid-docs/discussions> and letting us
-know so we can fix them! You can can also reach out to us directly via email at 
-[research@hbs.edu](mailto:research@hbs.edu).
-Our dedicated support team is always available to assist you.
-
