@@ -183,7 +183,7 @@ is available, along with [a helpful tutorial](https://nbis-reproducible-research
 
 ## Environment versions
 
-Current and historical software environments are described below.
+Current and historical software environments available system-wide on the HBS Grid are described below.
 
 ### rcs_2022.01 {#rcs_2022.01}
 
