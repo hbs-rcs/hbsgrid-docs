@@ -170,7 +170,7 @@ configured for you on the HBS Grid, making it easy to create and manage your own
 [official conda environment documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments).
 
 You can share and reproduce your own `conda` environments on other computers and systems as well.
-When setting up `conda` outside the HBSgrid we *strongly encourage* using the 
+When setting up `conda` outside the HBS Grid we *strongly encourage* using the 
 [MambaForge installer](https://github.com/conda-forge/miniforge#mambaforge) to get going with `conda` more quickly.
 (`conda` is already installed and configured for you on the HBS Grid, there is no need to 
 install it yourself there.)
