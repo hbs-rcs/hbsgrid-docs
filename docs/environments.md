@@ -169,11 +169,17 @@ to maintain the system-wide software environments on the HBS Grid. `conda` has a
 configured for you on the HBS Grid, making it easy to create and manage your own environments by following the 
 [official conda environment documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments).
 
-You can share and reproduce your own `conda` environments on other computers and systems as well. Some useful
-[documentation on sharing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment)
-along with [a helpful tutorial](https://nbis-reproducible-research.readthedocs.io/en/course_2104/conda/).
-We **strongly encourage** using the [MambaForge installer](https://github.com/conda-forge/miniforge#mambaforge)
-to get going with `conda` more quickly.
+You can share and reproduce your own `conda` environments on other computers and systems as well.
+When setting up `conda` outside the HBSgrid we *strongly encourage* using the 
+[MambaForge installer](https://github.com/conda-forge/miniforge#mambaforge) to get going with `conda` more quickly.
+(`conda` is already installed and configured for you on the HBS Grid, there is no need to 
+install it yourself there.)
+
+Some useful documentation on [creating environments](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments),
+[installing packages](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-packages),
+and [sharing](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment)
+is available, along with [a helpful tutorial](https://nbis-reproducible-research.readthedocs.io/en/course_2104/conda/).
+
 
 ## Environment versions
 
