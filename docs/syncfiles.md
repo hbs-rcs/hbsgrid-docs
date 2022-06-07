@@ -113,16 +113,14 @@ data synchronization with all major cloud storage providers.
 
 !!! example "Sync your data from a cloud provider to the HBS Grid:"
 
-    1.  Log in to the HBS Grid and connect your local drive using
-        *NoMachine* as described above.
+    1.  Log in to the HBS Grid via *NoMachine*.
      
     2.  Identify the directory on the HBS Grid that you will copy your data
-        too, creating it if needed.
+        to, creating it if needed.
      
     3.  From the HBS Grid desktop, open the *rclone browser* application.
      
-    4.  Click the *Config...* button and follow the prompts (only needed the first
-        time).
+    4.  Click the *Config...* button and follow the prompts (**only needed the first time**).
      
     5.  Click the cloud storage icon in the *Remotes* tab and select the directory you wish to sync.
      
@@ -135,3 +133,6 @@ data synchronization with all major cloud storage providers.
   <source src="../media/rclone.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
+
+Note that the demonstration video goes through the configuration step, which only needs to be done once.
+After that you can skip step 4 above, which greatly simplifies the process.
