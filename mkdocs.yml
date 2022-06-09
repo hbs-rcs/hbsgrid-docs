@@ -24,10 +24,10 @@ nav:
     - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
     - NLP in Python: 'tutorials/nlp_with_python.md'
   - Blog: 'https://hbs-rcs.github.io/'
-  - HBS RCS Home: 'https://www.hbs.edu/research-computing-services/'
 
 theme:
   name: material
+  logo: imgs/rcs.png
   features:
     - toc.integrate
     - navigation.instant
@@ -62,6 +62,7 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
 
 extra:
+  homepage: https://www.hbs.edu/research-computing-services/
   analytics:
     provider: google
     property: G-3P5QKSCGVL

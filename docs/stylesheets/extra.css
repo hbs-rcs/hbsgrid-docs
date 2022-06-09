@@ -60,3 +60,7 @@ a.md-nav__link--active:nth-child(3)::after {
 nav.md-nav--secondary {
     margin-left: 1.5em;
 }
+
+.md-header__button.md-logo :-webkit-any(img,svg) {
+    height: 2.0rem;
+}
