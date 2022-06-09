@@ -156,7 +156,7 @@ of the software needed for your project.
 
 ## Create your own environments
 
-!!! info inline end
+!!! info inline end "Software installation requests"
     If you find that the software you need is not available in the standard HBS Grid software environments
     please consider putting in an installation request using our 
     [discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions)

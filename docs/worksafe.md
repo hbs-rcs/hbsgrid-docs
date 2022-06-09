@@ -6,7 +6,7 @@ can access your files.
 
 ## Projects and group membership
 
-!!! info inline end
+!!! info inline end ""
     For more information about storage options refer to the 
     [file transfer documentation](syncfiles.md#storageoverview).
 

@@ -8,7 +8,7 @@ options.
 
 ---
 
-!!! info inline end
+!!! info inline end "Graphical tools available"
     This software environment includes [robust graphical tools](menulaunch.md)
     that reduce the need to use the command line for many interactive tasks. This
     section is for those who prefer the command line, either for aesthetic reasons or
@@ -119,7 +119,7 @@ bsub -q short stata -b my_stata_code.do
 
 runs `my_stata_code.do` in batch mode.
 
-!!! info inline end
+!!! info inline end "Batch vs. interactive jobs"
     The key differences when submitting batch vs interactive jobs are the `-q` and
     `-Is` arguments. For example we used `-q short` for batch and `-q short_int` for 
     interactive. Interactive jobs must also include the `-Is` option.
@@ -159,7 +159,7 @@ are summarized in the table below.
 
 ## Run batch jobs in parallel
 
-!!! info inline end
+!!! info inline end "Other LSF front-ends"
     There are language-specific ways to submit job arrays that may be more
     convenient than the `bsub` job array approach described here. For
     example, R users may wish to consider

@@ -1,6 +1,6 @@
 # 💾 Research Data Storage and Databases
 
-!!! info inline end
+!!! info inline end "Mount Grid storage locally"
     Research storage is also accessible [on Windows as a network drive](https://support.microsoft.com/en-gb/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d) at `\\research.hbs.edu` and [via SMB on OSX/Linux](https://support.apple.com/lt-lt/guide/mac-help/mchlp1140/mac#mchlp1265542) 
     at `smb://research.hbs.edu` and via SSH at `hbsgrid.hbs.edu`.
 
@@ -133,7 +133,7 @@ Please contact us at <research@hbs.edu> for connection parameters including
 *USER*, *HOSTNAME*, and *CA Certificates*. Note that some clients 
 (including *DBeaver*) require you to set the *SSL CA Certificate*.
 
-!!! info inline end
+!!! info inline end "DBeaver driver installation"
     The *DBeaver* client may prompt you to download a driver to connect to your database.
     This is usually safe, and drivers will be stored in your home directory, under
     `~/.local/share/DBeaverData/drivers`
