@@ -61,6 +61,25 @@ nav.md-nav--secondary {
     margin-left: 1.5em;
 }
 
+.md-header__button.md-logo {
+  margin: 0;
+  padding: 0;
+  padding-top: .1rem
+}
+
+.md-header__button.md-logo :is(img, svg) {
+  height: 1.6rem;
+}
+
 .md-header__button.md-logo :-webkit-any(img,svg) {
-    height: 2.0rem;
+    height: 1.6rem;
+}
+
+.md-tabs__item {
+  height: 1.2rem;
+}
+
+.md-tabs__link {
+  font-size: .7rem;
+  margin-top: 0.1rem;
 }
