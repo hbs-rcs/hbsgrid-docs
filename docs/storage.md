@@ -133,21 +133,9 @@ Please contact us at <research@hbs.edu> for connection parameters including
 *USER*, *HOSTNAME*, and *CA Certificates*. Note that some clients 
 (including *DBeaver*) require you to set the *SSL CA Certificate*.
 
-!!! info inline end "DBeaver driver installation"
-    The *DBeaver* client may prompt you to download a driver to connect to your database.
-    This is usually safe, and drivers will be stored in your home directory, under
-    `~/.local/share/DBeaverData/drivers`
+#### Configuration
 
-You can connect to your database using any compatible client. If you 
-already have one you like go ahead and use that. Otherwise we recommend
-one of the following:
-
-- **Python**: [connector-python](https://dev.mysql.com/doc/connector-python/en/)
-- **R**: [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse.org/)
-- **Desktop**: [DBeaver](https://dbeaver.io/)
-- **Terminal**: [mycli](https://www.mycli.net/)
-
-Some *MySQL* clients will read connection information from a
+Most *MySQL* clients will read connection information from a
 configuration file found in `~/.my.cnf`. This file is used to store
 connection details to the MariaDB server, such as account details and
 connection parameters. If you don't have this file (on the Grid) you
@@ -155,12 +143,12 @@ may [request](mailto:research@hbs.edu) a template or create your own
 with the following details:
 
     [mysql]
-          host=HOSTNAME
-          port=3306
-          ssl-ca=PATH_TO_SSL_CERT
-          database=jharvard
-          user=jharvard
-          password=PASSWORD
+    host=HOSTNAME
+    port=3306
+    ssl-ca=PATH_TO_SSL_CERT
+    database=jharvard
+    user=jharvard
+    password=PASSWORD
 
 Please note that you will substitute *jharvard* and *PASSWORD* with
 your MariaDB username and password. For the other parameters such as
@@ -172,6 +160,30 @@ on a linux or Mac local machine, you may prevent others from reading the
 file by opening a *Terminal* on the HBS Grid and running this command:
 
 `chmod 700 ~/.my.cnf`
+
+You can connect to your database using any compatible client. If you 
+already have one you like go ahead and use that. Otherwise we recommend
+one of the clients listed below.
+
+#### Python 
+Use [connector-python](https://dev.mysql.com/doc/connector-python/en/) to connect following the 
+[official documentation](https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html).
+It is recommended to [use connection settings from `~/.my.cnf`](https://dev.mysql.com/doc/connector-python/en/connector-python-option-files.html) as described above.
+
+#### R
+Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse.org/), both use connection settings from `~/.my.cnf` as described above.
+
+!!! info inline end "DBeaver driver installation"
+    The *DBeaver* client may prompt you to download a driver to connect to your database.
+    This is usually safe, and drivers will be stored in your home directory, under
+    `~/.local/share/DBeaverData/drivers`
+
+#### Desktop
+Use [DBeaver](https://dbeaver.io/) connect following the [official documentation](https://dbeaver.com/docs/wiki/Create-Connection/). 
+Make sure to set the *CA Certificate* path in the *SSL* connection settings tab.
+
+#### Terminal
+The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.
 
 ### Additional MariaDB Resources {#additional-mariadb-resources}
 
