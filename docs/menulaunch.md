@@ -55,7 +55,7 @@ The software and versions available in each environment are
 documented in [Software Applications and
 Environments](environments.md). 
 
-Some application launchers have a [Pre-submission command]{#pre-submission-command} field. This
+Some application launchers have a *Pre-submission command* <a name="pre-submission-command"></a>field. This
 allows you to run an arbitrary bash command immediately before
 submitting the job. For example, you can use it to set [environment
 variables](https://www.redhat.com/sysadmin/linux-environment-variables)
