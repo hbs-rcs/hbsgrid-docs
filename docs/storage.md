@@ -142,22 +142,30 @@ connection parameters. If you don't have this file (on the Grid) you
 may [request](mailto:research@hbs.edu) a template or create your own
 with the following details:
 
-    [mysql]
-    host=HOSTNAME
-    port=3306
-    ssl-ca=PATH_TO_SSL_CERT
-    database=jharvard
-    user=jharvard
-    password=PASSWORD
+!!! important inline end
+    
+    A configuration file will all connection details enables database
+    access by anyone with access to the file. Ensure that this file is
+    not shared or accessible by anyone but you.
+
+```
+[mysql]
+host=HOSTNAME
+port=3306
+ssl-ca=PATH_TO_SSL_CERT
+database=jharvard
+user=jharvard
+password=PASSWORD
+```
 
 Please note that you will substitute *jharvard* and *PASSWORD* with
 your MariaDB username and password. For the other parameters such as
 *HOSTNAME*, please contact us at <research@hbs.edu>.
 
-Once your **.my.cnf** is ready, move it your home directory and adjust
-file privileges to ensure no one else can read the file. On the Grid or
+Once your **.my.cnf** is ready, move it your home directory and 
+**adjust file privileges to ensure no one else can read the file**. On the Grid or
 on a linux or Mac local machine, you may prevent others from reading the
-file by opening a *Terminal* on the HBS Grid and running this command:
+file by opening a *Terminal* and running this command:
 
 `chmod 700 ~/.my.cnf`
 
@@ -179,7 +187,7 @@ Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse
     `~/.local/share/DBeaverData/drivers`
 
 #### Desktop
-Use [DBeaver](https://dbeaver.io/) connect following the [official documentation](https://dbeaver.com/docs/wiki/Create-Connection/). 
+Use [DBeaver](https://dbeaver.io/) to connect following the [official documentation](https://dbeaver.com/docs/wiki/Create-Connection/). 
 Make sure to set the *CA Certificate* path in the *SSL* connection settings tab.
 
 #### Terminal
