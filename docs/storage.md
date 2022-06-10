@@ -149,7 +149,7 @@ with the following details:
     not shared or accessible by anyone but you.
 
 ```
-[mysql]
+[client]
 host=HOSTNAME
 port=3306
 ssl-ca=PATH_TO_SSL_CERT

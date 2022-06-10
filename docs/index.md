@@ -55,12 +55,18 @@ The video below demonstrates these steps visually.
 Your browser does not support the video tag.
 </video> 
 
+If you prefer old-school shell access from a terminal, you can log in to `hbsgrid.hbs.edu` using `ssh` 
+from  the command line. SSH terminal / command prompt clients are included by default on
+([Linux](https://man.openbsd.org/ssh), 
+[Mac OS X](https://support.apple.com/guide/mac-help/allow-a-remote-computer-to-access-your-mac-mchlp1066/mac#mchlp26a47b6), and 
+[Windows](https://docs.microsoft.com/en-us/windows/terminal/tutorials/ssh)).
+
+## Next steps
+
 A selection of our most popular applications are available in the favorites list
 pinned to the task-bar. Additional application launchers can be found in the
 Applications menu or by searching in Activities. You can add applications to
 your favorites list by right-clicking and selecting Add to Favorites.
-
-## Next steps
 
 This environment was designed to be intuitive and user-friendly, and
 you are encouraged to start exploring the available software and tools. If you
