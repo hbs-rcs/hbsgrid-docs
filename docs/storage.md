@@ -144,7 +144,7 @@ with the following details:
 
 !!! important inline end
     
-    A configuration file will all connection details enables database
+    A configuration file with all connection details enables database
     access by anyone with access to the file. Ensure that this file is
     not shared or accessible by anyone but you.
 
