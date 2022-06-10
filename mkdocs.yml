@@ -16,8 +16,10 @@ nav:
       - 🔄 Copy and Sync Files: 'syncfiles.md'
       - 💾 Storage & Databases: "storage.md"
       - 👥 Collaborate and Share: 'worksafe.md'
-  - Help & Support: 'help.md'
-  - Account & Project Requests: 'https://www.hbs.edu/research-computing-services/help/online-requests.aspx'
+  - Help & Support Requests:
+      - Support Channels: 'help.md'
+      - Account & Project Requests: 'https://www.hbs.edu/research-computing-services/help/online-requests.aspx'
+      - Troubleshooting: 'trouble.md'
   - Tutorials:
     - Topic list: 'tutorials.md'
     - Large data in R: 'tutorials/large_data_R.md'
