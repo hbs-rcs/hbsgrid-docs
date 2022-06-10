@@ -7,9 +7,14 @@ insufficient disk space
 r(699);
 ```
 
-As a first step you can try deleting any files you have in `/tmp` and see if that gives you enough space.
-You may also be able to change your *Stata* code to reduce the amount of temp space needed -- `preserve` 
-and `restore` commands are often the cause.
+As a first step you may be able to change your *Stata* code to reduce the amount of temp space 
+needed -- `preserve` and `restore` commands are often the cause.
+
+You can also try deleting any files you have in `/tmp` and see if that gives you enough space.
+Since each computer in the cluster has it's own `/tmp` disk you need to do this on the computer Stata is
+running on. An easy way to achieve that is to delete files directly from *Stata* 
+[using the shell escape feature](https://www.stata.com/manuals/dshell.pdf). For example, running 
+`! rm /tmp/my-temp-file` in *Stata* will delete `/tmp/my-temp-file`.
 
 If you cannot get enough space on `/tmp` you can tell *Stata* to store temporary files in a 
 [Scratch storage](storage.md#scratch-storage) directory on the HBS Grid.
