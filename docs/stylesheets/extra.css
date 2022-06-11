@@ -45,9 +45,14 @@ a.md-footer__link:hover {color: #eeeeee; text-decoration: none;}
     background-size: 10px auto;
 }
 
-a.md-header__button.md-logo::after {
+a.md-header__button::after {
     display: none;
 }
+
+a.md-logo::after {
+    display: none;
+}
+
 
 li.md-nav__item--active > nav:nth-child(3) > ul:nth-child(2) > li > a:nth-child(1)::after {
     content: '>';
