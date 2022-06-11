@@ -54,11 +54,10 @@ and the temporary needs may exceed the amount available.
 The storage location at `/export/scratch` is designed specifically for this purpose.
 Note:
 
--   This is a shared area, so use Unix file permissions to change the
-    accessibility if needed.
+-   This is a shared area, so make sure [permissions are set correctly](worksafe.md).
 -   Files older than 60 days will be deleted at monthly maintenance
     periods.
--   The /export/scratch filesystem is not backed up, so please copy back
+-   The `/export/scratch` filesystem is not backed up, so please copy back
     to your home or project folder any files or folders you wish to keep
     long-term.
 
@@ -86,7 +85,7 @@ corruption, please [contact RCS](mailto:research@hbs.edu).
 
 Project spaces can be set up with faculty sponsorship and/or approval by
 filling out the [New Project Space Request
-Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u). 
+Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u).
 
 If you are working with level 3 data or higher, we will ask you to
 submit documentation from the IRB or a Data Usage Agreement (DUA; a
@@ -99,8 +98,7 @@ security](https://security.harvard.edu/dct).
 
 If a project space already exists and you would like to make changes to
 the space users or size, fill out the [Project Space Change Request
-Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u). Once
-approved by the appropriate faculty member, the request will be put in
+Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u). Once approved by the appropriate faculty member, the request will be put in
 to the ESS group at HBS IT.
 
 ### Archiving a project space {#archiving-a-project-space}

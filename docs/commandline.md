@@ -199,66 +199,13 @@ For more details refer to the [LSF job array documentation](https://www.ibm.com/
 ## Monitor & troubleshoot {#troubleshooting-jobs-and-resources}
 
 A variety of problems can arise when running jobs and applications on
-the HBSGrid. LSF provides command-line tools to monitor and inspect your jobs
-to help you figure out if something goes wrong.
+the HBSGrid. LSF provides *command-line tools* to monitor and inspect your jobs
+to help you figure out if something goes wrong:
 
-!!! example "Job troubleshooting steps"
+- `bjobs` lists your running jobs
+- `bhist -a` lists your recent jobs
+- `bjobs -l <JOBID>` gives details about running job `<JOBID>`
+- `bhist -l <JOBID>` gives details about job `<JOBID>`
 
-    Open a *Terminal* and the HBS Grid and run the commands below to troubleshoot jobs.
-    
-    1. Get the JOBID number by running  
-       `bjobs`  
-       If your job is no longer running use  
-       `bhist -a`  
-       to list all your recent jobs. The JOBID is the first number in the output`.
-    2. Get detailed information about a specific job by running_
-       `bjobs -l <JOBID>`  
-       where <JOBID> is the number you looked up in step 1.
-    3. You can also look at any output produced by your job by running  
-       `bpeek <JOBID>`
-    4. Older jobs may not appear in `bjobs`. In that case you can still get some
-       information by running  
-       `bhist -l <JOBID>`  
-
-The `bjobs -l <JOBID>` command give you information about the *state* of the job,
-as defined below.
-
-!!! info "Job state definitions"
-    
-    `PENDING`
-     
-    :   Job is awaiting a slot suitable for the requested
-        resources or you've gone over your limit on resource usage. Jobs
-        with high resource demands may spend significant time PENDING if the
-        compute grid is busy.
-        
-    `RUNNING`
-        
-    :   Job is running.
-     
-    `COMPLETED`
-        
-    :    Job has finished and the command(s) have returned
-        successfully (i.e., exit code 0).
-     
-    `CANCELLED`
-        
-    :   Job has been terminated by the user or administrator
-        using `bkill`.
-     
-    `FAILED`
-        
-    :   Job finished with an exit code other than 0.
-
-
-If your job has failed `bjobs` will usually tell you why, but these messages can be cryptic.
-The most common are described below.
-
-  Error                                                    | Likely Cause
-  ---------------------------------------------------------| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  `JOB <jobid> CANCELLED AT <time> DUE TO TIME LIMIT`      | You did not specify enough time in your submission script. The `-W` option sets time in minutes or can also take HH:MM form (12:30 for 12.5 hours)
-  `Job <jobid> exceeded <mem> memory limit, being killed`  | Your job is attempting to use more memory than you've requested for it. Either increase the amount of memory requested or, if possible, reduce the amount your application is trying to use. For example, many Java programs set heap space using the `-Xmx` JVM option. This could potentially be reduced.
-  `Exited with exit code N`                                | Your job failed because your application exited with an error. Please look at the job or application logs to determine why your program exited abnormally.
-
-For more detailed information refer to the [official LSF
-documentation](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=run-jobs).
+For more detailed troubleshooting help refer to the 
+[troubleshooting documentation](trouble.md#troubleshooting-jobs-and-resources).
