@@ -22,6 +22,15 @@ Using the HBS Grid you can:
 
 ## Quick start
 
+!!! info inline end "Command line access"
+    
+    If you prefer old-school shell access from a terminal, you can log in to `hbsgrid.hbs.edu` using `ssh` 
+    from  the command line. SSH terminal / command prompt clients are included by default on
+    ([Linux](https://man.openbsd.org/ssh), 
+    [Mac OS X](https://support.apple.com/guide/mac-help/allow-a-remote-computer-to-access-your-mac-mchlp1066/mac#mchlp26a47b6), and 
+    [Windows](https://docs.microsoft.com/en-us/windows/terminal/tutorials/ssh)).
+
+
 HBS faculty, staff, doctoral students and their guests are eligible for HBSGrid accounts.
 You can setup your account and connect following the instructions below.
 
@@ -54,12 +63,6 @@ The video below demonstrates these steps visually.
   <source src="media/enable.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video> 
-
-If you prefer old-school shell access from a terminal, you can log in to `hbsgrid.hbs.edu` using `ssh` 
-from  the command line. SSH terminal / command prompt clients are included by default on
-([Linux](https://man.openbsd.org/ssh), 
-[Mac OS X](https://support.apple.com/guide/mac-help/allow-a-remote-computer-to-access-your-mac-mchlp1066/mac#mchlp26a47b6), and 
-[Windows](https://docs.microsoft.com/en-us/windows/terminal/tutorials/ssh)).
 
 ## Next steps
 
