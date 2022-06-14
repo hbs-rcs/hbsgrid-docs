@@ -104,7 +104,7 @@ Your browser does not support the video tag.
 </video>
 
 
-## Sync data from/to cloud storage (OneDrive,Dropbox etc.)
+## Sync data from/to cloud storage (OneDrive, Dropbox etc.)
 
 If your data is in cloud storage you may wish to sync it directly from
 there. While the HBS Grid does not offer native *Dropbox*, *OneDrive*,
@@ -136,3 +136,88 @@ Your browser does not support the video tag.
 
 Note that the demonstration video goes through the configuration step, which only needs to be done once.
 After that you can skip step 4 above, which greatly simplifies the process.
+
+## Transfer data using Globus
+
+!!! important inline end ""
+    At this time, **Globus should not be used to transfer** 
+    [DSL 4 research data](https://policy.security.harvard.edu/level-4).
+
+Globus is a robust data transfer service that enables sharing files or
+data with external persons, eliminates the need for both parties to have
+HBS or guest user credentials, and is capable of tolerating transfer
+interruptions.
+
+!!! info inline end "Preparing data for Globus transfer"
+    If staging files and/or a transfer folder on the HBSGrid cluster and
+    its storage, `/export/globus` is the main directory visible by the
+    Globus server. Create a folder there for yourself or your group by:
+    -   Using the Globus File Manager web interface, or
+    -   Using a shell via stand-alone terminal or one inside NoMachine
+     
+    **Note**: If using the terminal to create the folder, ensure that both
+    the [permissions and ownership are set appropriately](worksafe.md)
+    
+    **Note** A [Globus Collection](https://docs.globus.org/globus-connect-server/v5/reference/collection/#collections)
+    is a named location containing data you can access with Globus. An 
+    [Endpoint](https://docs.globus.org/globus-connect-server/v5/reference/endpoint/) is a server that hosts
+    collections.
+
+
+!!! example "Log in to Globus and transfer data"
+
+1.  [Login to the Globus web interface](https://app.globus.org), 
+    selecting "*Harvard University*" as your organization and authenticating
+    via [HarvardKey](https://key.harvard.edu/) if prompted.
+
+2.  In the *Collection* field, search for and select the *Harvard Business School DTN* (data transfer node).  
+    If you do not have a folder here, create one by clicking the *New Folder* button.
+
+3.  Click on the "Transfer or Sync to..." button
+
+4.  Use the second *Collection* search box on the right to find the other collection.
+
+5.  Select the folder you wish to transfer and click on the appropriate Start arrow icon.
+    (The direction the *Start* button arrow points indicates the direction file transfer).
+
+To share out files in disparate directories, create a separate directory which you will share, and copy these files into it.
+
+Please be aware that you can share out files or folders not only that you own but also that you have explicit permission to access.
+**Please be careful about sharing too broadly**.
+    
+For details refer to the excellent [Globus documentation](https://docs.globus.org/how-to/), and
+note that *Globus* has [documented limitations](https://docs.globus.org/faq/transfer-sharing/#are_there_any_limits_on_using_the_file_transfer_service) 
+on its transfer service capabilities.
+
+
+## Important Data Transfer Considerations
+
+The speed and success of data transfer rely on numerous factors, only
+some of which are in your control. Following these listed tips will help
+increase the likelihood of success:
+
+-   Wired, ethernet connections are the most reliable and fastest way to
+    transfer data, especially large amounts.
+
+-   If using WiFi, try to use a network that has a strong signal and is
+    interference-free.
+
+-   If in a location with a large numbers of WiFi networks
+    (e.g. apartment buildings), please restart both your cable/fiber
+    modem & your WiFi network router.
+
+-   If your data contains directories with hundreds or thousands of
+    files, we strongly recommend that you compress/archive the
+    directories up into a small number of archives, or you may
+    experience sluggish or failed transfers. On the HBSGrid cluster, we
+    recommend the GUI File Manager in NoMachine/Gnome or using
+    command-line programs like tar or zip.
+
+-   We do not recommend creating any single archive file larger than
+    about 100 GB in size: If your transfer must be restarted, *Globus*
+    and *RClone* will start at the beginning of the file.
+
+-   One can submit batch jobs to compress files if handling large number
+    of files, the sizes of the files are large, or compressing/processing will take 10s of minutes. 
+    If using *Globus* compression tools can use Globus transfer staging area as the destination,
+    eliminating the need to copy the data twice.
