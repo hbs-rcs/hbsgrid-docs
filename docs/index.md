@@ -43,7 +43,7 @@ You can setup your account and connect following the instructions below.
         otherwise.
     4.  Log in to the HBS Grid by using
         [NoMachine](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)
-        to connect to host `hbsgrid-nx.hbs.edu`
+        to connect to **Host** `hbsgrid-nx.hbs.edu`. Use any **Name** you like and leave defaults for all other settings.
     5.  Open a Terminal in NoMachine:
         *Applications => Favorites => Terminal*
      
@@ -63,6 +63,11 @@ The video below demonstrates these steps visually.
   <source src="media/enable.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video> 
+
+NoMachine maintains a [detailed connection guide](https://www.nomachine.com/getting-started-with-nomachine) 
+that you can refer to if needed. Connection difficulties from off-campus may be caused by VPN issues, see the
+[VPN guide](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
+for details.
 
 ## Next steps
 
