@@ -37,24 +37,29 @@ You can setup your account and connect following the instructions below.
 !!! example "Connect to the HBS Grid"
 
     1.  If you do not yet have an HBS Grid account [request one here](https://www.hbs.edu/research-computing-services/help/online-requests.aspx).
-    2.  Download and install the [NoMachine remote desktop application ](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client) if you do not already have it.
-    3.  Connect to the HBS network, either directly if you are on-campus or
+    2.  Connect to the HBS network, either directly if you are on-campus or
         [connect via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
         otherwise.
-    4.  Log in to the HBS Grid by using
-        [NoMachine](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client)
-        to connect to **Host** `hbsgrid-nx.hbs.edu`. Use any **Name** you like and leave defaults for all other settings.
-    5.  Open a Terminal in NoMachine:
+    3.  *If the *NoMachine* application is not yet installed* [download](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client) and install it.
+    4. Start the [NoMachine](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client) application.
+        
+    5.  *If this is your first time connecting* click the
+        ![add](imgs/nomachine_add.png#inline) button and enter these connection details:
+        - *Name*: "HBS Grid", or anything you like
+        - *Host*: `hbsgrid-nx.hbs.edu`
+        - Leave defaults for all other settings.
+    6. Click the ![connect](imgs/nomachine_connect.png#inline) button and enter your *Username* and *Password* (see *step* 1 above).
+    7.  Open a Terminal in NoMachine:
         *Applications => Favorites => Terminal*
      
-    6.  Run
+    8.  Run
      
         `/usr/local/app/rcs_bin/techpreview-dev/enable.sh & exit`
      
         to open the grid configuration utility (you can copy/paste from the
         documentation to your Terminal).
      
-    7.  Select the *Technology Preview* environment in the welcome dialog and click
+    9.  Select the *Technology Preview* environment in the welcome dialog and click
         OK.
 
 

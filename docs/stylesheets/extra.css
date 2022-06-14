@@ -92,3 +92,9 @@ nav.md-nav--secondary {
   font-size: .7rem;
   margin-top: 0.1rem;
 }
+
+
+img[src*="#inline"] {
+    height:1.5em;
+    vertical-align: text-bottom;
+}
