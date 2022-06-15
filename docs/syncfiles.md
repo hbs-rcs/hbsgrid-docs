@@ -71,9 +71,15 @@ have to decide where to put it. There are three options: *home directory*,
     Scratch storage is a shared resource accessible to all users on the HBS Grid;
     make sure you [set permissions on your files accordingly](worksafe.md).
 
+!!! info inline end "Sync data from the command line"
+    You can alternatively use the `rsync` command-line program to transfer data from your 
+    [connected local drive](syncfiles.md#access-local-files-from-nomachine-login-nodes). Documentation
+    is [available online](https://download.samba.org/pub/rsync/rsync.1) or type `man rsync` at the
+    HBS Grid command line.
+
 Once you have decided where to store your files on the HBS Grid you can follow the steps below to transfer them.
 
-!!! example "Sync data from your local machine to the HBS Grid"
+!!! example "Sync data from your local machine to the HBS Grid desktop"
     1.  Log in to the HBS Grid and connect your local drive using
         NoMachine [as described above](syncfiles.md#access-local-files-from-nomachine-login-nodes).
      
