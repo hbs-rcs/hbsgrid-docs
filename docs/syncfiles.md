@@ -37,7 +37,7 @@ Click the image below for a local drive mounting demonstration:
 Your browser does not support the video tag.
 </video>
 
-## Sync data from/to local storage
+## Transfer data from/to local storage
 
 *NoMachine* file mounting is useful, but it has a major limitation;
 **drives mounted via NoMachine are not accessible by applications running on HBS Grid compute nodes**. 
@@ -110,14 +110,14 @@ Your browser does not support the video tag.
 </video>
 
 
-## Sync data from/to cloud storage (OneDrive, Dropbox etc.)
+## Transfer data from/to cloud storage 
 
 !!! info inline end "Sync from the command-line"
     `rclone` is also available as a command-line application that you can
     use interactively in a terminal or in scripts. Refer to the
     [rclone documentation](https://rclone.org/docs/) for details.
 
-If your data is in cloud storage you may wish to sync it directly from
+If your data is in cloud storage (OneDrive, Dropbox etc.) you may wish to sync it directly from
 there. While the HBS Grid does not offer native *Dropbox*, *OneDrive*,
 or other cloud storage clients, you can use `rclone` to perform on-demand 
 data synchronization with all major cloud storage providers.
