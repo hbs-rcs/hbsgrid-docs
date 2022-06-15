@@ -175,7 +175,7 @@ Please be careful not to share too broadly.
     4.  Use the second *Collection* search box on the right to find the other collection.
      
     5.  Select the folder you wish to transfer and click on the appropriate Start arrow icon.
-        (The direction the *Start* button arrow points indicates the direction file transfer).
+        (The direction the *Start* button arrow points indicates the direction files will transfer.)
 
 *Globus* can also be used to transfer data from you local machine using *Globus Connect Personal*.
 Installers are available for [Mac OS X](https://docs.globus.org/how-to/globus-connect-personal-mac/).
