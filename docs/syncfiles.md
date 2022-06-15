@@ -1,4 +1,4 @@
-# 🔄 Copy and Sync Files
+# 🔄 Copy and Transfer Files
 
 The HBS Grid is primarily used for data analysis, machine learning, data
 wrangling, and data visualization. Usually this means that 
