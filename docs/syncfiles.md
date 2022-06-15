@@ -106,12 +106,17 @@ Your browser does not support the video tag.
 
 ## Sync data from/to cloud storage (OneDrive, Dropbox etc.)
 
+!!! info inline end "Sync from the command-line"
+    `rclone` is also available as a command-line application that you can
+    use interactively in a terminal or in scripts. Refer to the
+    [rclone documentation](https://rclone.org/docs/) for details.
+
 If your data is in cloud storage you may wish to sync it directly from
 there. While the HBS Grid does not offer native *Dropbox*, *OneDrive*,
 or other cloud storage clients, you can use `rclone` to perform on-demand 
 data synchronization with all major cloud storage providers.
 
-!!! example "Sync your data from a cloud provider to the HBS Grid:"
+!!! example "Sync your data from a cloud provider to the HBS Grid desktop"
 
     1.  Log in to the HBS Grid via *NoMachine*.
      
