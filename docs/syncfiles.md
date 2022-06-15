@@ -71,11 +71,6 @@ have to decide where to put it. There are three options: *home directory*,
     Scratch storage is a shared resource accessible to all users on the HBS Grid;
     make sure you [set permissions on your files accordingly](worksafe.md).
 
-!!! info inline end "Sync data from the command line"
-    You can alternatively use the `rsync` command-line program to transfer data from your 
-    [connected local drive](syncfiles.md#access-local-files-from-nomachine-login-nodes). Documentation
-    is [available online](https://download.samba.org/pub/rsync/rsync.1) or type `man rsync` at the
-    HBS Grid command line.
 
 Once you have decided where to store your files on the HBS Grid you can follow the steps below to transfer them.
 
@@ -96,10 +91,18 @@ Once you have decided where to store your files on the HBS Grid you can follow t
         run button in the upper-right corner of the
         grsync application.
 
+!!! info inline end "Sync data from the command line"
+    You can alternatively use the `rsync` command-line program to transfer data from your 
+    [connected local drive](syncfiles.md#access-local-files-from-nomachine-login-nodes). Documentation
+    is [available online](https://download.samba.org/pub/rsync/rsync.1) or type `man rsync` at the
+    HBS Grid command line.
+
 Note that transferring many small files is much slower than transferring
 a small number of large files. You may find it faster to compress
 folders with many small files into `.zip` or `.tar` archives, transfer those, 
-and decompress/extract them on the other end.
+and decompress/extract them on the other end. 
+(See [additional data transfer tips](syncfiles.md#important-data-transfer-considerations) below.)
+
 
 Click the image below for a demonstration showing how to sync your data
 from a local drive to the HBS Grid:
@@ -120,7 +123,8 @@ Your browser does not support the video tag.
 If your data is in cloud storage (OneDrive, Dropbox etc.) you may wish to sync it directly from
 there. While the HBS Grid does not offer native *Dropbox*, *OneDrive*,
 or other cloud storage clients, you can use `rclone` to perform on-demand 
-data synchronization with all major cloud storage providers.
+data synchronization with all major cloud storage providers. Transferring data *from*
+cloud storage providers to the HBS Grid using this tool is generally reasonably fast and easy.
 
 !!! example "Sync your data from a cloud provider to the HBS Grid desktop"
 
