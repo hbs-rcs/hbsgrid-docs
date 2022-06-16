@@ -13,21 +13,22 @@ nav:
       - 🐚 Use the Command-line: 'commandline.md'
       - 📦 Use Software Versions: 'environments.md'
   - Data & Storage:
-      - 🔄 Copy and Sync Files: 'syncfiles.md'
+      - 🔄 Copy and Transfer Files: 'syncfiles.md'
       - 💾 Storage & Databases: "storage.md"
       - 👥 Collaborate and Share: 'worksafe.md'
-  - Help and Support: 'help.md'
-  - Account & Project Requests: 'https://www.hbs.edu/research-computing-services/help/online-requests.aspx'
+  - Help & Support Requests:
+      - Support Channels: 'help.md'
+      - Account & Project Requests: 'https://www.hbs.edu/research-computing-services/help/online-requests.aspx'
+      - Troubleshooting: 'trouble.md'
   - Tutorials:
     - Topic list: 'tutorials.md'
     - Large data in R: 'tutorials/large_data_R.md'
     - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
     - NLP in Python: 'tutorials/nlp_with_python.md'
-  - Blog: 'https://hbs-rcs.github.io/'
-  - HBS RCS Home: 'https://www.hbs.edu/research-computing-services/'
 
 theme:
   name: material
+  logo: imgs/rcs.png
   features:
     - toc.integrate
     - navigation.instant
@@ -62,6 +63,7 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
 
 extra:
+  homepage: https://www.hbs.edu/research-computing-services/
   analytics:
     provider: google
     property: G-3P5QKSCGVL

@@ -45,7 +45,7 @@ For example, the first environment released in 2021 is named
 environment, including a command that you can run from the terminal to
 get a detailed software version list.
 
-## ## Select terminal environment
+## Select terminal environment
 
 In order to facilitate reproducible research and analysis we preserve old software
 environments so that you can switch back to them later if needed. These older
@@ -128,21 +128,62 @@ Detailed [Lmod documentation is available here](https://lmod.readthedocs.io/en/l
 
 ## Reproducing environments
 
-The instructions given above detail how to use different software environment
-versions on the HBS Grid. You may sometimes need to go a step further than this,
-e.g., go continue your work on another system after you leave HBS, or to provide
-reproduction instructions to meet a Journal publication requirement. To do this you
+The instructions above show how to use different software environment
+versions *on the HBS Grid*. You may sometimes need to go a step further than this,
+e.g., to continue your work on another system after you leave HBS, or to provide
+reproduction instructions to meet a journal publication requirement. To do this you
 need to know that 
 *the environments described here are managed using the **conda** package manager on a **Linux** system*. 
 
-You can easily recreate these environments on Linux systems by following the 
-[conda environment recreation] ](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments) or [conda environment sharing](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments) documentation.
+You can recreate these environments on Linux systems by following the steps below:
 
-In general it is not possible to exactly re-create these environments on Windows or Mac Machines.
+!!! example "Re-create environments on another system"
+    
+    1. Obtain access to a Linux system. If you don't have have a suitable physical computer 
+       you may wish to install one in a virtual machine. 
+       Many [tutorials are available](https://brb.nci.nih.gov/seqtools/installUbuntu.html)
+       to show you how to do this.
+    2. Download the [MambaForge installer](https://github.com/conda-forge/miniforge#mambaforge)
+       and install it on your Linux system.
+    3. Create the [conda package list](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments).
+    4. Copy the package list file to your Linux system and 
+       [use `conda` to re-create the environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments).
+
+In general it is not possible to exactly re-create these environments on Windows or Mac machines.
+You can however examine the package lists and manually create environments with the same versions
+of the software needed for your project.
+
+
+## Create your own environments
+
+!!! info inline end "Software installation requests"
+    If you find that the software you need is not available in the standard HBS Grid software environments
+    please consider putting in an installation request using our 
+    [discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
+    or [issue tracker](https://github.com/hbs-rcs/hbsgrid-docs/issues). This will help us maintain
+    consistent environments useful to the whole HBS community.
+
+If you prefer to create and manage your own software environments you may do so using 
+[conda](https://docs.conda.io/projects/conda/en/latest/user-guide). This is the same package manager used
+to maintain the system-wide software environments on the HBS Grid. `conda` has already been installed and
+configured for you on the HBS Grid, making it easy to create and manage your own environments by following the 
+[official conda environment documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments).
+
+You can share and reproduce your own `conda` environments on other computers and systems as well.
+When setting up `conda` outside the HBS Grid we *strongly encourage* using the 
+[MambaForge installer](https://github.com/conda-forge/miniforge#mambaforge) to get going with `conda` more quickly.
+(`conda` is already installed and configured for you on the HBS Grid, there is no need to 
+install it yourself there.)
+
+Some useful documentation on [creating environments](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments),
+[installing packages](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-packages),
+and [sharing](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment)
+is available, along with [a helpful tutorial](https://nbis-reproducible-research.readthedocs.io/en/course_2104/conda/).
+
 
 ## Environment versions
 
-Current and historical software environments are described below.
+Current and historical software environments available system-wide on the HBS Grid are described below.
 
 ### rcs_2022.01 {#rcs_2022.01}
 

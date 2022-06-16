@@ -1,6 +1,6 @@
 # 💾 Research Data Storage and Databases
 
-!!! info inline end
+!!! info inline end "Mount Grid storage locally"
     Research storage is also accessible [on Windows as a network drive](https://support.microsoft.com/en-gb/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d) at `\\research.hbs.edu` and [via SMB on OSX/Linux](https://support.apple.com/lt-lt/guide/mac-help/mchlp1140/mac#mchlp1265542) 
     at `smb://research.hbs.edu` and via SSH at `hbsgrid.hbs.edu`.
 
@@ -54,11 +54,10 @@ and the temporary needs may exceed the amount available.
 The storage location at `/export/scratch` is designed specifically for this purpose.
 Note:
 
--   This is a shared area, so use Unix file permissions to change the
-    accessibility if needed.
+-   This is a shared area, so make sure [permissions are set correctly](worksafe.md).
 -   Files older than 60 days will be deleted at monthly maintenance
     periods.
--   The /export/scratch filesystem is not backed up, so please copy back
+-   The `/export/scratch` filesystem is not backed up, so please copy back
     to your home or project folder any files or folders you wish to keep
     long-term.
 
@@ -86,7 +85,7 @@ corruption, please [contact RCS](mailto:research@hbs.edu).
 
 Project spaces can be set up with faculty sponsorship and/or approval by
 filling out the [New Project Space Request
-Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u). 
+Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u).
 
 If you are working with level 3 data or higher, we will ask you to
 submit documentation from the IRB or a Data Usage Agreement (DUA; a
@@ -99,8 +98,7 @@ security](https://security.harvard.edu/dct).
 
 If a project space already exists and you would like to make changes to
 the space users or size, fill out the [Project Space Change Request
-Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u). Once
-approved by the appropriate faculty member, the request will be put in
+Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u). Once approved by the appropriate faculty member, the request will be put in
 to the ESS group at HBS IT.
 
 ### Archiving a project space {#archiving-a-project-space}
@@ -133,45 +131,65 @@ Please contact us at <research@hbs.edu> for connection parameters including
 *USER*, *HOSTNAME*, and *CA Certificates*. Note that some clients 
 (including *DBeaver*) require you to set the *SSL CA Certificate*.
 
-!!! info inline end
-    The *DBeaver* client may prompt you to download a driver to connect to your database.
-    This is usually safe, and drivers will be stored in your home directory, under
-    `~/.local/share/DBeaverData/drivers`
+#### Configuration
 
-You can connect to your database using any compatible client. If you 
-already have one you like go ahead and use that. Otherwise we recommend
-one of the following:
-
-- **Python**: [connector-python](https://dev.mysql.com/doc/connector-python/en/)
-- **R**: [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse.org/)
-- **Desktop**: [DBeaver](https://dbeaver.io/)
-- **Terminal**: [mycli](https://www.mycli.net/)
-
-Some *MySQL* clients will read connection information from a
+Most *MySQL* clients will read connection information from a
 configuration file found in `~/.my.cnf`. This file is used to store
 connection details to the MariaDB server, such as account details and
 connection parameters. If you don't have this file (on the Grid) you
 may [request](mailto:research@hbs.edu) a template or create your own
 with the following details:
 
-    [mysql]
-          host=HOSTNAME
-          port=3306
-          ssl-ca=PATH_TO_SSL_CERT
-          database=jharvard
-          user=jharvard
-          password=PASSWORD
+!!! important inline end
+    
+    A configuration file with all connection details enables database
+    access by anyone with access to the file. Ensure that this file is
+    not shared or accessible by anyone but you.
+
+```
+[client]
+host=HOSTNAME
+port=3306
+ssl-ca=PATH_TO_SSL_CERT
+database=jharvard
+user=jharvard
+password=PASSWORD
+```
 
 Please note that you will substitute *jharvard* and *PASSWORD* with
 your MariaDB username and password. For the other parameters such as
 *HOSTNAME*, please contact us at <research@hbs.edu>.
 
-Once your **.my.cnf** is ready, move it your home directory and adjust
-file privileges to ensure no one else can read the file. On the Grid or
+Once your **.my.cnf** is ready, move it your home directory and 
+**adjust file privileges to ensure no one else can read the file**. On the Grid or
 on a linux or Mac local machine, you may prevent others from reading the
-file by opening a *Terminal* on the HBS Grid and running this command:
+file by opening a *Terminal* and running this command:
 
 `chmod 700 ~/.my.cnf`
+
+You can connect to your database using any compatible client. If you 
+already have one you like go ahead and use that. Otherwise we recommend
+one of the clients listed below.
+
+#### Python 
+Use [connector-python](https://dev.mysql.com/doc/connector-python/en/) to connect following the 
+[official documentation](https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html).
+It is recommended to [use connection settings from `~/.my.cnf`](https://dev.mysql.com/doc/connector-python/en/connector-python-option-files.html) as described above.
+
+#### R
+Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse.org/), both use connection settings from `~/.my.cnf` as described above.
+
+!!! info inline end "DBeaver driver installation"
+    The *DBeaver* client may prompt you to download a driver to connect to your database.
+    This is usually safe, and drivers will be stored in your home directory, under
+    `~/.local/share/DBeaverData/drivers`
+
+#### Desktop
+Use [DBeaver](https://dbeaver.io/) to connect following the [official documentation](https://dbeaver.com/docs/wiki/Create-Connection/). 
+Make sure to set the *CA Certificate* path in the *SSL* connection settings tab.
+
+#### Terminal
+The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.
 
 ### Additional MariaDB Resources {#additional-mariadb-resources}
 
