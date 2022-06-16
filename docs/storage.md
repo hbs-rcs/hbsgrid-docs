@@ -33,7 +33,7 @@ For example faculty member John Harvard's home folder would be at:
 Home folders vary in size by the program or role that you have. When
 your space fills up, you will not be able to do any more work, which may
 lead to programs acting strangely or crashing altogether, disk error
-notices, or Input/Output errors. Keep an eye on your space usage and 
+notices, or input/output errors. Keep an eye on your space usage and 
 periodically remove any old files that are no longer needed.
 
 Home folders are backed up every night. If you should need to recover
