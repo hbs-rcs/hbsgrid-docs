@@ -4,7 +4,7 @@
     Research storage is also accessible [on Windows as a network drive](https://support.microsoft.com/en-gb/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d) at `\\research.hbs.edu`, [via SMB on OSX/Linux](https://support.apple.com/lt-lt/guide/mac-help/mchlp1140/mac#mchlp1265542) 
     at `smb://research.hbs.edu`, and via SSH at `hbsgrid.hbs.edu`.at `smb://research.hbs.edu`, and via SSH at `hbsgrid.hbs.edu`.
     This is useful for viewing and copying small files, but will be slow for large data transfers.
-    See the [file transfer documentation].
+    See the [file transfer documentation](syncfiles.md).
 
 HBS provides storage for active research projects. Research storage is 
 typically used in conjunction with HBS Grid compute and accessed 
