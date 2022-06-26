@@ -9,9 +9,10 @@ remote_branch: gh-pages
 nav:
   - Start Here: 'index.md'
   - Software & Environments:
+      - 📦 Available Software: 'software.md'
       - 🚀 Run Desktop Applications: 'menulaunch.md'
       - 🐚 Use the Command-line: 'commandline.md'
-      - 📦 Use Software Versions: 'environments.md'
+      - 🔙 Use Software Versions: 'environments.md'
   - Data & Storage:
       - 🔄 Copy and Transfer Files: 'syncfiles.md'
       - 💾 Storage & Databases: "storage.md"

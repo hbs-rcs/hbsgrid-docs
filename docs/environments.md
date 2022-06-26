@@ -1,32 +1,11 @@
-# 📦 Use Software Versions
-
-A huge range of software applications, utilities, and libraries are
-installed and configured for you. Whether you need *Rstudio* or
-*Spyder*, *Julia* running in *VSCode*, popular R or Python packages,
-of fully configured *Jupyter Notebooks*, we have you covered.
-
----
-
-## Available software
-
-The list of installed software is so large we make no effort to
-enumerate everything here, but you can always get an up-to-date list
-by opening a *terminal* on the Grid and running
-``` sh
-conda list
-```
-
-**Start with the expectation that all the software you need is already
-installed and ready to use**. If that expectation is ever broken please
-put in a request using our [discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
-or [issue tracker](https://github.com/hbs-rcs/hbsgrid-docs/issues).
-
-## Select desktop environment
+# 🔙 Use Software Versions
 
 Each time we update our software environments we preserve previous
 versions so that you can roll back for reproducibility or if your code
 stops working after an update. This section details the specific
 software environment versions available.
+
+## Select desktop environment
 
 As an illustration of the benefits of preserving historical software
 environments, imagine that you have a python project and that your
