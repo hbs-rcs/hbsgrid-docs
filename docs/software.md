@@ -22,6 +22,11 @@ in to the HBS Grid via *NoMachine* and nothing further is required in that case.
 
 When logging in via *SSH* from a terminal (i.e., without *NoMachine*) you must 
 explicitly activate the environment you wish to use after logging in. The default
-environment can be activated by running `ml rcs`. Refer to the 
-[terminal environment](environments.md#select-terminal-environment)
+environment can be activated by running 
+
+```
+ml rcs
+``` 
+
+Refer to the [terminal environment](environments.md#select-terminal-environment)
 documentation for details.
