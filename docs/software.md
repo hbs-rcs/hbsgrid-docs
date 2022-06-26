@@ -18,7 +18,8 @@ put in a request using our [discussion forum](https://github.com/hbs-rcs/hbsgrid
 or [issue tracker](https://github.com/hbs-rcs/hbsgrid-docs/issues).
 
 The most recent version of our software environment is activated when you log 
-in to the HBS Grid via *NoMachine* and nothing further is required in that case.
+in to the HBS Grid via *NoMachine* and nothing further is required unless you wish
+to [use an environment other than the default](environments.md).
 
 When logging in via *SSH* from a terminal (i.e., without *NoMachine*) you must 
 explicitly activate the environment you wish to use after logging in. The default
