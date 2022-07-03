@@ -1,0 +1,1126 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://hbs-rcs.github.io/hbsgrid-docs/environments/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>🔙 Use Software Versions - HBS Grid Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  <!-- Determine analytics property -->
+
+
+
+
+<script>
+ window.dataLayer = window.dataLayer || []
+ function gtag() { dataLayer.push(arguments) }
+
+ /* Set up integration and send page view */
+ gtag("js", new Date())
+ gtag("config", "G-3P5QKSCGVL", { client_storage: 'none', anonymize_ip: true })
+
+ /* Register event handlers after documented loaded */
+ document.addEventListener("DOMContentLoaded", function() {
+     if (document.forms.search) {
+         var query = document.forms.search.query
+         query.addEventListener("blur", function() {
+             if (this.value)
+                 gtag("event", "search", { search_term: this.value })
+         })
+     }
+
+     /* Send page view on location change */
+     if (typeof location$ !== "undefined")
+         location$.subscribe(function(url) {
+             gtag("config", "G-3P5QKSCGVL", {
+                 page_path: url.pathname, client_storage: 'none', anonymize_ip: true
+             })
+         })
+ })
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3P5QKSCGVL">
+</script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="hbs" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#use-software-versions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://www.hbs.edu/research-computing-services/" title="HBS Grid Documentation" class="md-header__button md-logo" aria-label="HBS Grid Documentation" data-md-component="logo">
+      
+  <img src="../imgs/rcs.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HBS Grid Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🔙 Use Software Versions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hbs-rcs/hbsgrid-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Start Here
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../software/" class="md-tabs__link md-tabs__link--active">
+        Software & Environments
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../syncfiles/" class="md-tabs__link">
+        Data & Storage
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../help/" class="md-tabs__link">
+        Help & Support Requests
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tutorials/" class="md-tabs__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.hbs.edu/research-computing-services/" title="HBS Grid Documentation" class="md-nav__button md-logo" aria-label="HBS Grid Documentation" data-md-component="logo">
+      
+  <img src="../imgs/rcs.png" alt="logo">
+
+    </a>
+    HBS Grid Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hbs-rcs/hbsgrid-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Start Here
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Software & Environments
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software & Environments" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Software & Environments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software/" class="md-nav__link">
+        📦 Available Software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../menulaunch/" class="md-nav__link">
+        🚀 Run Desktop Applications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commandline/" class="md-nav__link">
+        🐚 Use the Command-line
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          🔙 Use Software Versions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        🔙 Use Software Versions
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#select-desktop-environment" class="md-nav__link">
+    Select desktop environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#select-terminal-environment" class="md-nav__link">
+    Select terminal environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproducing-environments" class="md-nav__link">
+    Reproducing environments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-your-own-environments" class="md-nav__link">
+    Create your own environments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-versions" class="md-nav__link">
+    Environment versions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Data & Storage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data & Storage" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Data & Storage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syncfiles/" class="md-nav__link">
+        🔄 Copy and Transfer Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage/" class="md-nav__link">
+        💾 Storage & Databases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worksafe/" class="md-nav__link">
+        👥 Collaborate and Share
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Help & Support Requests
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Help & Support Requests" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Help & Support Requests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../help/" class="md-nav__link">
+        Support Channels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.hbs.edu/research-computing-services/help/online-requests.aspx" class="md-nav__link">
+        Account & Project Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trouble/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        Topic list
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/large_data_R/" class="md-nav__link">
+        Large data in R
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/PythonWebScrape/" class="md-nav__link">
+        Web Scraping in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/nlp_with_python/" class="md-nav__link">
+        NLP in Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/hbs-rcs/hbsgrid-docs/edit/main/docs/environments.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  
+
+
+
+<h1 id="use-software-versions">🔙 Use Software Versions</h1>
+<p>Each time we update our software environments we preserve previous
+versions so that you can roll back for reproducibility or if your code
+stops working after an update. This section details the specific
+software environment versions available.</p>
+<h2 id="select-desktop-environment">Select desktop environment</h2>
+<p>As an illustration of the benefits of preserving historical software
+environments, imagine that you have a python project and that your
+<em>Pandas</em> code no longer works with the latest <em>Pandas</em> release in the
+current software environment. In that case you can start <em>Spyder</em> and 
+revert to a previous software environment in order to run your analysis 
+using an older version of <em>Pandas</em>. The screen-shot below shows how to 
+use the Software environment version selector to run and older version of
+<em>python</em>.</p>
+<p><img alt="" class="media media-block" src="../imgs/switchEnvironment.png" /></p>
+<p>Software environments are named following a <code>rcs_year.version</code> scheme.
+For example, the first environment released in 2021 is named
+<code>rcs_2021.01</code>. The list below shows you key information about each
+environment, including a command that you can run from the terminal to
+get a detailed software version list.</p>
+<h2 id="select-terminal-environment">Select terminal environment</h2>
+<p>In order to facilitate reproducible research and analysis we preserve old software
+environments so that you can switch back to them later if needed. These older
+environments can be loaded using <a href="https://lmod.readthedocs.io/en/latest/010_user.html">Lmod</a>.</p>
+<p>Running
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ml avail
+</code></pre></div>
+will show you the available environments, named by date and version number.</p>
+<p>For example, suppose that you have a python project and that your pandas code no
+longer works with the latest pandas release in the current software environment.
+In that case you can revert to a previous software environment and run your
+analysis using an older version of pandas.</p>
+<p>You can use the <code>ml</code> command from the terminal to <em>list</em>, <em>load</em>, and <em>unload</em> Lmod environment,
+as shown below.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>      ml avail
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>------------------- /usr/local/app/rcs_bin/grid3/modulefiles -------------------
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   rcs/rcs_2020.01        rcs/rcs_2021.03      rcs/rcs_2021.06
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>   rcs/rcs_2022.01 (D,L)  rcs/rcs_2022.06
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        Where:
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        D:  Default Module
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        L:  Module is loaded
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        Use &quot;module spider&quot; to find all possible modules.
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        Use &quot;module keyword key1 key2 ...&quot; to search for all possible modules matching
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        any of the &quot;keys&quot;.
+</code></pre></div>
+<p>You can get detailed information about specific software modules using the
+<code>ml spyder</code> command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>module spyder rcs/rcs_2021.03
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>----------------------------------------------------------------------------
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  rcs: rcs/rcs_2022.01
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>----------------------------------------------------------------------------
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    Description:
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>      Anaconda environment for research computing
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    This module can be loaded directly: module load rcs/rcs_2022.01
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    Help:
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>      Sets up environment for Data Science and Statistical computing.
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>      A huge list of software is avalable, including &#39;python&#39;, &#39;spyder&#39;, &#39;R&#39;, 
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>      &#39;rstudio&#39;, &#39;emacs&#39;, &#39;vscode&#39;, rclone, ripgrep, nnn and much more.
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>      See https://hbs-rcs.github.io/hbsgrid-docs/ for documentation
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>      and https://hbs-rcs.github.io/hbsgrid-docs/environments/#rcs_2022.01
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>      for version-specific details.
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>      For a detailed software list open a terminal and run 
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>      conda env export -n rcs_2022.07
+</code></pre></div>
+<p>Finally you can use <code>ml</code> to load and unload specific environments.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ml rcs_2021.03
+</code></pre></div>
+will load the <em>rcs_2021.03</em> environment, and 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ml -rcs_2021.03
+</code></pre></div>
+will unload it.</p>
+<p>Detailed <a href="https://lmod.readthedocs.io/en/latest/">Lmod documentation is available here</a> and you can learn more about the environments available on the HBS Grid in the <a href="./">Environments documentation</a>.</p>
+<h2 id="reproducing-environments">Reproducing environments</h2>
+<p>The instructions above show how to use different software environment
+versions <em>on the HBS Grid</em>. You may sometimes need to go a step further than this,
+e.g., to continue your work on another system after you leave HBS, or to provide
+reproduction instructions to meet a journal publication requirement. To do this you
+need to know that 
+<em>the environments described here are managed using the </em><em>conda</em><em> package manager on a </em><em>Linux</em><em> system</em>. </p>
+<p>You can recreate these environments on Linux systems by following the steps below:</p>
+<div class="admonition example">
+<p class="admonition-title">Re-create environments on another system</p>
+<ol>
+<li>Obtain access to a Linux system. If you don't have have a suitable physical computer 
+   you may wish to install one in a virtual machine. 
+   Many <a href="https://brb.nci.nih.gov/seqtools/installUbuntu.html">tutorials are available</a>
+   to show you how to do this.</li>
+<li>Download the <a href="https://github.com/conda-forge/miniforge#mambaforge">MambaForge installer</a>
+   and install it on your Linux system.</li>
+<li>Create the <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments">conda package list</a>.</li>
+<li>Copy the package list file to your Linux system and 
+   <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments">use <code>conda</code> to re-create the environment</a>.</li>
+</ol>
+</div>
+<p>In general it is not possible to exactly re-create these environments on Windows or Mac machines.
+You can however examine the package lists and manually create environments with the same versions
+of the software needed for your project.</p>
+<h2 id="create-your-own-environments">Create your own environments</h2>
+<div class="admonition info inline end">
+<p class="admonition-title">Software installation requests</p>
+<p>If you find that the software you need is not available in the standard HBS Grid software environments
+please consider putting in an installation request using our 
+<a href="https://github.com/hbs-rcs/hbsgrid-docs/discussions">discussion forum</a>
+or <a href="https://github.com/hbs-rcs/hbsgrid-docs/issues">issue tracker</a>. This will help us maintain
+consistent environments useful to the whole HBS community.</p>
+</div>
+<p>If you prefer to create and manage your own software environments you may do so using 
+<a href="https://docs.conda.io/projects/conda/en/latest/user-guide">conda</a>. This is the same package manager used
+to maintain the system-wide software environments on the HBS Grid. <code>conda</code> has already been installed and
+configured for you on the HBS Grid, making it easy to create and manage your own environments by following the 
+<a href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments">official conda environment documentation</a>.</p>
+<p>You can share and reproduce your own <code>conda</code> environments on other computers and systems as well.
+When setting up <code>conda</code> outside the HBS Grid we <em>strongly encourage</em> using the 
+<a href="https://github.com/conda-forge/miniforge#mambaforge">MambaForge installer</a> to get going with <code>conda</code> more quickly.
+(<code>conda</code> is already installed and configured for you on the HBS Grid, there is no need to 
+install it yourself there.)</p>
+<p>Some useful documentation on <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments">creating environments</a>,
+<a href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-packages">installing packages</a>,
+and <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment">sharing</a>
+is available, along with <a href="https://nbis-reproducible-research.readthedocs.io/en/course_2104/conda/">a helpful tutorial</a>.</p>
+<h2 id="environment-versions">Environment versions</h2>
+<p>Current and historical software environments available system-wide on the HBS Grid are described below.</p>
+<h3 id="rcs_2022.01">rcs_2022.01</h3>
+<p>This software environment is a user-friendly collection of
+software and utilities designed to make data science and statistics
+easier for HBS Grid users.</p>
+<p>In this release we have added a large number of new statistics and
+data science applications and packages, including:</p>
+<ul>
+<li><a href="https://jasp-stats.org/" title="https://jasp-stats.org/">JASP</a>, a free
+    menu-driven statistics application similar to SPSS</li>
+<li><a href="https://cytoscape.org/" title="https://cytoscape.org/">Cytoscape</a>, an
+    open source software platform for visualizing complex networks,</li>
+<li><a href="https://duckdb.org/" title="https://duckdb.org/">DuckDB</a>, an in-process
+    SQL OLAP database management system</li>
+<li><a href="https://www.rtextminer.com/" title="https://www.rtextminer.com/">texminer</a>,
+    functions for text mining and topic modeling in R</li>
+<li><a href="https://docs.dedupe.io/en/latest/" title="https://docs.dedupe.io/en/latest/">Dedupe</a>,
+    a library that uses machine learning to perform de-duplication and
+    entity resolution in Python</li>
+<li><a href="https://aws.amazon.com/cli/" title="https://aws.amazon.com/cli/">awscli</a>,
+    a unified tool to manage your AWS services</li>
+<li><a href="https://snakemake.readthedocs.io/en/stable/" title="https://snakemake.readthedocs.io/en/stable/">snakemake</a>,
+    a workflow management system to create reproducible and scalable
+    data analyses</li>
+</ul>
+<p>and many many more!</p>
+<p>If you find a software program that you need is not yet available please
+<a href="https://github.com/hbs-rcs/hbsgrid-docs/discussions">let us know</a>
+and we will try to install it for you.</p>
+<p>The 2022.01 release also brings a huge number of application and package
+updates, including:</p>
+<ul>
+<li>Python updated to 3.9.9</li>
+<li>R updated to 4.1.1</li>
+<li>Octave updaed to 6.4</li>
+<li>Julia updated to 1.7.1</li>
+<li>RStudio updated to 2021.09.1</li>
+<li>Spyder updated to 5.2.1</li>
+<li>LibreOffice updated to 7.1.8</li>
+<li>VSCode updated to 1.63.2</li>
+<li>Emacs updated to 27.2</li>
+<li>Arrow (C++, R and Python) updated to 6.0</li>
+<li>Tensorflow updated to 2.7</li>
+<li>PyTorch updated to 1.10.0</li>
+<li>CUDA toolkit updated to 11.5.0</li>
+<li>Jupyterlab updated to 3.10</li>
+<li>MKL updated to 2021.4.0</li>
+</ul>
+<p>and hundreds of others.</p>
+<p>In this release we have also dropped support for several infrequently
+used programs:</p>
+<ul>
+<li>OCRfeeder -- use gImageReader for OCR instead</li>
+<li>Gephi -- replaced by Cytoscape for network visualization</li>
+<li>PSPP -- replaced by JASP, a modern statistics GUI that uses R under
+    the hood</li>
+<li>Meld -- use Diffuse for graphical text comparisony</li>
+</ul>
+<p><a href="https://hbs-rcs.github.io/hbsgrid-docs/">Documentation is available on line</a>
+or via the <em>HBS Grid help</em> application on the Grid. If you have any difficulties or
+feature requests please <a href="https://github.com/hbs-rcs/hbsgrid-docs/discussions">reach out on the discussion forum</a>.</p>
+<p>For complete environment details, open a terminal and run
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>conda list -n rcs_2022.01
+</code></pre></div></p>
+<h3 id="rcs_2021.06">rcs_2021.06</h3>
+<p>The <code>rcs_2021.06</code> environment was released in May 2021. It includes updated
+<em>Octave</em>, <em>Python</em>, <em>QGIS</em>, <em>R</em>, <em>Stata</em>, and other software. Key software versions included in this
+environment are listed below.</p>
+<ul>
+<li>CUDAtoolkit 11.2</li>
+<li>Spyder 5.0</li>
+<li>Texlive 2021</li>
+<li>Emacs 27.2</li>
+<li>Julia 1.6.1</li>
+<li>Jupyterlab 3.0</li>
+<li>Mathematica 12</li>
+<li>Matlab R2021a</li>
+<li>Numpy 1.20</li>
+<li>Octave 6.2</li>
+<li>Pandas 1.2</li>
+<li>Python 3.9</li>
+<li>Pytorch 1.8</li>
+<li>QGIS 3.18</li>
+<li>R 4.0</li>
+<li>R-tidyverse 1.3</li>
+<li>SAS 9.4</li>
+<li>Stata 17</li>
+<li>Tensorflow 2.4</li>
+</ul>
+<p>For complete environment details, open a terminal and run</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>conda env <span class="nb">export</span> -n rcs_2021.06
+</code></pre></div>
+<h3 id="rcs_2021.03">rcs_2021.03</h3>
+<p>The <code>rcs_2021.03</code> environment was released in March 2021. It includes updated
+<em>Octave</em>, <em>Python</em>, <em>QGIS</em>, <em>R</em>, <em>Stata</em>, and other software. Key software versions included in this
+environment are listed below.</p>
+<ul>
+<li>CUDAtoolkit 10.1</li>
+<li>Emacs 27.1</li>
+<li>Julia 1.5.3</li>
+<li>Jupyterlab 3.0</li>
+<li>Mathematica 12</li>
+<li>Matlab R2020a</li>
+<li>Numpy 1.20</li>
+<li>Octave 6.2</li>
+<li>Pandas 1.2</li>
+<li>Python 3.8</li>
+<li>Pytorch 1.7</li>
+<li>QGIS 3.16</li>
+<li>R 4.0</li>
+<li>R-tidyverse 1.3</li>
+<li>SAS 9.4</li>
+<li>Stata 16</li>
+<li>Tensorflow 2.2</li>
+</ul>
+<p>For complete environment details, open a terminal and run</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>conda env <span class="nb">export</span> -n rcs_2021.03
+</code></pre></div>
+<h3 id="rcs_2020.01">rcs_2020.01</h3>
+<p>The <code>rcs_2020.01</code> environment was released in March 2020. It includes updated
+<em>Octave</em>, <em>Python</em>, <em>QGIS</em>, <em>R</em>, <em>Stata</em>, and other software. Key software versions included in this
+environment are listed below.</p>
+<ul>
+<li>CUDAtoolkit 10.1</li>
+<li>Emacs 27.1</li>
+<li>Julia 1.5.3</li>
+<li>Jupyterlab 2</li>
+<li>Mathematica 12</li>
+<li>Matlab R2019a</li>
+<li>Numpy 1.19</li>
+<li>Octave 6.2</li>
+<li>Pandas 1.2</li>
+<li>Python 3.7</li>
+<li>R 3.6</li>
+<li>R-tidyverse 1.2</li>
+<li>SAS 9.4</li>
+<li>Stata 15</li>
+<li>Tensorflow 2.2</li>
+</ul>
+<p>For complete environment details, open a terminal and run</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>conda env <span class="nb">export</span> -n rcs_2020.01
+</code></pre></div>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../commandline/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 🐚 Use the Command-line" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              🐚 Use the Command-line
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../syncfiles/" class="md-footer__link md-footer__link--next" aria-label="Next: 🔄 Copy and Transfer Files" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              🔄 Copy and Transfer Files
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; President & Fellows of Harvard College.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>
