@@ -41,7 +41,7 @@ Refer to the [Research Data Storage and Databases] documentation for details.
     at `smb://research.hbs.edu`, and via SSH at `hbsgrid.hbs.edu`.
     This is useful for viewing and copying small files, but will be slow for large data transfers.
 
-Transferring data from you local computer to the HBS Grid is usually done using the SFTP protocol. 
+Transferring data from your local computer to the HBS Grid is usually done using the SFTP protocol. 
 This requires an SFTP client on your local machine. If you don't yet have one
 [Cyberduck](https://cyberduck.io/download/) and [Filezilla](https://filezilla-project.org/) 
 are popular graphical desktop clients. For command-line data from a terminal we recommend
