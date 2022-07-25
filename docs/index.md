@@ -29,15 +29,15 @@ You can setup your account and connect following the instructions below.
     
     If you prefer shell access from a terminal/command prompt you can log in using `ssh` like this:
     ```sh
-    USERNAME@hbsgrid.hbs.edu using `ssh
+    ssh USERNAME@hbsgrid.hbs.edu
     ```
     (replace "USERNAME" with your HBS Grid username). `ssh` is included by default on both
     [Mac OS X](https://support.apple.com/guide/mac-help/allow-a-remote-computer-to-access-your-mac-mchlp1066/mac#mchlp26a47b6), 
     and 
     [Windows](https://docs.microsoft.com/en-us/windows/terminal/tutorials/ssh)).
     
-    Command line access via `ssh` can be useful for debugging in the rare event that
-    something prevents you from logging in to the desktop via NoMachine.
+    Command line access via `ssh` can be useful for debugging if
+    something prevents you from loggin in via NoMachine.
 
 !!! example "Connect to the HBS Grid"
 
