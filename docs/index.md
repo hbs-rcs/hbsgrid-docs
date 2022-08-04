@@ -36,8 +36,11 @@ You can setup your account and connect following the instructions below.
     and 
     [Windows](https://docs.microsoft.com/en-us/windows/terminal/tutorials/ssh)).
     
-    Command line access via `ssh` can be useful for debugging if
-    something prevents you from loggin in via NoMachine.
+    **NOTE: the [software environment](software.md) is not activated by default when connecting via `ssh`**. Run
+    ```
+    ml rcs
+    ```
+    to enable it.
 
 !!! example "Connect to the HBS Grid"
 
