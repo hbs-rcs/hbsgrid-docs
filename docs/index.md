@@ -32,11 +32,11 @@ You can setup your account and connect following the instructions below.
     ssh USERNAME@hbsgrid.hbs.edu
     ```
     
-    The [software environment](software.md) is not activated by default when connecting via `ssh`. After loggin in, run
+    The [software environment](software.md) is not activated by default when connecting via `ssh`. Run
     ```
     ml rcs
     ```
-    to enable it.
+    to [enable the software environment](environments.md#select-terminal-environment).
 
 !!! example "Connect to the HBS Grid"
 
