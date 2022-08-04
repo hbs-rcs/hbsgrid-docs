@@ -31,12 +31,8 @@ You can setup your account and connect following the instructions below.
     ```sh
     ssh USERNAME@hbsgrid.hbs.edu
     ```
-    (replace "USERNAME" with your HBS Grid username). `ssh` is included by default on both
-    [Mac OS X](https://support.apple.com/guide/mac-help/allow-a-remote-computer-to-access-your-mac-mchlp1066/mac#mchlp26a47b6), 
-    and 
-    [Windows](https://docs.microsoft.com/en-us/windows/terminal/tutorials/ssh)).
     
-    **NOTE: the [software environment](software.md) is not activated by default when connecting via `ssh`**. Run
+    The [software environment](software.md) is not activated by default when connecting via `ssh`. After loggin in, run
     ```
     ml rcs
     ```
@@ -66,9 +62,6 @@ You can setup your account and connect following the instructions below.
      
         to open the grid configuration utility (you can copy/paste from the
         documentation to your Terminal).
-     
-    9.  Select the *Technology Preview* environment in the welcome dialog and click
-        OK.
 
 
 The video below demonstrates these steps visually.
