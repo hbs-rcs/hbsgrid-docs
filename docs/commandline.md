@@ -28,7 +28,7 @@ make the basics of bsub clear:
 -   `bsub` (**b**atch **sub**mission) is the top-level command used to run applications
     on powerful remote machines.
 -   `-q short_int` means you want to run on the **short int**eractive **q**ueue 
-([details below](commandline.md##job-queues-limits)).
+([details below](commandline.md#job-queues-limits)).
 -   `-Is` means we are running an **I**nteractive **s**hell.
 -   The rest of the command (`R` in this case) is the command that will be run on
     the remote machine.
