@@ -96,7 +96,7 @@ If you need more control please refer to the [LSF documentation for instructions
 on specifying more advanced GPU resource requirements](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=jobs-submitting-that-require-gpu-resources).
 
 
-## Job queues & limits
+## Queue limits & batch jobs {#job-queues-limits}
 
 Machines on the HBS Grid are grouped in **queues** and `bsub` can start jobs in either
 *batch* (background) or *interactive* modes. *Batch* jobs make it easier to run
