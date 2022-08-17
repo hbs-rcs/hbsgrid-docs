@@ -40,7 +40,7 @@ You can setup your account and connect following the instructions below.
 
 !!! example "Connect to the HBS Grid"
 
-    1.  If you do not yet have an HBS Grid account [request one here](https://www.hbs.edu/research-computing-services/help/online-requests.aspx).
+    1.  *If you do not yet have an HBS Grid account* [request one here](https://www.hbs.edu/research-computing-services/help/online-requests.aspx).
     2.  Connect to the HBS network, either directly if you are on-campus or
         [connect via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
         otherwise.
@@ -53,15 +53,6 @@ You can setup your account and connect following the instructions below.
         - *Host*: `hbsgrid-nx.hbs.edu`
         - Leave defaults for all other settings.
     6. Click the ![connect](imgs/nomachine_connect.png#inline) button and enter your *Username* and *Password* (see *step* 1 above).
-    7.  Open a Terminal in NoMachine:
-        *Applications => Favorites => Terminal*
-     
-    8.  Run
-     
-        `/usr/local/app/rcs_bin/techpreview-dev/enable.sh & exit`
-     
-        to open the grid configuration utility (you can copy/paste from the
-        documentation to your Terminal).
 
 
 The video below demonstrates these steps visually.
