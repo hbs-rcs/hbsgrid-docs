@@ -1,12 +1,18 @@
 # 💾 Research Data Storage and Databases
 
 !!! info inline end "Mount Grid storage locally"
-    Research storage is also accessible [on Windows as a network drive](https://support.microsoft.com/en-gb/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d) at `\\research.hbs.edu` and [via SMB on OSX/Linux](https://support.apple.com/lt-lt/guide/mac-help/mchlp1140/mac#mchlp1265542) 
-    at `smb://research.hbs.edu` and via SSH at `hbsgrid.hbs.edu`.
+    Research storage is also accessible 
+    [on Windows as a network drive](https://support.microsoft.com/en-gb/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d) 
+    at `\\research.hbs.edu`, 
+    [via SMB on OSX/Linux](https://support.apple.com/lt-lt/guide/mac-help/mchlp1140/mac#mchlp1265542) 
+    at `smb://research.hbs.edu`, 
+    and via SSH at `hbsgrid.hbs.edu`.
+    This is useful for viewing and copying small files, but will be slow for large data transfers.
+    See the [file transfer documentation](syncfiles.md).
 
 HBS provides storage for active research projects. Research storage is 
-usually used in conjunction with HBS Grid compute and we recommend accessing 
-it via *NoMachine* remote desktop as documented in the [Userguide](syncfiles.md). 
+typically used in conjunction with HBS Grid compute and accessed 
+via *NoMachine* remote desktop as documented in the [Userguide](index.md).
 
 There are three different sets of storage locations that are available
 for research work, depending on the particular usage patterns, size
@@ -33,7 +39,7 @@ For example faculty member John Harvard's home folder would be at:
 Home folders vary in size by the program or role that you have. When
 your space fills up, you will not be able to do any more work, which may
 lead to programs acting strangely or crashing altogether, disk error
-notices, or Input/Output errors. Keep an eye on your space usage and 
+notices, or input/output errors. Keep an eye on your space usage and 
 periodically remove any old files that are no longer needed.
 
 Home folders are backed up every night. If you should need to recover

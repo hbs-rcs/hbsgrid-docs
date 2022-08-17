@@ -5,53 +5,10 @@ wrangling, and data visualization. Usually this means that
 **you need to copy or sync your data to the HBS Grid in order to do your work**.
 
 
-## Access local files from *NoMachine* login nodes
-
-!!! info inline end ""
-     
-    This makes files accessible from the [login nodes](commandline.md#compute-cluster-basics) 
-    but not from the [compute nodes](commandline.md#compute-cluster-basics). For that you need to 
-    [copy your files to the HBS Grid](syncfiles.md#sync-data-fromto-local-storage).
-
-NoMachine makes it easy to mount your local file system on the HBS Grid
-login node. This is useful for reading documentation, scripts, and other
-small files without needing to physically copy anything to the HBS Grid.
-</br>
-&nbsp;
-
-!!! example "Mount your local file system to the HBS Grid:"
-     
-    1.  Log in to the HBS Grid by using
-        [NoMachine](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client")
-        to connect to host `hbsgrid-nx.hbs.edu`.
-    2.  Press *Ctrl-Alt-0* to open the NoMachine session menu.
-    3.  Click *Devices*
-    4.  Click *Connect a disk*.
-    5.  Locate the disk you want to mount under Local disks and click on it.
-    6.  click the *Connect* button to mount your local disk on the HBS Grid.
-
-Click the image below for a local drive mounting demonstration:
-
-<video width="100%" controls>
-  <source src="../media/datasync.mp4" type="video/webm">
-Your browser does not support the video tag.
-</video>
-
-## Transfer data from/to local storage
-
-*NoMachine* file mounting is useful, but it has a major limitation;
-**drives mounted via NoMachine are not accessible by applications running on HBS Grid compute nodes**. 
-This means that you will usually want to copy or sync your data to the HBS Grid. 
-The easiest way to do this for files on your local machine is to mount your 
-local drive 
-[as described above](syncfiles.md#access-local-files-from-nomachine-login-nodes), 
-and then use *grsync* to sync files from the 
-*NoMachine* mount to the HBS Grid.
-
-Because you must physically copy data to the HBS Grid in order to access
-it from the [compute nodes](commandline.md#overview), you
-have to decide where to put it. There are three options: *home directory*, 
-*project space*, or *scratch storage*.
+## HBS Grid storage overview
+    
+Before transferring data to the HBS Grid you have to decide where to put it. 
+There are three options: *home directory*, *project space*, or *scratch storage*.
 
 <a name="storageoverview"></a>
 !!! info "HBS Grid storage overview"
@@ -71,31 +28,47 @@ have to decide where to put it. There are three options: *home directory*,
     Scratch storage is a shared resource accessible to all users on the HBS Grid;
     make sure you [set permissions on your files accordingly](worksafe.md).
 
+Refer to the [Research Data Storage and Databases] documentation for details.
 
-Once you have decided where to store your files on the HBS Grid you can follow the steps below to transfer them.
 
-!!! example "Sync data from your local machine to the HBS Grid desktop"
-    1.  Log in to the HBS Grid and connect your local drive using
-        NoMachine [as described above](syncfiles.md#access-local-files-from-nomachine-login-nodes).
-     
-    2.  Identify the directory on the HBS Grid that you will copy your data
+## Transfer data from/to local storage
+
+!!! info inline end "Mount Grid storage locally"
+    Research storage is also accessible 
+    [on Windows as a network drive](https://support.microsoft.com/en-gb/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d) 
+    at `\\research.hbs.edu`, 
+    [via SMB on OSX/Linux](https://support.apple.com/lt-lt/guide/mac-help/mchlp1140/mac#mchlp1265542) 
+    at `smb://research.hbs.edu`, and via SSH at `hbsgrid.hbs.edu`.
+    This is useful for viewing and copying small files, but will be slow for large data transfers.
+
+Transferring data from your local computer to the HBS Grid is usually done using the SFTP protocol. 
+This requires an SFTP client on your local machine. If you don't yet have one
+[Cyberduck](https://cyberduck.io/download/) and [Filezilla](https://filezilla-project.org/) 
+are popular graphical desktop clients. For command-line data from a terminal we recommend
+[rsync](https://rsync.samba.org/).
+
+Once you have an SFTP client installed on your local machine, follow these steps to transfer
+data to or from the HBS Grid.
+
+!!! example "Transfer data the HBS Grid using a desktop SFTP client"
+    
+    1. Connect to the HBS network, either directly if you are on-campus or
+       [connect via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
+       otherwise. 
+    
+    2. Open your transfer client and connect to the HBS Grid at `hbsgrid.hbs.edu` on port 22
+
+    3.  Locate the data on your local machine that you wish to transfer.
+    
+    4.  Locate the directory on the HBS Grid that you will copy your data
         too, creating it if needed.
      
-    3.  From the HBS Grid desktop, open the
-        grsync application.
-     
-    4.  Choose a source directory under the
-        NoMachine mount and specify the target directory from step 2.
-     
-    5.  Click the
-        run button in the upper-right corner of the
-        grsync application.
+    5.  Start the data transfer
 
-!!! info inline end "Sync data from the command line"
-    You can alternatively use the `rsync` command-line program to transfer data from your 
-    [connected local drive](syncfiles.md#access-local-files-from-nomachine-login-nodes). Documentation
-    is [available online](https://download.samba.org/pub/rsync/rsync.1) or type `man rsync` at the
-    HBS Grid command line.
+!!! info inline end "Transfer from the command line"
+    You can alternatively use the `rsync` command-line program to transfer data from the
+    command line on Mac, Linux, or [Windows subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about). 
+    `rsync` documentation is [available online](https://download.samba.org/pub/rsync/rsync.1).
 
 Note that transferring many small files is much slower than transferring
 a small number of large files. You may find it faster to compress
@@ -196,6 +169,10 @@ Please be careful not to share too broadly.
 Installers are available for [Mac OS X](https://docs.globus.org/how-to/globus-connect-personal-mac/).
 [Windows](https://docs.globus.org/how-to/globus-connect-personal-windows) and
 [Linux](https://docs.globus.org/how-to/globus-connect-personal-linux).
+
+After transferring your data to the HBS Grid via *Globus* you will typically move it from 
+`/export/globus` to a [project folder](storage.md). This can be done one the HBS Grid *NoMachine* 
+desktop using *Grsync* or from the HBS Grid command line using `rsync`, or `mv` or similar.
 
 For details on using *Globus* refer to the excellent [Globus documentation](https://docs.globus.org/how-to/).
 A [FAQ section](https://docs.globus.org/faq/) is also available.

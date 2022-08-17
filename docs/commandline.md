@@ -28,7 +28,7 @@ make the basics of bsub clear:
 -   `bsub` (**b**atch **sub**mission) is the top-level command used to run applications
     on powerful remote machines.
 -   `-q short_int` means you want to run on the **short int**eractive **q**ueue 
-([details below](commandline.md#interactive-and-batch-queue-limits)).
+([details below](commandline.md#job-queues-limits)).
 -   `-Is` means we are running an **I**nteractive **s**hell.
 -   The rest of the command (`R` in this case) is the command that will be run on
     the remote machine.
@@ -96,7 +96,7 @@ If you need more control please refer to the [LSF documentation for instructions
 on specifying more advanced GPU resource requirements](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=jobs-submitting-that-require-gpu-resources).
 
 
-## Job queues & limits
+## Queue limits & batch jobs {#job-queues-limits}
 
 Machines on the HBS Grid are grouped in **queues** and `bsub` can start jobs in either
 *batch* (background) or *interactive* modes. *Batch* jobs make it easier to run
