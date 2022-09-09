@@ -68,6 +68,7 @@ extra:
   analytics:
     provider: google
     property: G-3P5QKSCGVL
+    anonymize_ip: TRUE
   consent:
     title: Cookie consent
     description: >- 
