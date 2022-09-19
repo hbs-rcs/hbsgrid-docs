@@ -31,7 +31,7 @@ There are three options: *home directory*, *project space*, or *scratch storage*
 Refer to the [Research Data Storage and Databases] documentation for details.
 
 
-## Transfer data from/to local storage
+## Local storage data transfer {#transfer-data-fromto-local-storage}
 
 !!! info inline end "Mount Grid storage locally"
     Research storage is also accessible 
@@ -86,7 +86,7 @@ Your browser does not support the video tag.
 </video>
 
 
-## Transfer data from/to cloud storage 
+## Cloud storage data transfer {#transfer-data-fromto-cloud-storage} 
 
 !!! info inline end "Sync from the command-line"
     `rclone` is also available as a command-line application that you can
@@ -125,9 +125,9 @@ Your browser does not support the video tag.
 Note that the demonstration video goes through the configuration step, which only needs to be done once.
 After that you can skip step 4 above, which greatly simplifies the process.
 
-## Transfer data using Globus
+## Globus data transfer {#transfer-data-using-globus}
 
-*Globus* is a robust data transfer service that enables sharing files or
+*Globus* is a data transfer service that enables sharing files or
 data with external persons, eliminates the need for both parties to have
 HBS or guest user credentials, and is capable of tolerating transfer
 interruptions. **Note**: At this time, *Globus* should not be used to transfer
@@ -178,7 +178,7 @@ For details on using *Globus* refer to the excellent [Globus documentation](http
 A [FAQ section](https://docs.globus.org/faq/) is also available.
 
 
-## Important data transfer considerations
+## Data transfer tips {#important-data-transfer-considerations}
 
 The speed and success of data transfer rely on numerous factors, only
 some of which are in your control. Following these listed tips will help
