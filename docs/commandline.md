@@ -74,9 +74,21 @@ and 4 CPUs with
 bsub -q short_int -M 50G -n 4 -Is python
 ```
 
-Knowing just these arguments to `bsub` will take you a long way. There is 
-[much more to know about bsub](https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_command_ref/bsub.heading_options.1.html),
-but these basics will get you started.
+When choosing RAM and CPU values keep in mind that 
+**the system reserves the resources you select**, e.g., CPUs used by your job become unavailable for other users. Please be considerate and try not
+to reserve resources you don't need.
+
+Specific memory requirements depend on the nature of the job, but as a rough
+guide **we recommend requesting RAM 4-10 times the size of your data**. For
+example, if you have a 6 Gb.csv file you may wish to request 24GB of memory or so.
+
+We recommend that you **request only 1 CPU** unless you
+know that you are using code or libraries that were written to run
+in parallel such as 
+[Matlab parallel processint toolbox](https://www.mathworks.com/help/parallel-computing/getting-started-with-parallel-computing-toolbox.html),
+[Python multiprocessing library](https://docs.python.org/3/library/multiprocessing.html),
+or the [R future package](https://future.futureverse.org/). For detailed parallel
+processing instructons [refer to our tutorial](tutorials/scaling-work.md).
 
 ### Using GPUs
 
@@ -95,6 +107,9 @@ single dash in `-gpu -`, this uses the default GPU settings).
 If you need more control please refer to the [LSF documentation for instructions
 on specifying more advanced GPU resource requirements](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=jobs-submitting-that-require-gpu-resources).
 
+Knowing just these arguments to `bsub` will take you a long way. There is 
+[much more to know about bsub](https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_command_ref/bsub.heading_options.1.html),
+but these basics will get you started.
 
 ## Queue limits & batch jobs {#job-queues-limits}
 
