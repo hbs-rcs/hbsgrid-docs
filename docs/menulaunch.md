@@ -9,16 +9,6 @@ just a few mouse clicks!
 
 ## Basic launcher options
 
-!!! important inline end
-    Note that **the system reserves the
-    resources you select**, e.g., CPUs used by your job become
-    unavailable for other users. **Request only 1 CPU** unless you
-    know that you are using code or libraries that were written to run
-    in parallel. Specific memory requirements depend on the nature of
-    the job, but as a rough guide **we recommend requesting RAM 4-10
-    times the size of your data**. For example, if you have a 6 Gb
-    .csv file you may wish to request 24GB of memory or so.
-
 Each application will open a dialog where you can configure your
 environment and resource requirements.
 
@@ -37,6 +27,24 @@ demonstration:
   <source src="../media/launchers.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
+
+## Resource recommendations
+
+When choosing RAM and CPU values keep in mind that 
+**the system reserves the resources you select**, e.g., CPUs used by your job become unavailable for other users. Please be considerate and try not
+to reserve resources you don't need.
+
+Specific memory requirements depend on the nature of the job, but as a rough
+guide **we recommend requesting RAM 4-10 times the size of your data**. For
+example, if you have a 6 Gb.csv file you may wish to request 24GB of memory or so.
+
+We recommend that you **request only 1 CPU** unless you
+know that you are using code or libraries that were written to run
+in parallel such as 
+[Matlab parallel processint toolbox](https://www.mathworks.com/help/parallel-computing/getting-started-with-parallel-computing-toolbox.html),
+[Python multiprocessing library](https://docs.python.org/3/library/multiprocessing.html),
+or the [R future package](https://future.futureverse.org/). For detailed parallel
+processing instructons [refer to our tutorial](tutorials/scaling-work.md).
 
 ## Advanced launcher options
 
@@ -59,7 +67,7 @@ Some application launchers have a *Pre-submission command* <a name="pre-submissi
 allows you to run an arbitrary bash command immediately before
 submitting the job. For example, you can use it to set [environment
 variables](https://www.redhat.com/sysadmin/linux-environment-variables)
-or activate [conda environments](https://docs.conda.io/en/latest/).
+or activate [conda environments](https://docs.conda.io/en/latest/). 
 
 ## System resources & limits
 
