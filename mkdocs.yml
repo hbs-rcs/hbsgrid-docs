@@ -23,6 +23,7 @@ nav:
       - Troubleshooting: 'trouble.md'
   - Tutorials:
     - Topic list: 'tutorials.md'
+    - Parallel processing: 'tutorials/scaling-work.md'
     - Large data in R: 'tutorials/large_data_R.md'
     - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
     - NLP in Python: 'tutorials/nlp_with_python.md'
