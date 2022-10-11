@@ -1,34 +1,67 @@
-## Stata Temporary Files and Temp Storage {#stata-temporary-files-and-stata-tmp}
+## Troubleshooting Login Issues
 
-If there is not enough disk space available in `/tmp` *Stata* may give you an error message that looks like this:
+Login issues are usually caused by one of three common problems, and are often easy to resolve.
+
+### Network and VPN
+
+Connecting to the HBS Grid requires either a direct on-campus connection to the
+HBS network or a 
+[VPN connection](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf) 
+if you are connecting remotely. 
+
+Ethernet connections or WiFi connections to *HBS Secure* 
+will both work without further configuration. Note that connecting from other Harvard 
+networks, such as *Harvard Secure* or an Ethernet  connection from another Harvard School 
+will not work; you must be connected to the **HBS** network.
+
+If you are connecting from outside the HBS network you must use a
+[VPN connection](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf).
+If you suspect the VPN is not connected properly try re-installing the VPN client and restarting
+your computer.
+
+### Disk quota
+
+A *quota* system is used to limit the amount of data you can store in your home directory on 
+the HBS Grid. Reaching this limit can prevent *NoMachine* sessions from starting, and this is 
+one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine.
+
+You can fix this problem yourself by opening a terminal (Cmd prompt or PowerShell on Windows) and running
+
+```sh
+ssh <username>@hbsgrid.hbs.edu
+```
+
+(replace `<username>` with your actual HBS Grid username). Once connected you can use terminal
+commands like `rm` (remove) or `mv` (move) to get your home directory back under your storage 
+quota. You can also run `gio trash --empty` to empty the trash, which may give you enough 
+breathing room to permit NoMachine login.
+
+### Shell misconfiguration
+
+Some users like to configure the startup behavior of their login shell by editing the
+`~/.bashrc` or `~/.bash_profile` configuration files. A common problem is that activating
+*conda*, *software modules* or other environments in these config files can cause problems
+with *NoMachine* connections. 
+
+If you suspect this has happend, you can fix this problem yourself by opening a terminal 
+(Cmd prompt or PowerShell on Windows) and running
+
+```sh
+ssh <username>@hbsgrid.hbs.edu
+```
+
+(replace `<username>` with your actual HBS Grid username). One connected you can use a 
+terminal-based editor 
+[such as nano](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/)
+to comment out or remove sections of your config files that you suspect have caused the problem. 
+Alternative you can run
 
 ```
-insufficient disk space
-r(699);
+mv ~/.bashrc ~/backup.bashrc
+mv ~/.bash_profile ~/backup.bash_profile
 ```
 
-As a first step you may be able to change your *Stata* code to reduce the amount of temp space 
-needed -- `preserve` and `restore` commands are often the cause.
-
-You can also try deleting any files you have in `/tmp` and see if that gives you enough space.
-Since each computer in the cluster has it's own `/tmp` disk you need to do this on the computer 
-*Stata* is running on. An easy way to achieve that is to delete files directly from *Stata* 
-[using the shell escape feature](https://www.stata.com/manuals/dshell.pdf). For example, running 
-`! rm /tmp/my-temp-file` in *Stata* will delete `/tmp/my-temp-file`.
-
-If you cannot get enough space on `/tmp` you can tell *Stata* to store temporary files in a 
-[Scratch storage](storage.md#scratch-storage) directory on the HBS Grid.
-
-!!! example "Use scratch storage for *Stata* temp files"
-
-    1. Create a directory under `/export/scratch` and ensure that the 
-       [permissions are set correctly](worksafe.md).
-    2. Set the `STATATMP` environment variable to the directory you created
-       in step one. Use [launcher options](menulaunch.md#pre-submission-command)
-       if running from the destkop, or [set this variable from the command line](https://man.archlinux.org/man/export.1p).
-    3. Start *Stata* as usual after setting the `STATATMP` environment variable as described in steps 1-2 above.
-
-More details about this issue can be found in the [Stata FAQ](https://www.stata.com/support/faqs/data-management/statatmp-environment-variable/).
+to temporarily move your config files to backup locations.
 
 
 ## Troubleshooting LSF Jobs {#troubleshooting-jobs-and-resources}
@@ -97,3 +130,36 @@ The most common are described below.
 
 For more detailed information refer to the [official LSF
 documentation](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=run-jobs).
+
+## Stata Temporary Files and Temp Storage {#stata-temporary-files-and-stata-tmp}
+
+If there is not enough disk space available in `/tmp` *Stata* may give you an error message that looks like this:
+
+```
+insufficient disk space
+r(699);
+```
+
+As a first step you may be able to change your *Stata* code to reduce the amount of temp space 
+needed -- `preserve` and `restore` commands are often the cause.
+
+You can also try deleting any files you have in `/tmp` and see if that gives you enough space.
+Since each computer in the cluster has it's own `/tmp` disk you need to do this on the computer 
+*Stata* is running on. An easy way to achieve that is to delete files directly from *Stata* 
+[using the shell escape feature](https://www.stata.com/manuals/dshell.pdf). For example, running 
+`! rm /tmp/my-temp-file` in *Stata* will delete `/tmp/my-temp-file`.
+
+If you cannot get enough space on `/tmp` you can tell *Stata* to store temporary files in a 
+[Scratch storage](storage.md#scratch-storage) directory on the HBS Grid.
+
+!!! example "Use scratch storage for *Stata* temp files"
+
+    1. Create a directory under `/export/scratch` and ensure that the 
+       [permissions are set correctly](worksafe.md).
+    2. Set the `STATATMP` environment variable to the directory you created
+       in step one. Use [launcher options](menulaunch.md#pre-submission-command)
+       if running from the destkop, or [set this variable from the command line](https://man.archlinux.org/man/export.1p).
+    3. Start *Stata* as usual after setting the `STATATMP` environment variable as described in steps 1-2 above.
+
+More details about this issue can be found in the [Stata FAQ](https://www.stata.com/support/faqs/data-management/statatmp-environment-variable/).
+
