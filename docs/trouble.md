@@ -9,7 +9,7 @@ HBS network or a
 [VPN connection](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf) 
 if you are connecting remotely. 
 
-Ethernet connections or WiFi connections to *HBS Secure* 
+Ethernet connections from HBS offices or WiFi connections to *HBS Secure* 
 will both work without further configuration. Note that connecting from other Harvard 
 networks, such as *Harvard Secure* or an Ethernet  connection from another Harvard School 
 will not work; you must be connected to the **HBS** network.
