@@ -25,14 +25,14 @@ A *quota* system is used to limit the amount of data you can store in your home 
 the HBS Grid. Reaching this limit can prevent *NoMachine* sessions from starting, and this is 
 one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine.
 
-You can fix this problem yourself by opening a terminal (Cmd prompt or PowerShell on Windows) and running
+You can fix this problem yourself by opening a terminal (in the Windows search toolbar, type "Cmd" or "Windows PowerShell"; in the Mac search toolbar, type "Terminal") and running
 
 ```sh
 ssh <username>@hbsgrid.hbs.edu
 ```
 
 (replace `<username>` with your actual HBS Grid username). Once connected you can use terminal
-commands like `rm` (remove) or `mv` (move) to get your home directory back under your storage 
+commands like `ls` to list files in the directory, `rm` (remove) plus the name of the file to remove files you don't need, or `mv` (move) plus the name of your file and a path to a new location to move files. Removing and moving files can help get your home directory back under your storage 
 quota. You can also run `gio trash --empty` to empty the trash, which may give you enough 
 breathing room to permit NoMachine login.
 
