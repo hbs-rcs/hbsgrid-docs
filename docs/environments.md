@@ -164,6 +164,56 @@ is available, along with [a helpful tutorial](https://nbis-reproducible-research
 
 Current and historical software environments available system-wide on the HBS Grid are described below.
 
+### rcs_2022.01 {#rcs_2022.11}
+
+This software environment is a user-friendly collection of
+software and utilities designed to make data science and statistics
+easier for HBS Grid users. 
+
+In this release we have added a large number of new statistics and
+data science applications and packages, including:
+
+- [Quarto](https://quarto.org/), an open-source scientific and technical publishing system built on Pandoc
+- [Gephi](https://gephi.org/) visualization and exploration software for all kinds of graphs and networks
+- [GitHub CLI](https://cli.github.com/) brings GitHub to your terminal
+- [SCC](https://github.com/boyter/scc) a very fast accurate code counter with complexity calculations and COCOMO estimates written in pure Go
+
+    
+If you find a software program that you need is not yet available please
+[let us know](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
+and we will try to install it for you.
+
+The 2022.11 release brings a huge number of application and package
+updates, including:
+
+-   Python updated to 3.10.6
+-   R updated to 4.2.1
+-   Octave updaed to 7.2.0
+-   Julia updated to 1.8.2
+-   RStudio updated to 2022.07.2
+-   Spyder updated to 5.3.3
+-   LibreOffice updated to 7.3.6
+-   VSCode updated to 1.72
+-   Emacs updated to 28.2
+-   Arrow (C++, R and Python) updated to 9.0
+-   Tensorflow updated to 2.10
+-   PyTorch updated to 1.12.1
+-   CUDA toolkit updated to 11.7.0
+-   Jupyterlab updated to 3.4.8
+-   MKL updated to 2022.1.0
+
+and hundreds of others.
+
+[Documentation is available on line](https://hbs-rcs.github.io/hbsgrid-docs/)
+or via the *HBS Grid help* application on the Grid. If you have any difficulties or
+feature requests please [reach out on the discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions).
+
+For complete environment details, open a terminal and run
+``` sh
+conda list -n rcs_2022.11
+```
+
+
 ### rcs_2022.01 {#rcs_2022.01}
 
 This software environment is a user-friendly collection of
@@ -212,7 +262,7 @@ updates, including:
 -   Tensorflow updated to 2.7
 -   PyTorch updated to 1.10.0
 -   CUDA toolkit updated to 11.5.0
--   Jupyterlab updated to 3.10
+-   Jupyterlab updated to 3.1.0
 -   MKL updated to 2021.4.0
 
 and hundreds of others.
