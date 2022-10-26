@@ -170,8 +170,7 @@ This software environment is a user-friendly collection of
 software and utilities designed to make data science and statistics
 easier for HBS Grid users. 
 
-In this release we have added a large number of new statistics and
-data science applications and packages, including:
+In this release we have added a number of new applications and packages, including:
 
 - [Quarto](https://quarto.org/), an open-source scientific and technical publishing system built on Pandoc
 - [Gephi](https://gephi.org/) visualization and exploration software for all kinds of graphs and networks
