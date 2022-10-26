@@ -164,7 +164,7 @@ is available, along with [a helpful tutorial](https://nbis-reproducible-research
 
 Current and historical software environments available system-wide on the HBS Grid are described below.
 
-### rcs_2022.01 {#rcs_2022.11}
+### rcs_2022.11 {#rcs_2022.11}
 
 This software environment is a user-friendly collection of
 software and utilities designed to make data science and statistics
