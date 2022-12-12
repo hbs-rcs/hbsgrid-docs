@@ -95,11 +95,9 @@ There are three ways to connect:
 - For administrative requests including project and account creation or modification 
 please use our [request forms](https://www.hbs.edu/research-computing-services/help/online-requests.aspx).
 
-- If you have a question or can't get something working you can post
-to our [discussion
-forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions) or reach
+- If you have a question, can't get something working, or if something looks broken you can reach
 out to us directly via email at
 [research@hbs.edu](mailto:research@hbs.edu).
 
-- If something looks broken or is not working as expected please 
-[open an issue report](https://github.com/hbs-rcs/hbsgrid-docs/issues).
+<!-- If something looks broken or is not working as expected please 
+[open an issue report](https://github.com/hbs-rcs/hbsgrid-docs/issues).-->
