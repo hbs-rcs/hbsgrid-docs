@@ -137,10 +137,7 @@ of the software needed for your project.
 
 !!! info inline end "Software installation requests"
     If you find that the software you need is not available in the standard HBS Grid software environments
-    please consider putting in an installation request using our 
-    [discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
-    or [issue tracker](https://github.com/hbs-rcs/hbsgrid-docs/issues). This will help us maintain
-    consistent environments useful to the whole HBS community.
+    please reach out to [research@hbs.edu](mailto:research@hbs.edu).
 
 If you prefer to create and manage your own software environments you may do so using 
 [conda](https://docs.conda.io/projects/conda/en/latest/user-guide). This is the same package manager used
@@ -193,7 +190,7 @@ data science applications and packages, including:
 and many many more!
 
 If you find a software program that you need is not yet available please
-[let us know](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
+[let us know](mailto:research@hbs.edu)
 and we will try to install it for you.
 
 The 2022.01 release also brings a huge number of application and package
@@ -228,7 +225,7 @@ used programs:
 
 [Documentation is available on line](https://hbs-rcs.github.io/hbsgrid-docs/)
 or via the *HBS Grid help* application on the Grid. If you have any difficulties or
-feature requests please [reach out on the discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions).
+feature requests please [reach out to us](mailto:research@hbs.edu).
 
 For complete environment details, open a terminal and run
 ``` sh
