@@ -14,8 +14,7 @@ conda list
 
 **Start with the expectation that all the software you need is already
 installed and ready to use**. If that expectation is ever broken please
-put in a request using our [discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
-or [issue tracker](https://github.com/hbs-rcs/hbsgrid-docs/issues).
+email [research@hbs.edu](mailto:research@hbs.edu).
 
 The most recent version of our software environment is activated when you log 
 in to the HBS Grid via *NoMachine* and nothing further is required unless you wish
