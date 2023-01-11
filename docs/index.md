@@ -83,6 +83,9 @@ Terminal](commandline.md) sections.
 
 ## Feedback and support
 
+!!! important inline end
+    **Guest Users:** For expired passwords and password resets, please contact [TSS](mailto:ithelp@hbs.edu) directly.
+
 Our research computing environments are actively developed and
 continuously improving. **Bug reports and feature requests are important
 contributions to this project and are always welcome and encouraged!**
