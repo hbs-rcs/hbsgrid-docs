@@ -93,7 +93,7 @@ If you find that something doesn't work as expected, of if you have a
 feature request, we want to know about it so we can fix or
 improve it. 
 
-There are three ways to connect:
+There are several ways to connect:
 
 - For administrative requests including project and account creation or modification 
 please use our [request forms](https://www.hbs.edu/research-computing-services/help/online-requests.aspx).
