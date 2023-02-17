@@ -81,7 +81,7 @@ to help you figure out if something goes wrong.
        to list all your recent jobs. The JOBID is the first number in the output`.
     2. Get detailed information about a specific job by running_
        `bjobs -l <JOBID>`  
-       where <JOBID> is the number you looked up in step 1.
+       where `<JOBID>` is the number you looked up in step 1.
     3. You can also look at any output produced by your job by running  
        `bpeek <JOBID>`
     4. Older jobs may not appear in `bjobs`. In that case you can still get some
