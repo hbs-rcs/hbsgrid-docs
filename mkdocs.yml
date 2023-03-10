@@ -37,6 +37,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
+    - content.action.edit
   custom_dir: overrides
   palette:
     scheme: hbs
