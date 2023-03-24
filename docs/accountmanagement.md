@@ -27,8 +27,8 @@ HBSGrid guest accounts (i.e., accounts for users who do not have HBS credentials
     will include guest collaborators, the sponsor of the space must 
     be a faculty member or Jen Mucciarone.
 
-### Guest HBSGrid Accounts
-#### For Account Sponsors
+### HBSGrid Accounts
+#### For Guest Account Sponsors
 When a guest user requests an account listing you as the sponsor, you will receive an automated email from `noreply@hbs.edu` with a link asking you to review and approve the request. Click the link to do so. If you do not approve or receive a request from a person you do not recognize, contact RCS at <research@hbs.edu>.
 
 ![Screenshot of guest account approval screen](imgs/accountapproval.png)
