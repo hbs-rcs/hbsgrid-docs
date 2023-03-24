@@ -38,7 +38,3 @@ You must accept the agreement for your account to be created. Once the account i
 When you have been added to a project space, new or old, you will receive an automated email from `noreply@hbs.edu` with the access information.
 #### For Project Space Sponsors
 If a user requests access to your project space, you will receive an automated email from `noreply@hbs.edu` with a link asking you to click if you confirm. Click the link to add the person to the space. If you do not approve or receive a request from a person you do not recognize, contact RCS at <research@hbs.edu>. 
-#### For 
-
-## Automated Guest Password Resets 
-Is this happening?
