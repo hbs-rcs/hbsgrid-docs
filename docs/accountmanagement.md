@@ -1,9 +1,3 @@
----
-hide:
-  - navigation
-  - toc
----
-
 # New Account Management System
 
 RCS, along with our IT partners, are excited to announce the upcoming replacement of our HBSGrid account and project space provisioning system effective **April 10, 2023**. This upgrade will significantly improve the speed, efficiency, and automation of creating and maintaining HBSGrid accounts and project spaces.
