@@ -16,9 +16,9 @@ We will be retiring our old account and project space request forms. Instead, yo
     
 - Request a new HBSGrid project space: <https://secure.hbs.edu/accountManagement/secure/research/projectspace/new>
 
-To add a user to a project space, request more space in your project folder, or make other project space changes, please continue to use [this project space change request form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u) or contact RCS directly at <research@hbs.edu>.
-
 ![Screenshot of new account request form](imgs/accountrequestform.png)
+
+To add a user to a project space, request more space in your project folder, or make other project space changes, please continue to use [this project space change request form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u) or contact RCS directly at <research@hbs.edu>.
 
 ## Streamlined Approval Emails
 HBSGrid guest accounts (i.e., accounts for users who do not have HBS credentials) and all HBSGrid project spaces must have an approved HBS sponsor, usually a faculty member. The new system makes it easier than ever for sponsors to approve account requests and project space members by simply clicking a link in an email. 
