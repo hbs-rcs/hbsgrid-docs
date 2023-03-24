@@ -34,7 +34,7 @@ When a guest user requests an account listing you as the sponsor, you will recei
 ![Screenshot of guest account approval screen](imgs/accountapproval.png)
 
 #### For HBS Users
-Most account requests will be fulfilled by RCS within a business day. Account requests for Research Associates will first be routed to Research Staff Services for approval before the account is created. When your account is ready, you will receive an automated welcome email from `noreply@hbs.edu`.
+Most account requests from members of the HBS community will be fulfilled by RCS within a business day. Account requests for Research Associates will first be routed to Research Staff Services for approval before the account is created. When your account is ready, you will receive an automated welcome email from `noreply@hbs.edu`.
 
 #### For Guest Users
 After you submit a guest account request, you will receive an automated email from `noreply@hbs.edu` asking you to review and sign a Guest User Agreement. Click the link to do so. Please note that this link will expire in 5 days.
