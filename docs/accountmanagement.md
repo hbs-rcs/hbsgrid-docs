@@ -5,9 +5,9 @@ RCS, along with our IT partners, are excited to announce the upcoming replacemen
 **What will change for users on April 10th?**
 ## New and Improved Forms
 We will be retiring our old account and project space request forms. Instead, you will use new forms to request new spaces and accounts:
-- Request a new HBSGrid account: **URL**
-- Request a new HBSGrid project space: **URL**
-- Request access to an HBSGrid project space: **URL**
+-   Request a new HBSGrid account: **URL**
+-   Request a new HBSGrid project space: **URL**
+-   Request access to an HBSGrid project space: **URL**
 
 To request more space in your project folder or to make other project space changes, you will need to contact RCS directly at <research@hbs.edu>.
 
