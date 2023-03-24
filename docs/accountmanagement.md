@@ -10,15 +10,15 @@ We will be retiring our old account and project space request forms. Instead, yo
 
 - Request a new HBSGrid account:
     
-    **HBS Users**: https://secure.hbs.edu/accountManagement/secure/research/account/new
+    **HBS Users**: <https://secure.hbs.edu/accountManagement/secure/research/account/new>
     
-    **Guest Users**: https://secure.hbs.edu/accountManagement/guest/research/account/new
+    **Guest Users**: <https://secure.hbs.edu/accountManagement/guest/research/account/new>
     
 - Request a new HBSGrid project space: https://secure.hbs.edu/accountManagement/secure/research/projectspace/new
 
-To add a user to a project space, request more space in your project folder, or make other project space changes, please continue to use [this form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u) or contact RCS directly at <research@hbs.edu>.
+To add a user to a project space, request more space in your project folder, or make other project space changes, please continue to use [this project space change request form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u) or contact RCS directly at <research@hbs.edu>.
 
-**SCREENSHOT OF PORTAL**
+![Screenshot of new account request form](imgs/accountrequestform.png)
 
 ## Streamlined Approval Emails
 HBSGrid guest accounts (i.e., accounts for users who do not have HBS credentials) and all HBSGrid project spaces must have an approved HBS sponsor, usually a faculty member. The new system makes it easier than ever for sponsors to approve account requests and project space members by simply clicking a link in an email. 
@@ -33,15 +33,15 @@ HBSGrid guest accounts (i.e., accounts for users who do not have HBS credentials
 #### For Account Sponsors
 When a guest user requests an account listing you as the sponsor, you will receive an automated email from `noreply@hbs.edu` with a link asking you to review and approve the request. Click the link to do so. If you do not approve or receive a request from a person you do not recognize, contact RCS at <research@hbs.edu>.
 
-**SCREENSHOT OF APPROVAL SCREEN HERE**
+![Screenshot of guest account approval screen](imgs/accountapproval.png)
 
 #### For Guest Users
 After you submit a guest account request, you will receive an automated email from `noreply@hbs.edu` asking you to review and sign a Guest User Agreement. Click the link to do so. Please note that this link will expire in 5 days.
-
-**SCREENSHOT OF GUA SCREEN HERE**
 
 You must accept the agreement for your account to be created. Once the account is created, you will receive an encrypted automated email from `svc_ome@hbs.edu` containing your username and temporary HBSGrid password. **You may use this link only once and it expires in two weeks.** When you retrieve your password, you will receive instructions on how to change your password and download our VPN software so that you can access the HBSGrid.
 ### Project Space Access
 When a new project space is ready or you have been added to a project space, you will receive an automated email from `noreply@hbs.edu` with the access information.
 #### For Project Space Sponsors
 If a user requests access to your project space, you will receive an automated email from `noreply@hbs.edu` notifying you of the request. Click the link to view and approve your outstanding requests. 
+
+![Screenshot of project space member approval](projectspaceapproval.png)
