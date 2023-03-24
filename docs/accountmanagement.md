@@ -2,7 +2,7 @@
 
 RCS, along with our IT partners, are excited to announce the upcoming replacement of our HBSGrid account and project space provisioning system effective **April 10, 2023**. This upgrade will significantly improve the speed, efficiency, and automation of creating and maintaining HBSGrid accounts and project spaces.
 
-**What will change for users on April 10th?**
+<span style='font-size:50px;'>What will change for users on April 10th?</span>
 ## New and Improved HBSGrid Account and Project Space Request Forms
 We will be retiring our old account and project space request forms. Instead, you will use new forms to request new spaces and accounts (note that if you tyipcally access forms from the Online Requests tab of our website, you can continue to do so. Links on that page will be updated to point to the new forms):
 
@@ -32,6 +32,9 @@ HBSGrid guest accounts (i.e., accounts for users who do not have HBS credentials
 When a guest user requests an account listing you as the sponsor, you will receive an automated email from `noreply@hbs.edu` with a link asking you to review and approve the request. Click the link to do so. If you do not approve or receive a request from a person you do not recognize, contact RCS at <research@hbs.edu>.
 
 ![Screenshot of guest account approval screen](imgs/accountapproval.png)
+
+#### For HBS Users
+Most account requests will be fulfilled by RCS within a business day. Account requests for Research Associates will first be routed to Research Staff Services for approval before the account is created. When your account is ready, you will receive an automated welcome email from `noreply@hbs.edu`.
 
 #### For Guest Users
 After you submit a guest account request, you will receive an automated email from `noreply@hbs.edu` asking you to review and sign a Guest User Agreement. Click the link to do so. Please note that this link will expire in 5 days.
