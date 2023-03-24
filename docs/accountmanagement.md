@@ -44,4 +44,4 @@ When a new project space is ready or you have been added to a project space, you
 #### For Project Space Sponsors
 If a user requests access to your project space, you will receive an automated email from `noreply@hbs.edu` notifying you of the request. Click the link to view and approve your outstanding requests. 
 
-![Screenshot of project space member approval](projectspaceapproval.png)
+![Screenshot of project space member approval](imgs/projectspaceapproval.png)
