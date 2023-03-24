@@ -9,10 +9,11 @@ RCS, along with our IT partners, are excited to announce the upcoming replacemen
 We will be retiring our old account and project space request forms. Instead, you will use new forms to request new spaces and accounts:
 
 - Request a new HBSGrid account: **URL**
-- Request a new HBSGrid project space: **URL**
-- Request access to an HBSGrid project space: **URL**
+    HBS Users: https://secure.hbs.edu/accountManagement/secure/research/account/new
+    Guest Users: https://secure.hbs.edu/accountManagement/guest/research/account/new
+- Request a new HBSGrid project space: https://secure.hbs.edu/accountManagement/secure/research/projectspace/new
 
-To request more space in your project folder or to make other project space changes, you will need to contact RCS directly at <research@hbs.edu>.
+To add a user to a project space, request more space in your project folder, or make other project space changes, please continue to use [this form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u) or contact RCS directly at <research@hbs.edu>.
 
 **SCREENSHOT OF PORTAL**
 
