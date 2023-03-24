@@ -6,7 +6,7 @@ RCS, along with our IT partners, are excited to announce the upcoming replacemen
 
 
 ## New and Improved HBSGrid Account and Project Space Request Forms
-We will be retiring our old account and project space request forms. Instead, you will use new forms to request new spaces and accounts:
+We will be retiring our old account and project space request forms. Instead, you will use new forms to request new spaces and accounts (note that if you tyipcally access forms from the Online Requests tab of our website, you can continue to do so. Links on that page will be updated to point to the new forms):
 
 - Request a new HBSGrid account:
     
