@@ -39,7 +39,7 @@ Most account requests from members of the HBS community will be fulfilled by RCS
 #### For Guest Users
 After you submit a guest account request, you will receive an automated email from `noreply@hbs.edu` asking you to review and sign a Guest User Agreement. Click the link to do so. Please note that this link will expire in 5 days.
 
-You must accept the agreement for your account to be created. Once the account is created, you will receive an encrypted automated email from `svc_ome@hbs.edu` containing your username and temporary HBSGrid password. **You may use this link only once and it expires in two weeks.** When you retrieve your password, you will receive instructions on how to change your password and download our VPN software so that you can access the HBSGrid.
+You must accept the agreement for your account to be created. Once the account is created, you will receive an encrypted automated email from `encrypted@hbs.edu` containing your username and temporary HBSGrid password. **You may use this link only once and it expires in two weeks.** When you retrieve your password, you will receive instructions on how to change your password and download our VPN software so that you can access the HBSGrid.
 ### Project Space Access
 When a new project space is ready or you have been added to a project space, you will receive an automated email from `noreply@hbs.edu` with the access information.
 #### For Project Space Sponsors
