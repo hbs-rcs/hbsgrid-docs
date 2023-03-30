@@ -161,6 +161,23 @@ is available, along with [a helpful tutorial](https://nbis-reproducible-research
 
 Current and historical software environments available system-wide on the HBS Grid are described below.
 
+### rcs_2022.11 {#rcs_2022.11}
+
+We have updated a number of software packages in this release to make the newest features accessible to HBS researchers.
+**Please note** that before loading this version, Python and R users **must update
+any custom packages or modules** they have installed in their home directories or project folders.
+
+Notable application updates include:
+
+-   Python updated to 3.10.6
+-   R updated to 4.2.1
+-   RStudio updated to 2022.07
+-   JupyterLab updated to 3.5
+-   Spyder updated to 5.3.3
+-   Julia updated to 1.8.2
+-   MATLAB updated to 2022b
+-   VSCode updated to 1.72.2
+
 ### rcs_2022.01 {#rcs_2022.01}
 
 This software environment is a user-friendly collection of
