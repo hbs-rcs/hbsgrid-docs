@@ -102,7 +102,7 @@ ml -rcs_2021.03
 ```
 will unload it.
 
-Detailed [Lmod documentation is available here](https://lmod.readthedocs.io/en/latest/) and you can learn more about the environments available on the HBS Grid in the [Environments documentation](environments.md).
+Detailed [Lmod documentation is available here](https://lmod.readthedocs.io/en/latest/) and you can learn more about the environments available on the HBS Grid in the [Environments versions](environments.md#environment-versions) documentation.
 
 
 ## Reproducing environments
