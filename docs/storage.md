@@ -91,7 +91,7 @@ corruption, please [contact RCS](mailto:research@hbs.edu).
 
 Project spaces can be set up with faculty sponsorship and/or approval by
 filling out the [New Project Space Request
-Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhURFhFT09aVVJEQ0tQM1JRMjJOOTg0SFpZQi4u).
+Form](https://secure.hbs.edu/accountManagement/secure/research/projectspace/new).
 
 If you are working with level 3 data or higher, we will ask you to
 submit documentation from the IRB or a Data Usage Agreement (DUA; a
