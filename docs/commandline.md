@@ -1,6 +1,6 @@
 # 🐚 Use the Command-line
 
-The HBS Grid uses [IBM Spectrum LSF](https://www.ibm.com/docs/en/spectrum-lsf) 
+The HBSGrid uses [IBM Spectrum LSF](https://www.ibm.com/docs/en/spectrum-lsf) 
 to run applications on powerful remote computers. LSF is a large and complex 
 set of tools; our goal here is to give you just enough information so that you
 can use it to run jobs on our system, without overwhelming you with details and
@@ -99,12 +99,12 @@ example below is sufficient for many use cases.
 For example,
 
 ``` sh
-bsub -q gpu -gpu - -Is R
+bsub -q gpu_int -Is -gpu - R
 ```
 will get an interactive R session with access to a GPU (note the trailing
 single dash in `-gpu -`, this uses the default GPU settings).
 
-If you need more control please refer to the [LSF documentation for instructions
+If you need more control please refer to our [How-To for GPU Computing](tutorials/scaling-work.md#gpu-computing) or [LSF's documentation for instructions
 on specifying more advanced GPU resource requirements](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=jobs-submitting-that-require-gpu-resources).
 
 Knowing just these arguments to `bsub` will take you a long way. There is 

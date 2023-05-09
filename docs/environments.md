@@ -163,20 +163,53 @@ Current and historical software environments available system-wide on the HBS Gr
 
 ### rcs_2022.11 {#rcs_2022.11}
 
-We have updated a number of software packages in this release to make the newest features accessible to HBS researchers.
-**Please note** that before loading this version, Python and R users **must update
-any custom packages or modules** they have installed in their home directories or project folders.
+This software environment is a user-friendly collection of
+software and utilities designed to make data science and statistics
+easier for HBS Grid users. 
 
-Notable application updates include:
+In this release we have added a number of new applications and packages, including:
+
+- [Quarto](https://quarto.org/), an open-source scientific and technical publishing system built on Pandoc
+- [Gephi](https://gephi.org/) visualization and exploration software for all kinds of graphs and networks
+- [GitHub CLI](https://cli.github.com/) brings GitHub to your terminal
+- [SCC](https://github.com/boyter/scc) a very fast accurate code counter with complexity calculations and COCOMO estimates written in pure Go
+
+    
+If there is a software program that you need is not yet available and would be of benefit to the 
+larger community, please [contact us via the Research Inbox](mailto:research@hbs.edu?subject=HBSGrid%20software%20install)
+and we will follow-up as needed.
+
+The 2022.11 release brings a huge number of application and package
+updates, including:
 
 -   Python updated to 3.10.6
 -   R updated to 4.2.1
--   RStudio updated to 2022.07
--   JupyterLab updated to 3.5
--   Spyder updated to 5.3.3
--   Julia updated to 1.8.2
 -   MATLAB updated to 2022b
--   VSCode updated to 1.72.2
+-   Octave updaed to 7.2.0
+-   Julia updated to 1.8.2
+-   RStudio updated to 2022.07.2
+-   Spyder updated to 5.3.3
+-   LibreOffice updated to 7.3.6
+-   VSCode updated to 1.72
+-   Emacs updated to 28.2
+-   Arrow (C++, R and Python) updated to 9.0
+-   Tensorflow updated to 2.10
+-   PyTorch updated to 1.12.1
+-   CUDA toolkit updated to 11.7.0
+-   Jupyterlab updated to 3.5.0
+-   MKL updated to 2022.1.0
+
+and many others.
+
+[Documentation is available on line](https://hbs-rcs.github.io/hbsgrid-docs/)
+or via the *HBS Grid help* application on the Grid. If you have any difficulties or
+feature requests please [reach out to RCS](mailto:research@hbs.edu?subject=HBSGrid%20support)
+to continue the conversation.
+
+For complete environment details, open a terminal and run
+``` sh
+conda list -n rcs_2022.11
+```
 
 ### rcs_2022.01 {#rcs_2022.01}
 
@@ -226,7 +259,7 @@ updates, including:
 -   Tensorflow updated to 2.7
 -   PyTorch updated to 1.10.0
 -   CUDA toolkit updated to 11.5.0
--   Jupyterlab updated to 3.10
+-   Jupyterlab updated to 3.1.0
 -   MKL updated to 2021.4.0
 
 and hundreds of others.
