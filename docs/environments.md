@@ -184,7 +184,7 @@ updates, including:
 
 -   Python updated to 3.10.6
 -   R updated to 4.2.1
--   MATLAB to 2022b
+-   MATLAB updated to 2022b
 -   Octave updaed to 7.2.0
 -   Julia updated to 1.8.2
 -   RStudio updated to 2022.07.2
@@ -196,7 +196,7 @@ updates, including:
 -   Tensorflow updated to 2.10
 -   PyTorch updated to 1.12.1
 -   CUDA toolkit updated to 11.7.0
--   Jupyterlab updated to 3.4.8
+-   Jupyterlab updated to 3.5.0
 -   MKL updated to 2022.1.0
 
 and many others.
