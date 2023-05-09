@@ -165,9 +165,10 @@ are summarized in the table below.
  | long_int    | interactive            | 3 days     | 4               | 
  | short_int   | interactive            | 1 day      | 12              | 
  | sas_int     | interactive            | no limit   | 4               | 
+ | gpu_int     | interactive.           | no limit   | 4               | 
  | long        | batch                  | 7 days     | 12              | 
  | short       | batch                  | 3 days     | 16              | 
- | gpu         | interactive or batch   | no limit   | 4               | 
+ | gpu         | batch                  | no limit   | 4               | 
  | sas         | batch                  | no limit   | 4               | 
  | unlimited   | interactive or batch   | no limit   | 4               | 
 

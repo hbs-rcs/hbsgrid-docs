@@ -102,7 +102,7 @@ ml -rcs_2021.03
 ```
 will unload it.
 
-Detailed [Lmod documentation is available here](https://lmod.readthedocs.io/en/latest/) and you can learn more about the environments available on the HBS Grid in the [Environments documentation](environments.md).
+Detailed [Lmod documentation is available here](https://lmod.readthedocs.io/en/latest/) and you can learn more about the environments available on the HBS Grid in the [Environments versions](environments.md#environment-versions) documentation.
 
 
 ## Reproducing environments
@@ -137,10 +137,7 @@ of the software needed for your project.
 
 !!! info inline end "Software installation requests"
     If you find that the software you need is not available in the standard HBS Grid software environments
-    please consider putting in an installation request using our 
-    [discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
-    or [issue tracker](https://github.com/hbs-rcs/hbsgrid-docs/issues). This will help us maintain
-    consistent environments useful to the whole HBS community.
+    please reach out to [research@hbs.edu](mailto:research@hbs.edu).
 
 If you prefer to create and manage your own software environments you may do so using 
 [conda](https://docs.conda.io/projects/conda/en/latest/user-guide). This is the same package manager used
@@ -178,9 +175,9 @@ In this release we have added a number of new applications and packages, includi
 - [SCC](https://github.com/boyter/scc) a very fast accurate code counter with complexity calculations and COCOMO estimates written in pure Go
 
     
-If you find a software program that you need is not yet available please
-[let us know](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
-and we will try to install it for you.
+If there is a software program that you need is not yet available and would be of benefit to the 
+larger community, please [contact us via the Research Inbox](mailto:research@hbs.edu?subject=HBSGrid%20software%20install)
+and we will follow-up as needed.
 
 The 2022.11 release brings a huge number of application and package
 updates, including:
@@ -202,17 +199,17 @@ updates, including:
 -   Jupyterlab updated to 3.4.8
 -   MKL updated to 2022.1.0
 
-and hundreds of others.
+and many others.
 
 [Documentation is available on line](https://hbs-rcs.github.io/hbsgrid-docs/)
 or via the *HBS Grid help* application on the Grid. If you have any difficulties or
-feature requests please [reach out on the discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions).
+feature requests please [reach out to RCS](mailto:research@hbs.edu?subject=HBSGrid%20support)
+to continue the conversation.
 
 For complete environment details, open a terminal and run
 ``` sh
 conda list -n rcs_2022.11
 ```
-
 
 ### rcs_2022.01 {#rcs_2022.01}
 
@@ -243,7 +240,7 @@ data science applications and packages, including:
 and many many more!
 
 If you find a software program that you need is not yet available please
-[let us know](https://github.com/hbs-rcs/hbsgrid-docs/discussions)
+[let us know](mailto:research@hbs.edu)
 and we will try to install it for you.
 
 The 2022.01 release also brings a huge number of application and package
@@ -278,7 +275,7 @@ used programs:
 
 [Documentation is available on line](https://hbs-rcs.github.io/hbsgrid-docs/)
 or via the *HBS Grid help* application on the Grid. If you have any difficulties or
-feature requests please [reach out on the discussion forum](https://github.com/hbs-rcs/hbsgrid-docs/discussions).
+feature requests please [reach out to us](mailto:research@hbs.edu).
 
 For complete environment details, open a terminal and run
 ``` sh

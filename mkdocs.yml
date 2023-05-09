@@ -19,7 +19,7 @@ nav:
       - 👥 Collaborate and Share: 'worksafe.md'
   - Help & Support Requests:
       - Support Channels: 'help.md'
-      - Account & Project Requests: 'https://www.hbs.edu/research-computing-services/help/online-requests.aspx'
+      - Account & Project Requests: 'accountmanagement.md'
       - Troubleshooting: 'trouble.md'
   - Tutorials:
     - Topic list: 'tutorials.md'
@@ -37,6 +37,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
+    - content.action.edit
   custom_dir: overrides
   palette:
     scheme: hbs
