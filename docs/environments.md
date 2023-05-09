@@ -187,6 +187,7 @@ updates, including:
 
 -   Python updated to 3.10.6
 -   R updated to 4.2.1
+-   MATLAB to 2022b
 -   Octave updaed to 7.2.0
 -   Julia updated to 1.8.2
 -   RStudio updated to 2022.07.2
