@@ -35,8 +35,11 @@ When choosing RAM and CPU values keep in mind that
 to reserve resources you don't need.
 
 Specific memory requirements depend on the nature of the job, but as a rough
-guide **we recommend requesting RAM 4-10 times the size of your data**. For
-example, if you have a 6 Gb.csv file you may wish to request 24GB of memory or so.
+guide:
+-   If your code runs on your local machine, start by asking for the same amount of RAM or less (for example, if your laptop has 8GB of RAM, try asking for 8GB).
+-   If you are loading in native binary data files, ask for an amount of RAM abot 1.5x the size of your data.
+-   If you are importing a text file (e.g., .csv), you may need to request up to 10x the size of the text file. We discourage ongoing reading and writing of text files; to save time and RAM, try to read your text files into binary data files and work primarily with those.
+-   You can review your memory usage from a past job by running `bhist -l <JOBID>` (use `bhist` alone for a list of your recently run jobs). Take note of `MAX MEM` and when you run a similar job in the future, request that amount plus about 20% for wiggle room (e.g., if your past job had a maximum memory usage of 10GB, request 12GB next time).
 
 We recommend that you **request only 1 CPU** unless you
 know that you are using code or libraries that were written to run
