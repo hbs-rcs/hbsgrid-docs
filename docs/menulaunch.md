@@ -35,10 +35,25 @@ When choosing RAM and CPU values, keep in mind that
 become unavailable for other users. Please be considerate and do not reserve resources you don't need.
 
 Specific memory requirements depend on the nature of the job, but as a rough guide:
--   If your code runs on your local machine, start by asking for the same amount of RAM or less (for example, if your laptop has 8GB of RAM, try asking for 8GB).
--   If you are loading in native binary data files, ask for an amount of RAM about 1.5x the size of your data.
--   If you are importing a text file (e.g., CSV), you may need to request up to 8 - 10x the size of the text file. This should be a one-time operation: We discourage ongoing reading and writing of text files, as these operations are expensive, especially on large data files. To save time and RAM, try to read your text files into binary data files and work primarily with those. (You may find Stat/Transfer helpful for this.)
--   You can review your memory usage from a past job by running `bhist -l <JOBID>` (use `bhist` alone for a list of your recently run jobs). Take note of `MAX MEM` and when you run a similar job in the future, request that amount plus about 20% for wiggle room (e.g., if your past job had a maximum memory usage of 10GB, request 12GB next time).
+
+-   If your code runs on your local machine, start by asking for 
+    the same amount of RAM or less (for example, if your laptop has 8GB of RAM, try asking for 8GB).
+  
+-   If you are loading in native binary data files, 
+    ask for an amount of RAM about 1.5x the size of your data.
+  
+-   If you are importing a text file (e.g., CSV), you may need to request 
+    up to 8 - 10x the size of the text file.
+    This should be a one-time operation: We discourage ongoing reading and writing of text files, 
+    as these operations are expensive, especially on large data files. 
+    To save time and RAM, try to read your text files into binary data files 
+    and work primarily with those. (You may find Stat/Transfer helpful for this.)
+  
+-   You can review your memory usage from a past job by running `bhist -l <JOBID>`
+    use `bhist` alone for a list of your recently run jobs). 
+    Take note of `MAX MEM` and when you run a similar job in the future, 
+    request that amount plus about 20% for wiggle room 
+    (e.g., if your past job had a maximum memory usage of 10GB, request 12GB next time).
 
 We recommend that you **request only 1 CPU**, especially for interactive work, unless you
 know that you are using code or libraries that were written to run
