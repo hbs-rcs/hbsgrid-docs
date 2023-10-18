@@ -38,7 +38,7 @@ You can fix this problem yourself in a couple of ways:
     quota. You can also run `gio trash --empty` to empty the trash, which may give you enough 
     breathing room to permit NoMachine login.
 2.  **By GUI**: Use a [GUI SFTP client like FileZilla or CyberDuck](https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/#transfer-data-fromto-local-storage) 
-    to log into your storage and clean up your home directory.
+    to log into your storage and clean up your home directory by moving/deleting files and emptying your trash folder.
 
 ### Shell misconfiguration
 
