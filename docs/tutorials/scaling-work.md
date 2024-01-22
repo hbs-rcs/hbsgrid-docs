@@ -142,7 +142,7 @@ the HBSGrid cluster.
     ``` matlab
     hLog = fopen( [mfilename, '.log'] , 'w' ); % Create log file 
     % Launch parallel pool with as many workers as requested
-    hPar = parpool( 'local' , str2num( getenv('LSB_MAX_NUM_PROCESSORS') ) ); 
+    hPar = parpool( 'local' , str2num( getenv('LSB_DJOB_NUMPROC') ) ); 
     % Report number of workers
     fprintf( hLog , 'Number of workers = %d\n' , hPar.NumWorkers ) 
     % Main code
@@ -220,9 +220,9 @@ the HBSGrid cluster.
     The `parpool` function is used
     to initiate the parallel pool. To dynamically set the number of
     workers to the CPU cores you requested, we ask MATLAB to query the
-    LSF environment variable `LSB_MAX_NUM_PROCESSORS`:
+    LSF environment variable `LSB_DJOB_NUMPROC`:
 
-    `hPar = parpool( 'local', str2num( getenv( 'LSB_MAX_NUM_PROCESSORS' ) ) ); `
+    `hPar = parpool( 'local', str2num( getenv( 'LSB_DJOB_NUMPROC' ) ) ); `
 
     Once the parallelized portion of your code has been run, you should
     explicitly close the parallel pool and release the workers as
@@ -274,10 +274,10 @@ the HBSGrid cluster.
     up to 16 cores, while the limit remains at 12 cores for long queue
     jobs. **Nota Bene!** The number of workers are dynamically
     determined by asking LSF (the scheduler) how many cores you have
-    reserved via the `LSB_MAX_NUM_PROCESSORS` environment variable. **DO NOT** use
+    reserved via the `LSB_DJOB_NUMPROC` environment variable. **DO NOT** use
     `multiprocessing.cpu_count()`
     or similar; instead retrieve the values of this environment
-    variable, e.g., `os.getenv(LSB_MAX_NUM_PROCESSORS)`.
+    variable, e.g., `os.getenv("LSB_DJOB_NUMPROC")`.
 
     ### **Example: Parallel Processing Basics**
 
@@ -336,7 +336,7 @@ the HBSGrid cluster.
     if __name__ == '__main__':
      
       numList=range(1,100)
-      num_workers = os.getenv("LSB_MAX_NUM_PROCESSORS")
+      num_workers = os.getenv("LSB_DJOB_NUMPROC")
      
       p = multiprocessing.Pool(num_workers)
       result = p.map(f,numList)
@@ -436,7 +436,7 @@ the HBSGrid cluster.
     Below are a number of very simple examples to highlight how the
     frameworks can be included in your code. **Nota Bene!** The number
     of workers are dynamically determined by asking LSF (the scheduler)
-    how many cores you have reserved via the LSB_MAX_NUM_PROCESSORS
+    how many cores you have reserved via the `LSB_DJOB_NUMPROC`
     environment variable. **DO NOT** use the `mc.detectcores()` routine or anything similar, as this
     will clobber your code as well as any other code running on the same
     compute node.
@@ -456,7 +456,7 @@ the HBSGrid cluster.
 
     ``` r
     ## detect the number of CPUs we are allowed to use 
-    n_cores <- as.integer(Sys.getenv('LSB_MAX_NUM_PROCESSORS')) 
+    n_cores <- as.integer(Sys.getenv('LSB_DJOB_NUMPROC')) 
     ## use multiprocess backend 
     plan(multiprocess, workers = n_cores)
     ```
@@ -484,7 +484,7 @@ the HBSGrid cluster.
     will submit your R code to the compute grid and will allocate 4 CPU
     cores for the work (as well as 5 GB of RAM for a run time limit of
     12 hrs). If your code is written as above, using
-    `LSB_MAX_NUM_PROCESSORS`, then
+    `LSB_DJOB_NUMPROC`, then
     your code will detect that 4 cores have been allocated.
 
     ```{bash}
