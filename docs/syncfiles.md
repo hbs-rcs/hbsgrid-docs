@@ -28,7 +28,7 @@ There are three options: *home directory*, *project space*, or *scratch storage*
     Scratch storage is a shared resource accessible to all users on the HBS Grid;
     make sure you [set permissions on your files accordingly](worksafe.md).
 
-Refer to the [Research Data Storage and Databases] documentation for details.
+Refer to the [Research Data Storage and Databases](../storage/) documentation for details.
 
 
 ## Local storage data transfer {#transfer-data-fromto-local-storage}

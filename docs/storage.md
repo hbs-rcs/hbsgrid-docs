@@ -57,18 +57,32 @@ software may require a 'working', or temporary, directory. In most
 cases, you should not use your home folder, as there are quota limits,
 and the temporary needs may exceed the amount available.
 
-The storage location at `/export/scratch` is designed specifically for this purpose.
-Note:
+The storage location at `/export/scratch` is designed specifically for this purpose. See the next section for setting up and using a temporary folder on this volume.
 
--   This is a shared area, so make sure [permissions are set correctly](worksafe.md).
--   Files older than 60 days will be deleted at monthly maintenance
-    periods.
--   The `/export/scratch` filesystem is not backed up, so please copy back
-    to your home or project folder any files or folders you wish to keep
-    long-term.
+_Nota bene_:
+
+* This volume is a shared, community area. Be mindful of your usage (how much you use and for how long).
+* This filesystem is not backed up! Ensure you copy anything important back to your home or project folder.
+* Files older than 60 days will be deleted nightly via disk cleanup scripts. Do not interfere with these scripts.
 
 Please see our [RCS Policies page](https://www.hbs.edu/research-computing-services/about-us/terms-of-service/policies.aspx#scratch)
-for more information about our scratch usage policies.
+for more information about our scratch usage policies. 
+
+
+### Using `/export/scratch` effectively {#using-scratch}
+
+As this volume is a shared area visible by everyone, it is important that you follow best practices for its use:
+ * Do not store any files in the top-level. 
+ * Use the Create Scratch Folder script to create your temporary folder. This will open a terminal / 
+   text window that will guide you through the process of naming your folder and setting the correct permissions.
+   For folder naming, we recommend prefixing the folder with either your account name or the project name. To start:
+    * In the NoMachine GUI, select from the menubar Applications > Other > Create Scratch Directory.
+    * In terminal, execute the command `/usr/local/app/scripts/create_scratch_folder.sh`
+ * Clean up files when you no longer need them, so that others can use the additional space immediately
+ 
+If you should need to keep files on the scratch volume for longer than 60 days, please contact RCS.
+
+Please see our Tutorials section for example scratch usage patterns.
 
 ## Project spaces {#project-spaces}
 
