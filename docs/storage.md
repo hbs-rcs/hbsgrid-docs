@@ -76,7 +76,7 @@ As this volume is a shared area visible by everyone, it is important that you fo
  * Use the Create Scratch Folder script to create your temporary folder. This will open a terminal / 
    text window that will guide you through the process of naming your folder and setting the correct permissions.
    For folder naming, we recommend prefixing the folder with either your account name or the project name. To start:
-    * In the NoMachine GUI, selet from the menubar Applications > Other > Create Scratch Directory.
+    * In the NoMachine GUI, select from the menubar Applications > Other > Create Scratch Directory.
     * In terminal, execute the command `/usr/local/app/scripts/create_scratch_folder.sh`
  * Clean up files when you no longer need them, so that others can use the additional space immediately
  
