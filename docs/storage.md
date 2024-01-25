@@ -72,6 +72,7 @@ for more information about our scratch usage policies.
 ### Using `/export/scratch` effectively {#using-scratch}
 
 As this volume is a shared area visible by everyone, it is important that you follow best practices for its use:
+
 -   Do not store any files in the top-level.
 
 -   Use the Create Scratch Folder script to create your temporary folder. This will open a terminal / 
