@@ -61,9 +61,9 @@ The storage location at `/export/scratch` is designed specifically for this pur
 
 _Nota bene_:
 
-* This volume is a shared, community area. Be mindful of your usage (how much you use and for how long).
-* This filesystem is not backed up! Ensure you copy anything important back to your home or project folder.
-* Files older than 60 days will be deleted nightly via disk cleanup scripts. Do not interfere with these scripts.
+-   This volume is a shared, community area. Be mindful of your usage (how much you use and for how long).
+-   This filesystem is not backed up! Ensure you copy anything important back to your home or project folder.
+-   Files older than 60 days will be deleted nightly via disk cleanup scripts. Do not interfere with these scripts.
 
 Please see our [RCS Policies page](https://www.hbs.edu/research-computing-services/about-us/terms-of-service/policies.aspx#scratch)
 for more information about our scratch usage policies. 
@@ -72,13 +72,17 @@ for more information about our scratch usage policies.
 ### Using `/export/scratch` effectively {#using-scratch}
 
 As this volume is a shared area visible by everyone, it is important that you follow best practices for its use:
- * Do not store any files in the top-level. 
- * Use the Create Scratch Folder script to create your temporary folder. This will open a terminal / 
-   text window that will guide you through the process of naming your folder and setting the correct permissions.
-   For folder naming, we recommend prefixing the folder with either your account name or the project name. To start:
-    * In the NoMachine GUI, select from the menubar Applications > Other > Create Scratch Directory.
-    * In terminal, execute the command `/usr/local/app/scripts/create_scratch_folder.sh`
- * Clean up files when you no longer need them, so that others can use the additional space immediately
+-   Do not store any files in the top-level.
+
+-   Use the Create Scratch Folder script to create your temporary folder. This will open a terminal / 
+    text window that will guide you through the process of naming your folder and setting the correct permissions.
+    For folder naming, we recommend prefixing the folder with either your account name or the project name. To start:
+    
+    -   In the NoMachine GUI, select from the menubar Applications > Other > Create Scratch Directory.
+
+    -   In terminal, execute the command `/usr/local/app/scripts/create_scratch_folder.sh`
+
+-   Clean up files when you no longer need them, so that others can use the additional space immediately
  
 If you should need to keep files on the scratch volume for longer than 60 days, please contact RCS.
 
