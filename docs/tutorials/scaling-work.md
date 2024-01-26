@@ -40,12 +40,13 @@ fact that jobs (work sessions) from multiple (and possibly) different
 people, are often running side-by-side on a given compute node on the
 compute cluster.
 
-When you start a job on the HBS Grid can specify the number of CPUs you will use.
-Desktop applications have drop-down menu where you can select this value, and the
+When you start a job on the HBSGrid, one can specify the number of CPUs you will use.
+Desktop applications have pop-up dialog where you can enter an appropriate value, and the
 `bsub` command-line program allows you to specify CPUs via the `-n` argument.
-For example, starting R with the command `bsub -q short_int -Is -n 5 R` from 
-the HBS Grid command line will start *R* with 
-5 CPUs reserved. 
+For example, starting Stata-MP4 with the command `bsub -q short_int -Is -n 4 xstata-mp` from 
+the HBSGrid command line will ask to start a session with 
+4 CPUs reserved (the session will start when there's room and its been sent to the
+appropriate compute node.)
 
 ### Implicit Parallelism {#implicit-parallelism}
 
@@ -104,75 +105,83 @@ the HBSGrid cluster.
     The following has been adapted from FAS RC's Parallel MATLAB page
     (<https://docs.rc.fas.harvard.edu/kb/parallel-matlab-pct-dcs/>). As
     the Odyssey cluster uses a different workload manager, the code has
-    been adapted to the workload manager on the HBS compute grid.
+    been adapted to the workload manager on the HBSGrid compute cluster.
 
     This page is intended to help you with running parallel MATLAB codes
-    on the HBS compute grid. Parallel processing with MATLAB is
+    on HBSGrid. Parallel processing with MATLAB is
     performed with the help of two products, Parallel Computing Toolbox
     (PCT) and Distributed Computing Server (DCS). **HBS is licensed only
     for use of the PCT.**
 
-    *Supported Versions*: On the HBS compute grid, the following
-    versions of MATLAB with the Parallel Computing Toolbox (PCT) are:
-
-      --------------------- -------------------
-      *MATLAB Version*      *Executable name*
-      MATALB 2018a 64-bit   matlab
-      --------------------- -------------------
-
+    *Supported Versions*: On the HBSGrid cluster, all versions of MATLAB
+    2018a 64-bit and greater are licensed and have been installed
+    with the Parallel Computing Toolbox (PCT).
+    
     *Maximum Workers*: PCT uses *workers*, MATLAB computational engines,
     to execute parallelized applications and their parts on CPU cores.
-    Each compute node on the Grid has 32 physical cores; therefore (in
+    Each compute node on the cluster has >= 32 physical cores; therefore (in
     theory) users should request no more than 32 cores when using MATLAB
     with PCT. However, due to current user resource limits, **you should
     request no more than 12 (interactive) or 16 (batch) cores**. If you
-    request more than this, your job will not run as it will sit in a
+    request more than this, your job will not run – it will sit in a
     `PEND` state.
 
     ### **Code Example**
 
     The following simple code illustrates the use of PCT to calculate pi
     via a parallel Monte-Carlo method. This example also illustrates the
-    use of `parfor` (parallel
-    `for`) loops. In this scheme,
+    use of `parfor` (parallel `for`) loops. In this scheme,
     suitable `for` loops could be
     simply replaced by parallel `parfor` loops without other changes to the
     code:
 
     ``` matlab
     hLog = fopen( [mfilename, '.log'] , 'w' ); % Create log file 
+    
     % Launch parallel pool with as many workers as requested
     hPar = parpool( 'local' , str2num( getenv('LSB_DJOB_NUMPROC') ) ); 
+    
     % Report number of workers
     fprintf( hLog , 'Number of workers = %d\n' , hPar.NumWorkers ) 
+    
     % Main code
     R = 1; darts = 1e7; count = 0; % Prepare settings
     tic; % Start timer 
+    
     parfor i = 1:darts 
-    x = R * rand(1); 
-    y = R * rand(1); 
-    if x^2 + y^2 <= R^2 
-    count = count + 1 
+      % Compute the X and Y coordinates of where the dart hit the
+      % square using Uniform distribution
+      x = R * rand(1); 
+      y = R * rand(1); 
+      if x^2 + y^2 <= R^2 
+        % Increment the count of darts that fell inside of the.................
+        % circle
+        count = count + 1 % Count is a reduction variable.
+      end
     end
-    explanation_parallel_code
+    
+    % Compute pi
     myPI = 4 * count / darts;
+    
     T = toc; % Stop timer 
     % Log results
     fprintf( hLog , 'The computed value of pi is %2.7f\n' , myPI );
     fprintf( hLog , 'Executed in %8.2f seconds\n' , T ); 
+    
     % shutdown pool, close log file, and exit
     delete(gcp); 
     fclose(hLog); 
+    
     exit;
     ```
     
     ### **Code with Job Submission Script**
 
-    To run the above code (named code.m) using **5 CPU cores** with the
-    Grid's default wrapper scripts, in the terminal use the following
+    To run the above code (named code.m) using **4 CPU cores** with the
+    HBSGrid's default version of MATLAB, in the terminal use the following
     command:
 
-    `bsub -q short -n5 matlab code.m `
+    `bsub -q short -n4 matlab code.m `
 
     This will cause a log file to be created called `code.log` owing 
     to the first line in our MATLAB code, `hLog=fopen( [mfilename, '.log'] , 'w' );`
@@ -180,38 +189,44 @@ the HBSGrid cluster.
     If you do not use MATLAB's `mfilename` function, then you may also enter the
     following command to have output sent to an unnamed output file:
 
-    ``` sh
+    ``` bash
     bsub -q short -n 5 matlab \< code.m
     ```
 
-    The `<` is escaped here so that
-    it becomes part of the `MATLAB`
-    command, not the `bsub`
-    command.
+    The `<` is escaped here so that it becomes part of the `MATLAB`
+    command, not the `bsub` command.
 
     If you wish to use a submission script to run this code and include
     LSF job option parameters, create a text file named
     `code.sh` containing the
     following:
-
-    ``` sh
+    
+ 
+    ``` bash
     #!/bin/bash
     #
     #BSUB -q short
-    #BSUB -N
-    #BSUB -W 10
-    #BSUB -R" rusage[mem=100]"
-    #BSUB -W 100matlab -r "run('code.m');
+    #BSUB -n 4
+    #BSUB -We 30
+    #BSUB -R" rusage[mem=10G]"
+    #BSUB -M 10G -hl
+    
+    # do a module load if needed, e.g.
+    # module load rcs/rcs_2022.11 
+    # OR
+    # module load matlab/2023a
+    
+    matlab -nosplash -nodesktop  -r "code"
     ```
 
-    Once your script is ready, you may run it with **5 cores** by
-    entering:
+    Once your script is ready, make it executable via `chmod a+x ./code.sh`, and then
+    submit/run the job run by entering:
 
-    `bsub -n 5 < ./code.sh `
+    `bsub ./code.sh `
 
-    The `<` character is used here
-    so that the `#BSUB` directives
-    in the script file are parsed by LSF.
+    Note: we don't need to include `-n 4` as it is embedded in the file. Also, the `<` 
+    character often used here so that the `#BSUB` directives  in the script file are 
+    parsed by LSF. This is now optional.
 
     ### **Explanation of Parallel Code**
 
@@ -242,11 +257,14 @@ the HBSGrid cluster.
     any other iteration in the same loop.
 
     ``` matlab
-    parfor i = 1:darts x = R * rand(1);
-    y = R * rand(1);
-    if x^2 + y^2 <= R^2 count = count + 1 
+    parfor i = 1:darts
+      x = R * rand(1);
+      y = R * rand(1);
+      if x^2 + y^2 <= R^2
+        count = count + 1 
+      end
     end
-    end
+    
     ```
     
 ??? note "Python"
@@ -362,7 +380,7 @@ the HBSGrid cluster.
     #BSUB -q short
     #BSUB -W 10
     #BSUB -R" rusage[mem=1024]"
-    #BSUB -W 1024
+    #BSUB -M 1024 -hl 
      
     pool_process.py
     ```
@@ -488,7 +506,7 @@ the HBSGrid cluster.
     your code will detect that 4 cores have been allocated.
 
     ```{bash}
-    bsub -n 4 -q long -M 5G Rscript my_parallel_code.R
+    bsub -n 4 -q long -M 5G -hl Rscript my_parallel_code.R
     ```
 
 ??? note "Stata"
