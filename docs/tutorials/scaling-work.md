@@ -181,13 +181,13 @@ the HBSGrid cluster.
     HBSGrid's default version of MATLAB, in the terminal use the following
     command:
 
-    `bsub -q short -n4 matlab code.m `
+    `bsub -q short -n4 matlab -r "code" `
 
-    This will cause a log file to be created called `code.log` owing 
+    This will run and create a log file called `code.log` owing 
     to the first line in our MATLAB code, `hLog=fopen( [mfilename, '.log'] , 'w' );`
 
     If you do not use MATLAB's `mfilename` function, then you may also enter the
-    following command to have output sent to an unnamed output file:
+    following command to have output sent to an output/report file (often emailed):
 
     ``` bash
     bsub -q short -n 5 matlab \< code.m
