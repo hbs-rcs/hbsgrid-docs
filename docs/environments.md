@@ -19,8 +19,8 @@ use the Software environment version selector to run and older version of
 ![](imgs/switchEnvironment.png){.media .media-block}
 
 Software environments are named following a `rcs_year.version` scheme.
-For example, the first environment released in 2021 is named
-`rcs_2021.01`. The list below shows you key information about each
+For example, the last environment released in 2022 is named
+`rcs_2022.11`. The list below shows you key information about each
 environment, including a command that you can run from the terminal to
 get a detailed software version list.
 
@@ -46,10 +46,11 @@ as shown below.
 
 ``` contents
       ml avail
+
+--------------------------- /usr/local/app/rcs_bin/grid3/modulefiles ---------------------------
+   rcs/rcs_2021.03        rcs/rcs_2022.01      rcs/rcs_2023.09 (D,L)
+   rcs/rcs_2020.01        rcs/rcs_2021.06      rcs/rcs_2022.11    
       
-------------------- /usr/local/app/rcs_bin/grid3/modulefiles -------------------
-   rcs/rcs_2020.01        rcs/rcs_2021.03      rcs/rcs_2021.06
-   rcs/rcs_2022.01 (D,L)  rcs/rcs_2022.06
    
         Where:
         D:  Default Module
@@ -61,21 +62,21 @@ as shown below.
 ```
 
 You can get detailed information about specific software modules using the
-`ml spyder` command:
+`ml spider` command:
 
 ``` sh
-module spyder rcs/rcs_2021.03
+module spider rcs/rcs_2023.09
 ```
 
 ``` contents
 ----------------------------------------------------------------------------
-  rcs: rcs/rcs_2022.01
+  rcs: rcs/rcs_2023.09
 ----------------------------------------------------------------------------
     Description:
       Anaconda environment for research computing
 
 
-    This module can be loaded directly: module load rcs/rcs_2022.01
+    This module can be loaded directly: module load rcs/rcs_2023.09
 
     Help:
       Sets up environment for Data Science and Statistical computing.
@@ -84,21 +85,21 @@ module spyder rcs/rcs_2021.03
       'rstudio', 'emacs', 'vscode', rclone, ripgrep, nnn and much more.
       
       See https://hbs-rcs.github.io/hbsgrid-docs/ for documentation
-      and https://hbs-rcs.github.io/hbsgrid-docs/environments/#rcs_2022.01
+      and https://hbs-rcs.github.io/hbsgrid-docs/environments/#rcs_2023.09
       for version-specific details.
       
       For a detailed software list open a terminal and run 
       
-      conda env export -n rcs_2022.07
+      conda env export -n rcs_2023.09
 ```
 
 Finally you can use `ml` to load and unload specific environments.
 ``` sh
-ml rcs_2021.03
+ml rcs/rcs_2022.11
 ```
-will load the *rcs_2021.03* environment, and 
+will load the *rcs_2022.11* environment, and 
 ``` sh
-ml -rcs_2021.03
+ml -rcs/rcs_2022.11
 ```
 will unload it.
 
@@ -161,6 +162,54 @@ is available, along with [a helpful tutorial](https://nbis-reproducible-research
 
 Current and historical software environments available system-wide on the HBS Grid are described below.
 
+### rcs_2023.09 {#rcs_2023.09}
+
+This software environment is a user-friendly collection of software and utilities designed to make data science and statistics
+easier for HBS Grid users. 
+
+If there is a software program that you need is not yet available and would be of benefit to the 
+larger community, please [contact us via the Research Inbox](mailto:research@hbs.edu?subject=HBSGrid%20software%20install)
+and we will follow-up as needed.
+
+The 2023.09 release brings a huge number of application and package updates, including:
+
+-   Python updated to 3.10.12
+-   R updated to 4.2.2
+-   MATLAB updated to 2023b
+-   Octave updated to 7.3.0
+-   Julia updated to 1.9.0
+-   RStudio updated to 2022.12.0
+-   Spyder updated to 5.4.5
+-   LibreOffice updated to 7.5.5.2
+-   VSCode updated to 1.82.0
+-   Arrow (C++, R and Python) updated to 11.0
+-   Tensorflow updated to 2.11
+-   PyTorch updated to 2.0.0
+-   CUDA toolkit updated to 11.8.0
+-   nltk updated to 3.8.1 
+-   Jupyterlab updated to 3.6.5
+-   MKL updated to 2022.2.1
+-   gcc updated to 12.3.0
+
+...and many others.
+
+
+Versions that remain unchanged:
+
+-   Emacs 28.2
+
+
+[Documentation is available on line](https://hbs-rcs.github.io/hbsgrid-docs/)
+or via the *HBS Grid help* application on the Grid. If you have any difficulties or
+feature requests please [reach out to RCS](mailto:research@hbs.edu?subject=HBSGrid%20support)
+to continue the conversation.
+
+For complete environment details, open a terminal and run
+``` sh
+conda list -n rcs_2023.09  >  ~/rcs_2023_09_versions.txt
+```
+
+
 ### rcs_2022.11 {#rcs_2022.11}
 
 This software environment is a user-friendly collection of
@@ -185,7 +234,7 @@ updates, including:
 -   Python updated to 3.10.6
 -   R updated to 4.2.1
 -   MATLAB updated to 2022b
--   Octave updaed to 7.2.0
+-   Octave updated to 7.2.0
 -   Julia updated to 1.8.2
 -   RStudio updated to 2022.07.2
 -   Spyder updated to 5.3.3
@@ -248,7 +297,7 @@ updates, including:
 
 -   Python updated to 3.9.9
 -   R updated to 4.1.1
--   Octave updaed to 6.4
+-   Octave updated to 6.4
 -   Julia updated to 1.7.1
 -   RStudio updated to 2021.09.1
 -   Spyder updated to 5.2.1
