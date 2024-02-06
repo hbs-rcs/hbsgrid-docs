@@ -175,6 +175,7 @@ The 2023.09 release brings a huge number of application and package updates, inc
 
 -   Python updated to 3.10.12
 -   R updated to 4.2.2
+-   Stata updated to version 18
 -   Octave updated to 7.3.0
 -   Julia updated to 1.9.0
 -   RStudio updated to 2022.12.0
