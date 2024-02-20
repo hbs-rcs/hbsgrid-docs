@@ -57,6 +57,6 @@ To help us help you, **please work through the relevant list(s)** and **include 
 3.  **If you are accessing the cluster via a terminal**, have you [loaded the RCS sofware environment](https://hbs-rcs.github.io/hbsgrid-docs/environments/#select-terminal-environment) (e.g., run `ml rcs`)?
 4.  Did you check to determine if any application run logs might reveal why your program crashed?
 5.  Are you writing log entries to troubleshoot where you are having problems?
-6.  **If you are submitting a job from the command line**, are you saving the cluster errors and output for your job? This can be accomplished using the bsub -o and -e options, e.g., `bsub -q short -W 6:00 -R "rusage[mem=4000]" -M 4000 -o output_%J.out -e error_%J.err -B -N -u jharvard@hbs.edu`
+6.  **If you are submitting a job from the command line**, are you saving the cluster errors and output for your job? This can be accomplished using the bsub [-o](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=o-o) and [-e](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=o-e) options, e.g., `bsub -q short -W 6:00 -R "rusage[mem=4000]" -M 4000 -o output_%J.out -e error_%J.err -B -N -u jharvard@hbs.edu`
 7.  If you need additional assistance from RCS, please include the JOBID and any of the above logs in your submission. 
 
