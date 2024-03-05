@@ -41,7 +41,8 @@ To help us help you, **please work through the relevant list(s)** and **include 
 ## Running Interactive & Batch Applications (Jobs) - PENDs or Not Running
 
 1.  **If you are working in NoMachine**, did you get a pop-window warning? Is this explanation indicative of the problem (e.g., "Job Requirements Not Satisfied" == no room yet on the cluster)?
-2.  Have you run the HBSGrid Job Monitor script or checked the [status of your job](https://hbs-rcs.github.io/hbsgrid-docs/trouble/#troubleshooting-jobs-and-resources) using the terminal? The Job Monitor script can be found under "System Tools" in the Applications menu or simply by searching for "Job Monitor."
+2.  Have you run the HBSGrid Job Monitor script or checked the [status of your job](https://hbs-rcs.github.io/hbsgrid-docs/trouble/#troubleshooting-jobs-and-resources) using the terminal?
+    -  The Job Monitor script can be found under "System Tools" in the Applications menu or simply by searching for "Job Monitor."
     -  If you are using NoMachine, the terminal can be found under applications. To check the status of the job, request 4GB of RAM and 1 CPU to avoid launching another interactive job.
 3.  Do you already have 3 interactive sessions or 16 interactive cores running, or do you already have 150 cores running in total on the cluster? If you do, you have [reached the limit of the resources one user can request](https://hbs-rcs.github.io/hbsgrid-docs/menulaunch/#system-resources-limits).
 4.  Are you asking for very large amounts of RAM / cores? If you are:
@@ -52,6 +53,7 @@ To help us help you, **please work through the relevant list(s)** and **include 
 ## Running Interactive & Batch Applications (Jobs) - Crashes & Problems
 
 1.  Have you run the HBSGrid Job Monitor script or checked [why your job crashed](https://hbs-rcs.github.io/hbsgrid-docs/trouble/#troubleshooting-jobs-and-resources) using the terminal? 
+    -  The Job Monitor script can be found under "System Tools" in the Applications menu or simply by searching for "Job Monitor."
     -  If you are using NoMachine, the terminal can be found under applications. To check the status of the job, request 4GB of RAM and 1 CPU to avoid launching another interactive job.
 2.  Have you [exceeded the time limit for your queue or run session](https://hbs-rcs.github.io/hbsgrid-docs/commandline/#job-queues-limits)?
 3.  **If you are accessing the cluster via a terminal**, have you [loaded the RCS sofware environment](https://hbs-rcs.github.io/hbsgrid-docs/environments/#select-terminal-environment) (e.g., run `ml rcs`)?
