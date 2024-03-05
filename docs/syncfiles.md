@@ -90,40 +90,21 @@ and **may result in unexpected permissions settings on the cluster**.
 
 #### Map a Drive on Windows
 
-    1. Connect to the HBS network, either directly if you are on-campus or
-       [via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
-       otherwise.
+1.   Connect to the HBS network, either directly if you are on-campus or [via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf) otherwise.
 
-    2. Open a Windows Explorer window, right-click on the "Computer" icon, and then select "Map Network Drive". 
+2.   Open a Windows Explorer window, right-click on the "Computer" icon, and then select "Map Network Drive". 
 
-    3. To map a drive to your **home directory**, specify the folder path 
-        `\\research\username` (for example, `\\research\jharvard`).
-       To map a drive to a **project space**, specify the path `\\research.hbs.edu\projects\projectname` 
-       (note that you may have to use projects, projects2, projects3, projects4, or projects5
-       depending on the path of your project space).
-       Also note that **you may not map a drive to a project space containing security level 4 data**.
+3.   To map a drive to your **home directory**, specify the folder path  \research\username` (for example, `\\research\jharvard`). To map a drive to a **project space**, specify the path `\\research.hbs.edu\projects\projectname` (note that you may have to use projects, projects2, projects3, projects4, or projects5 depending on the path of your project space). Also note that **you may not map a drive to a project space containing security level 4 data**.
 
-    4. Click "Connect using different credentials" if you are not using an HBS-issued machine. 
-       If you are prompted for your username and password, enter your HBSGrid username (the part preceding @hbs.edu) 
-       and your password. 
-       If you are connecting from a non-HBS-issued machine, please add HBS\ before your username (e.g. HBS\jharvard). 
-       This specifies the proper Windows domain for authenticating your credentials.
+4.   Click "Connect using different credentials" if you are not using an HBS-issued machine. If you are prompted for your username and password, enter your HBSGrid username (the part preceding @hbs.edu) and your password. If you are connecting from a non-HBS-issued machine, please add HBS\ before your username (e.g. HBS\jharvard). This specifies the proper Windows domain for authenticating your credentials.
 
 #### Mount a Volume on Mac
     
-    1. Connect to the HBS network, either directly if you are on-campus or
-       [via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
-       otherwise.
+1.   Connect to the HBS network, either directly if you are on-campus or [via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf) otherwise.
 
-    2. From the Finder menu bar, select Go > Connect to Server...
+2.   From the Finder menu bar, select Go > Connect to Server...
 
-    3. In the Server Address field, enter the domain\username, server address, and file path combination
-       that is appropriate for your the space you're trying to access.    
-       For your **home directory**, this will be `smb://HBS\jharvard@research.hbs.edu/jharvard`, 
-       and for **project spaces**, this will be `smb://HBS\jharvard@research.hbs.edu/projects/projectname` 
-       (note that you may have to use projects, projects2, projects3, projects4, or projects5
-       depending on the path of your project space). In both cases, use your own HBS username in place of "jharvard."
-       Also note that **you may not mount a project space containing security level 4 data**.
+3.   In the Server Address field, enter the domain\username, server address, and file path combination that is appropriate for your the space you're trying to access. For your **home directory**, this will be `smb://HBS\jharvard@research.hbs.edu/jharvard`, and for **project spaces**, this will be `smb://HBS\jharvard@research.hbs.edu/projects/projectname` (note that you may have to use projects, projects2, projects3, projects4, or projects5 depending on the path of your project space). In both cases, use your own HBS username in place of "jharvard." Also note that **you may not mount a project space containing security level 4 data**.
 
 ## Cloud storage data transfer {#transfer-data-fromto-cloud-storage} 
 
