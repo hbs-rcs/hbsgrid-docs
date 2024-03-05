@@ -86,7 +86,7 @@ at `\\research.hbs.edu`,
 [via SMB on OSX/Linux](https://support.apple.com/lt-lt/guide/mac-help/mchlp1140/mac#mchlp1265542) 
 at `smb://research.hbs.edu`, and via SSH at `hbsgrid.hbs.edu`.
 This is useful for viewing and copying small files, but will be slow for large data transfers 
-and may result in unexpected permissions settings on the cluster.
+and **may result in unexpected permissions settings on the cluster**.
 
 === "Map a Drive on Windows"
 
