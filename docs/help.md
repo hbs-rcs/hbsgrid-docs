@@ -20,7 +20,7 @@ To help us help you, **please work through the relevant list(s)** and **include 
 ## Storage & Project Spaces - Access Problems
 
 1.  Has your access been approved by the sponsor of your space? 
-    - When you request access, our [automated system sends the project space sponsor an email](https://hbs-rcs.github.io/hbsgrid-docs/accountmanagement/#project-space-access) to formally approve your access. You will not be able to access a project space until the sponsor has formally approved.
+    - When you request access, our [automated system sends the project space sponsor an email](https://hbs-rcs.github.io/hbsgrid-docs/accountmanagement/#project-space-access) to formally approve your access. We recommend contacting them to ensure they have received the email to approve access.
 2.  **If you received an email indicating that the project space sponsor has approved your access**, have at least 2 hours passed since you were approved? This is how long the approval may take to sync in our systems.
 3.  **If you are trying to access the project space by mounting/mapping the drive**, please check:
     - Are you [connected to the appropriate network](https://hbs-rcs.github.io/hbsgrid-docs/trouble/#network-and-vpn): i.e., the HBS VPN if off-campus, or to the wired HBS ethernet/HBSSECURE wireless if on-campus? 
