@@ -4,7 +4,7 @@ If you run into any problems please let us know! You can reach out to us directl
 [research@hbs.edu](mailto:research@hbs.edu).
 Our dedicated support team is always available to assist you.
 
-We've provided some checklists below for some of the most common issues that our users experience. 
+We've provided checklists below for the most common issues that our users experience. 
 To help us help you, **please work through the relevant list(s)** and **include all relevant information** (LSF logs, error logs and messages, etc.) when you reach out to us.
 
 ## HBSGrid Login & Account Issues
