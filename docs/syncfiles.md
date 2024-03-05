@@ -33,13 +33,7 @@ Refer to the [Research Data Storage and Databases](../storage/) documentation fo
 
 ## Local storage data transfer {#transfer-data-fromto-local-storage}
 
-!!! info inline end "Mount Grid storage locally"
-    Research storage is also accessible 
-    [on Windows as a network drive](https://support.microsoft.com/en-gb/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d) 
-    at `\\research.hbs.edu`, 
-    [via SMB on OSX/Linux](https://support.apple.com/lt-lt/guide/mac-help/mchlp1140/mac#mchlp1265542) 
-    at `smb://research.hbs.edu`, and via SSH at `hbsgrid.hbs.edu`.
-    This is useful for viewing and copying small files, but will be slow for large data transfers.
+### SFTP
 
 Transferring data from your local computer to the HBS Grid is usually done using the SFTP protocol. 
 This requires an SFTP client on your local machine. If you don't yet have one
@@ -85,6 +79,8 @@ from a local drive to the HBS Grid:
 Your browser does not support the video tag.
 </video>
 
+### Mount Storage Locally
+
 Research storage is also accessible [on Windows as a network drive](https://support.microsoft.com/en-gb/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d) 
 at `\\research.hbs.edu`, 
 [via SMB on OSX/Linux](https://support.apple.com/lt-lt/guide/mac-help/mchlp1140/mac#mchlp1265542) 
@@ -92,7 +88,7 @@ at `smb://research.hbs.edu`, and via SSH at `hbsgrid.hbs.edu`.
 This is useful for viewing and copying small files, but will be slow for large data transfers 
 and may result in unexpected permissions settings on the cluster.
 
-=== "Windows"
+=== "Map a Drive on Windows"
 
     1. Connect to the HBS network, 
        either directly if you are on-campus or
@@ -123,7 +119,7 @@ and may result in unexpected permissions settings on the cluster.
        This specifies the proper Windows domain 
        for authenticating your credentials.
 
-=== "Mac"
+=== "Mount a Volume on Mac"
     
     1. Connect to the HBS network, 
        either directly if you are on-campus or
