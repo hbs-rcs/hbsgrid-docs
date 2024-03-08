@@ -88,7 +88,7 @@ at `smb://research.hbs.edu`, and via SSH at `hbsgrid.hbs.edu`.
 This is useful for viewing and copying small files, but will be slow for large data transfers 
 and **may result in unexpected permissions settings on the cluster**.
 
-=== Map a Drive on Windows
+=== "Map a Drive on Windows"
 
     1.   Connect to the HBS network, either directly if you are on-campus or [via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf) otherwise.
 
@@ -98,7 +98,7 @@ and **may result in unexpected permissions settings on the cluster**.
 
     4.   Click "Connect using different credentials" if you are not using an HBS-issued machine. If you are prompted for your username and password, enter your HBSGrid username (the part preceding @hbs.edu) and your password. If you are connecting from a non-HBS-issued machine, please add HBS\ before your username (e.g. HBS\jharvard). This specifies the proper Windows domain for authenticating your credentials.
 
-=== Mount a Volume on Mac
+=== "Mount a Volume on Mac"
     
     1.   Connect to the HBS network, either directly if you are on-campus or [via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf) otherwise.
 
