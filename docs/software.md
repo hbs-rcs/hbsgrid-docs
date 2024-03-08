@@ -113,25 +113,41 @@ pip install --prefix /path/to/project/.local some_module
 Similar to R, one will need to include this location in the [PYTHONPATH](https://docs.python.org/3/using/cmdline.html#environment-variables) using [`sys.path`](https://docs.python.org/3/library/sys.html#sys.path) as a part of one's first few lines of code or as part of a [Python startup script](https://docs.python.org/3/tutorial/appendix.html).
 
 
-## Installing Compatible Software on the HBSGrid
 
-Ideally, the application you need will have a version compatible with the HBSGrid system (currently Red Hat Enterprise Linux 7, also known as RHEL 7.) Examples include the PyCharm Python IDE and fzf command-line fuzzy-finder. If you have a compatible application, using the terminal, download and extract the program; run any installer provided (if there is no installer just move the program wherever you like); and run the software directly from the terminal. If the software is available in multiple versions, pick one that mentions "RHEL", "RPM", "Linux x86-64 / AMD64", or just "Linux".
+## Installing Compatible Software on the HBSGrid Cluster
+
+Ideally, the application you need will have a version compatible with the cluster's OS
+(operating system; currently Red Hat Enterprise Linux 7, also known as RHEL 7.) Examples
+include the PyCharm Python IDE and `fzf` command-line fuzzy-finder. If you have a
+compatible application, using the terminal, download and extract the program; run any
+installer provided (if there is no installer just move the program wherever you like); and
+run the software directly from the [terminal command
+line](./commandline.md). If the software is available
+in multiple versions, pick one that mentions "RHEL", "RPM", "Linux x86-64 / AMD64", or
+just "Linux".
 
 As an illustration, we can install PyCharm as follows:
 
-1. Connect to the HBSGrid via NoMachine, start Terminal from the menu, and download Pycharm: 
+1. Connect to the HBSGrid via NoMachine, start Terminal from the menu, and download
+Pycharm: 
 
 ``` sh
 wget https://download.jetbrains.com/python/pycharm-community-2020.1.3.tar.gz
 ```
-2. You will notice that the file has a '.tar.gz' extension, indicating that it needs to be decompressed with 'tar':
+2. You will notice that the file has a '.tar.gz' extension, indicating that it needs to be
+decompressed with [`tar`](https://www.geeksforgeeks.org/tar-command-linux-examples/):
 ``` sh
 tar xvf pycharm-community-2020.1.3.tar.gz
 ```
-3. Submit an interactive job to run Pycharm on a compute node: 
+3. [Submit an interactive job](./commandline.md) to run Pycharm on a compute node: 
 ``` sh
 bsub -I pycharm-community-2020.1.3/bin/pycharm.sh
 ```
-If all goes well you will see the Pycharm splash screen and you can start a new Python project using this popular IDE.
+If all goes well you will see the Pycharm splash screen and you can start a new Python
+project using this popular IDE.
 
-If the application you need does not have a pre-built version compatible with the HBSGrid system or you are having issues installing your compatible software, reach out to [research@hbs.edu](mailto:research@hbs.edu).
+If the application you need does not have a pre-built version compatible with the HBSGrid
+system or you are having issues installing your compatible software, reach out to
+[research@hbs.edu](mailto:research@hbs.edu).
+
+**Note: Please do not use sudo, apt-get, dnf, or rpm** programs, as these require elevated privileges, which are reserved for the cluster administrators and not mere mortals such as ourselves.
