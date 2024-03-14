@@ -28,55 +28,6 @@ demonstration:
 Your browser does not support the video tag.
 </video>
 
-## Resource recommendations
-
-When choosing RAM and CPU values, keep in mind that 
-**the system reserves these resources exclusively for your use**. That is, cores and RAM used by your job
-become unavailable for other users. Please (_please_) be considerate and do not reserve resources you don't need.
-
-### How much memory (RAM) should I ask for?
-Specific memory requirements depend on the nature of the job (meaning it will likely take less RAM to read in a file only than it would to read in a file, make a copy, and run analyses on it), but as a rough guide:
-
--   If your code runs on your local machine, start by asking for 
-    the same amount of RAM or less (for example, if your laptop has 8GB of RAM, try asking for 8GB).
-  
--   Another starting point is to request an amount of RAM equal the size of your input files (for example, if you are reading in a 4GB file, try asking for 4GB). You can also adjust this guideline based on your file type: 
-    * If you are loading in native binary data files (i.e., non-text files), 
-    ask for an amount of RAM about 1.5x the size of your data.
-  
-    * If you are importing a text file (e.g., CSV), you may need to request 
-    up to 8 - 10x the size of the text file.
-    This should be a one-time operation: We discourage ongoing reading and writing of text files, 
-    as these operations are expensive, especially on large data files. 
-    To save time and RAM, try to read your text files into binary data files 
-    and work primarily with those. (You may find Stat/Transfer helpful for this.)
-
-Once you have a starting point, you can refine these estimates in a few ways:
-
--   **While you are running a job**, you can monitor how much RAM it is using:
-    * Using a terminal within NoMachine or on your computer (note: if using the latter, you will need to have SSH'd into the cluster [LINK TO INSTRUCTIONS), type `bjobs -l | grep -E "Application|IDLE|MAX"` (or `bjobs -l <JOBID> | grep -E "Application|IDLE|MAX"` if you know the specific JOBID of interest).
-    * Look at the `MAX MEM`
-    * If, for example, you asked for 4GB of RAM and you check in on the job shortly after submitting it, and you've already used almost 4GB of RAM you should likely kill the job (`bkill <JOBID>`) as you have not requested enough, and incrementally increase the RAM request.
-
-- **After you've run a job**, review your memory usage to predict how much RAM you will need for future jobs:
-  * You can review your memory usage from a past job by running `bhist -l <JOBID>`
-    (use `bhist` alone for a list of your recently run jobs).
-  * Take note of `MAX MEM` and when you run a similar job in the future, 
-    request that amount plus about 20% for wiggle room 
-    (e.g., if your past job had a maximum memory usage of 10GB, request 12GB next time).
-
-### How many CPUs should I ask for?
-- We recommend that you **request only 1 CPU**, especially for interactive work, unless you
-know that you are using code or libraries that were written to run
-in parallel such as 
-[Matlab parallel processing toolbox](https://www.mathworks.com/help/parallel-computing/getting-started-with-parallel-computing-toolbox.html),
-[Python multiprocessing library](https://docs.python.org/3/library/multiprocessing.html),
-or the [R future package](https://future.futureverse.org/). For detailed parallel
-processing instructions [refer to our tutorial](tutorials/scaling-work.md).
-
-
-_We are grateful for the resources and documentation from NC State University's High Computing Services Website [https://hpc.ncsu.edu/Documents/LSFResources.php], which informed the write-up above._
-
 ## Advanced launcher options
 
 !!! important inline end
@@ -105,7 +56,6 @@ or activate [conda environments](https://docs.conda.io/en/latest/).
 The HBS Grid is configured with limits to prevent any single user from
 monopolizing the available resources. Understanding and working within these
 limits will make your experience on the HBS Grid more productive and enjoyable.
-
 ### Configured system limits
 
 In some cases the desktop launchers will down-grade your request to the
@@ -154,3 +104,55 @@ quick and convenient way to run interactive applications on powerful
 compute nodes. In the case where you wish to run many such jobs you
 may find it more convenient to run batch jobs. Refer to the
 [command line documentation](commandline.md) for details.
+
+## Resource recommendations
+
+When choosing RAM and CPU values, keep in mind that 
+**the system reserves these resources exclusively for your use**. That is, cores and RAM used by your job
+become unavailable for other users. Please (_please_) be considerate and do not reserve resources you don't need.
+
+### How much memory (RAM) should I ask for?
+Specific memory requirements depend on the nature of the job (meaning it will likely take less RAM to read in a file than it would to read in a file, make a copy, and run analyses on it), but as a rough guide:
+
+-   If your code runs on your local machine, start by asking for 
+    the same amount of RAM or less (for example, if your laptop has 8GB of RAM, try asking for 8GB).
+  
+-   Another starting point is to request an amount of RAM equal the size of your input files (for example, if you are reading in a 4GB file, try asking for 4GB). You can also adjust this guideline based on your file type: 
+    * If you are loading in native binary data files (i.e., non-text files), 
+    ask for an amount of RAM about 1.5x the size of your data.
+  
+    * If you are importing a text file (e.g., CSV), you may need to request 
+    up to 8 - 10x the size of the text file.
+    This should be a one-time operation: We discourage ongoing reading and writing of text files, 
+    as these operations are expensive, especially on large data files. 
+    To save time and RAM, try to read your text files into binary data files 
+    and work primarily with those. (You may find Stat/Transfer helpful for this.)
+
+Once you have a starting point, you can refine these estimates in a few ways:
+
+-   **While you are running a job**, you can monitor how much RAM it is using:
+    * Using a terminal within NoMachine or on your computer (note: if using the latter, you will need to have SSH'd into the cluster [LINK TO INSTRUCTIONS), type `bjobs -l | grep -E "Application|IDLE|MAX"` (or `bjobs -l <JOBID> | grep -E "Application|IDLE|MAX"` if you know the specific JOBID of interest).
+    * Look at the `MAX MEM`
+    * If, for example, you asked for 4GB of RAM and you check in on the job shortly after submitting it, and you've already used almost 4GB of RAM you should likely kill the job (`bkill <JOBID>`) as you have not requested enough, and incrementally increase the RAM request.
+
+- **After you've run a job**, review your memory usage to predict how much RAM you will need for future jobs:
+  * You can review your memory usage from a past job by running `bhist -l <JOBID>`
+    (use `bhist` alone for a list of your recently run jobs).
+  * Take note of `MAX MEM` and when you run a similar job in the future, 
+    request that amount plus about 20% for wiggle room 
+    (e.g., if your past job had a maximum memory usage of 10GB, request 12GB next time).
+
+### How many CPUs should I ask for?
+- We recommend that you **request only 1 CPU**, especially for interactive work, unless you
+know that you are using code or libraries that were written to run
+in parallel such as 
+[Matlab parallel processing toolbox](https://www.mathworks.com/help/parallel-computing/getting-started-with-parallel-computing-toolbox.html),
+[Python multiprocessing library](https://docs.python.org/3/library/multiprocessing.html),
+or the [R future package](https://future.futureverse.org/). For detailed parallel
+processing instructions [refer to our tutorial](tutorials/scaling-work.md).
+
+
+_We are grateful for the resources and documentation from NC State University's High Computing Services Website [https://hpc.ncsu.edu/Documents/LSFResources.php], which informed the write-up on Resource Recommendations._
+
+
+
