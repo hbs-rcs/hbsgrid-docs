@@ -127,11 +127,17 @@ Specific memory requirements depend on the nature of the job (meaning it will li
     as these operations are expensive, especially on large data files. 
     To save time and RAM, try to read your text files into binary data files 
     and work primarily with those. (You may find Stat/Transfer helpful for this.)
+-   If you really don't know where to start, each programming language has commands that will
+give you the memory usage of your data while loaded (in memory):
+    * [Stata](https://www.stata.com/manuals14/dmemory.pdf)
+    * [MATLAB](https://www.mathworks.com/matlabcentral/answers/97560-how-can-i-monitor-how-much-memory-matlab-is-using)
+    * [Python](https://www.pluralsight.com/blog/tutorials/how-to-profile-memory-usage-in-python)
+    * [R](http://adv-r.had.co.nz/memory.html)
 
 Once you have a starting point, you can refine these estimates in a few ways:
 
 -   **While you are running a job**, you can monitor how much RAM it is using:
-    * Using a terminal within NoMachine or on your computer (note: if using the latter, you will need to have SSH'd into the cluster [LINK TO INSTRUCTIONS), type `bjobs -l | grep -E "Application|IDLE|MAX"` (or `bjobs -l <JOBID> | grep -E "Application|IDLE|MAX"` if you know the specific JOBID of interest).
+    * Using a terminal within NoMachine or on your computer, type `bjobs -l | grep -E "Application|IDLE|MAX"` (or `bjobs -l <JOBID> | grep -E "Application|IDLE|MAX"` if you know the specific JOBID of interest).
     * Look at the `MAX MEM`
     * If, for example, you asked for 4GB of RAM and you check in on the job shortly after submitting it, and you've already used almost 4GB of RAM you should likely kill the job (`bkill <JOBID>`) as you have not requested enough, and incrementally increase the RAM request.
 
@@ -150,6 +156,7 @@ in parallel such as
 [Python multiprocessing library](https://docs.python.org/3/library/multiprocessing.html),
 or the [R future package](https://future.futureverse.org/). For detailed parallel
 processing instructions [refer to our tutorial](tutorials/scaling-work.md).
+- If parallelizing, do basic scaling tests (compare run times at 1-, 2-, 4-cores…)
 
 
 _We are grateful for the resources and documentation from NC State University's High Computing Services Website [https://hpc.ncsu.edu/Documents/LSFResources.php], which informed the write-up on Resource Recommendations._
