@@ -44,7 +44,7 @@ wget https://download.jetbrains.com/python/pycharm-community-2020.1.3.tar.gz
 ```
 2. You will notice that the file has a '.tar.gz' extension, indicating that it needs to be decompressed with 'tar':
 ``` sh
-tar xvf pycharm-community-2020.1.3.tar.gz
+tar -xvf pycharm-community-2020.1.3.tar.gz
 ```
 3. Submit an interactive job to run Pycharm on a compute node: 
 ``` sh
