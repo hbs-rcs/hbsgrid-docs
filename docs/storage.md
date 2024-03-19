@@ -1,5 +1,5 @@
 # 💾 Research Data Storage and Databases
-
+## Research Data Storage
 !!! info inline end "Mount Grid storage locally"
     Research storage is also accessible 
     [on Windows as a network drive](https://support.microsoft.com/en-gb/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d) 
@@ -11,16 +11,22 @@
     See the [file transfer documentation](syncfiles.md).
 
 HBS provides storage for active research projects. Research storage is 
-typically used in conjunction with HBS Grid compute and accessed 
+typically used in conjunction with the computer cluster (HBSGrid) and accessed 
 via *NoMachine* remote desktop as documented in the [Userguide](index.md).
 
-There are three different sets of storage locations that are available
+There are three sets of storage locations available
 for research work, depending on the particular usage patterns, size
 consideration, and number of people involved in the work. These are the
 [home folders](storage.md#home-folders), [scratch folders](storage.md#scratch-storage),
 and [project spaces.](storage.md#project-spaces)
 
-## Home folders {#home-folders}
+| Folder Type | Size | Expandable? | Shareable? | Backed up? | Other Considerations|
+| --- | --- | --- | --- | --- | --- |
+| [Home](storage.md#home-folders) | 100GB | No | No | Yes | This is a personal folder with size limitations that cannot be shared with others.|
+| [Scratch](storage.md#scratch-storage) | Varies | Yes | Yes | No | Files older than 60 days are deleted. This is SSD storage that is faster than other storage options.|
+| [Project](storage.md#project-spaces) | Default is 50GB | Yes | Yes | Yes | These folders are meant for collaboration and/or projects that may increase in size over time. |
+
+### Home folders {#home-folders}
 
 By default, when your grid account is created (whether this account is
 used for just storage or storage + compute), a home folder is created as
@@ -49,7 +55,7 @@ any files due to accidental deletion or corruption, please
 In addition to home folders, project spaces are another location of disk
 storage space, and are described in the next section.
 
-## Scratch storage {#scratch-storage}
+### Scratch storage {#scratch-storage}
 
 Whether you are doing batch or interactive work, at times you may need a
 temporary location to stash files that you will not keep, or your
@@ -69,7 +75,7 @@ Please see our [RCS Policies page](https://www.hbs.edu/research-computing-servic
 for more information about our scratch usage policies. 
 
 
-### Using `/export/scratch` effectively {#using-scratch}
+#### Using `/export/scratch` effectively {#using-scratch}
 
 As this volume is a shared area visible by everyone, it is important that you follow best practices for its use:
 
@@ -89,7 +95,7 @@ If you should need to keep files on the scratch volume for longer than 60 days, 
 
 Please see our Tutorials section for example scratch usage patterns.
 
-## Project spaces {#project-spaces}
+### Project spaces {#project-spaces}
 
 Project spaces (folders) are the primary, recommended location for
 storing and doing collaborative work on research storage, including HBS
@@ -106,7 +112,7 @@ If you should need to recover any files due to accidental deletion or
 corruption, please [contact RCS](mailto:research@hbs.edu).
 
 
-### Requesting a project space {#requesting-a-project-space}
+#### Requesting a project space {#requesting-a-project-space}
 
 Project spaces can be set up with faculty sponsorship and/or approval by
 filling out the [New Project Space Request
@@ -123,10 +129,9 @@ security](https://security.harvard.edu/dct).
 
 If a project space already exists and you would like to make changes to
 the space users or size, fill out the [Project Space Change Request
-Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u). Once approved by the appropriate faculty member, the request will be put in
-to the ESS group at HBS IT.
+Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u).
 
-### Archiving a project space {#archiving-a-project-space}
+#### Archiving a project space {#archiving-a-project-space}
 
 Project space usage is reviewed and confirmed on a yearly basis.
 Inactive project spaces will be backed up and archived only after
@@ -140,7 +145,7 @@ our [technical note on archiving your research
 files](https://www.hbs.edu/research-computing-services/help/technical-how-tos-and-technical-notes/archiving-your-research-files.aspx){target="_blank"}.
 
 
-## SQL Databases
+# SQL Databases
 
 RCS hosts a database server running MariaDB (an open source fork
 of MySQL) to help meet growing data storage needs.
@@ -150,14 +155,14 @@ Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXM
 RCS also can advise researchers in data storage planning, as well as the
 building of and interacting with their database.
 
-### Connecting to your Database {#connecting-to-your-database}
+## Connecting to your Database {#connecting-to-your-database}
 
 Please contact us at <research@hbs.edu> for connection parameters including
 *USER*, *HOSTNAME*, and *CA Certificates*. Note that some clients 
 (including *DBeaver*) require you to set the *SSL CA Certificate*.
 **Connections from outside the HBS Grid always require an RCS-proviced SSL CA Certificate**.
 
-#### Configuration
+### Configuration
 
 Most *MySQL* clients will read connection information from a
 configuration file found in `~/.my.cnf`. This file is used to store
@@ -197,12 +202,12 @@ You can connect to your database using any compatible client. If you
 already have one you like go ahead and use that. Otherwise we recommend
 one of the clients listed below.
 
-#### Python 
+### Python 
 Use [connector-python](https://dev.mysql.com/doc/connector-python/en/) to connect following the 
 [official documentation](https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html).
 It is recommended to [use connection settings from `~/.my.cnf`](https://dev.mysql.com/doc/connector-python/en/connector-python-option-files.html) as described above.
 
-#### R
+### R
 Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse.org/), both use connection settings from `~/.my.cnf` as described above.
 
 !!! info inline end "DBeaver driver installation"
@@ -210,14 +215,92 @@ Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse
     This is usually safe, and drivers will be stored in your home directory, under
     `~/.local/share/DBeaverData/drivers`
 
-#### Desktop
+### Desktop
 Use [DBeaver](https://dbeaver.io/) to connect following the [official documentation](https://dbeaver.com/docs/wiki/Create-Connection/). 
 Make sure to set the *CA Certificate* path in the *SSL* connection settings tab.
 
-#### Terminal
+### Terminal
 The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.
 
-### Additional MariaDB Resources {#additional-mariadb-resources}
+## Importing Data
+The following is a basic overview of the import process. Complete documentation for the `LOAD DATA` command can be found at [https://mariadb.com/kb/en/library/load-data-infile/].
+
+The general process is as follows:
+
+1. Move your data to the appropriate import folder
+2. Within MariaDB, create the database table that will hold the imported data
+3. Within MariaDB, import the data
+4. Validate the import
+5. Remove your data from the import folder
+   
+To create the database table (step 2), you will need to know the name of all columns, each column’s data type (integer, numeric with decimals, string of characters, etc), and each column’s maximum width. For example, if one of the columns in your data is US phone numbers of the format 6174953292, then you may opt to use int(10) as the column data type. This tells us that all entries will be integers with up to 10 digits. However, if you suspect some entries have dashes such as 617-495-3292, then you will need to use char(12) which stores the data as a string of characters, up to 12 characters in length.
+
+### Import Example
+
+We will use the following to illustrate importing:
+MariaDB username = jharvard  
+MariaDB database = jharvard_database  
+MariaDB database table = table_import  
+Import filename = SampleData.txt  
+
+Data:
+
+| COLUMN_1 | COLUMN_2 | COLUMN_3 |
+| --- | --- | --- |
+| 25 | Harvard | Way |
+| 86| Brattle | St | 
+
+
+Before importing, we will need to create our database table. Creating a table includes specifying the maximum size of each column. We will keep this example simple by specifying each column be char and have a maximum length of 20. Please note that you can modify your table at a later time, for instance if you need to example a column from char(20) to char(30).
+To begin, prepare the import folder as described above in the section Prevent Others From Accessing Your Data
+
+mkdir /export/mdb_external/import/jharvard
+chmod 700 /export/mdb_external/import/jharvard
+Move your data to this import folder
+
+mv SampleData.txt /export/mdb_external/import/jharvard
+! Note that mv moves the file, as opposed to cp which copies the file!
+
+cp SampleData.txt /export/mdb_external/import/jharvard
+Log into MariaDB
+
+mysql -h HOSTNAME -u jharvard -p
+Within MariaDB, create table that will hold imported data
+
+use jharvard_database; create table table_import (Column_1 char(20), Column_2 char(20), Column_3 char(20));
+
+
+Within MariaDB, import data
+
+load data local infile ‘/export/mdb_external/import/jharvard/SampleData.txt’ into table table_import fields terminated by ‘|’ lines terminated by ‘\n’ ignore 1 lines;
+
+
+
+Please note our command has 4 sections:
+
+(1) load data local infile ‘/export/mdb_external/import/jharvard/SampleData.txt’
+specify file to import
+(2) into table table_import
+specify table that will hold the imported data
+(3) fields terminated by ‘|’ lines terminated by ‘\n’
+specify delimiters (Click here for more information)
+(4) ignore 1 lines
+include this only if your file includes column header information
+Official documentation for this command may be found at [https://mariadb.com/kb/en/mariadb/load-data-infile/].
+
+We can check do a preliminary check on the first 10 rows of our data via
+
+select * from table_import limit 10;
+
+Log out of MariaDB
+
+>exit;
+Delete import folder
+
+rm -rf /export/mdb_external/import/jharvard
+
+
+## Additional MariaDB Resources {#additional-mariadb-resources}
 
 -   [MariaDB Documentation](https://mariadb.com/kb/en/mariadb/documentation/)
 -   [Getting Started with MariaDB](https://mariadb.com/products/get-started)
