@@ -22,7 +22,7 @@ and [project spaces.](storage.md#project-spaces)
 
 | Folder Type | Size | Expandable? | Shareable? | Backed up? | Other Considerations|
 | --- | --- | --- | --- | --- | --- |
-| [Home](storage.md#home-folders) | 100GB | No | No | Yes | This is a personal folder with size limitations that cannot be shared with others.|
+| [Home](storage.md#home-folders) | 150GB <br>(100GB for guests) | No | No | Yes | This is a personal folder with size limitations that cannot be shared with others.|
 | [Scratch](storage.md#scratch-storage) | Varies | Yes | Yes | No | Files older than 60 days are deleted. This is SSD storage that is faster than other storage options.|
 | [Project](storage.md#project-spaces) | Default is 50GB | Yes | Yes | Yes | These folders are meant for collaboration and/or projects that may increase in size over time. |
 
@@ -30,7 +30,7 @@ and [project spaces.](storage.md#project-spaces)
 
 By default, when your grid account is created (whether this account is
 used for just storage or storage + compute), a home folder is created as
-well.
+well. Home folders are 150GB (or 100GB for guests) and cannot be expanded (note: default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory).
 
 If you are logging in to the HBSGrid to do work via the NoMachine GUI or
 terminal, you are automatically placed in and are using this home
@@ -227,13 +227,13 @@ The following is a basic overview of the import process. Complete documentation 
 
 The general process is as follows:
 
-1. Move your data to the appropriate import folder
-2. Within MariaDB, create the database table that will hold the imported data
+1. Within MariaDB, create the database table that will hold the imported data
+2. Move your data to the appropriate import folder
 3. Within MariaDB, import the data
 4. Validate the import
 5. Remove your data from the import folder
    
-To create the database table (step 2), you will need to know the name of all columns, each column’s data type (integer, numeric with decimals, string of characters, etc), and each column’s maximum width. For example, if one of the columns in your data is US phone numbers of the format 6174953292, then you may opt to use int(10) as the column data type. This tells us that all entries will be integers with up to 10 digits. However, if you suspect some entries have dashes such as 617-495-3292, then you will need to use char(12) which stores the data as a string of characters, up to 12 characters in length.
+To create the database table (step 1), you will need to know the name of all columns, each column’s data type (integer, numeric with decimals, string of characters, etc), and each column’s maximum width. For example, if one of the columns in your data is US phone numbers of the format 6174953292, then you may opt to use int(10) as the column data type. This tells us that all entries will be integers with up to 10 digits. However, if you suspect some entries have dashes such as 617-495-3292, then you will need to use char(12) which stores the data as a string of characters, up to 12 characters in length.
 
 ### Import Example
 
@@ -250,24 +250,22 @@ Data:
 | 25 | Harvard | Way |
 | 86| Brattle | St | 
 
+1. Create a database table specifying the maximum size of each column--for this example, we will specify that all columns are char with a maximum length of 20. Please note that you can modify your table at a later time, e.g., switching from  char(20) to char(30).
+2. Prepare the import folder:
+`mkdir /export/mdb_external/import/jharvard`
+`chmod 700 /export/mdb_external/import/jharvard`  
 
-Before importing, we will need to create our database table. Creating a table includes specifying the maximum size of each column. We will keep this example simple by specifying each column be char and have a maximum length of 20. Please note that you can modify your table at a later time, for instance if you need to example a column from char(20) to char(30).
-To begin, prepare the import folder as described above in the section Prevent Others From Accessing Your Data
-
-mkdir /export/mdb_external/import/jharvard
-chmod 700 /export/mdb_external/import/jharvard
 Move your data to this import folder
+`mv SampleData.txt /export/mdb_external/import/jharvard`
 
-mv SampleData.txt /export/mdb_external/import/jharvard
 ! Note that mv moves the file, as opposed to cp which copies the file!
+`cp SampleData.txt /export/mdb_external/import/jharvard`  
 
-cp SampleData.txt /export/mdb_external/import/jharvard
 Log into MariaDB
+`mysql -h HOSTNAME -u jharvard -p`  
 
-mysql -h HOSTNAME -u jharvard -p
 Within MariaDB, create table that will hold imported data
-
-use jharvard_database; create table table_import (Column_1 char(20), Column_2 char(20), Column_3 char(20));
+`use jharvard_database; create table table_import (Column_1 char(20), Column_2 char(20), Column_3 char(20));`
 
 
 Within MariaDB, import data
