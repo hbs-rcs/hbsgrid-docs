@@ -202,12 +202,12 @@ You can connect to your database using any compatible client. If you
 already have one you like go ahead and use that. Otherwise we recommend
 one of the clients listed below.
 
-### Python 
+=== "Python"
 Use [connector-python](https://dev.mysql.com/doc/connector-python/en/) to connect following the 
 [official documentation](https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html).
 It is recommended to [use connection settings from `~/.my.cnf`](https://dev.mysql.com/doc/connector-python/en/connector-python-option-files.html) as described above.
 
-### R
+=== "R"
 Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse.org/), both use connection settings from `~/.my.cnf` as described above.
 
 !!! info inline end "DBeaver driver installation"
@@ -215,11 +215,11 @@ Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse
     This is usually safe, and drivers will be stored in your home directory, under
     `~/.local/share/DBeaverData/drivers`
 
-### Desktop
+=== "Desktop"
 Use [DBeaver](https://dbeaver.io/) to connect following the [official documentation](https://dbeaver.com/docs/wiki/Create-Connection/). 
 Make sure to set the *CA Certificate* path in the *SSL* connection settings tab.
 
-### Terminal
+=== "Terminal"
 The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.
 
 ## Importing Data
@@ -227,13 +227,13 @@ The following is a basic overview of the import process. Complete documentation 
 
 The general process is as follows:
 
-1. Within MariaDB, create the database table that will hold the imported data
-2. Move your data to the appropriate import folder
+1. Move your data to an import folder
+2. Within MariaDB, create the database table that will hold the imported data
 3. Within MariaDB, import the data
 4. Validate the import
 5. Remove your data from the import folder
    
-To create the database table (step 1), you will need to know the name of all columns, each column’s data type (integer, numeric with decimals, string of characters, etc), and each column’s maximum width. For example, if one of the columns in your data is US phone numbers of the format 6174953292, then you may opt to use int(10) as the column data type. This tells us that all entries will be integers with up to 10 digits. However, if you suspect some entries have dashes such as 617-495-3292, then you will need to use char(12) which stores the data as a string of characters, up to 12 characters in length.
+To create the database table (step 2), you will need to know the name of all columns, each column’s data type (integer, numeric with decimals, string of characters, etc), and each column’s maximum width. For example, if one of the columns in your data is US phone numbers of the format 6174953292, then you may opt to use int(10) as the column data type. This tells us that all entries will be integers with up to 10 digits. However, if you suspect some entries have dashes such as 617-495-3292, then you will need to use char(12) which stores the data as a string of characters, up to 12 characters in length.
 
 ### Import Example
 
@@ -250,53 +250,48 @@ Data:
 | 25 | Harvard | Way |
 | 86| Brattle | St | 
 
-1. Create a database table specifying the maximum size of each column--for this example, we will specify that all columns are char with a maximum length of 20. Please note that you can modify your table at a later time, e.g., switching from  char(20) to char(30).
-2. Prepare the import folder:
-`mkdir /export/mdb_external/import/jharvard`
-`chmod 700 /export/mdb_external/import/jharvard`  
+#### 1. Move your data to the appropriate import folder
 
-Move your data to this import folder
-`mv SampleData.txt /export/mdb_external/import/jharvard`
+Prepare an import folder and ensure it has the appropriate permissions:  
+`mkdir /export/mdb_external/import/jharvard`  
+`chmod 700 /export/mdb_external/import/jharvard`   
 
-! Note that mv moves the file, as opposed to cp which copies the file!
+Move your data to this import folder:  
+`mv SampleData.txt /export/mdb_external/import/jharvard`  
+
+! Note that mv moves the file, as opposed to cp which copies the file!  
 `cp SampleData.txt /export/mdb_external/import/jharvard`  
 
-Log into MariaDB
+#### 2. Within MariaDB, create the database table that will hold the imported data  
+Log into MariaDB and create table that will hold imported data:  
 `mysql -h HOSTNAME -u jharvard -p`  
 
-Within MariaDB, create table that will hold imported data
-`use jharvard_database; create table table_import (Column_1 char(20), Column_2 char(20), Column_3 char(20));`
+Create a database table specifying the maximum size of each column--e.g., below we specify that all columns are char with a maximum length of 20. Please note that you can modify your table at a later time, e.g., switching from  char(20) to char(30):  
+`use jharvard_database; create table table_import (Column_1 char(20), Column_2 char(20), Column_3 char(20));`  
+ 
+#### 3. Within MariaDB, import the data:  
+`load data local infile ‘/export/mdb_external/import/jharvard/SampleData.txt’ into table table_import fields terminated by ‘|’ lines terminated by ‘\n’ ignore 1 lines;`
 
+The command above has 4 sections:  
+(1) `_load data local infile ‘/export/mdb_external/import/jharvard/SampleData.txt’`  
+specify file to import  
+(2) `into table table_import`  
+specify table that will hold the imported data  
+(3) `fields terminated by ‘|’ lines terminated by ‘\n’`  
+specify delimiters (the character which splits data or text into separate fields). More information about delimiters can be found here: [https://mariadb.com/kb/en/delimiters/].    
+(4) `ignore 1 lines`  
+include this only if your file includes column header information  
+Official documentation for this command may be found at [https://mariadb.com/kb/en/mariadb/load-data-infile/].  
 
-Within MariaDB, import data
+#### 4. Validate the import  
+Do a preliminary check on the first 10 rows of our data:  
+`select * from table_import limit 10;`  
 
-load data local infile ‘/export/mdb_external/import/jharvard/SampleData.txt’ into table table_import fields terminated by ‘|’ lines terminated by ‘\n’ ignore 1 lines;
+Log out of MariaDB:  
+`exit;`  
 
-
-
-Please note our command has 4 sections:
-
-(1) load data local infile ‘/export/mdb_external/import/jharvard/SampleData.txt’
-specify file to import
-(2) into table table_import
-specify table that will hold the imported data
-(3) fields terminated by ‘|’ lines terminated by ‘\n’
-specify delimiters (Click here for more information)
-(4) ignore 1 lines
-include this only if your file includes column header information
-Official documentation for this command may be found at [https://mariadb.com/kb/en/mariadb/load-data-infile/].
-
-We can check do a preliminary check on the first 10 rows of our data via
-
-select * from table_import limit 10;
-
-Log out of MariaDB
-
->exit;
-Delete import folder
-
-rm -rf /export/mdb_external/import/jharvard
-
+#### 5. Remove your data from the import folder  
+`rm -rf /export/mdb_external/import/jharvard`  
 
 ## Additional MariaDB Resources {#additional-mariadb-resources}
 
