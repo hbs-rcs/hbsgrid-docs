@@ -302,7 +302,7 @@ The following is a basic overview of the export process followed by an example. 
    
 Please note that you will be copying your data to a new file, not moving it. This ensures you are the owner of the file, as opposed to the MariaDB server. Additionally note that your exported data will **NOT** include column headers/names!
 
-### Exporting Example  
+### Export Example  
 
 We will use the following to illustrate importing:  
 MariaDB username = jharvard  
