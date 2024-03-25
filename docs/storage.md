@@ -156,8 +156,7 @@ of MySQL) to help meet growing data storage needs.
 To obtain a database account, please fill out the [New
 MariaDB Account Request
 Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUNVlWWUgwM1dCSjdWWllOVEVDQUtCUUVNMS4u).
-RCS also can advise researchers in data storage planning, as well as the
-building of and interacting with their database.
+Please note that RCS provides limited support for databases.
 
 ## Connecting to your Database {#connecting-to-your-database}
 
@@ -206,6 +205,11 @@ You can connect to your database using any compatible client. If you
 already have one you like go ahead and use that. Otherwise we recommend
 one of the clients listed below.
 
+!!! info inline end "DBeaver driver installation"
+    The *DBeaver* client may prompt you to download a driver to connect to your database.
+    This is usually safe, and drivers will be stored in your home directory, under
+    `~/.local/share/DBeaverData/drivers`
+
 === "Python"
 Use [connector-python](https://dev.mysql.com/doc/connector-python/en/) to connect following the 
 [official documentation](https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html).
@@ -213,11 +217,6 @@ It is recommended to [use connection settings from `~/.my.cnf`](https://dev.mysq
 
 === "R"
 Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse.org/), both use connection settings from `~/.my.cnf` as described above.
-
-!!! info inline end "DBeaver driver installation"
-    The *DBeaver* client may prompt you to download a driver to connect to your database.
-    This is usually safe, and drivers will be stored in your home directory, under
-    `~/.local/share/DBeaverData/drivers`
 
 === "Desktop"
 Use [DBeaver](https://dbeaver.io/) to connect following the [official documentation](https://dbeaver.com/docs/wiki/Create-Connection/). 
@@ -235,7 +234,7 @@ The following is a basic overview of the import process. Complete documentation 
 4. Validate the import
 5. Remove your data from the import folder
    
-To create the database table (step 2), you will need to know the name of all columns, each column’s data type (integer, numeric with decimals, string of characters, etc), and each column’s maximum width. For example, if one of the columns in your data is US phone numbers of the format 6174953292, then you may opt to use int(10) as the column data type. This tells us that all entries will be integers with up to 10 digits. However, if you suspect some entries have dashes such as 617-495-3292, then you will need to use char(12) which stores the data as a string of characters, up to 12 characters in length.
+To create the database table (step 2), you will need to know the name of all columns, each column’s data type (integer, numeric with decimals, string of characters, etc), and each column’s maximum width. For example, if one of the columns in your data is US phone numbers of the format 6174953292, then you may opt to use int(10) as the column data type (i.e., integer with up to 10 digits). However, if you suspect some entries have dashes such as 617-495-3292, then you will need to use char(12) which stores the data as a string of characters, up to 12 characters in length.
 
 ### Import Example
 
@@ -279,6 +278,7 @@ specify table that will hold the imported data
 specify delimiters (the character which splits data or text into separate fields). More information about delimiters can be found here: [https://mariadb.com/kb/en/delimiters/](https://mariadb.com/kb/en/delimiters/).    
 (4) `ignore 1 lines`  
 include this only if your file includes column header information  
+
 Official documentation for this command may be found at [https://mariadb.com/kb/en/mariadb/load-data-infile/](https://mariadb.com/kb/en/mariadb/load-data-infile/).  
 
 #### 4. Validate the import  
@@ -346,7 +346,8 @@ Log out of MariaDB:
 `chmod 700 /export/mdb_external/export/jharvard`  
 
 #### 4. Copy your data out of the export folder  
-*Copy* (command `cp`), don't move, the data to ensure you have ownership as opposed to the MariaDB server:  
+*Copy* (`cp`), *don't move*, the data to ensure you have ownership as opposed to the MariaDB server: 
+
 Option 1: Copy data to your home dir:  
 `cp /export/mdb_external/export/jharvard/my_export.dat ~/`  
 
