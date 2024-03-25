@@ -203,12 +203,7 @@ file by opening a *Terminal* and running this command:
 
 You can connect to your database using any compatible client. If you 
 already have one you like go ahead and use that. Otherwise we recommend
-one of the clients listed below.
-
-!!! info inline end "DBeaver driver installation"
-    The *DBeaver* client may prompt you to download a driver to connect to your database.
-    This is usually safe, and drivers will be stored in your home directory, under
-    `~/.local/share/DBeaverData/drivers`
+one of the clients listed below. 
 
 === "Python"
 Use [connector-python](https://dev.mysql.com/doc/connector-python/en/) to connect following the 
@@ -218,9 +213,9 @@ It is recommended to [use connection settings from `~/.my.cnf`](https://dev.mysq
 === "R"
 Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse.org/), both use connection settings from `~/.my.cnf` as described above.
 
-=== "Desktop"
+=== "Desktop and DBeaver"
 Use [DBeaver](https://dbeaver.io/) to connect following the [official documentation](https://dbeaver.com/docs/wiki/Create-Connection/). 
-Make sure to set the *CA Certificate* path in the *SSL* connection settings tab.
+Make sure to set the *CA Certificate* path in the *SSL* connection settings tab. The *DBeaver* client may prompt you to download a driver to connect to your database. This is usually safe, and drivers will be stored in your home directory, under `~/.local/share/DBeaverData/drivers`
 
 === "Terminal"
 The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.
