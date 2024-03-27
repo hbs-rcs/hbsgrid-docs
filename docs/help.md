@@ -49,7 +49,7 @@ To help us help you, **please work through the relevant list(s)** and **include 
 4.  Did you ask for > 50-100 GB RAM and/or > 4-8 cores? If so:
     - Are you over-asking? Could your request be reduced using information from previous runs or based on past usage or [data file sizes/types](https://hbs-rcs.github.io/hbsgrid-docs/menulaunch/#resource-recommendations)?
     - Are you doing "big data" work? Could this be done more efficiently?
-5.  If using a terminal to start your interactive or batch sessions, did you submit your job to the [correct queue with the correct parameters](https://hbs-rcs.github.io/hbsgrid-docs/commandline/)?
+5.  If using a terminal, did you submit your job to the [correct queue with the correct parameters](https://hbs-rcs.github.io/hbsgrid-docs/commandline/)? Or did you submit that could never be scheduled (e.g. a RAM size that won't fit anywhere)?
 
 ## Running Interactive & Batch Applications (Jobs) - Crashes & Problems
 
