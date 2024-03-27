@@ -44,7 +44,7 @@ To help us help you, **please work through the relevant list(s)** and **include 
 1.  **If you are working in NoMachine**, did you get a pop-window warning? Is this explanation indicative of the problem (e.g., "Job Requirements Not Satisfied" == no room yet on the cluster)?
 2.  Have you run the HBSGrid Job Monitor script or checked the [status of your job](https://hbs-rcs.github.io/hbsgrid-docs/trouble/#troubleshooting-jobs-and-resources) using the terminal?
     -  The Job Monitor script can be found under "System Tools" in the Applications menu or simply by searching for "Job Monitor."
-    -  If you are using NoMachine, the terminal can be found under applications. To check the status of the job, request 4GB of RAM and 1 CPU to avoid launching another interactive job.
+    -  Launch NoMachine's terminal via Applications > System Tools > Terminal, select 4GB RAM (and 1 CPU) to get a local terminal for using `bjobs` and its options.
 3.  Do you already have 3 interactive sessions or 16 interactive cores running, or do you already have 150 cores running in total on the cluster? If you do, you have [reached the limit of the resources one user can request](https://hbs-rcs.github.io/hbsgrid-docs/menulaunch/#system-resources-limits).
 4.  Are you asking for very large amounts of RAM / cores? If you are:
     - Are you over-asking? Could your request be reduced using information from previous runs or based on past usage or [data file sizes/types](https://hbs-rcs.github.io/hbsgrid-docs/menulaunch/#resource-recommendations)?
