@@ -24,7 +24,7 @@ To help us help you, **please work through the relevant list(s)** and **include 
 2.  **If you received an email indicating that the project space sponsor has approved your access**, have at least 2 hours passed since you were approved? This is how long the approval may take to sync in our systems.
 3.  **If you are trying to access the project space by mounting/mapping the drive**, please check:
     - Are you [connected to the appropriate network](https://hbs-rcs.github.io/hbsgrid-docs/trouble/#network-and-vpn): i.e., the HBS VPN if off-campus, or to the wired HBS ethernet/HBSSECURE wireless if on-campus? 
-    - Are you using the correct path / URL? (Note here to link to mapping instructions)
+    - Are you using the correct path / URL? (https://www.hbs.edu/research-computing-services/resources/research-storage/accessing-spaces-and-storage.aspx)
 4.  **If you are trying to access the project space via NoMachine**, have you tried terminating your session and logging back in?
 5.  **If you are trying to access the project space via Terminal**, have you tried accessing the project space from a new terminal?
 
