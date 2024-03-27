@@ -32,7 +32,8 @@ To help us help you, **please work through the relevant list(s)** and **include 
 1.  Have you hit the quota for the home or project folder? 
     - You may have received an email notifying you about having reached storage quotas on your home folder or project space.
     - You can also check your disk usage by running the command `df -h filepath/to/directory`.
-2.  Do you have the appropriate read or read/write access to the files / folders? For example, if your script writes to a sub-folder in your project space, but you do not have read/write access, you will receive a permission denied error.
+2.  Are the permissions set appropriately for (shared) read/write access? 
+    - Inconsistent group ownership or read/write access can cause permission denied errors.
     - You can check the permissions on files and directories either by viewing the properties of the item in the GUI File Manager in NoMachine or by running `ls -al filepath/to/directory` in a terminal. 
     - File permissions can be changed using [our instructions here](https://hbs-rcs.github.io/hbsgrid-docs/worksafe/#file-ownership-and-permissions). If you do not have the rights to do so, first check with your colleagues on the project folder to see if they can change the permissions; the owner of the file or folder should be able to do so.
 3.  Did you transfer data via mounted volumes instead of via SFTP (e.g., Filezilla or Cyberduck)? Doing so often results in unexpected file / folder permissions. Please see our instructions in 2b to change the permissions if this is what is causing the issue, and we recommend using [other data transfer methods](https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/#transfer-data-fromto-local-storage) going forward.
