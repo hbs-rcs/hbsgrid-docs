@@ -29,7 +29,7 @@ To help us help you, **please work through the relevant list(s)** and **include 
 5.  **If you are trying to access the project space via Terminal**, have you tried accessing the project space from a new terminal?
 
 ## Storage & Project Spaces - Permission Problems
-1.  Is the directory full? 
+1.  Have you hit the quota for the home or project folder? 
     - You may have received an email notifying you about having reached storage quotas on your home folder or project space.
     - You can also check your disk usage by running the command `df -h filepath/to/directory`.
 2.  Do you have the appropriate read or read/write access to the files / folders? For example, if your script writes to a sub-folder in your project space, but you do not have read/write access, you will receive a permission denied error.
