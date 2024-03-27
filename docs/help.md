@@ -46,7 +46,7 @@ To help us help you, **please work through the relevant list(s)** and **include 
     -  The Job Monitor script can be found under "System Tools" in the Applications menu or simply by searching for "Job Monitor."
     -  Launch NoMachine's terminal via Applications > System Tools > Terminal, select 4GB RAM (and 1 CPU) to get a local terminal for using `bjobs` and its options.
 3.  Do you already have 3 interactive sessions or 16 interactive cores running, or do you already have 150 cores running in total on the cluster? If you do, you have [reached the limit of the resources one user can request](https://hbs-rcs.github.io/hbsgrid-docs/menulaunch/#system-resources-limits).
-4.  Are you asking for very large amounts of RAM / cores? If you are:
+4.  Did you ask for > 50-100 GB RAM and/or > 4-8 cores? If so:
     - Are you over-asking? Could your request be reduced using information from previous runs or based on past usage or [data file sizes/types](https://hbs-rcs.github.io/hbsgrid-docs/menulaunch/#resource-recommendations)?
     - Are you doing "big data" work? Could this be done more efficiently?
 5.  If using a terminal to start your interactive or batch sessions, did you submit your job to the [correct queue with the correct parameters](https://hbs-rcs.github.io/hbsgrid-docs/commandline/)?
