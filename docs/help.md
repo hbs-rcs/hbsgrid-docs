@@ -40,7 +40,8 @@ To help us help you, **please work through the relevant list(s)** and **include 
 
 ## Running Interactive & Batch Applications (Jobs) - PENDs or Not Running (#troubleshooting-running-jobs)
 
-1.  **If you are working in NoMachine**, did you get a pop-window warning? Is this explanation indicative of the problem (e.g., "Job Requirements Not Satisfied" == no room yet on the cluster)?
+1.  **If using the GUI Launchers in NoMachine**, did a warning dialog appear? 
+    - Is this explanation – "Job Requirements Not Satisfied" == no room yet on the cluster – indicative of the problem?
 2.  Have you **run the HBSGrid Job Monitor script or checked the [status of your job](https://hbs-rcs.github.io/hbsgrid-docs/trouble/#troubleshooting-jobs-and-resources) using the terminal**?
     -  The Job Monitor script can be found under "System Tools" in the Applications menu or simply by searching for "Job Monitor."
     -  Launch NoMachine's terminal via Applications > System Tools > Terminal, select 4GB RAM (and 1 CPU) to get a local terminal for using `bjobs` and its options.
