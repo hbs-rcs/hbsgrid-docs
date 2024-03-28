@@ -43,7 +43,7 @@ To help us help you, **please work through the relevant list(s)** and **include 
 1.  **If using the GUI Launchers in NoMachine**, did a warning dialog appear? 
     - Is this explanation – "Job Requirements Not Satisfied" == no room yet on the cluster – indicative of the problem?
 2.  Have you **run the HBSGrid Job Monitor script or checked the [status of your job](https://hbs-rcs.github.io/hbsgrid-docs/trouble/#troubleshooting-jobs-and-resources) using the terminal**?
-    -  The Job Monitor script can be found under "System Tools" in the Applications menu or simply by searching for "Job Monitor."
+    -  In NoMachine/Gnome, select Applications > System Tools > HBSGrid Job Monitor, or simply search for "Job Monitor".
     -  Launch NoMachine's terminal via Applications > System Tools > Terminal, select 4GB RAM (and 1 CPU) to get a local terminal for using `bjobs` and its options.
 3.  Do you already have **3 interactive sessions or 16 interactive cores running**, or do you already have **150 cores running in total** on the cluster? If you do, you have [reached the limit of the resources one user can request](https://hbs-rcs.github.io/hbsgrid-docs/menulaunch/#system-resources-limits). You can wait for these jobs to finish or you may opt to terminate one of your running jobs to prioritze another:
     - Launch NoMachine's terminal via Applications > System Tools > Terminal, select 4GB RAM (and 1 CPU) to get a local terminal. Review your running jobs using `bjobs` and its options. You can terminate a job using the `bkill JOBID` command or all jobs using `bkill 0`.
