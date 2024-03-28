@@ -7,7 +7,7 @@ Our support team is happy to assist you.
 We've provided checklists below for the most common issues that our users experience. 
 To help us help you, **please work through the relevant list(s)** and **include all relevant information** (LSF logs, error logs and messages, etc.) and at which step you encountered an issue when you reach out to us.
 
-## HBSGrid Account & Login Issues (#troubleshooting-account)
+## HBSGrid Account & Login Issues
 
 1.  **If you are a guest**, have you successfully completed our [instructions](https://secure.hbs.edu/accountManagement/guest/research/new-member-instructions) to obtain access to the cluster?
 2.  Are you **[connected to the appropriate network](https://hbs-rcs.github.io/hbsgrid-docs/trouble/#network-and-vpn)**: i.e., the HBS VPN if off-campus, or to the wired HBS ethernet/HBSSECURE wireless if on-campus? 
@@ -17,7 +17,7 @@ To help us help you, **please work through the relevant list(s)** and **include 
     - Is your [home folder full](https://hbs-rcs.github.io/hbsgrid-docs/trouble/#disk-quota)?
     - Have you [altered your login scripts](https://hbs-rcs.github.io/hbsgrid-docs/trouble/#shell-misconfiguration) (.bashrc / .bash_profile)? Activating conda, software modules or other environments in these config files can cause problems with NoMachine connections.
 
-## Storage & Project Spaces - Access Problems (#troubleshooting-spaces)
+## Storage & Project Spaces - Access Problems
 
 1.  Has your **access been approved by the sponsor of your space**? 
     - When you request access, our [automated system sends the project space sponsor an email](https://hbs-rcs.github.io/hbsgrid-docs/accountmanagement/#project-space-access) to formally approve your access. We recommend contacting them to ensure they have received the email to approve access.
@@ -28,7 +28,7 @@ To help us help you, **please work through the relevant list(s)** and **include 
 4.  **If you are trying to access the project space via NoMachine**, have you tried terminating your session and logging back in?
 5.  **If you are trying to access the project space via Terminal**, have you tried accessing the project space from a new terminal?
 
-## Storage & Project Spaces - Permission Problems (#troubleshooting-permissions)
+## Storage & Project Spaces - Permission Problems
 1.  Have you hit the **quota for the home or project folder**? 
     - You may have received an email notifying you about having reached storage quotas on your home folder or project space.
     - You can also check your disk usage *for project spaces* by running the command `df -h filepath/to/directory`.
@@ -38,7 +38,7 @@ To help us help you, **please work through the relevant list(s)** and **include 
     - Use our [File Permissions instructions](https://hbs-rcs.github.io/hbsgrid-docs/worksafe/#file-ownership-and-permissions) to change file/directory permissions. Enlist a colleague's help if needed, especially if the person owns the item in question.
 3.  Did you **transfer data via mounted volumes** instead of via SFTP (e.g., Filezilla or Cyberduck)? Doing so often results in unexpected file / folder permissions. Please see our instructions in section 2 to change the permissions if this is what is causing the issue, and we recommend using [other data transfer methods](https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/#transfer-data-fromto-local-storage) going forward.
 
-## Running Interactive & Batch Applications (Jobs) - PENDs or Not Running (#troubleshooting-running-jobs)
+## Running Interactive & Batch Applications (Jobs) - PENDs or Not Running 
 
 1.  **If using the GUI Launchers in NoMachine**, did a warning dialog appear? 
     - Is this explanation – "Job Requirements Not Satisfied" == no room yet on the cluster – indicative of the problem?
