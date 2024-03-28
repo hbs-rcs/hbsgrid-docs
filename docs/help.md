@@ -35,7 +35,7 @@ To help us help you, **please work through the relevant list(s)** and **include 
 2.  Are the **permissions set appropriately for (shared) read/write access**? 
     - Inconsistent group ownership or read/write access can cause permission denied errors.
     - Verify the permissions by viewing the item's properties in the Files browser in NoMachine/Gnome or by running `ls -al filepath/to/directory` in a terminal. 
-    - File permissions can be changed using [our instructions here](https://hbs-rcs.github.io/hbsgrid-docs/worksafe/#file-ownership-and-permissions). If you do not have the rights to do so, first check with your colleagues on the project folder to see if they can change the permissions; the owner of the file or folder should be able to do so.
+    - Use our [File Permissions instructions](https://hbs-rcs.github.io/hbsgrid-docs/worksafe/#file-ownership-and-permissions) to change file/directory permissions. Enlist a colleague's help if needed, especially if the person owns the item in question.
 3.  Did you **transfer data via mounted volumes** instead of via SFTP (e.g., Filezilla or Cyberduck)? Doing so often results in unexpected file / folder permissions. Please see our instructions in section 2 to change the permissions if this is what is causing the issue, and we recommend using [other data transfer methods](https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/#transfer-data-fromto-local-storage) going forward.
 
 ## Running Interactive & Batch Applications (Jobs) - PENDs or Not Running (#troubleshooting-running-jobs)
