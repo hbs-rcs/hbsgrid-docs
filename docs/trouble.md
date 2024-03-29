@@ -40,6 +40,18 @@ You can fix this problem yourself in a couple of ways:
 2.  **By GUI**: Use a [GUI SFTP client like FileZilla or CyberDuck](https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/#transfer-data-fromto-local-storage) 
     to log into your storage and clean up your home directory by moving/deleting files and emptying your trash folder.
 
+### NoMachine Hanging While Loading Session
+
+If you get stuck on a spinning loading wheel when trying to connect to a NoMachine session:
+
+1. Right click on the Virtual Desktop button and select "Terminate session."
+2. Start a new NoMachine session.
+
+To avoid such issues and to prevent instability on the login nodes, we recommend that users 
+**always log out of NoMachine completely** when they are finished with their work.
+
+If you still cannot get a NoMachine session after following the above steps, please [contact RCS](mailto:research@hbs.edu).
+
 ### Shell misconfiguration
 
 Some users like to configure the startup behavior of their login shell by editing the
