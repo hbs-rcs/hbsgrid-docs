@@ -51,3 +51,14 @@ To help us help you, **please work through the relevant list(s)** and **include 
     - Are you over-asking? Could your request be reduced using information from previous runs or based on past usage or [data file sizes/types](https://hbs-rcs.github.io/hbsgrid-docs/menulaunch/#resource-recommendations)?
     - Are you doing "big data" work? Could this be done more efficiently?
 6.  **If using a terminal**, did you submit your job to the [correct queue with the correct parameters](https://hbs-rcs.github.io/hbsgrid-docs/commandline/)? Or did you submit a job that could never be scheduled (e.g. a RAM size that won't fit anywhere)?
+
+## Running Interactive & Batch Applications (Jobs) - Crashes & Problems 
+
+1.  Do you have the jobID of your program?
+    -  If not, use `bhist –a` and/or `bhist -l jobid` to get LSF details 
+2.  Have you [exceeded the time limit for your queue or run session](https://hbs-rcs.github.io/hbsgrid-docs/commandline/#job-queues-limits)? 
+3.  Does your program generate its own logs? If so, what do these indicate? 
+4.  Are you writing log entries to troubleshoot where you are having problems? 
+5.  **If you are running a batch program**, are you saving the cluster errors and output for your job? This can be accomplished using the bsub [-o](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=o-o) and [-e](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=o-e) options, e.g., `bsub -q short -W 6:00 -R "rusage[mem=4000]" -M 4000 -o output_%J.out -e error_%J.err -B -N -u jharvard@hbs.edu` 
+  
+If you need additional assistance from RCS, please include the [JOBID](https://hbs-rcs.github.io/hbsgrid-docs/trouble/#troubleshooting-jobs-and-resources) and any of the above logs in your email. 
