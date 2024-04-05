@@ -88,8 +88,6 @@ As this volume is a shared area visible by everyone, it is important that you fo
 
 If you should need to keep files on the scratch volume for longer than 60 days, please contact RCS.  
 
-Please see our Tutorials section for example scratch usage patterns.  
-
 #### Undeleted Trash files on Scratch {#undeleted-files-scratch}
 Although your Trash may appear empty,  'trashed' files may still exist in a hidden folder on scratch. To check whether this is the case, `run ls -al /export/scratch` and see whether a .Trash folder with your username is listed.
  
