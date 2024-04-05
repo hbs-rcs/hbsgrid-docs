@@ -45,11 +45,30 @@ For example faculty member John Harvard's home folder would be at:
 When space in your home folder fills up, **you will not be able to do any more work**, which may
 lead to programs acting strangely or crashing altogether, disk error
 notices, or input/output errors. Keep an eye on your space usage and 
-periodically remove any old files that are no longer needed.
+periodically remove any old files that are no longer needed. 
 
 Home folders are backed up every night. If you should need to recover
 any files due to accidental deletion or corruption, please
 [contact RCS](mailto:research@hbs.edu).
+
+[!WARNING] 
+#### Reaching your home folder limit can prevent *NoMachine* sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine. 
+
+You can fix this problem yourself in a couple of ways:
+
+1.  **By Terminal**: Open a terminal (in the Windows search toolbar, type "Cmd" or "Windows PowerShell"; in the Mac search toolbar, type "Terminal") and run
+    ```sh
+    ssh <username>@hbsgrid.hbs.edu
+    ```
+    (replace `<username>` with your actual HBS Grid username). Once connected you can use terminal
+    commands like `ls` to list files in the directory, `rm` (remove) plus the name of the file to remove files you don't need,
+    or `mv` (move) plus the name of your file and a path to a new location to move files.
+    Removing and moving files can help get your home directory back under your storage 
+    quota. You can also run `gio trash --empty` to empty the trash, which may give you enough 
+    breathing room to permit NoMachine login.
+    
+2. **By GUI**: Use a [GUI SFTP client like FileZilla or CyberDuck](https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/#transfer-data-fromto-local-storage) 
+    to log into your storage and clean up your home directory by moving/deleting files and emptying your trash folder.
 
 ### Scratch storage {#scratch-storage}
 
@@ -84,7 +103,7 @@ As this volume is a shared area visible by everyone, it is important that you fo
 
     -   In terminal, execute the command `/usr/local/app/scripts/create_scratch_folder.sh`
 
--   Clean up files when you no longer need them, so that others can use the additional space immediately
+-   Clean up files when you no longer need them, so that others can use the additional space immediately. Please note that this includes [undeleted trash files on scratch](storage.md#undeleted-files-scratch). Although your trash may appear empty, 'trashed' files may still exist in a hidden folder and take up space. 
 
 If you should need to keep files on the scratch volume for longer than 60 days, please contact RCS.  
 
@@ -102,15 +121,14 @@ We recommend that you review and 'delete permanently' the files in your NoMachin
 Project spaces (folders) are the primary, recommended location for
 storing and doing collaborative work on research storage, including HBS
 and guest user accounts. This is in contrast to home folders, which are
-accessible only by the account holder. Both home folders and project
-spaces are backed up every evening. 
+accessible only by the account holder. 
 
 The default size is 50GB, with increases granted upon request and with
 space available. Keep an eye on the space usage, as project spaces that
 reach capacity will throw errors in programs and when transferring
 files, and data loss may result.
 
-If you should need to recover any files due to accidental deletion or
+Project spaces are backed up every evening. If you should need to recover any files due to accidental deletion or
 corruption, please [contact RCS](mailto:research@hbs.edu).
 
 
@@ -263,7 +281,7 @@ Create a database table that will hold imported data, specifying the maximum siz
 `load data local infile ‘/export/mdb_external/import/jharvard/SampleData.txt’ into table table_import fields terminated by ‘|’ lines terminated by ‘\n’ ignore 1 lines;`
 
 The command above has 4 sections:  
-(1) `_load data local infile ‘/export/mdb_external/import/jharvard/SampleData.txt’`  
+(1) `load data local infile ‘/export/mdb_external/import/jharvard/SampleData.txt’`  
 specify file to import  
 (2) `into table table_import`  
 specify table that will hold the imported data  
