@@ -25,7 +25,7 @@ and [project spaces.](storage.md#project-spaces)
 | [Scratch](storage.md#scratch-storage) | Varies | Yes | Yes | No | Files older than 60 days are deleted and files are **not backed up**. This is SSD storage that is faster than other storage options.|
 | [Project](storage.md#project-spaces) | Default is 50GB | Yes | Yes | Yes | These folders are meant for collaboration and/or projects that may increase in size over time. |      
 
-* Default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory  
+*Default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory  
 
 ### Home folders {#home-folders}
 
