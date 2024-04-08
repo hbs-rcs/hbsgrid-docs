@@ -24,7 +24,6 @@ and [project spaces.](storage.md#project-spaces)
 | [Home](storage.md#home-folders) | 150GB <br>(100GB for guests)[^*] | No | No | Yes | This is a personal folder with size limitations that cannot be shared with others.|
 | [Scratch](storage.md#scratch-storage) | Varies | Yes | Yes | No | Files older than 60 days are deleted and files are **not backed up**. This is SSD storage that is faster than other storage options.|
 | [Project](storage.md#project-spaces) | Default is 50GB | Yes | Yes | Yes | These folders are meant for collaboration and/or projects that may increase in size over time. |  
-
 [^*]: Default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory  
 
 ## Home folders {#home-folders}
@@ -52,23 +51,23 @@ any files due to accidental deletion or corruption, please
 [contact RCS](mailto:research@hbs.edu).
 
 !!! warning
-### Reaching your home folder limit can prevent *NoMachine* sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine. 
-
-You can fix this problem yourself in a few ways:
-
-1.  **By Terminal**: Open a terminal (in the Windows search toolbar, type "Cmd" or "Windows PowerShell"; in the Mac search toolbar, type "Terminal") and run
-    ```sh
-    ssh <username>@hbsgrid.hbs.edu
-    ```
-    (replace `<username>` with your actual HBS Grid username). Once connected you can use terminal
-    commands like `ls` to list files in the directory, `rm` (remove) plus the name of the file to remove files you don't need,
-    or `mv` (move) plus the name of your file and a path to a new location to move files.
-    Removing and moving files can help get your home directory back under your storage 
-    quota. You can also run `gio trash --empty` to empty the trash, which may give you enough 
-    breathing room to permit NoMachine login.
-    
-2. **By GUI**: Use a [GUI SFTP client like FileZilla or CyberDuck](https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/#transfer-data-fromto-local-storage) 
-    to log into your storage and clean up your home directory by moving/deleting files and emptying your trash folder.
+        ### Reaching your home folder limit can prevent *NoMachine* sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine. 
+        
+        You can fix this problem yourself in a few ways:
+        
+        1.  **By Terminal**: Open a terminal (in the Windows search toolbar, type "Cmd" or "Windows PowerShell"; in the Mac search toolbar, type "Terminal") and run
+            ```sh
+            ssh <username>@hbsgrid.hbs.edu
+            ```
+            (replace `<username>` with your actual HBS Grid username). Once connected you can use terminal
+            commands like `ls` to list files in the directory, `rm` (remove) plus the name of the file to remove files you don't need,
+            or `mv` (move) plus the name of your file and a path to a new location to move files.
+            Removing and moving files can help get your home directory back under your storage 
+            quota. You can also run `gio trash --empty` to empty the trash, which may give you enough 
+            breathing room to permit NoMachine login.
+            
+        2. **By GUI**: Use a [GUI SFTP client like FileZilla or CyberDuck](https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/#transfer-data-fromto-local-storage) 
+            to log into your storage and clean up your home directory by moving/deleting files and emptying your trash folder.  
 
 ## Scratch storage {#scratch-storage}
 
