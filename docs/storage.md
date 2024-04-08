@@ -1,5 +1,7 @@
 # Research Data Storage
 
+## Data Storage on the HBSGrid
+
 HBS provides storage for active research projects. Research storage is 
 typically used in conjunction with the computer cluster (HBSGrid) and accessed 
 via *NoMachine* remote desktop as documented in the [Userguide](index.md).
@@ -18,7 +20,7 @@ and [project spaces.](storage.md#project-spaces)
 
 *Default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory  
 
-## Home folders {#home-folders}
+### Home folders {#home-folders}
 
 By default, when your account is created (whether this account is
 used for just storage or storage + computing), a home folder is created. Home folders are 150GB (or 100GB for guests) and cannot be expanded (note: default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory).
@@ -43,7 +45,7 @@ any files due to accidental deletion or corruption, please
 [contact RCS](mailto:research@hbs.edu).
 
 !!! warning 
-### Reaching your home folder limit can prevent *NoMachine* sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine. {#home-folder-quota}
+#### Reaching your home folder limit can prevent *NoMachine* sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine. {#home-folder-quota}
         
 You can fix this problem yourself in a few ways:
         
@@ -56,7 +58,7 @@ You can fix this problem yourself in a few ways:
             
 2. **By GUI**: Use a [GUI SFTP client like FileZilla or CyberDuck](https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/#transfer-data-fromto-local-storage) to log into your storage and clean up your home directory by moving/deleting files and emptying your trash folder.  
 
-## Scratch storage {#scratch-storage}
+### Scratch storage {#scratch-storage}
 
 Whether you are doing batch or interactive work, at times you may need a
 temporary location to stash files that you will not keep, or your
@@ -75,7 +77,7 @@ _Nota bene_:
 Please see our [RCS Policies page](https://www.hbs.edu/research-computing-services/about-us/terms-of-service/policies.aspx#scratch)
 for more information about our scratch usage policies. 
 
-### Using `/export/scratch` effectively {#using-scratch}
+#### Using `/export/scratch` effectively {#using-scratch}
 
 As this volume is a shared area visible by everyone, it is important that you follow best practices for its use:
 
@@ -93,7 +95,7 @@ As this volume is a shared area visible by everyone, it is important that you fo
 
 If you should need to keep files on the scratch volume for longer than 60 days, please contact RCS.  
 
-### Undeleted Trash files on Scratch {#undeleted-files-scratch}
+#### Undeleted Trash files on Scratch {#undeleted-files-scratch}
 Although your Trash may appear empty,  'trashed' files may still exist in a hidden folder on scratch. To check whether this is the case, run `ls -al /export/scratch` and see whether a .Trash folder with your username is listed.
  
 We recommend that you review and 'delete permanently' the files in your NoMachine/Gnome Trash. If you are still uncertain or your Trash folder is empty, you can delete your "trash" folder on `/export/scratch` with one of the following three terminal commands:
@@ -102,7 +104,7 @@ We recommend that you review and 'delete permanently' the files in your NoMachin
 - `rm -rI /export/scratch/.Trash-$(id -u $USER)`    # to be prompted, but less intrusive
 - `rm -rf /export/scratch/.Trash-$(id -u $USER`)    # NO PROMPT
 
-## Project spaces {#project-spaces}
+### Project spaces {#project-spaces}
 
 Project spaces (folders) are the primary, recommended location for
 storing and doing collaborative work on research storage, including HBS
@@ -117,7 +119,7 @@ files, and data loss may result.
 Project spaces are backed up every evening. If you should need to recover any files due to accidental deletion or
 corruption, please [contact RCS](mailto:research@hbs.edu).
 
-### Requesting a project space {#requesting-a-project-space}
+#### Requesting a project space {#requesting-a-project-space}
 
 Project spaces can be set up with faculty sponsorship and/or approval by
 filling out the [New Project Space Request
@@ -136,7 +138,7 @@ If a project space already exists and you would like to make changes to
 the space users or size, fill out the [Project Space Change Request
 Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u).
 
-### Archiving a project space {#archiving-a-project-space}
+#### Archiving a project space {#archiving-a-project-space}
 
 Project space usage is reviewed and confirmed on a yearly basis.
 Inactive project spaces will be backed up and archived only after
@@ -150,7 +152,7 @@ our [technical note on archiving your research
 files](https://www.hbs.edu/research-computing-services/help/technical-how-tos-and-technical-notes/archiving-your-research-files.aspx){target="_blank"}.
 
 
-# SQL Databases
+## SQL Databases
 
 RCS hosts a database server running MariaDB (an open source fork
 of MySQL) to help meet growing data storage needs.
@@ -159,14 +161,14 @@ MariaDB Account Request
 Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUNVlWWUgwM1dCSjdWWllOVEVDQUtCUUVNMS4u).
 Please note that RCS provides limited support for databases.
 
-## Connecting to your Database {#connecting-to-your-database}
+### Connecting to your Database {#connecting-to-your-database}
 
 Please contact us at <research@hbs.edu> for connection parameters including
 *USER*, *HOSTNAME*, and *CA Certificates*. Note that some clients 
 (including *DBeaver*) require you to set the *SSL CA Certificate*.
 **Connections from outside the HBS Grid always require an RCS-proviced SSL CA Certificate**.
 
-### Configuration {#configuration-database}
+#### Configuration {#configuration-database}
 
 Most *MySQL* clients will read connection information from a
 configuration file found in `~/.my.cnf`. This file is used to store
@@ -225,7 +227,7 @@ one of the clients listed below.
 
     The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.
 
-## Importing Data {#importing-database}
+### Importing Data {#importing-database}
 The following is a basic overview of the import process. Complete documentation for the `LOAD DATA` command can be found at [https://mariadb.com/kb/en/library/load-data-infile/](https://mariadb.com/kb/en/library/load-data-infile/).
 
 1. Move your data to an import folder
@@ -236,7 +238,7 @@ The following is a basic overview of the import process. Complete documentation 
    
 To create the database table (step 2), you will need to know the name of all columns, each column’s data type (integer, numeric with decimals, string of characters, etc), and each column’s maximum width. For example, if one of the columns in your data is US phone numbers of the format 6174953292, then you may opt to use int(10) as the column data type (i.e., integer with up to 10 digits). However, if you suspect some entries have dashes such as 617-495-3292, then you will need to use char(12) which stores the data as a string of characters, up to 12 characters in length.
 
-### Import Example
+#### Import Example
 
 We will use the following to illustrate importing:  
 MariaDB username = jharvard  
@@ -251,7 +253,7 @@ Data:
 | 25 | Harvard | Way |
 | 86| Brattle | St | 
 
-#### 1. Move your data to the appropriate import folder  
+##### 1. Move your data to the appropriate import folder  
 Prepare an import folder and ensure it has the appropriate permissions:   
 `mkdir /export/mdb_external/import/jharvard`  
 `chmod 700 /export/mdb_external/import/jharvard`   
@@ -259,14 +261,14 @@ Prepare an import folder and ensure it has the appropriate permissions:
 Move your data to this import folder:  
 `mv SampleData.txt /export/mdb_external/import/jharvard`  
 
-#### 2. Create the database table that will hold the imported data  
+##### 2. Create the database table that will hold the imported data  
 Log into MariaDB:  
 `mysql -h HOSTNAME -u jharvard -p`  
 
 Create a database table that will hold imported data, specifying the maximum size of each column. For example, below we specify that all columns are char with a maximum length of 20. You can modify your table at a later time, e.g., switching from  char(20) to char(30):  
 `use jharvard_database; create table table_import (Column_1 char(20), Column_2 char(20), Column_3 char(20));`  
  
-#### 3. Import the data:  
+##### 3. Import the data:  
 `load data local infile ‘/export/mdb_external/import/jharvard/SampleData.txt’ into table table_import fields terminated by ‘|’ lines terminated by ‘\n’ ignore 1 lines;`
 
 The command above has 4 sections:  
@@ -281,17 +283,17 @@ include this only if your file includes column header information
 
 Official documentation for this command may be found at [https://mariadb.com/kb/en/mariadb/load-data-infile/](https://mariadb.com/kb/en/mariadb/load-data-infile/).  
 
-#### 4. Validate the import  
+##### 4. Validate the import  
 Do a preliminary check on the first 10 rows of our data:  
 `select * from table_import limit 10;`  
 
 Log out of MariaDB:  
 `exit;`  
 
-#### 5. Remove your data from the import folder  
+##### 5. Remove your data from the import folder  
 `rm -rf /export/mdb_external/import/jharvard`  
 
-## Exporting Data {#exporting-database}
+### Exporting Data {#exporting-database}
 The following is a basic overview of the export process followed by an example. Complete documentation for the `SELECT … INTO FILE` command to be run within MariaDB may be found at [https://mariadb.com/kb/en/library/select-into-outfile/](https://mariadb.com/kb/en/library/select-into-outfile/).
 
 1. Prepare export folder such that it is accessible to everyone
@@ -302,7 +304,7 @@ The following is a basic overview of the export process followed by an example. 
    
 Please note that you will be copying your data to a new file, not moving it. This ensures you are the owner of the file, as opposed to the MariaDB server. Additionally note that your exported data will **NOT** include column headers/names!
 
-### Export Example  
+#### Export Example  
 
 We will use the following to illustrate importing:  
 MariaDB username = jharvard  
@@ -317,12 +319,12 @@ Data:
 | 25 | Harvard | Way |
 | 86| Brattle | St | 
  
-#### 1. Prepare export folder such that it is accessible to everyone
+##### 1. Prepare export folder such that it is accessible to everyone
 Prepare an export folder and ensure it has the appropriate permissions:  
 `mkdir /export/mdb_external/export/jharvard`  
 `chmod 777 /export/mdb_external/export/jharvard`  
 
-#### 2. Export data
+##### 2. Export data
 Log into MariaDB:  
 `mysql -h HOSTNAME -u jharvard -p`  
 
@@ -342,10 +344,10 @@ Official documentation for this command may be found at [https://mariadb.com/kb/
 Log out of MariaDB:  
 `exit;`  
 
-#### 3. Change access rules to export folder  
+##### 3. Change access rules to export folder  
 `chmod 700 /export/mdb_external/export/jharvard`  
 
-#### 4. Copy your data out of the export folder  
+##### 4. Copy your data out of the export folder  
 *Copy* (`cp`), *don't move*, the data to ensure you have ownership as opposed to the MariaDB server: 
 
 Option 1: Copy data to your home dir:  
@@ -354,10 +356,10 @@ Option 1: Copy data to your home dir:
 Option 2: Copy data to your project space:  
 `project_space cp /export/mdb_external/export/jharvard/my_export.dat /export/projects/project_space`  
 
-#### 5. Remove export folder  
+##### 5. Remove export folder  
 `rm -rf /export/mdb_external/import/jharvard`  
 
-## Additional MariaDB Resources {#additional-mariadb-resources}
+### Additional MariaDB Resources {#additional-mariadb-resources}
 
 -   [MariaDB Documentation](https://mariadb.com/kb/en/mariadb/documentation/)
 -   [Getting Started with MariaDB](https://mariadb.com/products/get-started)
