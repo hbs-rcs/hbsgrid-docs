@@ -51,7 +51,7 @@ Home folders are backed up every night. If you should need to recover
 any files due to accidental deletion or corruption, please
 [contact RCS](mailto:research@hbs.edu).
 
-[!WARNING] 
+!!! warning
 #### Reaching your home folder limit can prevent *NoMachine* sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine. 
 
 You can fix this problem yourself in a few ways:
@@ -221,19 +221,23 @@ You can connect to your database using any compatible client. If you
 already have one you like, feel free to use that. Otherwise we recommend
 one of the clients listed below. 
 
-=== "Python"
+=== "Python"  
+
 Use [connector-python](https://dev.mysql.com/doc/connector-python/en/) to connect following the 
 [official documentation](https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html).
 It is recommended to [use connection settings from `~/.my.cnf`](https://dev.mysql.com/doc/connector-python/en/connector-python-option-files.html) as described above.
 
-=== "R"
+=== "R"  
+
 Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse.org/), both use connection settings from `~/.my.cnf` as described above.
 
-=== "Desktop and DBeaver"
+=== "Desktop and DBeaver"  
+
 Use [DBeaver](https://dbeaver.io/) to connect following the [official documentation](https://dbeaver.com/docs/wiki/Create-Connection/). 
 Make sure to set the *CA Certificate* path in the *SSL* connection settings tab. The *DBeaver* client may prompt you to download a driver to connect to your database. This is usually safe, and drivers will be stored in your home directory, under `~/.local/share/DBeaverData/drivers`
 
-=== "Terminal"
+=== "Terminal"  
+
 The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.
 
 ## Importing Data {#importing-database}
