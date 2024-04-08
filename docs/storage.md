@@ -29,8 +29,8 @@ and [project spaces.](storage.md#project-spaces)
 
 ### Home folders {#home-folders}
 
-By default, when your grid account is created (whether this account is
-used for just storage or storage + compute), a home folder is created. Home folders are 150GB (or 100GB for guests) and cannot be expanded (note: default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory).
+By default, when your account is created (whether this account is
+used for just storage or storage + computing), a home folder is created. Home folders are 150GB (or 100GB for guests) and cannot be expanded (note: default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory).
 
 If you are logging in to the HBSGrid to do work via the NoMachine GUI or
 terminal, you are automatically placed in and are using this home
@@ -54,7 +54,7 @@ any files due to accidental deletion or corruption, please
 [!WARNING] 
 #### Reaching your home folder limit can prevent *NoMachine* sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine. 
 
-You can fix this problem yourself in a couple of ways:
+You can fix this problem yourself in a few ways:
 
 1.  **By Terminal**: Open a terminal (in the Windows search toolbar, type "Cmd" or "Windows PowerShell"; in the Mac search toolbar, type "Terminal") and run
     ```sh
@@ -212,13 +212,13 @@ your MariaDB username and password. For the other parameters such as
 
 Once your **.my.cnf** is ready, move it your home directory and 
 **adjust file privileges to ensure no one else can read the file**. On the Grid or
-on a linux or Mac local machine, you may prevent others from reading the
+on a Linux or Mac local machine, you may prevent others from reading the
 file by opening a *Terminal* and running this command:
 
 `chmod 700 ~/.my.cnf`
 
 You can connect to your database using any compatible client. If you 
-already have one you like go ahead and use that. Otherwise we recommend
+already have one you like, feel free to use that. Otherwise we recommend
 one of the clients listed below. 
 
 === "Python"
