@@ -1,4 +1,4 @@
-## Research Data Storage
+# Research Data Storage
 
 HBS provides storage for active research projects. Research storage is 
 typically used in conjunction with the computer cluster (HBSGrid) and accessed 
@@ -18,7 +18,7 @@ and [project spaces.](storage.md#project-spaces)
 
 *Default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory  
 
-### Home folders {#home-folders}
+## Home folders {#home-folders}
 
 By default, when your account is created (whether this account is
 used for just storage or storage + computing), a home folder is created. Home folders are 150GB (or 100GB for guests) and cannot be expanded (note: default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory).
@@ -43,7 +43,7 @@ any files due to accidental deletion or corruption, please
 [contact RCS](mailto:research@hbs.edu).
 
 !!! warning 
-#### Reaching your home folder limit can prevent *NoMachine* sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine. {#home-folder-quota}
+### Reaching your home folder limit can prevent *NoMachine* sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine. {#home-folder-quota}
         
 You can fix this problem yourself in a few ways:
         
@@ -56,7 +56,7 @@ You can fix this problem yourself in a few ways:
             
 2. **By GUI**: Use a [GUI SFTP client like FileZilla or CyberDuck](https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/#transfer-data-fromto-local-storage) to log into your storage and clean up your home directory by moving/deleting files and emptying your trash folder.  
 
-### Scratch storage {#scratch-storage}
+## Scratch storage {#scratch-storage}
 
 Whether you are doing batch or interactive work, at times you may need a
 temporary location to stash files that you will not keep, or your
@@ -75,7 +75,7 @@ _Nota bene_:
 Please see our [RCS Policies page](https://www.hbs.edu/research-computing-services/about-us/terms-of-service/policies.aspx#scratch)
 for more information about our scratch usage policies. 
 
-#### Using `/export/scratch` effectively {#using-scratch}
+### Using `/export/scratch` effectively {#using-scratch}
 
 As this volume is a shared area visible by everyone, it is important that you follow best practices for its use:
 
@@ -93,7 +93,7 @@ As this volume is a shared area visible by everyone, it is important that you fo
 
 If you should need to keep files on the scratch volume for longer than 60 days, please contact RCS.  
 
-#### Undeleted Trash files on Scratch {#undeleted-files-scratch}
+### Undeleted Trash files on Scratch {#undeleted-files-scratch}
 Although your Trash may appear empty,  'trashed' files may still exist in a hidden folder on scratch. To check whether this is the case, run `ls -al /export/scratch` and see whether a .Trash folder with your username is listed.
  
 We recommend that you review and 'delete permanently' the files in your NoMachine/Gnome Trash. If you are still uncertain or your Trash folder is empty, you can delete your "trash" folder on `/export/scratch` with one of the following three terminal commands:
@@ -102,7 +102,7 @@ We recommend that you review and 'delete permanently' the files in your NoMachin
 - `rm -rI /export/scratch/.Trash-$(id -u $USER)`    # to be prompted, but less intrusive
 - `rm -rf /export/scratch/.Trash-$(id -u $USER`)    # NO PROMPT
 
-### Project spaces {#project-spaces}
+## Project spaces {#project-spaces}
 
 Project spaces (folders) are the primary, recommended location for
 storing and doing collaborative work on research storage, including HBS
@@ -117,7 +117,7 @@ files, and data loss may result.
 Project spaces are backed up every evening. If you should need to recover any files due to accidental deletion or
 corruption, please [contact RCS](mailto:research@hbs.edu).
 
-#### Requesting a project space {#requesting-a-project-space}
+### Requesting a project space {#requesting-a-project-space}
 
 Project spaces can be set up with faculty sponsorship and/or approval by
 filling out the [New Project Space Request
@@ -136,7 +136,7 @@ If a project space already exists and you would like to make changes to
 the space users or size, fill out the [Project Space Change Request
 Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u).
 
-#### Archiving a project space {#archiving-a-project-space}
+### Archiving a project space {#archiving-a-project-space}
 
 Project space usage is reviewed and confirmed on a yearly basis.
 Inactive project spaces will be backed up and archived only after
