@@ -1,4 +1,4 @@
-# Research Data Storage
+## Research Data Storage
 !!! info inline end "Mount Grid storage locally"
     Research storage is also accessible 
     [on Windows as a network drive](https://support.microsoft.com/en-gb/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d) 
@@ -21,12 +21,12 @@ and [project spaces.](storage.md#project-spaces)
 
 | Folder Type | Size | Expandable? | Shareable? | Backed up? | Other Considerations|
 | --- | --- | --- | --- | --- | --- |
-| [Home](storage.md#home-folders) | 150GB <br>(100GB for guests)[^*] | No | No | Yes | This is a personal folder with size limitations that cannot be shared with others.|
+| [Home](storage.md#home-folders) | 150GB <br>(100GB for guests)* | No | No | Yes | This is a personal folder with size limitations that cannot be shared with others.|
 | [Scratch](storage.md#scratch-storage) | Varies | Yes | Yes | No | Files older than 60 days are deleted and files are **not backed up**. This is SSD storage that is faster than other storage options.|
-| [Project](storage.md#project-spaces) | Default is 50GB | Yes | Yes | Yes | These folders are meant for collaboration and/or projects that may increase in size over time. |  
-[^*]: Default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory  
+| [Project](storage.md#project-spaces) | Default is 50GB | Yes | Yes | Yes | These folders are meant for collaboration and/or projects that may increase in size over time. |    
+* Default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory  
 
-## Home folders {#home-folders}
+### Home folders {#home-folders}
 
 By default, when your account is created (whether this account is
 used for just storage or storage + computing), a home folder is created. Home folders are 150GB (or 100GB for guests) and cannot be expanded (note: default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory).
@@ -51,25 +51,20 @@ any files due to accidental deletion or corruption, please
 [contact RCS](mailto:research@hbs.edu).
 
 !!! warning
-        ### Reaching your home folder limit can prevent *NoMachine* sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine. 
+#### Reaching your home folder limit can prevent *NoMachine* sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine. 
         
-        You can fix this problem yourself in a few ways:
+You can fix this problem yourself in a few ways:
         
-        1.  **By Terminal**: Open a terminal (in the Windows search toolbar, type "Cmd" or "Windows PowerShell"; in the Mac search toolbar, type "Terminal") and run
-            ```sh
-            ssh <username>@hbsgrid.hbs.edu
-            ```
-            (replace `<username>` with your actual HBS Grid username). Once connected you can use terminal
-            commands like `ls` to list files in the directory, `rm` (remove) plus the name of the file to remove files you don't need,
-            or `mv` (move) plus the name of your file and a path to a new location to move files.
-            Removing and moving files can help get your home directory back under your storage 
-            quota. You can also run `gio trash --empty` to empty the trash, which may give you enough 
-            breathing room to permit NoMachine login.
+1.  **By Terminal**: Open a terminal (in the Windows search toolbar, type "Cmd" or "Windows PowerShell"; in the Mac search toolbar, type "Terminal") and run
+       ```sh
+       ssh <username>@hbsgrid.hbs.edu
+    ```
+    (replace `<username>` with your actual HBS Grid username). Once connected you can use terminal commands like `ls` to list files in the directory, `rm` (remove) plus the name of the file to remove files you don't need,
+    or `mv` (move) plus the name of your file and a path to a new location to move files. Removing and moving files can help get your home directory back under your storage quota. You can also run `gio trash --empty` to empty the trash, which may give you enough breathing room to permit NoMachine login.
             
-        2. **By GUI**: Use a [GUI SFTP client like FileZilla or CyberDuck](https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/#transfer-data-fromto-local-storage) 
-            to log into your storage and clean up your home directory by moving/deleting files and emptying your trash folder.  
+2. **By GUI**: Use a [GUI SFTP client like FileZilla or CyberDuck](https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/#transfer-data-fromto-local-storage) to log into your storage and clean up your home directory by moving/deleting files and emptying your trash folder.  
 
-## Scratch storage {#scratch-storage}
+### Scratch storage {#scratch-storage}
 
 Whether you are doing batch or interactive work, at times you may need a
 temporary location to stash files that you will not keep, or your
@@ -88,7 +83,7 @@ _Nota bene_:
 Please see our [RCS Policies page](https://www.hbs.edu/research-computing-services/about-us/terms-of-service/policies.aspx#scratch)
 for more information about our scratch usage policies. 
 
-### Using `/export/scratch` effectively {#using-scratch}
+#### Using `/export/scratch` effectively {#using-scratch}
 
 As this volume is a shared area visible by everyone, it is important that you follow best practices for its use:
 
@@ -106,7 +101,7 @@ As this volume is a shared area visible by everyone, it is important that you fo
 
 If you should need to keep files on the scratch volume for longer than 60 days, please contact RCS.  
 
-### Undeleted Trash files on Scratch {#undeleted-files-scratch}
+#### Undeleted Trash files on Scratch {#undeleted-files-scratch}
 Although your Trash may appear empty,  'trashed' files may still exist in a hidden folder on scratch. To check whether this is the case, run `ls -al /export/scratch` and see whether a .Trash folder with your username is listed.
  
 We recommend that you review and 'delete permanently' the files in your NoMachine/Gnome Trash. If you are still uncertain or your Trash folder is empty, you can delete your "trash" folder on `/export/scratch` with one of the following three terminal commands:
@@ -115,7 +110,7 @@ We recommend that you review and 'delete permanently' the files in your NoMachin
 - `rm -rI /export/scratch/.Trash-$(id -u $USER)`    # to be prompted, but less intrusive
 - `rm -rf /export/scratch/.Trash-$(id -u $USER`)    # NO PROMPT
 
-## Project spaces {#project-spaces}
+### Project spaces {#project-spaces}
 
 Project spaces (folders) are the primary, recommended location for
 storing and doing collaborative work on research storage, including HBS
@@ -131,7 +126,7 @@ Project spaces are backed up every evening. If you should need to recover any fi
 corruption, please [contact RCS](mailto:research@hbs.edu).
 
 
-### Requesting a project space {#requesting-a-project-space}
+#### Requesting a project space {#requesting-a-project-space}
 
 Project spaces can be set up with faculty sponsorship and/or approval by
 filling out the [New Project Space Request
@@ -150,7 +145,7 @@ If a project space already exists and you would like to make changes to
 the space users or size, fill out the [Project Space Change Request
 Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u).
 
-### Archiving a project space {#archiving-a-project-space}
+#### Archiving a project space {#archiving-a-project-space}
 
 Project space usage is reviewed and confirmed on a yearly basis.
 Inactive project spaces will be backed up and archived only after
@@ -222,22 +217,22 @@ one of the clients listed below.
 
 === "Python"  
 
-Use [connector-python](https://dev.mysql.com/doc/connector-python/en/) to connect following the 
-[official documentation](https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html).
-It is recommended to [use connection settings from `~/.my.cnf`](https://dev.mysql.com/doc/connector-python/en/connector-python-option-files.html) as described above.
+    Use [connector-python](https://dev.mysql.com/doc/connector-python/en/) to connect following the 
+    [official documentation](https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html).
+    It is recommended to [use connection settings from `~/.my.cnf`](https://dev.mysql.com/doc/connector-python/en/connector-python-option-files.html) as described above.
 
 === "R"  
 
-Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse.org/), both use connection settings from `~/.my.cnf` as described above.
+    Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse.org/), both use connection settings from `~/.my.cnf` as described above.
 
 === "Desktop and DBeaver"  
 
-Use [DBeaver](https://dbeaver.io/) to connect following the [official documentation](https://dbeaver.com/docs/wiki/Create-Connection/). 
-Make sure to set the *CA Certificate* path in the *SSL* connection settings tab. The *DBeaver* client may prompt you to download a driver to connect to your database. This is usually safe, and drivers will be stored in your home directory, under `~/.local/share/DBeaverData/drivers`
+    Use [DBeaver](https://dbeaver.io/) to connect following the [official documentation](https://dbeaver.com/docs/wiki/Create-Connection/). 
+    Make sure to set the *CA Certificate* path in the *SSL* connection settings tab. The *DBeaver* client may prompt you to download a driver to connect to your database. This is usually safe, and drivers will be stored in your home directory,     under `~/.local/share/DBeaverData/drivers`
 
 === "Terminal"  
 
-The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.
+    The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.
 
 ## Importing Data {#importing-database}
 The following is a basic overview of the import process. Complete documentation for the `LOAD DATA` command can be found at [https://mariadb.com/kb/en/library/load-data-infile/](https://mariadb.com/kb/en/library/load-data-infile/).
