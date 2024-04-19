@@ -29,8 +29,9 @@ one of the most common reasons for difficulties connecting to the HBS Grid deskt
 
 If you get stuck on a spinning loading wheel when trying to connect to a NoMachine session:
 
-1. Right click on the Virtual Desktop button and select "Terminate session."
-2. Start a new NoMachine session.
+1. Cancel the hanging connection attempt.
+2. Right click on the Virtual Desktop button and select "Terminate session."
+3. Start a new NoMachine session.
 
 To avoid such issues and to prevent instability on the login nodes, we recommend that users 
 **always log out of NoMachine completely** when they are finished with their work.
