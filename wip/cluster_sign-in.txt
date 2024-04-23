@@ -11,8 +11,26 @@
 # Software:					XXXX
 # Parallelization/Scaling:	xxxx
 # Storage:					xxxx
+# LSF Cheat Sheet			xxxx
 # 
 # Troubleshooting:			####
 # Help & Support:			XXXX
 #
+#
+# If SSHing into the cluster, don't forget to 'module load rcs/rcs_yyyy.mm' (substituting
+# the actual release date) so that you have full access to the Grid3 UI overlay software.
+# 
+# If you are seeing this via NoMachine, you're all set!
+#
+# Happy researching!
+#
+# ##### 
+# Current quota
+#
+# ####
+# System messages
+#
+#######
+
+MOTD
 
