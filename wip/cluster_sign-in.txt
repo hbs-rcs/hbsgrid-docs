@@ -1,0 +1,18 @@
+#
+# Welcome to the HBSGrid computer cluster
+#
+# This resource is for HBS faculty researchers and their collaborators. By login and
+# use of this resource, as are agreeing to and will abide by the Terms of Service,
+# Acceptable Use, and XXX Policies, at outlined at XXX.
+#
+# Please refer to our online documentation for reference & support:
+
+# General usage:			XXXX
+# Software:					XXXX
+# Parallelization/Scaling:	xxxx
+# Storage:					xxxx
+# 
+# Troubleshooting:			####
+# Help & Support:			XXXX
+#
+
