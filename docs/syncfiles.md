@@ -94,7 +94,7 @@ and **may result in unexpected permissions settings on the cluster**.
 
     2.   Open a Windows Explorer window, right-click on the "Computer" icon, and then select "Map Network Drive". 
 
-    3.   To map a drive to your **home directory**, specify the folder path  `\research\username` (for example, `\\research\jharvard`). To map a drive to a **project space**, specify the path `\\research.hbs.edu\projects\projectname` (note that you may have to use projects, projects2, projects3, projects4, or projects5 depending on the path of your project space). Also note that **you may not map a drive to a project space containing security level 4 data**.
+    3.   To map a drive to your **home directory**, specify the folder path  `\\research\username` (for example, `\\research\jharvard`). To map a drive to a **project space**, specify the path `\\research.hbs.edu\projects\projectname` (note that you may have to use projects, projects2, projects3, projects4, or projects5 depending on the path of your project space). Also note that **you may not map a drive to a project space containing security level 4 data**.
 
     4.   Click "Connect using different credentials" if you are not using an HBS-issued machine. If you are prompted for your username and password, enter your HBSGrid username (the part preceding @hbs.edu) and your password. If you are connecting from a non-HBS-issued machine, please add HBS\ before your username (e.g. HBS\jharvard). This specifies the proper Windows domain for authenticating your credentials.
 
