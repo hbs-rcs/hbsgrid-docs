@@ -204,11 +204,13 @@ file by opening a *Terminal* and running this command:
 
 `chmod 700 ~/.my.cnf`
 
+**************************
+
 You can connect to your database using any compatible client. If you 
 already have one you like, feel free to use that. Otherwise we recommend
 one of the clients listed below. 
 
-===| "Python"  
+=== "Python"  
 
     Use [connector-python](https://dev.mysql.com/doc/connector-python/en/) to connect following the 
     [official documentation](https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html).
@@ -225,7 +227,7 @@ one of the clients listed below.
 
 === "Terminal"  
 
-    The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.|
+    The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.
 
 
 **************************
