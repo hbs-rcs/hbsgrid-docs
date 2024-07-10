@@ -208,6 +208,7 @@ You can connect to your database using any compatible client. If you
 already have one you like, feel free to use that. Otherwise we recommend
 one of the clients listed below. 
 
+<div style="border: 1px solid #ddd; padding: 20px;">
 === "Python"  
 
     Use [connector-python](https://dev.mysql.com/doc/connector-python/en/) to connect following the 
@@ -227,6 +228,7 @@ one of the clients listed below.
 
     The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.
 
+</div>
 **************************
 
 ### Importing Data {#importing-database}
