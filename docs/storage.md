@@ -226,7 +226,7 @@ one of the clients listed below.
 === "Terminal"  
 
     The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.
-
+---
 ### Importing Data {#importing-database}
 The following is a basic overview of the import process. Complete documentation for the `LOAD DATA` command can be found at [https://mariadb.com/kb/en/library/load-data-infile/](https://mariadb.com/kb/en/library/load-data-infile/).
 
