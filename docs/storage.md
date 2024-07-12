@@ -210,16 +210,9 @@ You can connect to your database using any compatible client. If you
 already have one you like, feel free to use that. Otherwise we recommend
 one of the clients listed below. 
 
-| :warning: WARNING                                                        |
-|:-------------------------------------------------------------------------|
-| If you are connecting to MariaDB on the cluster, please be advised that  |
-| there is a known bug in the current environment. If you'd like to connect|
-| to the database using software on the cluster (e.g., R, Python), please  |
-| select the `rcs/rcs_2022.11` software environment version in the         |
-| interactive launcher or in Terminal. If you'd like to use DBeaver, launch|
-| a Terminal session, load the the previous environment                    |
-|(`ml load rcs/rcs_2022.11`) and then once loaded launch DBeaver by typing |
-| `dbeaver` in the Terminal.                                               |
+| :warning: WARNING                                                                        |
+|:-----------------------------------------------------------------------------------------|
+| If you are connecting to MariaDB on the cluster, please be advised that there is a known bug in the current environment. If you'd like to connect to the database using software on the cluster (e.g., R, Python), please select the `rcs/rcs_2022.11` software environment version in the interactive launcher or in Terminal. If you'd like to use DBeaver, launch a Terminal session, load the the previous environment (`ml load rcs/rcs_2022.11`), and then once loaded launch DBeaver by typing `dbeaver` in the Terminal.|
 
 === "Python"  
 
