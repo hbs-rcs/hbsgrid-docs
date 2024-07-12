@@ -44,8 +44,9 @@ Home folders are backed up every night. If you should need to recover
 any files due to accidental deletion or corruption, please
 [contact RCS](mailto:research@hbs.edu).
 
-!!! warning 
-#### Reaching your home folder limit can prevent *NoMachine* sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine. {#home-folder-quota}
+| :warning: WARNING                                                                        |
+|:-----------------------------------------------------------------------------------------|
+| Reaching your home folder limit can prevent *NoMachine* sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine.|
         
 You can fix this problem yourself in a few ways:
         
