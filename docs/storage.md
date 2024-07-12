@@ -248,7 +248,9 @@ The following is a basic overview of the import process. Complete documentation 
    
 To create the database table (step 2), you will need to know the name of all columns, each column’s data type (integer, numeric with decimals, string of characters, etc), and each column’s maximum width. For example, if one of the columns in your data is US phone numbers of the format 6174953292, then you may opt to use int(10) as the column data type (i.e., integer with up to 10 digits). However, if you suspect some entries have dashes such as 617-495-3292, then you will need to use char(12) which stores the data as a string of characters, up to 12 characters in length.
 
-#### Import Example
+<details>
+
+<summary>Import Example</summary>
 
 We will use the following to illustrate importing:  
 MariaDB username = jharvard  
@@ -301,7 +303,9 @@ Log out of MariaDB:
 `exit;`  
 
 ##### 5. Remove your data from the import folder  
-`rm -rf /export/mdb_external/import/jharvard`  
+`rm -rf /export/mdb_external/import/jharvard` 
+
+</details>
 
 ### Exporting Data {#exporting-database}
 The following is a basic overview of the export process followed by an example. Complete documentation for the `SELECT … INTO FILE` command to be run within MariaDB may be found at [https://mariadb.com/kb/en/library/select-into-outfile/](https://mariadb.com/kb/en/library/select-into-outfile/).
@@ -314,7 +318,9 @@ The following is a basic overview of the export process followed by an example. 
    
 Please note that you will be copying your data to a new file, not moving it. This ensures you are the owner of the file, as opposed to the MariaDB server. Additionally note that your exported data will **NOT** include column headers/names!
 
-#### Export Example  
+<details>
+
+<summary>Export Example</summary>
 
 We will use the following to illustrate importing:  
 MariaDB username = jharvard  
@@ -368,6 +374,8 @@ Option 2: Copy data to your project space:
 
 ##### 5. Remove export folder  
 `rm -rf /export/mdb_external/import/jharvard`  
+
+</details>
 
 ### Additional MariaDB Resources {#additional-mariadb-resources}
 
