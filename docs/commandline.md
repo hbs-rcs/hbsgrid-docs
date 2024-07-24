@@ -92,7 +92,9 @@ processing instructons [refer to our tutorial](tutorials/scaling-work.md).
 
 ### Using GPUs
 
-To request GPU resources you must use the `gpu` queue. You must also explicitly
+GPUs on the HBSGrid are currently accessible **by request only**. To request access, please use our [online form](https://forms.office.com/pages/responsepage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUNTJJOERNR1pNRzUzS0g4WkZKWjNHVjBTSy4u).
+
+To submit a GPU job, you must use the `gpu` queue. You must also explicitly
 specify gpu options; using a single dash for the default settings as shown in the
 example below is sufficient for many use cases.
 
