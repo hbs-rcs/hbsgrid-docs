@@ -5,26 +5,29 @@ tags:
   - Delimiters
 ---
 
-# Delimiter Overview (and a word of caution!)
+# Database Delimiters
+## A word of caution!
 
 The field delimiter is the character which splits data or text into separate fields. A field is a column within your database. As an example, we may have the dataset below:
 
-| **Column_1** | **Column_2** | **Column_3**|
-| --- | --- |
+| **Column_1** | **Column_2** | **Column_3** |
+| --- | --- | --- |
 | 25 | Harvard Way | Boston, MA |
 
 When we export this data to a text file, it would appear as:
 
 `Line 1: Column_1 DELIMITER Column_2 DELIMITER Column_3`
+
 `Line 2: 25 DELIMITER Harvard Way DELIMITER Boston, MA`
 
 Often, the comma is used as the field delimiter. In this example, using a comma would cause Line 2 to appear to have 4 fields instead of 3!
 
 `Line 1: Column_1,Column_2,Column_3`
+
 `Line 2: 25,Harvard Way,Boston, MA`
 
-| **Column_1** | **Column_2** | **Column_3**|
-| --- | --- |
+| **Column_1** | **Column_2** | **Column_3** ||
+| --- | --- | --- |--- |
 | 25 | Harvard Way | Boston | MA|
 
 When exporting data, you should not use a field delimiter that may also occur within your data. Commas and tabs are common field delimiters but are likely to occur when storing text strings. Your options are to either change your field delimiter or have MariaDB enclose the data. We recommend you use the pipe character, |, as your field delimiter. Otherwise you may have MariaDB enclose the data by adding **OPTIONALLY ENCLOSED BY …** as described here (https://mariadb.com/kb/en/mariadb/select-into-outfile/">https://mariadb.com/kb/en/mariadb/select-into-outfile/).
@@ -36,6 +39,7 @@ When importing data, you must specify the field delimiter that had been used. Yo
 Many users will use Excel to view their data. If you decide to set the pipe character, |, as your field delimiter, then Excel will not automatically parse your data into separate columns. As an example, we can enter the above data into a text editor. 
 
 `Line 1: Column_1|Column_2|Column_3`
+
 `Line 2: 25|Harvard Way|Boston, MA`
 
 ![image](https://github.com/user-attachments/assets/c550f636-f2f2-4384-82cf-ece3871217c7)
