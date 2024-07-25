@@ -5,7 +5,7 @@ tags:
   - Delimiters
 ---
 
-# Delimiter Overview
+# Delimiter Overview (and a word of caution!)
 
 The field delimiter is the character which splits data or text into separate fields. A field is a column within your database. As an example, we may have the dataset below:
 
