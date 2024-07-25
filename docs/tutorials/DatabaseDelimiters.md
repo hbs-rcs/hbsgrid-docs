@@ -34,7 +34,7 @@ When exporting data, you should not use a field delimiter that may also occur wi
 
 When importing data, you must specify the field delimiter that had been used. You should verify with the dataset author as to the field delimiter, and whether any fields were enclosed by another character. Aside from the field delimiter, you will also have to specify the line delimiter. In most cases, the line delimiter is **\n**. You may also try using **\r**.
 
-# Using Excel with NonStandard Delimiters such as the Pipe Character
+## Using Excel with NonStandard Delimiters such as the Pipe Character
 
 Many users will use Excel to view their data. If you decide to set the pipe character, |, as your field delimiter, then Excel will not automatically parse your data into separate columns. As an example, we can enter the above data into a text editor. 
 
