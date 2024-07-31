@@ -167,7 +167,7 @@ Please note that RCS provides limited support for databases.
 Please contact us at <research@hbs.edu> for connection parameters including
 *USER*, *HOSTNAME*, and *CA Certificates*. Note that some clients 
 (including *DBeaver*) require you to set the *SSL CA Certificate*.
-**Connections from outside the HBS Grid always require an RCS-proviced SSL CA Certificate**.
+**Connections from outside the HBS Grid always require an RCS-provided SSL CA Certificate**.
 
 #### Configuration {#configuration-database}
 
