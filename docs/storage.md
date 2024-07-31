@@ -205,7 +205,7 @@ file by opening a *Terminal* and running this command:
 
 `chmod 700 ~/.my.cnf`
 
-**************************
+#### Tools to Connect to your Database {#tools-database}
 
 You can connect to your database using any compatible client. If you 
 already have one you like, feel free to use that. Otherwise we recommend
