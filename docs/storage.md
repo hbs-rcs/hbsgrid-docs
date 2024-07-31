@@ -205,6 +205,10 @@ file by opening a *Terminal* and running this command:
 
 `chmod 700 ~/.my.cnf`
 
+On a Windows machine, right-click on the file, select Properties, and then
+1. Under the General tab, toggle ON the Hidden attribute
+2. Under the Security tab, ensure only the following users or groups have access: System, Administrators, and you.
+
 #### Tools to Connect to your Database {#tools-database}
 
 You can connect to your database using any compatible client. If you 
