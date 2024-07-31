@@ -228,17 +228,16 @@ one of the clients listed below.
 
 === "R"  
 
-    Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse.org/), both use connection settings from `~/.my.cnf` as described above.
+    Use [RMariaDB](https://rmariadb.r-dbi.org/) or [dbplyr](https://dbplyr.tidyverse.org/), both use connection settings from `~/.my.cnf` as described above. Sample code for connecting R to the Grid's MariaDB database can be found [here]( https://github.com/hbs-rcs/sample_code/blob/master/mariadb/R_MariaDB_fromGrid.R).
 
 === "Desktop and DBeaver"  
 
     Use [DBeaver](https://dbeaver.io/) to connect following the [official documentation](https://dbeaver.com/docs/wiki/Create-Connection/). 
     Make sure to set the *CA Certificate* path in the *SSL* connection settings tab. The *DBeaver* client may prompt you to download a driver to connect to your database. This is usually safe, and drivers will be stored in your home directory,     under `~/.local/share/DBeaverData/drivers`
 
-=== "Terminal"  
+=== "mycli and Terminal"  
 
-    The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above.
-
+    The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above. You can download mycli onto your local machine, or use the instance already installed on the Grid. To connect from your local machine type: `mysql -u username -p -h mariadbhost --ssl-ca=/path/to/file/ca-cert.pem` or from the Grid: `mysql -u username -p -h mariadbhost`. Alternatively, you can access MariaDB from Terminal after **first logging into the Grid** (see instructions on the [Start Here page](https://hbs-rcs.github.io/hbsgrid-docs/) and then typing: `mysql -h hostname -u username -p`. For all of the commands referenced above, replace the `username` with your username, the mariadbhost with the HBS host name in your `.my.cnf` file, and (if applicable) the `ssl-ca path` with the appropriate path. You will be prompted to provide your password . 
 
 **************************
 
