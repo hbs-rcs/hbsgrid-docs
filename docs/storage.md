@@ -267,7 +267,7 @@ Once your `.odbc.ini` is ready, save it to your home directory and adjust file p
 `chmod 700 ~/.odbc.ini`
 
 **************************
-<details>
+<details markdown>
 <summary>Importing Data</summary>
        
 ### Importing Data {#importing-database}
