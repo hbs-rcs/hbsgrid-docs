@@ -269,7 +269,7 @@ Once your `.odbc.ini` is ready, save it to your home directory and adjust file p
 **************************
 <details>
 <summary>Importing Data</summary>
-```        
+       
 ### Importing Data {#importing-database}
 The following is a basic overview of the import process. Complete documentation for the `LOAD DATA` command can be found at [https://mariadb.com/kb/en/library/load-data-infile/](https://mariadb.com/kb/en/library/load-data-infile/).
 
@@ -336,6 +336,11 @@ Log out of MariaDB:
 ##### 5. Remove your data from the import folder  
 `rm -rf /export/mdb_external/import/jharvard` 
 
+</details>
+
+<details>
+<summary>Importing Data</summary>
+        
 ### Exporting Data {#exporting-database}
 The following is a basic overview of the export process followed by an example. Complete documentation for the `SELECT … INTO FILE` command to be run within MariaDB may be found at [https://mariadb.com/kb/en/library/select-into-outfile/](https://mariadb.com/kb/en/library/select-into-outfile/).
 
@@ -346,8 +351,7 @@ The following is a basic overview of the export process followed by an example. 
 5. Remove export folder
    
 Please note that you will be copying your data to a new file, not moving it. This ensures you are the owner of the file, as opposed to the MariaDB server. Additionally note that your exported data will **NOT** include column headers/names!
-```
-</details>
+
 #### Export Example
 
 We will use the following to illustrate importing:  
@@ -402,6 +406,7 @@ Option 2: Copy data to your project space:
 
 ##### 5. Remove export folder  
 `rm -rf /export/mdb_external/import/jharvard`  
+</details>
 
 ### Additional MariaDB Resources {#additional-mariadb-resources}
 
