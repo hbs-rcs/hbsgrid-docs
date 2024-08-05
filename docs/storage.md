@@ -267,11 +267,14 @@ Once your `.odbc.ini` is ready, save it to your home directory and adjust file p
 `chmod 700 ~/.odbc.ini`
 
 **************************
-<details open>
+<details>
         
 <summary>Importing Data</summary>
        
-### Importing Data {#importing-database}
+<summary>
+        ### Importing Data {#importing-database}
+</summary>
+
 The following is a basic overview of the import process. Complete documentation for the `LOAD DATA` command can be found at [https://mariadb.com/kb/en/library/load-data-infile/](https://mariadb.com/kb/en/library/load-data-infile/).
 
 1. Move your data to an import folder
