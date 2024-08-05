@@ -262,7 +262,7 @@ sslmode = required
 sslca = PATH_TO_SSL_CERT
 ```
 
-Once your .odbc.ini is ready, save it to your home directory and adjust file privileges to ensure no one else can read the file:
+Once your `.odbc.ini` is ready, save it to your home directory and adjust file privileges to ensure no one else can read the file:
 
 `chmod 700 ~/.odbc.ini`
 
