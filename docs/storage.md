@@ -245,11 +245,26 @@ one of the clients listed below.
 
 === "ODBC"  
 
-    The [mycli](https://www.mycli.net/) client uses connection settings from `~/.my.cnf` as described above. You can download mycli onto your local machine, or use the instance already installed on the Grid. To connect from your local machine type: `mysql -u username -p -h mariadbhost --ssl-ca=/path/to/file/ca-cert.pem` or from the Grid: `mysql -u username -p -h mariadbhost`. 
-    
-    Alternatively, you can access MariaDB from Terminal after **first logging into the Grid** (see instructions on the [Start Here page](https://hbs-rcs.github.io/hbsgrid-docs/) and then typing: `mysql -h hostname -u username -p`. 
-    
-    For all of the commands referenced above, replace the `username` with your username, the mariadbhost with the HBS host name in your `.my.cnf` file, and (if applicable) the `ssl-ca path` with the appropriate path. You will be prompted to provide your password. 
+     Setting up an ODBC connection differs by whether you are connecting from the Grid (Linux), Mac, or Windows machine. Please see MariaDB's ODBC set-up [documentation](https://mariadb.com/kb/en/creating-a-data-source-with-mariadb-connectorodbc/) for more information and **note that if connecting from the Grid, the ODBC administration tool and appropriate ODBC drivers are already installed.** You will still need to ensure that you have a `.odbc.ini` configuration file saved in your home directory. An example `.odbc.ini` template is below
+
+```
+[ODBC Data Sources]
+rcs_mariadb = RCS_MariaDB_ODBC_connection
+
+[rcs_mariadb]
+driver = mariaDB
+server = HOSTNAME
+port = 3306
+database = jharvard
+user = jharvard
+password = PASSWORD
+sslmode = required
+sslca = PATH_TO_SSL_CERT
+```
+
+Once your .odbc.ini is ready, save it to your home directory and adjust file privileges to ensure no one else can read the file:
+
+`chmod 700 ~/.odbc.ini`
 
 **************************
 
