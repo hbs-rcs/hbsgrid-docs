@@ -268,6 +268,7 @@ Once your `.odbc.ini` is ready, save it to your home directory and adjust file p
 
 **************************
 <details open>
+        
 <summary>Importing Data</summary>
        
 ### Importing Data {#importing-database}
