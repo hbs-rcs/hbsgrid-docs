@@ -14,8 +14,8 @@ nav:
       - 🐚 Use the Command-line: 'commandline.md'
       - 🔙 Use Software Versions: 'environments.md'
   - Data & Storage:
-      - 🔄 Copy and Transfer Files: 'syncfiles.md'
       - 💾 Storage & Databases: "storage.md"
+      - 🔄 Copy and Transfer Files: 'syncfiles.md'
       - 👥 Collaborate and Share: 'worksafe.md'
   - Help & Support Requests:
       - Support Channels: 'help.md'
