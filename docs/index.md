@@ -46,7 +46,7 @@ You can setup your account and connect via either GUI or terminal following the 
 
 
     The video below demonstrates these steps visually.
-    <video width="100%" controls>
+    <video width="80%" controls>
     <source src="media/enable.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video>
@@ -69,7 +69,7 @@ You can setup your account and connect via either GUI or terminal following the 
     ```
     ssh USERNAME@hbsgrid.hbs.edu
     ```
-    and enter your username and password if prompted.
+    and enter your password when prompted.
         - If you are on a PC and choose to use 
         [SecureCRT](https://hbs.service-now.com/support?id=kb_article&table=kb_knowledge&sysparm_article=KB0015137&searchTerm=securecrt), click "Quick connect..." and enter the following:
             - **Protocol**: SSH2
