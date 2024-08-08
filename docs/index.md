@@ -23,68 +23,76 @@ Using the HBS Grid you can:
 ## Quick start
 
 HBS faculty, staff, doctoral students and their guests are eligible for HBSGrid accounts.
-You can setup your account and connect following the instructions below.
+You can setup your account and connect via either GUI or terminal following the instructions below.
 
-!!! info inline end "Command line access"
-    
-    If you prefer shell access from a terminal/command prompt you can log in using `ssh` like this:
-    ```sh
-    ssh USERNAME@hbsgrid.hbs.edu
-    ```
-    
-    The [software environment](software.md) is not activated by default when connecting via `ssh`. Run
-    ```
-    ml rcs
-    ```
-    to [enable the software environment](environments.md#select-terminal-environment).
-
-!!! example "Connect to the HBS Grid"
+!!! example "Getting Started"
 
     1.  *If you do not yet have an HBS Grid account* [request one here](https://www.hbs.edu/research-computing-services/help/online-requests.aspx).
     2.  Connect to the HBS network, either directly if you are on-campus or
         [connect via VPN](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
         otherwise.
-    3.  *If the *NoMachine* application is not yet installed* [download](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client) and install it.
-    4. Start the [NoMachine](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client) application.
-        
-    5.  *If this is your first time connecting* click the
+
+=== "Connect via GUI"
+
+    1.  *If the *NoMachine* application is not yet installed* [download](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client) and install it.
+    2. Start the [NoMachine](https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client) application.    
+    3.  *If this is your first time connecting*, click the
         ![add](imgs/nomachine_add.png#inline) button and enter these connection details:
-        - *Name*: "HBS Grid", or anything you like
-        - *Host*: `hbsgrid-nx.hbs.edu`
-        - Leave defaults for all other settings.
-    6. Click the ![connect](imgs/nomachine_connect.png#inline) button and enter your *Username* and *Password* (see *step* 1 above).
+        - **Name**: "HBS Grid", or anything you like
+        - **Host**: `hbsgrid-nx.hbs.edu`
+        - **Port**: 4000
+        - **Protocol**: NX
+    4. Click the ![connect](imgs/nomachine_connect.png#inline) button and enter your *Username* and *Password*.
 
 
-The video below demonstrates these steps visually.
-<video width="100%" controls>
-  <source src="media/enable.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video> 
+    The video below demonstrates these steps visually.
+    <video width="100%" controls>
+    <source src="media/enable.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
 
-NoMachine maintains a [detailed connection guide](https://www.nomachine.com/getting-started-with-nomachine) 
-that you can refer to if needed. Connection difficulties from off-campus may be caused by VPN issues, see the
-[VPN guide](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf)
-for details.
+    NoMachine maintains a [detailed connection guide](https://www.nomachine.com/getting-started-with-nomachine) 
+    that you can refer to if needed. To troubleshoot connection difficulties, see our 
+    [troubleshooting checklist](https://hbs-rcs.github.io/hbsgrid-docs/help/#hbsgrid-account-login-issues).
 
-## Next steps
+    A selection of our most popular applications are available in the favorites list
+    pinned to the task-bar. Additional application launchers can be found in the
+    Applications menu or by searching in Activities. You can add applications to
+    your favorites list by right-clicking and selecting Add to Favorites.
 
-A selection of our most popular applications are available in the favorites list
-pinned to the task-bar. Additional application launchers can be found in the
-Applications menu or by searching in Activities. You can add applications to
-your favorites list by right-clicking and selecting Add to Favorites.
+    This environment was designed to be intuitive and user-friendly, and
+    you are encouraged to start exploring the available software and tools. 
 
-This environment was designed to be intuitive and user-friendly, and
-you are encouraged to start exploring the available software and tools. If you
-are doing real work you will probably want to refer to [Mount Drives and Copy
-Data](syncfiles.md) to learn how to get your data onto the HBS Grid. Additional
-documentation is available if you need it, including the [Launch
-Applications from the Desktop](menulaunch.md) and [Start Jobs from the
-Terminal](commandline.md) sections.
+=== "Connect via command line"
+    
+    1. In your favorite terminal program, run
+    ```
+    ssh USERNAME@hbsgrid.hbs.edu
+    ```
+    and enter your username and password if prompted.
+        - If you are on a PC and choose to use 
+        [SecureCRT](https://hbs.service-now.com/support?id=kb_article&table=kb_knowledge&sysparm_article=KB0015137&searchTerm=securecrt), click "Quick connect..." and enter the following:
+            - **Protocol**: SSH2
+            - **Hostname**: hbsgrid.hbs.edu
+            - **Port**: 22
+            - **Firewall**: none
+            - **Username**: your HBSGrid username
+
+    2. The [software environment](software.md) is not activated by default when connecting via `ssh`. Run
+    ```
+    ml rcs
+    ```
+    to [enable the software environment](environments.md#select-terminal-environment).
+
+## Next Steps
+
+To work on the cluster, you will probably want to [learn about HBSGrid storage](storage.md) and
+[transfer your data](syncfiles.md). You may also refer to our documentation on [launching jobs from the desktop](menulaunch.md) and [running jobs from the command line](commandline.md).
 
 ## Feedback and support
 
 !!! important inline end
-    **Guest Users:** For expired passwords and password resets, please contact [TSS](mailto:ithelp@hbs.edu) directly.
+    **Guest Users:** For expired passwords and password resets, please contact [RCS](mailto:research@hbs.edu).
 
 Our research computing environments are actively developed and
 continuously improving. **Bug reports and feature requests are important
