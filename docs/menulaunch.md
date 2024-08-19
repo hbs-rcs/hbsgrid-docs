@@ -104,8 +104,8 @@ There are both user-level, queue-level and job-level limits on the resources tha
 -   You are limited to a total of
     24 CPUs allocated to interactive jobs at any given time.
 
--   Interactive jobs are limited to 12 CPUs for up to 24 hours, or 4
-    CPUs for up to 72 hours.
+-   Interactive jobs are limited to 12 CPUs on the short_int queue, or 4
+    CPUs for the long_int qeueue.
 
 As a practical example of these limits, if you try request 12 CPUs and
 runtime greater than 24 hours the system will not be able to meet your
