@@ -1,11 +1,6 @@
 ---
 tags:
-  - R
-  - Python
   - Stata
-  - Matlab
-  - Parallelization
-  - GPU
 ---
 
 # Maintaining Version Stability in Stata
