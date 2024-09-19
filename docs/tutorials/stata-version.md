@@ -58,8 +58,8 @@ to submit a job and point to the location of the older Stata binary.
 On the HBSGrid, in general, all binaries are located 
 within respective directories at /usr/local/app. Thus:
 
-Stata v17 MP4 is at /usr/local/app/stata17-mp4/.
-Stata v17 MP8 is at /usr/local/app/stata17-mp8/
+Stata v17 MP4 is at `/usr/local/app/stata17-mp4/`.
+Stata v17 MP8 is at `/usr/local/app/stata17-mp8/`.
 
 And so on. So to run a Stata v17 MP4 interactive with 5 GB RAM, 
 one would use the interactive form of the [bsub command](https://hbs-rcs.github.io/hbsgrid-docs/commandline/) 
@@ -71,7 +71,7 @@ To run a Stata v17 MP4 batch file with 30 GB RAM,
 one would use the non-GUI binary and use the appropriate Stata command line flags
 to run the *.do file in batch. So the full command would be
 
-`bsub -q long -n 4 -R "rusage[mem=30000]" -M 30000 -hl /usr/local/app/stata17-mp4/stata-mp -d do mydofile.do`
+`bsub -q long -n 4 -R "rusage[mem=30000]" -M 30G -hl /usr/local/app/stata17-mp4/stata-mp -d do mydofile.do`
 
 <!--If you plan to use ODBC with Stata, you must also include the following command before your job submission bsub:
 export LD_LIBRARY_PATH=/usr/lib64:$LD_LIBRARY_PATH -->
