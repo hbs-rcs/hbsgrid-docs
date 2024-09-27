@@ -51,8 +51,7 @@ any files due to accidental deletion or corruption, please
 You can fix this problem yourself in a few ways:
         
 1.  **By Terminal**: Open a terminal (in the Windows search toolbar, type "Cmd" or "Windows PowerShell"; in the Mac search toolbar, type "Terminal") and run
-       ```sh
-       ssh <username>@hbsgrid.hbs.edu
+       ```ssh <username>@hbsgrid.hbs.edu
     ```
     (replace `<username>` with your actual HBS Grid username). Once connected you can use terminal commands like `ls` to list files in the directory, `rm` (remove) plus the name of the file to remove files you don't need,
     or `mv` (move) plus the name of your file and a path to a new location to move files. Removing and moving files can help get your home directory back under your storage quota. You can also run `gio trash --empty` to empty the trash, which may give you enough breathing room to permit NoMachine login.
