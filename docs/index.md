@@ -25,6 +25,9 @@ Using the HBS Grid you can:
 HBS faculty, staff, doctoral students and their guests are eligible for HBSGrid accounts.
 You can setup your account and connect via either GUI or terminal following the instructions below.
 
+!!! important inline end
+    **Guest Users:** Recall that before getting started you must change your temporary password and connect to the HBS VPN. Please see our detailed instructions [here](https://secure.hbs.edu/accountManagement/guest/research/new-member-instructions).
+
 !!! example "Getting Started"
 
     1.  *If you do not yet have an HBS Grid account* [request one here](https://www.hbs.edu/research-computing-services/help/online-requests.aspx).
