@@ -6,7 +6,7 @@ Login issues are usually caused by one of three common problems, and are often e
 
 Connecting to the HBS Grid requires either a direct on-campus connection to the
 HBS network or a 
-[VPN connection](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf) 
+[VPN connection](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/ivanti_connecting-to-vpn_rcs.pdf) 
 if you are connecting remotely. 
 
 Ethernet connections from HBS offices or WiFi connections to *HBS Secure* 
