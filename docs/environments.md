@@ -162,7 +162,7 @@ is available, along with [a helpful tutorial](https://nbis-reproducible-research
 
 Current and historical software environments available system-wide on the HBS Grid are described below.
 
-### rcs_2023.09 {#rcs_2023.09}
+### rcs_2024.09
 
 This software environment is a user-friendly collection of software and utilities designed to make data science and statistics
 easier for HBS Grid users. 
@@ -170,6 +170,13 @@ easier for HBS Grid users.
 If there is a software program that you need is not yet available and would be of benefit to the 
 larger community, please [contact us via the Research Inbox](mailto:research@hbs.edu?subject=HBSGrid%20software%20install)
 and we will follow-up as needed.
+
+More details about this release will be available soon.
+
+### rcs_2023.09 {#rcs_2023.09}
+
+This software environment is a user-friendly collection of software and utilities designed to make data science and statistics
+easier for HBS Grid users. 
 
 The 2023.09 release brings a huge number of application and package updates, including:
 
