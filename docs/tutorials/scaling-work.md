@@ -385,8 +385,7 @@ the HBSGrid cluster.
     pool_process.py
     ```
 
-    Once your script is ready, you may run it with **5 cores** by
-    entering:
+    Once your script is ready, you may run it with **5 cores** by making it executable via `chmod a+x ./code.sh`, and then submitting/running the job run by entering:
 
     `bsub -n 5 ./code.sh`
 
