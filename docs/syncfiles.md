@@ -185,14 +185,14 @@ Please be careful not to share too broadly.
     5.  Select the folder you wish to transfer and click on the appropriate Start arrow icon.
         (The direction the *Start* button arrow points indicates the direction files will transfer.)
 
+After transferring your data to the HBS Grid via *Globus* you will typically move it from 
+`/export/globus` to a [project folder](storage.md). This can be done on the HBS Grid *NoMachine* 
+desktop using *Grsync* or from the HBS Grid command line using `rsync`, `mv`, or similar commands. **You must move or copy any necessary files from /export/globus within 30 days. After 30 days, your files will be deleted from the Globus volume.** If you anticipate that you will need to keep files in /export/globus longer than 30 days in order to complete a data transfer, please [contact RCS](mailto:research@hbs.edu).
+
 *Globus* can also be used to transfer data from you local machine using *Globus Connect Personal*.
 Installers are available for [Mac OS X](https://docs.globus.org/how-to/globus-connect-personal-mac/).
 [Windows](https://docs.globus.org/how-to/globus-connect-personal-windows) and
 [Linux](https://docs.globus.org/how-to/globus-connect-personal-linux).
-
-After transferring your data to the HBS Grid via *Globus* you will typically move it from 
-`/export/globus` to a [project folder](storage.md). This can be done one the HBS Grid *NoMachine* 
-desktop using *Grsync* or from the HBS Grid command line using `rsync`, or `mv` or similar.
 
 For details on using *Globus* refer to the excellent [Globus documentation](https://docs.globus.org/how-to/).
 A [FAQ section](https://docs.globus.org/faq/) is also available.
