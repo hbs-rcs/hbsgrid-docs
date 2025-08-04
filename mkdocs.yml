@@ -28,6 +28,7 @@ nav:
     - Web Scraping in Python: 'tutorials/PythonWebScrape.md'
     - NLP in Python: 'tutorials/nlp_with_python.md'
     - Database Delimiters: 'tutorials/DatabaseDelimiters.md'
+    - Extracting Archived/Compressed Files: 'tutorials/uncompress.md'
 
 theme:
   name: material
