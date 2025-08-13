@@ -41,7 +41,7 @@ You can setup your account and connect via either GUI or terminal following the 
     1.  *If the *NoMachine* application is not yet installed* [download](https://downloads.nomachine.com/enterprise/?product=enterprise-client) and install it.
     2. Start the [NoMachine](https://downloads.nomachine.com/enterprise/?product=enterprise-client) application.    
     3.  *If this is your first time connecting*, click the
-        ![add](imgs/nomachine_add.png#inline) button and choose "Add connection" (**not** "Add VPN connection). Enter these connection details:
+        ![add](imgs/nomachine_add.png#inline) button and choose "Add connection" (**not** "Add VPN connection"). Enter these connection details:
         - **Name**: "HBS Grid", or anything you like
         - **Host**: `hbsgrid-nx.hbs.edu`
         - **Port**: 4000
