@@ -46,9 +46,10 @@ You can setup your account and connect via either GUI or terminal following the 
         - **Host**: `hbsgrid-nx.hbs.edu`
         - **Port**: 4000
         - **Protocol**: NX
-        | :warning: WARNING                                                                        |
-        |:-----------------------------------------------------------------------------------------|
-        | If you are using the newest version of NoMachine, please make sure that you select "Add connection" and **not** "Add VPN connection."|
+    
+    | :warning: WARNING                                                                        |
+    |:-----------------------------------------------------------------------------------------|
+    | If you are using the newest version of NoMachine, please make sure that you select "Add connection" and **not** "Add VPN connection."|
     4. Click the ![connect](imgs/nomachine_connect.png#inline) button and enter your *Username* and *Password*.
 
 
