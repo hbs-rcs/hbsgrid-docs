@@ -104,7 +104,7 @@ We recommend that you review and 'delete permanently' the files in your NoMachin
  
 - `rm -ri /export/scratch/.Trash-$(id -u $USER)`    # to be prompted for every file
 - `rm -rI /export/scratch/.Trash-$(id -u $USER)`    # to be prompted, but less intrusive
-- `rm -rf /export/scratch/.Trash-$(id -u $USER`)    # NO PROMPT
+- `rm -rf /export/scratch/.Trash-$(id -u $USER)`    # NO PROMPT
 
 ### Project spaces {#project-spaces}
 
@@ -119,13 +119,22 @@ reach capacity will throw errors in programs and when transferring
 files, and data loss may result.
 
 Project spaces are backed up every evening. If you should need to recover any files due to accidental deletion or
-corruption, please [contact RCS](mailto:research@hbs.edu).
+corruption, please [contact RCS](mailto:research@hbs.edu).    
 
 #### Requesting a project space {#requesting-a-project-space}
 
-Project spaces can be set up with faculty sponsorship and/or approval by
-filling out the [New Project Space Request
-Form](https://secure.hbs.edu/accountManagement/secure/research/projectspace/new).
+!!! info inline end "Note to doctoral student sponsors"
+    
+    Access to project spaces that belong to doctoral students is limited
+    to internal HBS users only (i.e., users with @hbs.edu credentials.) 
+    Doctoral students who are working with external collaborators 
+    (which may include graduate students from other Harvard schools) should contact 
+    the Doctoral Programs office and RCS to discuss their options.
+
+Project spaces must be sponsored by an HBS faculty member or doctoral student. To request a project space,
+the prospective sponsor must fill out and submit the [New Project Space Request
+Form](https://secure.hbs.edu/accountManagement/secure/research/projectspace/new). (Please note that this form
+is only accessible to users who are eligible to sponsor a project space.)
 
 If you are working with level 3 data or higher, we will ask you to
 submit documentation from the IRB or a Data Usage Agreement (DUA; a
@@ -144,7 +153,7 @@ Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXM
 
 Project space usage is reviewed and confirmed on a yearly basis.
 Inactive project spaces will be backed up and archived only after
-contacting the primary faculty sponsor. Archives are retained for the
+contacting the primary sponsor. Archives are retained for the
 period of time specified by HU or HBS data retention policies, whichever
 is longest. If you would like to unarchive a project space, [contact
 RCS](https://www.hbs.edu/research-computing-services/contact-us/Pages/default.aspx){target="_blank"}.
