@@ -60,3 +60,11 @@ To extract a file into the current directory:
 | Command        | Example                |
 | -----------    | ---------------------- |
 | `7za x FILE`   | `7za x data.7z`       |
+
+To extract a file into a specific directory:
+
+| Command                      | Example                                                  |
+| ---------------------------- | -------------------------------------------------------- |
+| `7za x FILE -oDESTINATION`  | `7za x data.7z -o/export/home/dor/jharvard`       |
+
+Full documentation can be found here: <https://www.mankier.com/1/7za#>
