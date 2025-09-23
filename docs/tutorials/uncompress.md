@@ -2,6 +2,7 @@
 tags:
     - unzip
     - gunzip
+    - 7-zip
     - uncompress
 ---
 
@@ -50,3 +51,12 @@ To extract a file into the current directory and **keep both the compressed and 
 
 
 Full documentation can be found here: <https://linux.die.net/man/1/gunzip>
+
+## 7-zip
+`7za` can be used with files ending in .7z, .cab, .zip, .gzip, .bzip2, .Z, and .tar.
+
+To extract a file into the current directory:
+
+| Command        | Example                |
+| -----------    | ---------------------- |
+| `7za x FILE`   | `7za x data.7z`       |
