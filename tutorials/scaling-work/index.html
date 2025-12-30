@@ -1,0 +1,1958 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://hbs-rcs.github.io/hbsgrid-docs/tutorials/scaling-work/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../large_data_R/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Parallel processing - HBS Grid Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3P5QKSCGVL"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3P5QKSCGVL",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3P5QKSCGVL",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="hbs" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#scaling-work" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://www.hbs.edu/research-computing-services/" title="HBS Grid Documentation" class="md-header__button md-logo" aria-label="HBS Grid Documentation" data-md-component="logo">
+      
+  <img src="../../imgs/rcs.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HBS Grid Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Parallel processing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hbs-rcs/hbsgrid-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Start Here
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../software/" class="md-tabs__link">
+          
+  
+  
+  Software & Environments
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../storage/" class="md-tabs__link">
+          
+  
+  
+  Data & Storage
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../help/" class="md-tabs__link">
+          
+  
+  
+  Help & Support Requests
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.hbs.edu/research-computing-services/" title="HBS Grid Documentation" class="md-nav__button md-logo" aria-label="HBS Grid Documentation" data-md-component="logo">
+      
+  <img src="../../imgs/rcs.png" alt="logo">
+
+    </a>
+    HBS Grid Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hbs-rcs/hbsgrid-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start Here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software & Environments
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software & Environments
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 Available Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../menulaunch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Run Desktop Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commandline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🐚 Use the Command-line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔙 Use Software Versions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data & Storage
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data & Storage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💾 Storage & Databases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syncfiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔄 Copy and Transfer Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../worksafe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    👥 Collaborate and Share
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help & Support Requests
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help & Support Requests
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support Channels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../accountmanagement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Account & Project Requests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trouble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Topic list
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parallel processing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parallel processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parallel Processing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpu-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPU Computing
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../large_data_R/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large data in R
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PythonWebScrape/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Scraping in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nlp_with_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NLP in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DatabaseDelimiters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Delimiters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uncompress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extracting Archived/Compressed Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../#tag:gpu" class="md-tag">GPU</a>
+      
+    
+      
+      
+      
+      
+        <a href="../#tag:matlab" class="md-tag">Matlab</a>
+      
+    
+      
+      
+      
+      
+        <a href="../#tag:parallelization" class="md-tag">Parallelization</a>
+      
+    
+      
+      
+      
+      
+        <a href="../#tag:python" class="md-tag">Python</a>
+      
+    
+      
+      
+      
+      
+        <a href="../#tag:r" class="md-tag">R</a>
+      
+    
+      
+      
+      
+      
+        <a href="../#tag:stata" class="md-tag">Stata</a>
+      
+    
+  </nav>
+
+
+  
+    <a href="https://github.com/hbs-rcs/hbsgrid-docs/edit/main/docs/tutorials/scaling-work.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="scaling-work">Scaling Work</h1>
+<p>There are numerous ways to scale up your work on the HBSGrid, including
+<a href="#parallel-processing">parallel processing</a> and <a href="#GPU">GPUs</a>.</p>
+<h2 id="parallel-processing">Parallel Processing</h2>
+<p>Also commonly called parallel computing or multicore processing, using
+multiple cores (CPUs) to analyze data is an efficient way to get more
+work done in less time. But only under certain circumstances! There two
+basic ways to use multiple cores: <a href="#implicit">implicit parallelism</a>
+built in to your application or library,
+and <a href="#explicit">explicit parallelism</a> that you program and manage
+yourself. Explicit parallelism can be achieved using
+application/language native tools or using <a href="https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_admin/job_arrays_lsf.html">LSF job
+arrays</a>.</p>
+<h3 id="requesting-multiple-cpus-on-the-hbsgrid">Requesting multiple CPUs on the HBSGrid</h3>
+<p>When using parallel processing on shared compute systems, you need to
+indicate to the scheduler, the system software that manages workloads,
+that you wish to use multiple cores. On your personal desktop or laptop,
+this isn't necessary, as you control all the resources on that machine.
+However, on a compute cluster, you only control the resources that the
+scheduler has given you, and it has given you only the resources that
+you've requested, whether this is done explicitly via a custom job
+submission script, or implicitly using a default values or default
+submission scripts available on the HBS compute grid. This is due to the
+fact that jobs (work sessions) from multiple (and possibly) different
+people, are often running side-by-side on a given compute node on the
+compute cluster.</p>
+<p>When you start a job on the HBSGrid, one can specify the number of CPUs you will use.
+Desktop applications have pop-up dialog where you can enter an appropriate value, and the
+<code>bsub</code> command-line program allows you to specify CPUs via the <code>-n</code> argument.
+For example, starting Stata-MP4 with the command <code>bsub -q short_int -Is -n 4 xstata-mp</code> from 
+the HBSGrid command line will ask to start a session with 
+4 CPUs reserved (the session will start when there's room and its been sent to the
+appropriate compute node.)</p>
+<h3 id="implicit-parallelism">Implicit Parallelism</h3>
+<p>Implicit parallelism is easiest to use but limited to the features
+offered by your application or programming language. Most of the
+applications commonly used for data analysis on the HBSGrid provide some
+degree of implicit parallelization. The system-wide installation of
+Rstudio / Microsoft R Open uses the Intel Math Kernel Lbrary (MKL)
+for fast multi-threaded computations.  The system-wide installation of
+Spyder / Python also use MKL to speed up some computations.
+Similarly, many Stata commands have been parallelized, as have some
+Matlab algorithms. Note that for all these applications only some
+computations use implicit parallelization and many computations will
+only use a single CPU. To speed up other computations you may be able to
+use explicit parallelization.</p>
+<h3 id="explicit-parallelism">Explicit Parallelism</h3>
+<p>Explicit parallelism can be achieved using application or library
+features to leverage multiple CPUs on a single compute node, or
+using LSF job arrays to leverage multiple CPUs across multiple compute
+nodes. For this to work, your script or code must be parallelizable --
+it can be broken into parts that can execute independently. This is
+often the case with for loops or functions that can perform work
+independently. A good example is the apply functions in R
+(<code>apply()</code>, <code>lapply()</code>, etc.).</p>
+<p>As when using implicit parallelism, you must request the number of
+CPUs you will use when submitting a job. We also recommend that you do
+not statically indicate ('hard code') the number of cores that you'll
+be using in your code. Instead, set this value dynamically based on
+job/runtime environment variables that are set as the job executes.
+You'll see examples of this in the following sections.</p>
+<p>Finally, one must also factor in memory requirements for explicit
+parallelization. If the parallelization all happens within one job (e.g.
+Python's <code>muliprocessing</code>, certain
+approaches with <code>parallel</code> or <code>future</code> packages in R), one must
+also determine how the memory will be consumed for each
+fork/thread/process/branch of the code. If each has it's own copy of
+the data and data structures, then memory requirements will increase
+significantly based on the number of parallel executions. Conversely, if
+each shares the data in memory with the parent program, then
+significantly less memory will be needed. Each application/programming
+framework works differently; consult the documentation and adjust the
+memory requirement appropriately when submitting the job.</p>
+<p>Explicit parallelism uses application-specific libraries and features,
+and is described below for each of the most commonly used programs on
+the HBSGrid cluster.</p>
+<details class="note">
+<summary>MATLAB</summary>
+<h3 id="introduction"><strong>Introduction</strong></h3>
+<p>The following has been adapted from FAS RC's Parallel MATLAB page
+(<a href="https://docs.rc.fas.harvard.edu/kb/parallel-matlab-pct-dcs/">https://docs.rc.fas.harvard.edu/kb/parallel-matlab-pct-dcs/</a>). As
+the Odyssey cluster uses a different workload manager, the code has
+been adapted to the workload manager on the HBSGrid compute cluster.</p>
+<p>This page is intended to help you with running parallel MATLAB codes
+on HBSGrid. Parallel processing with MATLAB is
+performed with the help of two products, Parallel Computing Toolbox
+(PCT) and Distributed Computing Server (DCS). <strong>HBS is licensed only
+for use of the PCT.</strong></p>
+<p><em>Supported Versions</em>: On the HBSGrid cluster, all versions of MATLAB
+2018a 64-bit and greater are licensed and have been installed
+with the Parallel Computing Toolbox (PCT).</p>
+<p><em>Maximum Workers</em>: PCT uses <em>workers</em>, MATLAB computational engines,
+to execute parallelized applications and their parts on CPU cores.
+Each compute node on the cluster has &gt;= 32 physical cores; therefore (in
+theory) users should request no more than 32 cores when using MATLAB
+with PCT. However, due to current user resource limits, <strong>you should
+request no more than 12 (interactive) or 16 (batch) cores</strong>. If you
+request more than this, your job will not run – it will sit in a
+<code>PEND</code> state.</p>
+<h3 id="code-example"><strong>Code Example</strong></h3>
+<p>The following simple code illustrates the use of PCT to calculate pi
+via a parallel Monte-Carlo method. This example also illustrates the
+use of <code>parfor</code> (parallel <code>for</code>) loops. In this scheme,
+suitable <code>for</code> loops could be
+simply replaced by parallel <code>parfor</code> loops without other changes to the
+code:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">hLog</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fopen</span><span class="p">(</span><span class="w"> </span><span class="p">[</span><span class="nb">mfilename</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;.log&#39;</span><span class="p">]</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s">&#39;w&#39;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c">% Create log file </span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c">% Launch parallel pool with as many workers as requested</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">hPar</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">parpool</span><span class="p">(</span><span class="w"> </span><span class="s">&#39;local&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nb">str2num</span><span class="p">(</span><span class="w"> </span><span class="nb">getenv</span><span class="p">(</span><span class="s">&#39;LSB_DJOB_NUMPROC&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c">% Report number of workers</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">fprintf</span><span class="p">(</span><span class="w"> </span><span class="n">hLog</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Number of workers = %d\n&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">hPar</span><span class="p">.</span><span class="n">NumWorkers</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c">% Main code</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">R</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">darts</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1e7</span><span class="p">;</span><span class="w"> </span><span class="nb">count</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">% Prepare settings</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">tic</span><span class="p">;</span><span class="w"> </span><span class="c">% Start timer </span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">parfor</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">darts</span><span class="w"> </span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="c">% Compute the X and Y coordinates of where the dart hit the</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="c">% square using Uniform distribution</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="n">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">R</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="c">% Increment the count of darts that fell inside of the.................</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="c">% circle</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="nb">count</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="c">% Count is a reduction variable.</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="k">end</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="k">end</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c">% Compute pi</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="n">myPI</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">count</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">darts</span><span class="p">;</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="n">T</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">toc</span><span class="p">;</span><span class="w"> </span><span class="c">% Stop timer </span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="c">% Log results</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="nb">fprintf</span><span class="p">(</span><span class="w"> </span><span class="n">hLog</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s">&#39;The computed value of pi is %2.7f\n&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">myPI</span><span class="w"> </span><span class="p">);</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="nb">fprintf</span><span class="p">(</span><span class="w"> </span><span class="n">hLog</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Executed in %8.2f seconds\n&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="c">% shutdown pool, close log file, and exit</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="nb">delete</span><span class="p">(</span><span class="n">gcp</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="nb">fclose</span><span class="p">(</span><span class="n">hLog</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="nb">exit</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="code-with-job-submission-script"><strong>Code with Job Submission Script</strong></h3>
+<p>To run the above code (named code.m) using <strong>4 CPU cores</strong> with the
+HBSGrid's default version of MATLAB, in the terminal use the following
+command:</p>
+<p><code>bsub -q short -n4 matlab -r "code"</code></p>
+<p>This will run and create a log file called <code>code.log</code> owing 
+to the first line in our MATLAB code, <code>hLog=fopen( [mfilename, '.log'] , 'w' );</code></p>
+<p>If you do not use MATLAB's <code>mfilename</code> function, then you may also enter the
+following command to have output sent to an output/report file (often emailed):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bsub<span class="w"> </span>-q<span class="w"> </span>short<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span>matlab<span class="w"> </span><span class="se">\&lt;</span><span class="w"> </span>code.m
+</code></pre></div>
+<p>The <code>&lt;</code> is escaped here so that it becomes part of the <code>MATLAB</code>
+command, not the <code>bsub</code> command.</p>
+<p>If you wish to use a submission script to run this code and include
+LSF job option parameters, create a text file named
+<code>code.sh</code> containing the
+following:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">#</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">#BSUB -q short</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">#BSUB -n 4</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">#BSUB -We 30</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">#BSUB -R&quot; rusage[mem=10G]&quot;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">#BSUB -M 10G -hl</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># do a module load if needed, e.g.</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># module load rcs/rcs_2022.11 </span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1"># OR</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1"># module load matlab/2023a</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>matlab<span class="w"> </span>-nosplash<span class="w"> </span>-nodesktop<span class="w">  </span>-r<span class="w"> </span><span class="s2">&quot;code&quot;</span>
+</code></pre></div>
+<p>Once your script is ready, make it executable via <code>chmod a+x ./code.sh</code>, and then
+submit/run the job run by entering:</p>
+<p><code>bsub ./code.sh</code></p>
+<p>Note: we don't need to include <code>-n 4</code> as it is embedded in the file. Also, the <code>&lt;</code> 
+character often used here so that the <code>#BSUB</code> directives  in the script file are 
+parsed by LSF. This is now optional.</p>
+<h3 id="explanation-of-parallel-code"><strong>Explanation of Parallel Code</strong></h3>
+<p><em>Starting and stopping the parallel pool</em></p>
+<p>The <code>parpool</code> function is used
+to initiate the parallel pool. To dynamically set the number of
+workers to the CPU cores you requested, we ask MATLAB to query the
+LSF environment variable <code>LSB_DJOB_NUMPROC</code>:</p>
+<p><code>hPar = parpool( 'local', str2num( getenv( 'LSB_DJOB_NUMPROC' ) ) );</code></p>
+<p>Once the parallelized portion of your code has been run, you should
+explicitly close the parallel pool and release the workers as
+follows:</p>
+<p><code>delete(gcp); % Shutdown parallel pool</code></p>
+<p><em>Parallelized portion of the code</em></p>
+<p>The actual portion of the code that takes advantage of multiple CPUs
+is the <code>parfor</code> loop
+(<a href="http://www.mathworks.com/help/distcomp/parfor.html">http://www.mathworks.com/help/distcomp/parfor.html</a>). A
+<code>parfor</code> loop behaves similarly
+to a <code>for</code> loop, though various
+iterations of the loop are passed to different workers. It is
+therefore important that iterations due not rely on the output of
+any other iteration in the same loop.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">parfor</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">darts</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="n">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">R</span><span class="o">^</span><span class="mi">2</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nb">count</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="k">end</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">end</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Python</summary>
+<h3 id="introduction_1"><strong>Introduction</strong></h3>
+<p>This page is intended to help you with running parallel python codes
+on the HBSGrid cluster or on your local multicore machine. The
+version of python on the cluster <a href="https://docs.anaconda.com/mkl-optimizations/">uses MKL to automatically
+parallelize some
+computations</a>.
+Python started via a desktop menu will use the number of CPUs you
+specify when starting your application.</p>
+<p>In addition to the implicit parallelization provided by MKL, you can
+explicitly parallelize your own analysis code using the
+'<a href="https://docs.python.org/3/library/multiprocessing.html">multiprocessing</a>'
+package. Instructions and examples are provided below. Note that
+this guide does NOT cover distributed computing, which distributes
+the workload over multiple machines.</p>
+<p><em>Maximum Workers</em>: Most compute nodes on the cluster have at least
+32 physical cores; therefore (in theory) users should request no
+more than 32 cores. For short queue jobs, you may request the use of
+up to 16 cores, while the limit remains at 12 cores for long queue
+jobs. <strong>Nota Bene!</strong> The number of workers are dynamically
+determined by asking LSF (the scheduler) how many cores you have
+reserved via the <code>LSB_DJOB_NUMPROC</code> environment variable. <strong>DO NOT</strong> use
+<code>multiprocessing.cpu_count()</code>
+or similar; instead retrieve the values of this environment
+variable, e.g., <code>os.getenv("LSB_DJOB_NUMPROC")</code>.</p>
+<h3 id="example-parallel-processing-basics"><strong>Example: Parallel Processing Basics</strong></h3>
+<p>This sample code will provide a basic introduction to parallel
+processing. You will be shown how to set up your parallel pool with
+the appropriate number of workers, how to define which function is
+to be run in parallel, and how to gather the results.</p>
+<p>For this example, we will calculate the square of a list of numbers
+in parallel.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># file: fork_process.py</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># This code both defines the function (f) to run</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># and also (in __main__) forks a new process for each worker</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">multiprocessing</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  <span class="n">pid</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">))</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>  <span class="n">numList</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>  <span class="n">procs</span> <span class="o">=</span> <span class="p">[</span><span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">f</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="p">,))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numList</span><span class="p">]</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">procs</span><span class="p">:</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="example-parallel-processing-with-pools"><strong>Example: Parallel Processing with Pools</strong></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a># File pool_process.py
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a># This code assumes the same function (f) as above
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a># but instead (in __main__) uses the requested cores to create
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a># persistent workers (process pool) to handle the spread of work
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>import sys
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>import os
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>import multiprocessing
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>import time
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>def f(x):
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>  pid=os.getpid()
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>  print(&quot;{}:{}&quot;.format(pid,x*x))
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>  return x*x
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>if __name__ == &#39;__main__&#39;:
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>  numList=range(1,100)
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>  num_workers = os.getenv(&quot;LSB_DJOB_NUMPROC&quot;)
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>  p = multiprocessing.Pool(num_workers)
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>  result = p.map(f,numList)
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>  p.close()
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>  p.join()
+</code></pre></div>
+<h3 id="code-with-job-submission-script_1"><strong>Code with Job Submission Script</strong></h3>
+<p>To run the above code (named <code>test.py</code>)
+using <strong>5 CPU cores</strong> in the terminal use the following command:</p>
+<p><code>bsub -q short n -n 5 python pool_process.py</code></p>
+<p>If you wish to use a submission script to run this code and include
+LSF job option parameters, create a text file named
+<code>code.sh</code> containing the
+following:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>#!/bin/bash
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>#
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>#BSUB -q short
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>#BSUB -W 10
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>#BSUB -R&quot; rusage[mem=1024]&quot;
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>#BSUB -M 1024 -hl 
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>pool_process.py
+</code></pre></div>
+<p>Once your script is ready, you may run it with <strong>5 cores</strong> by making it executable via <code>chmod a+x ./code.sh</code>, and then submitting/running the job run by entering:</p>
+<p><code>bsub -n 5 ./code.sh</code></p>
+<p>Note, the <code>&lt;</code> character is no
+longer needed when submitting jobs for LSF to parse <code>#BSUB</code>{.inline
+style="overflow-x: hidden;"} directives; this is done by default.</p>
+</details>
+<details class="note">
+<summary>R</summary>
+<h3 id="implicit-parallelization"><strong>Implicit Parallelization</strong></h3>
+<p>The system-wide installation of Rstudio / <a href="https://mran.microsoft.com/open">Microsoft R
+Open</a> on the Grid uses the Intel
+Math Kernel Lbrary (MKL) for <a href="https://mran.microsoft.com/documents/rro/multithread">fast multithreaded
+computations</a>.
+R started on the Grid via a <a href="running-a-program-submitting-a-job.md#custom">wrapper
+script</a>
+will use the number of CPUs you specify when starting your
+application. For example, starting Rstudio from the desktop menu
+and selecting 5 CPUs from the drop-down menu will start R with
+MKL correctly configured to use 5 cores. You can set the number of
+cores used by MKL using the setMKLthreads function in the
+<code>RevoUtilsMath</code> package; <a href="https://mran.microsoft.com/documents/rro/multithread">more
+information about MKL in R is
+available</a>.
+Some popular R packages, including
+<a href="https://cran.r-project.org/web/packages/data.table/index.html">data.table</a>,
+also provide some degree of implicit parallelization. The number of
+threads used by data.table can be set using the setDTthreads
+function.</p>
+<h3 id="explicit-parallelization"><strong>Explicit Parallelization</strong></h3>
+<p>It is also possible to explicilty parallelize your own analysis
+code. There are a large number of R packages available for parallel
+computing.</p>
+<p>The <a href="https://cran.r-project.org/package=future">future
+package</a>
+is simple, easy to use, and can make use of several backends to
+enable parallelization across CPUs, add-hoc clusters, HPC clusters
+(including LSF on the grid) via
+<a href="https://cran.r-project.org/web/packages/future.batchtools/index.html">future.batchtools</a>
+and others. A number of front-ends are available, including
+<a href="https://cran.r-project.org/web/packages/future.apply/index.html">future.apply</a>
+and
+<a href="https://cran.r-project.org/web/packages/furrr/index.html">furrr.</a></p>
+<p>The
+<a href="https://cran.r-project.org/package=foreach">foreach</a> package is another popular option with a number of
+available backends, including
+<a href="https://cran.r-project.org/package=doFuture">doFuture</a>
+that allows you to use foreach as a future frontend.</p>
+<p>For a more comprehensive survey of parallel computing in R refer to
+the <a href="https://cran.r-project.org/web/views/HighPerformanceComputing.html">High Performance Computing Task
+View</a>.</p>
+<h3 id="code-examples"><strong>Code Examples</strong></h3>
+<p>The following code examples were adapted from the Texas Advanced
+Computing Center (TACC) seminar <a href="https://www.xsede.org/web/xup/course-calendar/-/training-user/class/511/session/1063" title="R for High Performance Computing">R for High Performance
+Computing</a> given through XSEDE.</p>
+<p>Below are a number of very simple examples to highlight how the
+frameworks can be included in your code. <strong>Nota Bene!</strong> The number
+of workers are dynamically determined by asking LSF (the scheduler)
+how many cores you have reserved via the <code>LSB_DJOB_NUMPROC</code>
+environment variable. <strong>DO NOT</strong> use the <code>mc.detectcores()</code> routine or anything similar, as this
+will clobber your code as well as any other code running on the same
+compute node.</p>
+<p>All the following examples will use the following example function :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">myProc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">10000000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1">#Load a large vector </span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">vec</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="n">size</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1">#Now sum the vec values </span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="kr">return</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">vec</span><span class="p">))</span><span class="w"> </span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">}</span>
+</code></pre></div>
+<p>It is important not to use more cores than we've reserved:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">## detect the number of CPUs we are allowed to use </span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">n_cores</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.integer</span><span class="p">(</span><span class="nf">Sys.getenv</span><span class="p">(</span><span class="s">&#39;LSB_DJOB_NUMPROC&#39;</span><span class="p">))</span><span class="w"> </span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">## use multiprocess backend </span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nf">plan</span><span class="p">(</span><span class="n">multiprocess</span><span class="p">,</span><span class="w"> </span><span class="n">workers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n_cores</span><span class="p">)</span>
+</code></pre></div>
+<p>The future.apply package provides <code>*apply</code> functions that use future
+backends.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">## replicate in parallel </span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">future.apply</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nf">future_replicate</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="nf">myProc</span><span class="p">())</span>
+</code></pre></div>
+<p>The doFuture package makes it easy to write parallel loops:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">doFuture</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nf">registerDoFuture</span><span class="p">()</span><span class="w"> </span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nf">foreach </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">.combine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">%dopar%</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nf">myProc</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="scheduler-submission-job-script"><strong>Scheduler Submission (Job) Script</strong></h3>
+<p>If submitted via the terminal, the following batch submission script
+will submit your R code to the compute grid and will allocate 4 CPU
+cores for the work (as well as 5 GB of RAM for a run time limit of
+12 hrs). If your code is written as above, using
+<code>LSB_DJOB_NUMPROC</code>, then
+your code will detect that 4 cores have been allocated.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>bsub -n 4 -q long -M 5G -hl Rscript my_parallel_code.R
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Stata</summary>
+<h3 id="introduction_2"><strong>Introduction</strong></h3>
+<p>StataMP provides implicilty parallel implementations of many
+functions, which are documented its <a href="https://www.stata.com/statamp/report.pdf">330 page Stata/MP Performance
+Report</a>, describing which functions are parallelized and
+each's efficiency (how perfectly parallelized a given function is):</p>
+<p>Stata/MP is the version of Stata that is programmed to take full
+advantage of multicore and multiprocessor computers. It is exactly
+like Stata/SE in all ways except that it distributes many of Stata's
+most computationally demanding tasks across all the cores in your
+computer and thereby runs faster---much faster.</p>
+<p>They could be impressive. But a caveat:</p>
+<p><img alt="" src="https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/stata_parallelization.png" style="max-width:400px;" /></p>
+<p>With multiple cores, one might expect to achieve the theoretical
+upper bound of doubling the speed by doubling the number of
+cores---2 cores run twice as fast as 1, 4 run twice as fast as 2,
+and so on. However, there are three reasons why such perfect
+scalability cannot be expected: 1) some calculations have parts that
+cannot be partitioned into parallel processes; 2) even when there
+are parts that can be partitioned, determining how to partition them
+takes computer time; and 3) multicore/multiprocessor systems only
+duplicate processors and cores, not all the other system resources.</p>
+<p>In general:</p>
+<p>Stata/MP achieved <strong>75% parallelization efficiency overall</strong> and
+<strong>85% efficiency among estimation commands</strong>... Speed is more
+important for problems that are quantified as large in terms of the
+size of the dataset or some other aspect of the problem, such as the
+number of covariates. On large problems, Stata/MP with <strong>2 cores
+runs half of Stata's commands at least 1.7 times faster</strong> than on a
+single core. With <strong>4 cores, the same commands run at least 2.4
+times faster</strong> than on a single core. <strong><em>NOTE: This is already a
+drop to 60% efficiency on 4 cores.</em></strong></p>
+<h3 id="how-to-utilize-this"><strong>How to Utilize This?</strong></h3>
+<p>This parallelization benefit is <strong>mostly realized in running code in
+batch mode</strong>. If using Stata interactively, Stata is predominantly
+waiting for user input, and so the parallelization gains diminish
+rapidly. If one intends to do intense, focused work for short
+periods of time (up to a few days) and subsequently exit the
+software, choosing multiple cores is fine. But <strong>if you plan to run
+an interactive session over the course of the day or two, please
+select Stata-SE</strong>, as the multiple cores that you have requested are
+reserved only for you and will sit idle during this time, decreasing
+the resources available to other people.</p>
+<p>No additional work is needed for you to utilize the multiple CPU
+cores in your code. Stata will handle this transparently for you.
+But you do need to ensure that you ask the compute grid to reserve
+the cores for your use:</p>
+<h3 id="using-nomachine-interactive-only"><strong>Using NoMachine (interactive only):</strong></h3>
+<p>From the Applications menu, select the Stata-SE menus for
+single-core or Stata-MP4 menus for 4-core Stata. Under each, select
+the appropriate memory footprint for your work (see <a href="guidelines-for-choosing-resources.md">Choosing
+Resources</a> ).
+An example screenshot can be see
+<a href="http://static.hwpi.harvard.edu/files/styles/os_files_xxlarge/public/hbs_test/files/image02.png">here</a>.
+The wrapper scripts that drive these menu items include all the
+necessary commands to start Stata with the designated number of CPU
+cores within your session.</p>
+<h3 id="using-the-command-line-interactive-or-batch"><strong>Using the command-line (interactive or batch):</strong></h3>
+<p>Both interactive and batch jobs can started from the command line.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a># interactive (GUI) Stata<span class="o">-</span>MP4 with <span class="m">5</span> GB footprint via the comand<span class="k"> line</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>bsub <span class="o">-</span>q short_int <span class="o">-</span>n4 <span class="o">-</span>M5G <span class="o">-</span>Is xstata<span class="o">-</span>mp4
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a># batch Stata<span class="o">-</span>MP4, <span class="m">35</span> GB,<span class="k"> for</span> <span class="m">12</span> hours
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>bsub <span class="o">-</span>q long <span class="o">-</span>n <span class="m">4</span> <span class="o">-</span>W <span class="m">12</span>:<span class="m">00</span> <span class="o">-</span>M35G stata<span class="o">-</span>mp4 <span class="o">-</span>b<span class="k"> do</span> myfile<span class="m">.</span>do 
+</code></pre></div>
+<h3 id="explicit-parallelization_1"><strong>Explicit Parallelization</strong></h3>
+<p>Explicit parallelization in Stata can be achieved using the
+<a href="https://github.com/gvegayon/parallel">parallel
+module</a>.</p>
+</details>
+<p>For other environments, or if you have any questions, please <a href="mailto:research@hbs.edu">contact
+RCS</a>.</p>
+<h2 id="gpu-computing">GPU Computing</h2>
+<h3 id="about">About GPU Computing</h3>
+<p>A GPU (graphics processing unit) is a processor that is great at
+handling specialized computations. We can contrast this to the Central
+Processing Unit (CPU), which is great at handling general computations.
+CPUs power most of the computations performed on the devices we use
+daily.</p>
+<p>GPU can be faster at completing tasks than CPU. However, it is not true
+for every case. The performance hugely depends on the type of
+computation being performed. GPUs are great at tasks that can be run in
+parallel ....and are often used for Machine Learning types
+of'embarrassingly parallel' tasks (== a huge task can be broken down
+into many smaller ones that are completely independent of one another).</p>
+<p>-- Taken and adapted from <a href="https://towardsdatascience.com/why-deep-learning-uses-gpus-c61b399e93a0">Why Deep Learning Uses
+GPUs</a></p>
+<p>The HBSGrid cluster has five <a href="https://www.nvidia.com/en-gb/data-center/tesla-v100/">NVIDIA Tesla V100 graphics processing
+units
+(GPUs)</a> attached to one compute node. Computational workflows
+that make use of GPUs can see significant speedups in execution time,
+though one's code must be written using frameworks that will leverage
+these special resources (e.g.
+<a href="https://tensorflow.org/">Tensorflow</a>,
+<a href="https://pytorch.org/">PyTorch</a>, etc). The GPU node is available for both interactive
+and batch sessions.</p>
+<h3 id="submitting">Submitting Jobs</h3>
+<p>To request any GPU resources as a part of your job submission, you must
+include the <code>-gpu</code> flag and options
+and we recommend that you submit to the gpu queue (<code>-q gpu</code>). Your job can 
+be either for interactive or batch sessions as your work requires.</p>
+<p>The easiest route is to use the default GPU configuration,
+<code>-gpu -</code>. For example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>bsub<span class="w"> </span>-q<span class="w"> </span>gpu<span class="w"> </span>-gpu<span class="w"> </span>-<span class="w"> </span>-Is<span class="w"> </span>-M<span class="w"> </span>5G<span class="w"> </span>-hl<span class="w"> </span>spyder
+</code></pre></div>
+<p>The default GPU options are
+<code>"num=1:aff=no:mode=shared:mps=no:j_exclusive=no"</code>(with quotes). 
+If you wish to do something other than the default, simply indicate the option name and its
+preferred value, or supply the whole option string. For example,</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># one parameter</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>bsub<span class="w"> </span>-q<span class="w"> </span>gpu<span class="w"> </span>-gpu<span class="w"> </span><span class="s2">&quot;aff=yes&quot;</span><span class="w"> </span>-Is<span class="w"> </span>-M<span class="w"> </span>5G<span class="w"> </span>spyder
+</code></pre></div>
+OR</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># full parameter list</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>bsub<span class="w"> </span>-q<span class="w"> </span>gpu<span class="w"> </span>-gpu<span class="w"> </span><span class="s2">&quot;num=1:aff=yes:mode=shared:mps=no:j_exclusive=no&quot;</span><span class="w"> </span>-Is<span class="w"> </span>-M<span class="w"> </span>5G<span class="w"> </span>spyder<span class="w"> </span>
+</code></pre></div>
+<p>Again, as with all job submissions, one can specify the parameters on
+the command line or include them in a job submission script.</p>
+<h3 id="common">Common GPU Options and Their Definitions</h3>
+<p>The full range of options for use of the GPU resources are documented at
+LSF's <a href="https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_gpu/lsf_gpu_submit_jobs.html">Submitting Jobs that Require GPU
+Resources</a> page. These five options should handle most use cases
+(defaults are in <strong>boldface type</strong>; text below is copied or paraphrased
+from the LSF page):</p>
+<p><strong>num= (</strong>default =<strong>1</strong>): The number of GPUs to request. Note that
+after your job is dispatched, no matter which GPU one is allocated, the
+GPUs will be indexed starting from 0. And for security purposes, we are
+enforcing GPU sandboxing via Linux CGROUPS so one cannot use an
+incorrect index.</p>
+<p><strong>aff</strong>=<strong>no</strong> | yes: CPU-GPU affinity. This indicates whether or not
+the job should enforce strict GPU-CPU affinity binding. That is, the GPU
+allocated is on the same socket (group of CPU cores) as the GPU. This
+GPU-CPU affinity translates to higher communication rate, and thus
+better performance. If set to no, LSF does not bind the job core on the
+CPU socket to the GPU, but does ensure that the job is pinned to one or
+more cores (it does not bounce around == less performance) and that
+CGROUPs are active (job is sandboxed). NOTE: due to the unusual nature
+of the compute node, if you request aff=yes and the node has filled the
+lower 48 cores, your job will not dispatch until some of the lower cores
+are released. This is due to the fact that the upper 16 cores do not
+share the same CPU socket with any GPU. If you wish use
+<code>aff=yes</code> and are submitting an
+interactive job (concerned about immediate job dispatching), we advise
+that you use <code>bhosts | grep -i nod12</code>{.inline
+style="overflow-x: hidden;"} to see how busy the GPU node is.</p>
+<p><strong>mode=shared</strong> | exclusive_process: The GPU mode when the job is
+running, either <code>shared</code> or
+<code>exclusive_process</code>. The
+<code>shared</code> mode corresponds to the
+NVIDIA <code>DEFAULT</code> compute mode --
+multiple processes can use the GPU simultaneously. Individual threads of
+each process may submit work to the GPU simultaneously. The
+<code>exclusive_process</code> mode
+corresponds to the NVIDIA <code>EXCLUSIVE_PROCESS</code>{.inline
+style="overflow-x: hidden;"} compute mode -- the GPU is assigned to
+only one process at a time, and individual process threads may submit
+work to the GPU concurrently.</p>
+<p><strong>mps=no</strong> | yes: Enables or disables the NVIDIA Multi-Process Service
+(MPS) for the GPUs that are allocated to the job. We are not using this
+service at this time. If you have a need for this or feel that it should
+be in play, please <a href="mailto:mailto:research@hbs.edu?subject=gpu%20node%20MIPS%20service">contact
+RCS</a>
+to consult with us on this.</p>
+<p><strong>j_exclusive=no</strong>| yes: Specifies whether the allocated GPUs can be
+used by other jobs. When the mode is set to <code>exclusive_process</code>{.inline
+style="overflow-x: hidden;"}, the <code>j_exclusive=yes</code>{.inline
+style="overflow-x: hidden;"} option is set automatically.</p>
+<h3 id="further-resources">Further Resources</h3>
+<p>For more information, please see:</p>
+<ul>
+<li><a href="https://www.nvidia.com/en-gb/data-center/tesla-v100/">NVidia Telsa V100
+    GPUs</a></li>
+<li><a href="https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_welcome/lsf_kc_gpu_resources.html">LSF documentation on GPU resources and
+    jobs</a></li>
+<li><a href="https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_gpu/lsf_gpu_example_jobs.html">LSF example job submission
+    commands</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; President & Fellows of Harvard College.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.
+    </p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
