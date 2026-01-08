@@ -82,7 +82,7 @@ Specific memory requirements depend on the nature of the job, but as a rough
 guide **we recommend requesting RAM 4-10 times the size of your data**. For
 example, if you have a 6 Gb.csv file you may wish to request 24GB of memory or so.
 
-Additionally, you can review your memory usage from a past job by running `bhist -l JOBID` (use `bhist` alone for a list of your recently run jobs). Take note of MAX MEM and when you run a similar job in the future, request that amount plus about 20% for wiggle room (e.g., if your past job had a maximum memory usage of 10GB, request 12GB next time).
+Additionally, you can review your memory usage from a past job by running `bhist -a -l JOBID` (use `bhist` alone for a list of your recently run jobs). Take note of MAX MEM and when you run a similar job in the future, request that amount plus about 20% for wiggle room (e.g., if your past job had a maximum memory usage of 10GB, request 12GB next time). If your jobs are shutting down unexpectedly, it is usually because you have exceeded the memory requested. See our section on [troubleshooting jobs that exceed the memory limit](https://hbs-rcs.github.io/hbsgrid-docs/trouble/#MaxMem) for additional information.
 
 We recommend that you **request only 1 CPU** unless you
 know that you are using code or libraries that were written to run
