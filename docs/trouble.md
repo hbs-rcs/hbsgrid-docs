@@ -135,28 +135,11 @@ documentation](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=run-jobs).
 
 ## Jobs Exceeding Memory Limit {#MaxMem}
 
-Many times, a job that suddenly shuts down without an apparent error message has exceeded its memory limit (i.e., too little RAM was requested for the job). You can confirm this in a terminal window by using the `bhist -a -l` command to review all recent jobs (recall that the `-a` displays historical job information about both finished and unfinished jobs and the `-l` command asks for the output in a long format with more detailed information). Scroll until you see the header MEMLIMIT. Just above this may be an error message indicated that the job was killed after reaching the memory limit and just below will be the memory  used. For example:
+Many times, a job that suddenly shuts down without an apparent error message has exceeded its memory limit (i.e., too little RAM was requested for the job). You can confirm this in a terminal window by using the `bhist -a -l` command to review all recent jobs (recall that the `-a` displays historical job information about both finished and unfinished jobs and the `-l` command asks for the output in a long format with more detailed information). Scroll down until you see the header MEMLIMIT. Just above this will be an error message indicating that the job was killed after reaching the memory limit. The MEMLIMIT will display how much memory you requested and the MEMORY USAGE will display the MAX and AVG memory used for the job. For example:
 
 ```
 [jharvard@rhrcscli01:~]$ bhist -a –l
 ...
-Tue Dec 23 14:46:42: Submitted from host <rhrcscli1>, to Queue <short>, CWD <$H
-                     OME/dev/pipeline>, Output File </export/pr
-                     ojects5/facultyproject/log.log>, Error File </export/projects5/facultyproject/
-                     error.log>, 12 Task(s), Requested 
-                     Resources <rusage[mem=49152]>, memory/swap limit enforced 
-                     per-job/per-host;
-Tue Dec 23 14:46:43: Dispatched 12 Task(s) on Host(s) <12*rhrcsnod19>, Allocate
-                     d 12 Slot(s) on Host(s) <12*rhrcsnod19>, Effective RES_REQ
-                      <select[type == local] order[r15s:pg] rusage[mem=49152.00
-                     ] span[hosts=1] affinity[core(1)*1] >;
-Tue Dec 23 14:46:43: Starting (Pid 258999);
-Tue Dec 23 14:46:43: Running with execution home </export/home/itg/idoroshenko>
-                     , Execution CWD </export/home/itg/idoroshenko/dev/bbaik-wo
-                     rdcount-pipeline>, Execution Pid <258999>;
-Tue Dec 23 16:34:13: Exited with exit code 1. The CPU time used is 31911.0 seco
-                     nds;
-
 Tue Dec 23 16:34:13: Completed <exit>; TERM_MEMLIMIT: job killed after reaching
                       LSF memory usage limit;
 
@@ -166,7 +149,6 @@ Tue Dec 23 16:34:13: Completed <exit>; TERM_MEMLIMIT: job killed after reaching
 
 MEMORY USAGE:
 MAX MEM: 48 Gbytes;  AVG MEM: 1.3 Gbytes
-
 ```
 
 The MAX MEM values can inform how much RAM you would ask for next time you do similar work or work with the same data. If the amount was not sufficient for your job and the job exceeded the memory limit and was shut down, you know that you will need to ask for more memory the next time. This output can also tell you if you've asked for more RAM than was needed to complete the job.
