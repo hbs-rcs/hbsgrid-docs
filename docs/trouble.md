@@ -161,7 +161,7 @@ MAX MEM: 42.2 Gbytes;  AVG MEM: 36.6 Gbytes
 MAX MEM: 915 Mbytes;  AVG MEM: 340 Mbytes
 MAX MEM: 471 Mbytes;  AVG MEM: 211 Mbytes
 ```
-You can further customize this output to focus on particular dates, or parse the output further if you were running many jobs. Below is an example of how you can narrow down the dates, and output when jobs were submitted, the job ID, the RAM (memory) requested, the maximum/average amount of RAM (memory) used, and the reason a job failed (if applicable):
+You can further customize this output to focus on particular dates, or parse the output further if you were running many jobs. Below is an example of how you can narrow down the dates (using the `-S` submitted date command with a comma to indicate a date range up to today), and output when jobs were submitted, the job ID, the RAM (memory) requested, the maximum/average amount of RAM (memory) used, and the reason a job failed (if applicable):
 
 ```
 [jharvard@rhrcscli01:~]$ bhist -a -l -S 2025/12/20, | awk '
