@@ -1,0 +1,1587 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://hbs-rcs.github.io/hbsgrid-docs/commandline/">
+      
+      
+        <link rel="prev" href="../menulaunch/">
+      
+      
+        <link rel="next" href="../environments/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>🐚 Use the Command-line - HBS Grid Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3P5QKSCGVL"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3P5QKSCGVL",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3P5QKSCGVL",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="hbs" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#use-the-command-line" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://www.hbs.edu/research-computing-services/" title="HBS Grid Documentation" class="md-header__button md-logo" aria-label="HBS Grid Documentation" data-md-component="logo">
+      
+  <img src="../imgs/rcs.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HBS Grid Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🐚 Use the Command-line
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hbs-rcs/hbsgrid-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Start Here
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../software/" class="md-tabs__link">
+          
+  
+  
+  Software & Environments
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../storage/" class="md-tabs__link">
+          
+  
+  
+  Data & Storage
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../help/" class="md-tabs__link">
+          
+  
+  
+  Help & Support Requests
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tutorials/" class="md-tabs__link">
+          
+  
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.hbs.edu/research-computing-services/" title="HBS Grid Documentation" class="md-nav__button md-logo" aria-label="HBS Grid Documentation" data-md-component="logo">
+      
+  <img src="../imgs/rcs.png" alt="logo">
+
+    </a>
+    HBS Grid Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hbs-rcs/hbsgrid-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start Here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software & Environments
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software & Environments
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 Available Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../menulaunch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Run Desktop Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🐚 Use the Command-line
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🐚 Use the Command-line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resource-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resource requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-queues-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Queue limits &amp; batch jobs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-batch-jobs-in-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run batch jobs in parallel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-jobs-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitor &amp; troubleshoot
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔙 Use Software Versions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data & Storage
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data & Storage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💾 Storage & Databases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syncfiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔄 Copy and Transfer Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worksafe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    👥 Collaborate and Share
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help & Support Requests
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help & Support Requests
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support Channels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accountmanagement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Account & Project Requests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trouble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Topic list
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/scaling-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parallel processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/large_data_R/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large data in R
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/PythonWebScrape/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Scraping in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/nlp_with_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NLP in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/DatabaseDelimiters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Delimiters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/uncompress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extracting Archived/Compressed Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/hbs-rcs/hbsgrid-docs/edit/main/docs/commandline.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="use-the-command-line">🐚 Use the Command-line</h1>
+<p>The HBSGrid uses <a href="https://www.ibm.com/docs/en/spectrum-lsf">IBM Spectrum LSF</a> 
+to run applications on powerful remote computers. LSF is a large and complex 
+set of tools; our goal here is to give you just enough information so that you
+can use it to run jobs on our system, without overwhelming you with details and
+options.</p>
+<hr />
+<div class="admonition info inline end">
+<p class="admonition-title">Graphical tools available</p>
+<p>This software environment includes <a href="../menulaunch/">robust graphical tools</a>
+that reduce the need to use the command line for many interactive tasks. This
+section is for those who prefer the command line, either for aesthetic reasons or
+because they need to submit batch jobs or carry out complex operations that cannot 
+be easily performed using graphical menu-driven tools.</p>
+</div>
+<p>LSF provides <code>bsub</code>, a command-line program for running applications on powerful remote
+computers. For example, you can use</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bsub<span class="w"> </span>-q<span class="w"> </span>short_int<span class="w"> </span>-Is<span class="w"> </span>R
+</code></pre></div>
+<p>to start an interactive R job on a compute node. Breaking this example down will
+make the basics of bsub clear:</p>
+<ul>
+<li><code>bsub</code> (<strong>b</strong>atch <strong>sub</strong>mission) is the top-level command used to run applications
+    on powerful remote machines.</li>
+<li><code>-q short_int</code> means you want to run on the <strong>short int</strong>eractive <strong>q</strong>ueue 
+(<a href="./#job-queues-limits">details below</a>).</li>
+<li><code>-Is</code> means we are running an <strong>I</strong>nteractive <strong>s</strong>hell.</li>
+<li>The rest of the command (<code>R</code> in this case) is the command that will be run on
+    the remote machine.</li>
+</ul>
+<p><a name='compute-cluster-basics'></a></p>
+<div class="admonition info">
+<p class="admonition-title">Compute cluster basics</p>
+<p>When you first log in to the HBS Grid using <em>NoMachine</em> or <em>ssh</em> you are running
+on what we call a "login node". The <em>login nodes</em> do not have substantial CPU or
+RAM available. All computationally intensive processes should be run on what we
+call "compute nodes". A diagram of the HBS Grid architecture helps make this
+clear:</p>
+<p><img alt="Diagram showing that the login nodes are used to access storage and compute node resources" class="media-small" src="../imgs/griddiagram.png" /></p>
+<p>As this diagram shows, the primary purpose of the <em>login nodes</em> is to serve as a hub 
+for launching jobs on powerful <em>compute nodes</em>. You can do that from the command line 
+using <code>bsub</code> or <a href="../menulaunch/">from the desktop menu using application launchers</a>.</p>
+<p>You may sometimes wish to run applications on the <em>login node</em>, and this is
+perfectly fine as long as you are not using it for computationally intensive work.
+For example, you may wish to run <code>ipython</code> to work out a small code example, or use
+<code>locate</code> to find a file you were working on. These low-resource activities can and
+should be done on the <em>login node</em>. The important thing to remember is that <strong><code>bsub</code> is
+used to run commands on powerful compute nodes</strong>.</p>
+</div>
+<div class="admonition important inline end">
+<p class="admonition-title">Important</p>
+<p>Please keep in mind that <strong>the system reserves the
+resources you select</strong>, e.g., CPUs used by your job become
+unavailable for other users. <strong>Request only 1 CPU</strong> unless you
+know that you are using code or libraries that were written to run
+in parallel. Specific memory requirements depend on the nature of
+the job, but as a rough guide <strong>we recommend requesting RAM 4-10
+times the size of your data</strong>. For example, if you have a 6 Gb
+.csv file you may wish to request 24GB of memory or so.</p>
+</div>
+<h2 id="resource-requirements">Resource requirements</h2>
+<p>The <code>bsub</code> command allows you to specify <em>RAM</em> and <em>CPU</em> requirements for your job via the <code>-M</code> and <code>-n</code> arguments. For example, you can run a python job with 50 GB of RAM
+and 4 CPUs with</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bsub<span class="w"> </span>-q<span class="w"> </span>short_int<span class="w"> </span>-M<span class="w"> </span>50G<span class="w"> </span>-n<span class="w"> </span><span class="m">4</span><span class="w"> </span>-Is<span class="w"> </span>python
+</code></pre></div>
+<p>When choosing RAM and CPU values keep in mind that 
+<strong>the system reserves the resources you select</strong>, e.g., CPUs used by your job become unavailable for other users. Please be considerate and try not
+to reserve resources you don't need.</p>
+<p>Specific memory requirements depend on the nature of the job, but as a rough
+guide <strong>we recommend requesting RAM 4-10 times the size of your data</strong>. For
+example, if you have a 6 Gb.csv file you may wish to request 24GB of memory or so.</p>
+<p>Additionally, you can review your memory usage from a past job by running <code>bhist -a -l JOBID</code> (use <code>bhist</code> alone for a list of your recently run jobs). Take note of MAX MEM and when you run a similar job in the future, request that amount plus about 20% for wiggle room (e.g., if your past job had a maximum memory usage of 10GB, request 12GB next time). If your jobs are shutting down unexpectedly, it is usually because you have exceeded the memory requested. See our section on <a href="https://hbs-rcs.github.io/hbsgrid-docs/trouble/#MaxMem">troubleshooting jobs that exceed the memory limit</a> for additional information.</p>
+<p>We recommend that you <strong>request only 1 CPU</strong> unless you
+know that you are using code or libraries that were written to run
+in parallel such as 
+<a href="https://www.mathworks.com/help/parallel-computing/getting-started-with-parallel-computing-toolbox.html">Matlab parallel processint toolbox</a>,
+<a href="https://docs.python.org/3/library/multiprocessing.html">Python multiprocessing library</a>,
+or the <a href="https://future.futureverse.org/">R future package</a>. For detailed parallel
+processing instructons <a href="../tutorials/scaling-work/">refer to our tutorial</a>.</p>
+<h3 id="using-gpus">Using GPUs</h3>
+<p>GPUs on the HBSGrid are currently accessible <strong>by request only</strong>. To request access, please use our <a href="https://forms.office.com/pages/responsepage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUNTJJOERNR1pNRzUzS0g4WkZKWjNHVjBTSy4u">online form</a>.</p>
+<p>To submit a GPU job, you must use the <code>gpu</code> queue (for batch jobs) 
+or the <code>gpu_int</code> queue (for interactive jobs). 
+You must also explicitly specify GPU options; using a single dash 
+for the default settings as shown in the
+example below is sufficient for many use cases.</p>
+<p>For example,</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bsub<span class="w"> </span>-q<span class="w"> </span>gpu_int<span class="w"> </span>-Is<span class="w"> </span>-gpu<span class="w"> </span>-<span class="w"> </span>R
+</code></pre></div>
+will get an interactive R session with access to a GPU (note the trailing
+single dash in <code>-gpu -</code>, this uses the default GPU settings).</p>
+<p>If you need more control please refer to our <a href="../tutorials/scaling-work/#gpu-computing">How-To for GPU Computing</a> or <a href="https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=jobs-submitting-that-require-gpu-resources">LSF's documentation for instructions
+on specifying more advanced GPU resource requirements</a>.</p>
+<p>Knowing just these arguments to <code>bsub</code> will take you a long way. There is 
+<a href="https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_command_ref/bsub.heading_options.1.html">much more to know about bsub</a>,
+but these basics will get you started.</p>
+<h2 id="job-queues-limits">Queue limits &amp; batch jobs</h2>
+<p>Machines on the HBS Grid are grouped in <strong>queues</strong> and <code>bsub</code> can start jobs in either
+<em>batch</em> (background) or <em>interactive</em> modes. <em>Batch</em> jobs make it easier to run
+many jobs at once and are more efficient because jobs don't keep running after the
+program is executed. Interactive jobs on the other hand tend to be more
+convenient, especially for exploratory work or when developing or debugging a
+script or program.</p>
+<p><strong>Batch queues</strong> including <em>short</em> and <em>long</em> are for running commands without interaction. For example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>bsub<span class="w"> </span>-q<span class="w"> </span>short<span class="w"> </span>Rscript<span class="w"> </span>my_r_code.R
+</code></pre></div>
+<p>runs <code>my_r_code.R</code> in batch mode, and</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>bsub<span class="w"> </span>-q<span class="w"> </span>short<span class="w"> </span>stata<span class="w"> </span>-b<span class="w"> </span>my_stata_code.do
+</code></pre></div>
+<p>runs <code>my_stata_code.do</code> in batch mode.</p>
+<div class="admonition info inline end">
+<p class="admonition-title">Batch vs. interactive jobs</p>
+<p>The key differences when submitting batch vs interactive jobs are the <code>-q</code> and
+<code>-Is</code> arguments. For example we used <code>-q short</code> for batch and <code>-q short_int</code> for 
+interactive. Interactive jobs must also include the <code>-Is</code> option.</p>
+</div>
+<p><strong>Interactive queues</strong> like <em>short_int</em> and <em>long_int</em> are used to run
+applications that you will interact with. For example,</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>bsub<span class="w"> </span>-q<span class="w"> </span>short_int<span class="w"> </span>-Is<span class="w"> </span>rstudio
+</code></pre></div>
+<p>runs an interactive <em>RStudio</em> application, and</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>bsub<span class="w"> </span>-q<span class="w"> </span>short_int<span class="w"> </span>-Is<span class="w"> </span>xstata
+</code></pre></div>
+<p>runs an interactive <em>Stata</em> application.</p>
+<p>Queues have other characteristics<a name='queue-characteristics'> </a>in addition to the batch vs.
+interactive distinction. These include the maximum run time and maximum
+number of CPUs that can be reserved per job. These queue-level limits
+are summarized in the table below.</p>
+<table>
+<thead>
+<tr>
+<th>Queue</th>
+<th>Type</th>
+<th>Length</th>
+<th>Max Cores/Job</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>long_int</td>
+<td>interactive</td>
+<td>3 days</td>
+<td>4</td>
+</tr>
+<tr>
+<td>short_int</td>
+<td>interactive</td>
+<td>1 day</td>
+<td>12</td>
+</tr>
+<tr>
+<td>sas_int</td>
+<td>interactive</td>
+<td>no limit</td>
+<td>4</td>
+</tr>
+<tr>
+<td>gpu_int</td>
+<td>interactive.</td>
+<td>no limit</td>
+<td>4</td>
+</tr>
+<tr>
+<td>long</td>
+<td>batch</td>
+<td>7 days</td>
+<td>12</td>
+</tr>
+<tr>
+<td>short</td>
+<td>batch</td>
+<td>3 days</td>
+<td>16</td>
+</tr>
+<tr>
+<td>gpu</td>
+<td>batch</td>
+<td>no limit</td>
+<td>4</td>
+</tr>
+<tr>
+<td>sas</td>
+<td>batch</td>
+<td>no limit</td>
+<td>4</td>
+</tr>
+<tr>
+<td>unlimited</td>
+<td>interactive or batch</td>
+<td>no limit</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="run-batch-jobs-in-parallel">Run batch jobs in parallel</h2>
+<div class="admonition info inline end">
+<p class="admonition-title">Other LSF front-ends</p>
+<p>There are language-specific ways to submit job arrays that may be more
+convenient than the <code>bsub</code> job array approach described here. For
+example, R users may wish to consider
+<a href="https://mschubert.github.io/clustermq/">ClusterMQ</a> or
+<a href="https://mllg.github.io/batchtools/">batchtools</a> and Python
+users may find <a href="https://jobqueue.dask.org/en/latest/index.html">Dask-jobqueue</a>
+more convenient.</p>
+</div>
+<p>It is often useful to split a big job up into many small pieces and
+run them all simultaneously.This allows you to spread the work out
+across multiple machines on the HBS Grid and can dramatically reduce
+the time needed for your computation. You can use <code>bsub</code> job arrays to
+submit multiple jobs simultaneously. For example, the following
+command creates a job array that runs <code>Rscript run.R</code> 100 times:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>bsub<span class="w"> </span>-q<span class="w"> </span>short<span class="w"> </span>-J<span class="w"> </span><span class="s2">&quot;myArray[1-100]&quot;</span><span class="w"> </span>Rscript<span class="w"> </span>run.R
+</code></pre></div>
+<div class="admonition important inline end">
+<p class="admonition-title">Important</p>
+<p>Job arrays are powerful tools and you must take care to use them properly.
+It is easy to accidentally monopolize system resources, e.g., by running
+a large array of jobs that reserve more memory (via the <code>-M</code> argument) then they need.
+For example, if each of your 100 jobs reserves 20Gb of memory but only uses 10 you will
+have <strong>wasted 1Tb of memory</strong>. Please take care to avoid this by matching your resource
+reservation arguments to the actual resources needed by your program.</p>
+</div>
+<p>Often you will want each job in the array to process a different file
+or use a different parameter value. For this purpose LSF sets the
+<code>LSB_JOBINDEX</code> environment variable to the job array index (1-100 in
+the example above). In this case your program (<code>run.R</code> in the example
+above) should retrieve this environment variable and use it to
+determine the correct inputs or parameter values.</p>
+<p>For more details refer to the <a href="https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=administration-job-arrays">LSF job array documentation</a>.</p>
+<h2 id="troubleshooting-jobs-and-resources">Monitor &amp; troubleshoot</h2>
+<p>A variety of problems can arise when running jobs and applications on
+the HBSGrid. LSF provides <em>command-line tools</em> to monitor and inspect your jobs
+to help you figure out if something goes wrong:</p>
+<ul>
+<li><code>bjobs</code> lists your running jobs</li>
+<li><code>bhist -a</code> lists your recent jobs</li>
+<li><code>bjobs -l &lt;JOBID&gt;</code> gives details about running job <code>&lt;JOBID&gt;</code></li>
+<li><code>bhist -l &lt;JOBID&gt;</code> gives details about job <code>&lt;JOBID&gt;</code></li>
+</ul>
+<p>For more detailed troubleshooting help refer to the 
+<a href="../trouble/#troubleshooting-jobs-and-resources">troubleshooting documentation</a>.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; President & Fellows of Harvard College.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.
+    </p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

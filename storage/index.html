@@ -1,0 +1,1748 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://hbs-rcs.github.io/hbsgrid-docs/storage/">
+      
+      
+        <link rel="prev" href="../environments/">
+      
+      
+        <link rel="next" href="../syncfiles/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>💾 Storage & Databases - HBS Grid Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3P5QKSCGVL"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3P5QKSCGVL",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3P5QKSCGVL",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="hbs" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#research-data-storage" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://www.hbs.edu/research-computing-services/" title="HBS Grid Documentation" class="md-header__button md-logo" aria-label="HBS Grid Documentation" data-md-component="logo">
+      
+  <img src="../imgs/rcs.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HBS Grid Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              💾 Storage & Databases
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hbs-rcs/hbsgrid-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Start Here
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../software/" class="md-tabs__link">
+          
+  
+  
+  Software & Environments
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Data & Storage
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../help/" class="md-tabs__link">
+          
+  
+  
+  Help & Support Requests
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tutorials/" class="md-tabs__link">
+          
+  
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.hbs.edu/research-computing-services/" title="HBS Grid Documentation" class="md-nav__button md-logo" aria-label="HBS Grid Documentation" data-md-component="logo">
+      
+  <img src="../imgs/rcs.png" alt="logo">
+
+    </a>
+    HBS Grid Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hbs-rcs/hbsgrid-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start Here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software & Environments
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software & Environments
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 Available Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../menulaunch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Run Desktop Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commandline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🐚 Use the Command-line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔙 Use Software Versions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data & Storage
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data & Storage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💾 Storage & Databases
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💾 Storage & Databases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-storage-on-the-hbsgrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Storage on the HBSGrid
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL Databases
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syncfiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔄 Copy and Transfer Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worksafe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    👥 Collaborate and Share
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help & Support Requests
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help & Support Requests
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support Channels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accountmanagement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Account & Project Requests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trouble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Topic list
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/scaling-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parallel processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/large_data_R/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large data in R
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/PythonWebScrape/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Scraping in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/nlp_with_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NLP in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/DatabaseDelimiters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Delimiters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/uncompress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extracting Archived/Compressed Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/hbs-rcs/hbsgrid-docs/edit/main/docs/storage.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="research-data-storage">Research Data Storage</h1>
+<h2 id="data-storage-on-the-hbsgrid">Data Storage on the HBSGrid</h2>
+<p>HBS provides storage for active research projects. Research storage is 
+typically used in conjunction with the computer cluster (HBSGrid) and accessed 
+via <em>NoMachine</em> remote desktop as documented in the <a href="../">Userguide</a>.</p>
+<p>There are three sets of storage locations available
+for research work, depending on the particular usage patterns, size
+consideration, and number of people involved in the work. These are the
+<a href="./#home-folders">home folders</a>, <a href="./#scratch-storage">scratch folders</a>,
+and <a href="./#project-spaces">project spaces.</a></p>
+<table>
+<thead>
+<tr>
+<th>Folder Type</th>
+<th>Size</th>
+<th>Expandable?</th>
+<th>Shareable?</th>
+<th>Backed up?</th>
+<th>Other Considerations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#home-folders">Home</a></td>
+<td>150GB <br>(100GB for guests)*</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>This is a personal folder with size limitations that cannot be shared with others.</td>
+</tr>
+<tr>
+<td><a href="./#scratch-storage">Scratch</a></td>
+<td>Varies</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>Files older than 60 days are deleted and files are <strong>not backed up</strong>. This is SSD storage that is faster than other storage options.</td>
+</tr>
+<tr>
+<td><a href="./#project-spaces">Project</a></td>
+<td>Default is 50GB</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>These folders are meant for collaboration and/or projects that may increase in size over time.</td>
+</tr>
+</tbody>
+</table>
+<p>*Default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory  </p>
+<h3 id="home-folders">Home folders</h3>
+<p>By default, when your account is created (whether this account is
+used for just storage or storage + computing), a home folder is created. Home folders are 150GB (or 100GB for guests) and cannot be expanded (note: default sizes for home folder have grown over time. If you received your HBSGrid account prior to 2024, you may have a smaller home directory).</p>
+<p>If you are logging in to the HBSGrid to do work via the NoMachine GUI or
+terminal, you are automatically placed in and are using this home
+folder. This is located at:</p>
+<p><code>/export/home/&lt;group&gt;/&lt;username&gt;</code></p>
+<p>For example faculty member John Harvard's home folder would be at:</p>
+<p><code>/export/home/faculty/jharvard</code></p>
+<p>When space in your home folder fills up, <strong>you will not be able to do any more work</strong>, which may
+lead to programs acting strangely or crashing altogether, disk error
+notices, or input/output errors. Keep an eye on your space usage and 
+periodically remove any old files that are no longer needed. </p>
+<p>Home folders are backed up every night. If you should need to recover
+any files due to accidental deletion or corruption, please
+<a href="mailto:research@hbs.edu">contact RCS</a>.</p>
+<h4 id="home-folder-quota">Disk Quota Exceeded Error</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> WARNING</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Reaching your home folder limit can prevent <em>NoMachine</em> sessions from starting, and this is one of the most common reasons for difficulties connecting to the HBS Grid desktop via NoMachine.</td>
+</tr>
+</tbody>
+</table>
+<p>You can fix this problem yourself in a few ways:</p>
+<ol>
+<li>
+<p><strong>By Terminal</strong>: Open a terminal (in the Windows search toolbar, type "Cmd" or "Windows PowerShell"; in the Mac search toolbar, type "Terminal") and run
+       <code>ssh &lt;username&gt;@hbsgrid.hbs.edu</code>
+    (replace <code>&lt;username&gt;</code> with your actual HBS Grid username). Once connected you can use terminal commands like <code>ls</code> to list files in the directory, <code>rm</code> (remove) plus the name of the file to remove files you don't need,
+    or <code>mv</code> (move) plus the name of your file and a path to a new location to move files. Removing and moving files can help get your home directory back under your storage quota. You can also run <code>gio trash --empty</code> to empty the trash, which may give you enough breathing room to permit NoMachine login.</p>
+</li>
+<li>
+<p><strong>By GUI</strong>: Use a <a href="https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/#transfer-data-fromto-local-storage">GUI SFTP client like FileZilla or CyberDuck</a> to log into your storage and clean up your home directory by moving/deleting files and emptying your trash folder.  </p>
+</li>
+</ol>
+<h3 id="scratch-storage">Scratch storage</h3>
+<p>Whether you are doing batch or interactive work, at times you may need a
+temporary location to stash files that you will not keep, or your
+software may require a 'working', or temporary, directory. In most
+cases, you should not use your home folder, as there are quota limits,
+and the temporary needs may exceed the amount available.</p>
+<p>The storage location at <code>/export/scratch</code> is designed specifically for this purpose. See the next section for setting up and using a temporary folder on this volume.</p>
+<p><em>Nota bene</em>:</p>
+<ul>
+<li>This volume is a shared, community area. Be mindful of your usage (how much you use and for how long).</li>
+<li>This filesystem is not backed up! Ensure you copy anything important back to your home or project folder.</li>
+<li>Files older than 60 days will be deleted nightly via disk cleanup scripts. Do not interfere with these scripts.</li>
+</ul>
+<p>Please see our <a href="https://www.hbs.edu/research-computing-services/about-us/terms-of-service/policies.aspx#scratch">RCS Policies page</a>
+for more information about our scratch usage policies. </p>
+<h4 id="using-scratch">Using <code>/export/scratch</code> effectively</h4>
+<p>As this volume is a shared area visible by everyone, it is important that you follow best practices for its use:</p>
+<ul>
+<li>
+<p>Do not store any files in the top-level.</p>
+</li>
+<li>
+<p>Use the Create Scratch Folder script to create your temporary folder. This will open a terminal / 
+    text window that will guide you through the process of naming your folder and setting the correct permissions.
+    For folder naming, we recommend prefixing the folder with either your account name or the project name. To start:</p>
+<ul>
+<li>
+<p>In the NoMachine GUI, select from the menubar Applications &gt; Other &gt; Create Scratch Directory.</p>
+</li>
+<li>
+<p>In terminal, execute the command <code>/usr/local/app/scripts/create_scratch_folder.sh</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Clean up files when you no longer need them, so that others can use the additional space immediately. Please note that this includes <a href="./#undeleted-files-scratch">undeleted trash files on scratch</a>. Although your trash may appear empty, 'trashed' files may still exist in a hidden folder and take up space. </p>
+</li>
+</ul>
+<p>If you should need to keep files on the scratch volume for longer than 60 days, please contact RCS.  </p>
+<h4 id="undeleted-files-scratch">Undeleted Trash files on Scratch</h4>
+<p>Although your Trash may appear empty,  'trashed' files may still exist in a hidden folder on scratch. To check whether this is the case, run <code>ls -al /export/scratch</code> and see whether a .Trash folder with your username is listed.</p>
+<p>We recommend that you review and 'delete permanently' the files in your NoMachine/Gnome Trash. If you are still uncertain or your Trash folder is empty, you can delete your "trash" folder on <code>/export/scratch</code> with one of the following three terminal commands:</p>
+<ul>
+<li><code>rm -ri /export/scratch/.Trash-$(id -u $USER)</code>    # to be prompted for every file</li>
+<li><code>rm -rI /export/scratch/.Trash-$(id -u $USER)</code>    # to be prompted, but less intrusive</li>
+<li><code>rm -rf /export/scratch/.Trash-$(id -u $USER)</code>    # NO PROMPT</li>
+</ul>
+<h3 id="project-spaces">Project spaces</h3>
+<p>Project spaces (folders) are the primary, recommended location for
+storing and doing collaborative work on research storage, including HBS
+and guest user accounts. This is in contrast to home folders, which are
+accessible only by the account holder. </p>
+<p>The default size is 50GB, with increases granted upon request and with
+space available. Keep an eye on the space usage, as project spaces that
+reach capacity will throw errors in programs and when transferring
+files, and data loss may result.</p>
+<p>Project spaces are backed up every evening. If you should need to recover any files due to accidental deletion or
+corruption, please <a href="mailto:research@hbs.edu">contact RCS</a>.    </p>
+<h4 id="requesting-a-project-space">Requesting a project space</h4>
+<div class="admonition info inline end">
+<p class="admonition-title">Note to doctoral student sponsors</p>
+<p>Access to project spaces that belong to doctoral students is limited
+to internal HBS users only (i.e., users with <a class="gh-link gh-mention" href="https://github.com/hbs" title="GitHub User: @hbs">@hbs</a>.edu credentials.) 
+Doctoral students who are working with external collaborators 
+(which may include graduate students from other Harvard schools) should contact 
+the Doctoral Programs office and RCS to discuss their options.</p>
+</div>
+<p>Project spaces must be sponsored by an HBS faculty member or doctoral student. To request a project space,
+the prospective sponsor must fill out and submit the <a href="https://secure.hbs.edu/accountManagement/secure/research/projectspace/new">New Project Space Request
+Form</a>. (Please note that this form
+is only accessible to users who are eligible to sponsor a project space.)</p>
+<p>If you are working with level 3 data or higher, we will ask you to
+submit documentation from the IRB or a Data Usage Agreement (DUA; a
+<a href="https://www.hbs.edu/research-computing-services/Shared%20Documents/Training/sample_l3_data_usage_agreement.pdf">sample can be found
+here</a>)
+so that we can ensure that the project space's security levels are
+appropriately set up. If you are unsure what level your data falls
+under, <a href="https://security.harvard.edu/dct">please review this page on data
+security</a>.</p>
+<p>If a project space already exists and you would like to make changes to
+the space users or size, fill out the <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUOEJQSUFSUkpUVUFRUEFHQzZGOVVMODNNRy4u">Project Space Change Request
+Form</a>.</p>
+<h4 id="archiving-a-project-space">Archiving a project space</h4>
+<p>Project space usage is reviewed and confirmed on a yearly basis.
+Inactive project spaces will be backed up and archived only after
+contacting the primary sponsor. Archives are retained for the
+period of time specified by HU or HBS data retention policies, whichever
+is longest. If you would like to unarchive a project space, <a href="https://www.hbs.edu/research-computing-services/contact-us/Pages/default.aspx" target="_blank">contact
+RCS</a>.</p>
+<p>For information about how to archive your data to an external drive, see
+our <a href="https://www.hbs.edu/research-computing-services/help/technical-how-tos-and-technical-notes/archiving-your-research-files.aspx" target="_blank">technical note on archiving your research
+files</a>.</p>
+<h2 id="sql-databases">SQL Databases</h2>
+<p>RCS hosts a database server running MariaDB (an open source fork
+of MySQL) to help meet growing data storage needs.
+To obtain a database account, please fill out the <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=Tlb9CUK_IUOPLbjkgvhjXMoIB6PHisBIlawtyGb7ibhUNVlWWUgwM1dCSjdWWllOVEVDQUtCUUVNMS4u">New
+MariaDB Account Request
+Form</a>.
+Please note that RCS provides limited support for databases.</p>
+<h3 id="connecting-to-your-database">Connecting to your Database</h3>
+<p>Please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#101;&#115;&#101;&#97;&#114;&#99;&#104;&#64;&#104;&#98;&#115;&#46;&#101;&#100;&#117;">&#114;&#101;&#115;&#101;&#97;&#114;&#99;&#104;&#64;&#104;&#98;&#115;&#46;&#101;&#100;&#117;</a> for connection parameters including
+<em>USER</em>, <em>HOSTNAME</em>, and <em>CA Certificates</em>. Note that some clients 
+(including <em>DBeaver</em>) require you to set the <em>SSL CA Certificate</em>.
+<strong>Connections from outside the HBS Grid always require an RCS-provided SSL CA Certificate</strong>.</p>
+<h4 id="configuration-database">Configuration</h4>
+<p>Most <em>MySQL</em> clients will read connection information from a
+configuration file found in <code>~/.my.cnf</code>. This file is used to store
+connection details to the MariaDB server, such as account details and
+connection parameters. If you don't have this file (on the Grid) you
+may <a href="mailto:research@hbs.edu">request</a> a template or create your own
+with the following details:</p>
+<div class="admonition important inline end">
+<p class="admonition-title">Important</p>
+<p>A configuration file with all connection details enables database
+access by anyone with access to the file. Ensure that this file is
+not shared or accessible by anyone but you.</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[client]
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>host=HOSTNAME
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>port=3306
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>ssl-ca=PATH_TO_SSL_CERT
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>database=jharvard
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>user=jharvard
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>password=PASSWORD
+</code></pre></div>
+<p>Please note that you will substitute <em>jharvard</em> and <em>PASSWORD</em> with
+your MariaDB username and password. For the other parameters such as
+<em>HOSTNAME</em>, please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#101;&#115;&#101;&#97;&#114;&#99;&#104;&#64;&#104;&#98;&#115;&#46;&#101;&#100;&#117;">&#114;&#101;&#115;&#101;&#97;&#114;&#99;&#104;&#64;&#104;&#98;&#115;&#46;&#101;&#100;&#117;</a>.</p>
+<p>Once your <strong>.my.cnf</strong> is ready, move it your home directory and 
+<strong>adjust file privileges to ensure no one else can read the file</strong>. On the Grid or
+on a Linux or Mac local machine, you may prevent others from reading the
+file by opening a <em>Terminal</em> and running this command:</p>
+<p><code>chmod 700 ~/.my.cnf</code></p>
+<p>On a Windows machine, right-click on the file, select Properties, and then:</p>
+<ol>
+<li>Under the General tab, toggle ON the Hidden attribute</li>
+<li>Under the Security tab, ensure only the following users or groups have access: System, Administrators, and you.</li>
+</ol>
+<h4 id="tools-database">Tools to Connect to your Database</h4>
+<p>You can connect to your database using any compatible client. If you 
+already have one you like, feel free to use that. Otherwise we recommend
+one of the clients listed below. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> WARNING</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">If you are connecting to MariaDB on the cluster, please be advised that there is a known bug in the current environment. If you'd like to connect to the database using software on the cluster (e.g., R, Python), please select the <code>rcs/rcs_2022.11</code> software environment version in the interactive launcher or in Terminal. If you'd like to use DBeaver, launch a Terminal session, load the the previous environment (<code>ml load rcs/rcs_2022.11</code>), and then once loaded launch DBeaver by typing <code>dbeaver</code> in the Terminal.</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">R</label><label for="__tabbed_1_3">Desktop and DBeaver</label><label for="__tabbed_1_4">mycli and Terminal</label><label for="__tabbed_1_5">ODBC</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use <a href="https://dev.mysql.com/doc/connector-python/en/">connector-python</a> to connect following the 
+<a href="https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html">official documentation</a>.
+It is recommended to <a href="https://dev.mysql.com/doc/connector-python/en/connector-python-option-files.html">use connection settings from <code>~/.my.cnf</code></a> as described above.</p>
+</div>
+<div class="tabbed-block">
+<p>Use <a href="https://rmariadb.r-dbi.org/">RMariaDB</a> or <a href="https://dbplyr.tidyverse.org/">dbplyr</a>, both use connection settings from <code>~/.my.cnf</code> as described above. Sample code for connecting R to the Grid's MariaDB database can be found <a href="https://github.com/hbs-rcs/sample_code/blob/master/mariadb/R_MariaDB_fromGrid.R">here</a>.</p>
+</div>
+<div class="tabbed-block">
+<p>Use <a href="https://dbeaver.io/">DBeaver</a> to connect following the <a href="https://dbeaver.com/docs/wiki/Create-Connection/">official documentation</a>. 
+Make sure to set the <em>CA Certificate</em> path in the <em>SSL</em> connection settings tab. The <em>DBeaver</em> client may prompt you to download a driver to connect to your database. This is usually safe, and drivers will be stored in your home directory,     under <code>~/.local/share/DBeaverData/drivers</code></p>
+</div>
+<div class="tabbed-block">
+<p>The <a href="https://www.mycli.net/">mycli</a> client uses connection settings from <code>~/.my.cnf</code> as described above. You can download mycli onto your local machine, or use the instance already installed on the Grid. To connect from your local machine type: <code>mysql -u username -p -h mariadbhost --ssl-ca=/path/to/file/ca-cert.pem</code> or from the Grid: <code>mysql -u username -p -h mariadbhost</code>. </p>
+<p>Alternatively, you can access MariaDB from Terminal after <strong>first logging into the Grid</strong> (see instructions on the <a href="https://hbs-rcs.github.io/hbsgrid-docs/">Start Here page</a> and then typing: <code>mysql -h hostname -u username -p</code>. </p>
+<p>For all of the commands referenced above, replace the <code>username</code> with your username, the mariadbhost with the HBS host name in your <code>.my.cnf</code> file, and (if applicable) the <code>ssl-ca path</code> with the appropriate path. You will be prompted to provide your password. </p>
+</div>
+<div class="tabbed-block">
+<p>Setting up an ODBC connection differs by whether you are connecting from the Grid (Linux), Mac, or Windows machine. Please see MariaDB's ODBC set-up <a href="https://mariadb.com/kb/en/creating-a-data-source-with-mariadb-connectorodbc/">documentation</a> for more information and <strong>note that if connecting from the Grid, the ODBC administration tool and appropriate ODBC drivers are already installed.</strong> You will still need to ensure that you have a <code>.odbc.ini</code> configuration file saved in your home directory. An example <code>.odbc.ini</code> template is below</p>
+</div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[ODBC Data Sources]
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>rcs_mariadb = RCS_MariaDB_ODBC_connection
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>[rcs_mariadb]
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>driver = mariaDB
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>server = HOSTNAME
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>port = 3306
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>database = jharvard
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>user = jharvard
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>password = PASSWORD
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>sslmode = required
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>sslca = PATH_TO_SSL_CERT
+</code></pre></div>
+<p>Once your <code>.odbc.ini</code> is ready, save it to your home directory and adjust file privileges to ensure no one else can read the file:</p>
+<p><code>chmod 700 ~/.odbc.ini</code></p>
+<hr />
+<h3 id="importing-database">Importing Data</h3>
+<p>The following is a basic overview of the import process. Complete documentation for the <code>LOAD DATA</code> command can be found at <a href="https://mariadb.com/kb/en/library/load-data-infile/">https://mariadb.com/kb/en/library/load-data-infile/</a>.</p>
+<ol>
+<li>Move your data to an import folder</li>
+<li>Create the database table that will hold the imported data</li>
+<li>Import the data</li>
+<li>Validate the import</li>
+<li>Remove your data from the import folder</li>
+</ol>
+<p>To create the database table (step 2), you will need to know the name of all columns, each column’s data type (integer, numeric with decimals, string of characters, etc), and each column’s maximum width. For example, if one of the columns in your data is US phone numbers of the format 6174953292, then you may opt to use int(10) as the column data type (i.e., integer with up to 10 digits). However, if you suspect some entries have dashes such as 617-495-3292, then you will need to use char(12) which stores the data as a string of characters, up to 12 characters in length.</p>
+<h4 id="import-example">Import Example</h4>
+<p>We will use the following to illustrate importing:<br />
+MariaDB username = jharvard<br />
+MariaDB database = jharvard_database<br />
+MariaDB database table = table_import<br />
+Import filename = SampleData.txt  </p>
+<p>Data:  </p>
+<table>
+<thead>
+<tr>
+<th>COLUMN_1</th>
+<th>COLUMN_2</th>
+<th>COLUMN_3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>25</td>
+<td>Harvard</td>
+<td>Way</td>
+</tr>
+<tr>
+<td>86</td>
+<td>Brattle</td>
+<td>St</td>
+</tr>
+</tbody>
+</table>
+<h5 id="1-move-your-data-to-the-appropriate-import-folder">1. Move your data to the appropriate import folder</h5>
+<p>Prepare an import folder and ensure it has the appropriate permissions: <br />
+<code>mkdir /export/mdb_external/import/jharvard</code><br />
+<code>chmod 700 /export/mdb_external/import/jharvard</code>   </p>
+<p>Move your data to this import folder:<br />
+<code>mv SampleData.txt /export/mdb_external/import/jharvard</code>  </p>
+<h5 id="2-create-the-database-table-that-will-hold-the-imported-data">2. Create the database table that will hold the imported data</h5>
+<p>Log into MariaDB:<br />
+<code>mysql -h HOSTNAME -u jharvard -p</code>  </p>
+<p>Create a database table that will hold imported data, specifying the maximum size of each column. For example, below we specify that all columns are char with a maximum length of 20. You can modify your table at a later time, e.g., switching from  char(20) to char(30):<br />
+<code>use jharvard_database; create table table_import (Column_1 char(20), Column_2 char(20), Column_3 char(20));</code>  </p>
+<h5 id="3-import-the-data">3. Import the data:</h5>
+<p><code>load data local infile ‘/export/mdb_external/import/jharvard/SampleData.txt’ into table table_import fields terminated by ‘|’ lines terminated by ‘\n’ ignore 1 lines;</code></p>
+<p>The command above has 4 sections:<br />
+(1) <code>load data local infile ‘/export/mdb_external/import/jharvard/SampleData.txt’</code><br />
+specify file to import<br />
+(2) <code>into table table_import</code><br />
+specify table that will hold the imported data<br />
+(3) <code>fields terminated by ‘|’ lines terminated by ‘\n’</code><br />
+specify delimiters (the character which splits data or text into separate fields). More information about delimiters can be found here: <a href="https://mariadb.com/kb/en/delimiters/">https://mariadb.com/kb/en/delimiters/</a>.  <br />
+(4) <code>ignore 1 lines</code><br />
+include this only if your file includes column header information  </p>
+<p>Official documentation for this command may be found at <a href="https://mariadb.com/kb/en/mariadb/load-data-infile/">https://mariadb.com/kb/en/mariadb/load-data-infile/</a>.  </p>
+<h5 id="4-validate-the-import">4. Validate the import</h5>
+<p>Do a preliminary check on the first 10 rows of our data:<br />
+<code>select * from table_import limit 10;</code>  </p>
+<p>Log out of MariaDB:<br />
+<code>exit;</code>  </p>
+<h5 id="5-remove-your-data-from-the-import-folder">5. Remove your data from the import folder</h5>
+<p><code>rm -rf /export/mdb_external/import/jharvard</code> </p>
+<h3 id="exporting-database">Exporting Data</h3>
+<p>The following is a basic overview of the export process followed by an example. Complete documentation for the <code>SELECT … INTO FILE</code> command to be run within MariaDB may be found at <a href="https://mariadb.com/kb/en/library/select-into-outfile/">https://mariadb.com/kb/en/library/select-into-outfile/</a>.</p>
+<ol>
+<li>Prepare export folder such that it is accessible to everyone</li>
+<li>Export data</li>
+<li>Change access rules to export folder</li>
+<li>Copy your data out of the export folder</li>
+<li>Remove export folder</li>
+</ol>
+<p>Please note that you will be copying your data to a new file, not moving it. This ensures you are the owner of the file, as opposed to the MariaDB server. Additionally note that your exported data will <strong>NOT</strong> include column headers/names!</p>
+<h4 id="export-example">Export Example</h4>
+<p>We will use the following to illustrate importing:<br />
+MariaDB username = jharvard<br />
+MariaDB database = jharvard_database<br />
+MariaDB database table = table_import<br />
+Import filename = SampleData.txt  </p>
+<p>Data:</p>
+<table>
+<thead>
+<tr>
+<th>COLUMN_1</th>
+<th>COLUMN_2</th>
+<th>COLUMN_3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>25</td>
+<td>Harvard</td>
+<td>Way</td>
+</tr>
+<tr>
+<td>86</td>
+<td>Brattle</td>
+<td>St</td>
+</tr>
+</tbody>
+</table>
+<h5 id="1-prepare-export-folder-such-that-it-is-accessible-to-everyone">1. Prepare export folder such that it is accessible to everyone</h5>
+<p>Prepare an export folder and ensure it has the appropriate permissions:<br />
+<code>mkdir /export/mdb_external/export/jharvard</code><br />
+<code>chmod 777 /export/mdb_external/export/jharvard</code>  </p>
+<h5 id="2-export-data">2. Export data</h5>
+<p>Log into MariaDB:<br />
+<code>mysql -h HOSTNAME -u jharvard -p</code>  </p>
+<p>Within MariaDB, export the data:<br />
+<code>select * from table_import into outfile ‘/export/mdb_external/export/jharvard/my_export.dat’ fields terminated by ‘|’ lines terminated by ‘\n’;</code>  </p>
+<p>Please note our command has 3 sections:<br />
+(1) <code>select * from table_import</code><br />
+specify what data you want export<br />
+(2) <code>into outfile ‘/export/mdb_external/export/jharvard/my_export.dat’</code><br />
+specify the export file<br />
+(3) <code>fields terminated by ‘|’lines terminated by ‘\n’</code><br />
+specify delimiters (the character which splits data or text into separate fields). More information about delimiters can be found here: <a href="https://mariadb.com/kb/en/delimiters/">https://mariadb.com/kb/en/delimiters/</a>.      </p>
+<p>Official documentation for this command may be found at <a href="https://mariadb.com/kb/en/mariadb/select-into-outfile">https://mariadb.com/kb/en/mariadb/select-into-outfile</a>.  </p>
+<p>Log out of MariaDB:<br />
+<code>exit;</code>  </p>
+<h5 id="3-change-access-rules-to-export-folder">3. Change access rules to export folder</h5>
+<p><code>chmod 700 /export/mdb_external/export/jharvard</code>  </p>
+<h5 id="4-copy-your-data-out-of-the-export-folder">4. Copy your data out of the export folder</h5>
+<p><em>Copy</em> (<code>cp</code>), <em>don't move</em>, the data to ensure you have ownership as opposed to the MariaDB server: </p>
+<p>Option 1: Copy data to your home dir:<br />
+<code>cp /export/mdb_external/export/jharvard/my_export.dat ~/</code>  </p>
+<p>Option 2: Copy data to your project space:<br />
+<code>project_space cp /export/mdb_external/export/jharvard/my_export.dat /export/projects/project_space</code>  </p>
+<h5 id="5-remove-export-folder">5. Remove export folder</h5>
+<p><code>rm -rf /export/mdb_external/import/jharvard</code>  </p>
+<h3 id="additional-mariadb-resources">Additional MariaDB Resources</h3>
+<ul>
+<li><a href="https://mariadb.com/kb/en/mariadb/documentation/">MariaDB Documentation</a></li>
+<li><a href="https://mariadb.com/products/get-started">Getting Started with MariaDB</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; President & Fellows of Harvard College.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.
+    </p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

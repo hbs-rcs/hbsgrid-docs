@@ -1,0 +1,1597 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://hbs-rcs.github.io/hbsgrid-docs/syncfiles/">
+      
+      
+        <link rel="prev" href="../storage/">
+      
+      
+        <link rel="next" href="../worksafe/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>🔄 Copy and Transfer Files - HBS Grid Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3P5QKSCGVL"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3P5QKSCGVL",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3P5QKSCGVL",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="hbs" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#copy-and-transfer-files" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://www.hbs.edu/research-computing-services/" title="HBS Grid Documentation" class="md-header__button md-logo" aria-label="HBS Grid Documentation" data-md-component="logo">
+      
+  <img src="../imgs/rcs.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HBS Grid Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🔄 Copy and Transfer Files
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hbs-rcs/hbsgrid-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Start Here
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../software/" class="md-tabs__link">
+          
+  
+  
+  Software & Environments
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../storage/" class="md-tabs__link">
+          
+  
+  
+  Data & Storage
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../help/" class="md-tabs__link">
+          
+  
+  
+  Help & Support Requests
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tutorials/" class="md-tabs__link">
+          
+  
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.hbs.edu/research-computing-services/" title="HBS Grid Documentation" class="md-nav__button md-logo" aria-label="HBS Grid Documentation" data-md-component="logo">
+      
+  <img src="../imgs/rcs.png" alt="logo">
+
+    </a>
+    HBS Grid Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hbs-rcs/hbsgrid-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start Here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software & Environments
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software & Environments
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 Available Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../menulaunch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Run Desktop Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commandline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🐚 Use the Command-line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔙 Use Software Versions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data & Storage
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data & Storage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💾 Storage & Databases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔄 Copy and Transfer Files
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔄 Copy and Transfer Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hbs-grid-storage-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HBS Grid storage overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-data-fromto-local-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local storage data transfer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-data-fromto-cloud-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud storage data transfer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-data-using-globus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Globus data transfer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-data-transfer-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data transfer tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worksafe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    👥 Collaborate and Share
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help & Support Requests
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help & Support Requests
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support Channels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accountmanagement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Account & Project Requests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trouble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Topic list
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/scaling-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parallel processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/large_data_R/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large data in R
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/PythonWebScrape/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Scraping in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/nlp_with_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NLP in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/DatabaseDelimiters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Delimiters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/uncompress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extracting Archived/Compressed Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/hbs-rcs/hbsgrid-docs/edit/main/docs/syncfiles.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="copy-and-transfer-files">🔄 Copy and Transfer Files</h1>
+<p>The HBS Grid is primarily used for data analysis, machine learning, data
+wrangling, and data visualization. Usually this means that 
+<strong>you need to copy or sync your data to the HBS Grid in order to do your work</strong>.</p>
+<h2 id="hbs-grid-storage-overview">HBS Grid storage overview</h2>
+<p>Before transferring data to the HBS Grid you have to decide where to put it. 
+There are three options: <em>home directory</em>, <em>project space</em>, or <em>scratch storage</em>.</p>
+<p><a name="storageoverview"></a></p>
+<div class="admonition info">
+<p class="admonition-title">HBS Grid storage overview</p>
+<p>A <strong>home directory</strong> was created at <code>/export/home/&lt;group&gt;/&lt;username&gt;</code> 
+when you requested your account. Your home folder has limited storage 
+capacity and is accessible only by you.</p>
+<p><strong>Project spaces</strong> are directories that are shared and accessible by all
+HBS Grid users working on that project. You can request a new
+project space using the <a href="https://www.hbs.edu/research-computing-services/help/online-requests.aspx">new project space request form</a>
+and you can request modifications to an existing project space using the
+<a href="https://www.hbs.edu/research-computing-services/help/online-requests.aspx">change request form</a>.</p>
+<p><strong>Scratch storage</strong> is available at <code>/export/scratch</code>. It is appropriate only for temporary, 
+short-term storage. Files are not backed up and will be deleted after 60 days.
+Scratch storage is a shared resource accessible to all users on the HBS Grid;
+make sure you <a href="../worksafe/">set permissions on your files accordingly</a>.</p>
+</div>
+<p>Refer to the <a href="../storage/">Research Data Storage and Databases</a> documentation for details.</p>
+<h2 id="transfer-data-fromto-local-storage">Local storage data transfer</h2>
+<h3 id="sftp">SFTP</h3>
+<p>Transferring data from your local computer to the HBS Grid is usually done using the SFTP protocol. 
+This requires an SFTP client on your local machine. If you don't yet have one
+<a href="https://cyberduck.io/download/">Cyberduck</a> and <a href="https://filezilla-project.org/">Filezilla</a> 
+are popular graphical desktop clients. For command-line data from a terminal we recommend
+<a href="https://rsync.samba.org/">rsync</a>.</p>
+<p>Once you have an SFTP client installed on your local machine, follow these steps to transfer
+data to or from the HBS Grid.</p>
+<div class="admonition example">
+<p class="admonition-title">Transfer data the HBS Grid using a desktop SFTP client</p>
+<ol>
+<li>
+<p>Connect to the HBS network, either directly if you are on-campus or
+   <a href="https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf">connect via VPN</a>
+   otherwise. </p>
+</li>
+<li>
+<p>Open your transfer client and connect to the HBS Grid at <code>hbsgrid.hbs.edu</code> on port 22</p>
+</li>
+<li>
+<p>Locate the data on your local machine that you wish to transfer.</p>
+</li>
+<li>
+<p>Locate the directory on the HBS Grid that you will copy your data
+    too, creating it if needed.</p>
+</li>
+<li>
+<p>Start the data transfer</p>
+</li>
+</ol>
+</div>
+<div class="admonition info inline end">
+<p class="admonition-title">Transfer from the command line</p>
+<p>You can alternatively use the <code>rsync</code> command-line program to transfer data from the
+command line on Mac, Linux, or <a href="https://docs.microsoft.com/en-us/windows/wsl/about">Windows subsystem for Linux</a>. 
+<code>rsync</code> documentation is <a href="https://download.samba.org/pub/rsync/rsync.1">available online</a>.</p>
+</div>
+<p>Note that transferring many small files is much slower than transferring
+a small number of large files. You may find it faster to compress
+folders with many small files into <code>.zip</code> or <code>.tar</code> archives, transfer those, 
+and decompress/extract them on the other end. 
+(See <a href="./#important-data-transfer-considerations">additional data transfer tips</a> below.)</p>
+<p>Click the image below for a demonstration showing how to sync your data
+from a local drive to the HBS Grid:</p>
+<video width="100%" controls>
+  <source src="../media/datasync.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<h3 id="mount-storage-locally">Mount Storage Locally</h3>
+<p>Research storage is also accessible <a href="https://support.microsoft.com/en-gb/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d">on Windows as a network drive</a> 
+at <code>\\research.hbs.edu</code>, 
+<a href="https://support.apple.com/lt-lt/guide/mac-help/mchlp1140/mac#mchlp1265542">via SMB on OSX/Linux</a> 
+at <code>smb://research.hbs.edu</code>, and via SSH at <code>hbsgrid.hbs.edu</code>.
+This is useful for viewing and copying small files, but will be slow for large data transfers 
+and <strong>may result in unexpected permissions settings on the cluster</strong>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Map a Drive on Windows</label><label for="__tabbed_1_2">Mount a Volume on Mac</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Connect to the HBS network, either directly if you are on-campus or <a href="https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf">via VPN</a> otherwise.</p>
+</li>
+<li>
+<p>Open a Windows Explorer window, right-click on the "Computer" icon, and then select "Map Network Drive". </p>
+</li>
+<li>
+<p>To map a drive to your <strong>home directory</strong>, specify the folder path  <code>\\research\username</code> (for example, <code>\\research\jharvard</code>). To map a drive to a <strong>project space</strong>, specify the path <code>\\research.hbs.edu\projects\projectname</code> (note that you may have to use projects, projects2, projects3, projects4, or projects5 depending on the path of your project space). Also note that <strong>you may not map a drive to a project space containing security level 4 data</strong>.</p>
+</li>
+<li>
+<p>Click "Connect using different credentials" if you are not using an HBS-issued machine. If you are prompted for your username and password, enter your HBSGrid username (the part preceding <a class="gh-link gh-mention" href="https://github.com/hbs" title="GitHub User: @hbs">@hbs</a>.edu) and your password. If you are connecting from a non-HBS-issued machine, please add HBS\ before your username (e.g. HBS\jharvard). This specifies the proper Windows domain for authenticating your credentials.</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Connect to the HBS network, either directly if you are on-campus or <a href="https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf">via VPN</a> otherwise.</p>
+</li>
+<li>
+<p>From the Finder menu bar, select Go &gt; Connect to Server...</p>
+</li>
+<li>
+<p>In the Server Address field, enter the domain\username, server address, and file path combination that is appropriate for your the space you're trying to access. For your <strong>home directory</strong>, this will be <code>smb://HBS\jharvard@research.hbs.edu/jharvard</code>, and for <strong>project spaces</strong>, this will be <code>smb://HBS\jharvard@research.hbs.edu/projects/projectname</code> (note that you may have to use projects, projects2, projects3, projects4, or projects5 depending on the path of your project space). In both cases, use your own HBS username in place of "jharvard." Also note that <strong>you may not mount a project space containing security level 4 data</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h2 id="transfer-data-fromto-cloud-storage">Cloud storage data transfer</h2>
+<div class="admonition info inline end">
+<p class="admonition-title">Sync from the command-line</p>
+<p><code>rclone</code> is also available as a command-line application that you can
+use interactively in a terminal or in scripts. Refer to the
+<a href="https://rclone.org/docs/">rclone documentation</a> for details.</p>
+</div>
+<p>If your data is in cloud storage (OneDrive, Dropbox etc.) you may wish to sync it directly from
+there. While the HBS Grid does not offer native <em>Dropbox</em>, <em>OneDrive</em>,
+or other cloud storage clients, you can use <code>rclone</code> to perform on-demand 
+data synchronization with all major cloud storage providers. Transferring data <em>from</em>
+cloud storage providers to the HBS Grid using this tool is generally reasonably fast and easy.</p>
+<div class="admonition example">
+<p class="admonition-title">Sync your data from a cloud provider to the HBS Grid desktop</p>
+<ol>
+<li>
+<p>Log in to the HBS Grid via <em>NoMachine</em>.</p>
+</li>
+<li>
+<p>Identify the directory on the HBS Grid that you will copy your data
+    to, creating it if needed.</p>
+</li>
+<li>
+<p>From the HBS Grid desktop, open the <em>rclone browser</em> application.</p>
+</li>
+<li>
+<p>Click the <em>Config...</em> button and follow the prompts (<strong>only needed the first time</strong>).</p>
+</li>
+<li>
+<p>Click the cloud storage icon in the <em>Remotes</em> tab and select the directory you wish to sync.</p>
+</li>
+<li>
+<p>Specify the target directory from step 2 in the destination field.</p>
+</li>
+</ol>
+</div>
+<p>Click the image below for a quick demonstration showing how to copy files from <em>Dropbox</em> to the HBS Grid.</p>
+<video width="100%" controls>
+  <source src="../media/rclone.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<p>Note that the demonstration video goes through the configuration step, which only needs to be done once.
+After that you can skip step 4 above, which greatly simplifies the process.</p>
+<h2 id="transfer-data-using-globus">Globus data transfer</h2>
+<p><em>Globus</em> is a data transfer service that enables sharing files or
+data with external persons, eliminates the need for both parties to have
+HBS or guest user credentials, and is capable of tolerating transfer
+interruptions. <strong>Note</strong>: At this time, <em>Globus</em> should not be used to transfer
+<a href="https://policy.security.harvard.edu/level-4">DSL 4 research data</a>.</p>
+<div class="admonition info inline end">
+<p class="admonition-title">Globus key concepts</p>
+<p>A <a href="https://docs.globus.org/globus-connect-server/v5/reference/collection/#collections">Globus Collection</a>
+is a named location containing data you can access with Globus.</p>
+</div>
+<p>HBS maintains a <em>Globus Collection</em> named <em>Harvard Business School DTN</em>.
+Storage for this collection is mounted on the HBS Grid at <code>/export/globus</code>.
+You can create folders there and share them with other <em>Globus</em> users, or 
+transfer data to them from other <em>Globus</em> collections you have access to.
+As with <a href="../storage/#scratch-storage">scratch storage</a>, <code>/export/globus</code> is
+accessible by all grid users, so you must 
+<strong>ensure that both the <a href="../worksafe/">ownership and permissions are set appropriately</a></strong>.</p>
+<p>Please be aware that you can share out files or folders not only
+that you own but also that you have explicit permission to access.
+Please be careful not to share too broadly.</p>
+<div class="admonition example">
+<p class="admonition-title">Log in to <em>Globus</em> and transfer data</p>
+<ol>
+<li>
+<p><a href="https://app.globus.org">Login to the Globus web interface</a>, 
+    selecting "<em>Harvard University</em>" as your organization and authenticating
+    via <a href="https://key.harvard.edu/">HarvardKey</a> if prompted.</p>
+</li>
+<li>
+<p>In the <em>Collection</em> field, search for and select the <em>Harvard Business School DTN</em> (data transfer node).<br />
+<em>If you have not already created a folder here</em>, create one now by clicking the <em>New Folder</em> button.</p>
+</li>
+<li>
+<p>Click on the "Transfer or Sync to..." button.</p>
+</li>
+<li>
+<p>Use the second <em>Collection</em> search box on the right to find the other collection.</p>
+</li>
+<li>
+<p>Select the folder you wish to transfer and click on the appropriate Start arrow icon.
+    (The direction the <em>Start</em> button arrow points indicates the direction files will transfer.)</p>
+</li>
+</ol>
+</div>
+<p>After transferring your data to the HBS Grid via <em>Globus</em> you will typically move it from 
+<code>/export/globus</code> to a <a href="../storage/">project folder</a>. This can be done on the HBS Grid <em>NoMachine</em> 
+desktop using <em>Grsync</em> or from the HBS Grid command line using <code>rsync</code>, <code>mv</code>, or similar commands. <strong>You must move or copy any necessary files from /export/globus within 30 days. After 30 days, your files will be deleted from the Globus volume.</strong> If you anticipate that you will need to keep files in /export/globus longer than 30 days in order to complete a data transfer, please <a href="mailto:research@hbs.edu">contact RCS</a>.</p>
+<p><em>Globus</em> can also be used to transfer data from you local machine using <em>Globus Connect Personal</em>.
+Installers are available for <a href="https://docs.globus.org/how-to/globus-connect-personal-mac/">Mac OS X</a>.
+<a href="https://docs.globus.org/how-to/globus-connect-personal-windows">Windows</a> and
+<a href="https://docs.globus.org/how-to/globus-connect-personal-linux">Linux</a>.</p>
+<p>For details on using <em>Globus</em> refer to the excellent <a href="https://docs.globus.org/how-to/">Globus documentation</a>.
+A <a href="https://docs.globus.org/faq/">FAQ section</a> is also available.</p>
+<h2 id="important-data-transfer-considerations">Data transfer tips</h2>
+<p>The speed and success of data transfer rely on numerous factors, only
+some of which are in your control. Following these listed tips will help
+increase the likelihood of success:</p>
+<ul>
+<li>
+<p>Wired, ethernet connections tend to be more reliable and faster than 
+    wireless internet connections.If using WiFi, try to use a network that 
+    has a strong signal and is interference-free.</p>
+</li>
+<li>
+<p>Transferring a few large files is often much faster than transferring many small files.
+    When transferring many small files we recommend that you compress/archive the
+    directories up into a small number of archives. On the HBSGrid cluster, we
+    recommend the GUI File Manager in NoMachine/Gnome or using
+    command-line programs like <code>tar</code> or <code>zip</code>.</p>
+</li>
+<li>
+<p>We do not recommend creating any single archive file larger than
+    about 100 GB in size: Many transfer programs don't support resuming partial transfers, 
+    so If your transfer is interrupted it will start again and transfer the whole file.</p>
+</li>
+<li>
+<p>You can use <a href="../commandline/">LSF batch jobs</a> to quickly compress large files and/or a large number of files.
+    If using <em>Globus</em>, you can create archives directly in your <em>Globus</em> collection folder, 
+    eliminating the need to copy the data twice.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; President & Fellows of Harvard College.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.
+    </p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
