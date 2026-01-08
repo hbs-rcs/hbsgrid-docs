@@ -80,10 +80,10 @@ to help you figure out if something goes wrong.
        `bjobs`  
        If your job is no longer running use  
        `bhist -a`  
-       to list all your recent jobs. The JOBID is the first number in the output`.
+       to list all your recent jobs, whether finished or unfinished. The JOBID is the first number in the output`.
     2. Get detailed information about a specific job by running_
        `bjobs -l <JOBID>`  
-       where `<JOBID>` is the number you looked up in step 1.
+       where `<JOBID>` is the number you looked up in step 1. The -l flag asks for the output in a long format with more detailed information.
     3. You can also look at any output produced by your job by running  
        `bpeek <JOBID>`
     4. Older jobs may not appear in `bjobs`. In that case you can still get some
@@ -132,6 +132,55 @@ The most common are described below.
 
 For more detailed information refer to the [official LSF
 documentation](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=run-jobs).
+
+## Jobs Exceeding Memory Limit {#MaxMem}
+
+Many times, a job that suddenly shuts down without an apparent error message has exceeded its memory limit (i.e., too little RAM was requested for the job). You can confirm this in a terminal window by using the `bhist -a -l` command to review all recent jobs (recall that the `-a` displays historical job information about both finished and unfinished jobs and the `-l` command asks for the output in a long format with more detailed information). Scroll until you see the header MEMORY USAGE. For example:
+
+```
+[jharvard@rhrcscli01:~]$ bhist -a –l
+...
+...
+MEMORY USAGE:
+MAX MEM: 33 Gbytes;  AVG MEM: 26.3 Gbytes
+```
+
+The MAX MEM values can inform how much RAM you would ask for next time you do similar work or work with the same data. If the amount was not sufficient for your job and the job exceeded the memory limit and was shut down, you know that you will need to ask for more memory the next time. This output can also tell you if you've asked for more RAM than was needed to complete the job.
+
+If you would like to avoid scrolling through the output of the `bhist` commands, you can write a longer customized statement so that only the MAX MEM and AVG MEM are output:
+
+```
+[jharvard@rhrcscli01:~]$ bhist -a -l | grep -E "MAX"
+
+MAX MEM: 29.5 Gbytes;  AVG MEM: 20.5 Gbytes
+MAX MEM: 373 Mbytes;  AVG MEM: 299 Mbytes
+MAX MEM: 50 Gbytes;  AVG MEM: 7.4 Gbytes
+MAX MEM: 46.4 Gbytes;  AVG MEM: 41.9 Gbytes
+MAX MEM: 1.1 Gbytes;  AVG MEM: 997 Mbytes
+MAX MEM: 42.2 Gbytes;  AVG MEM: 36.6 Gbytes
+MAX MEM: 915 Mbytes;  AVG MEM: 340 Mbytes
+MAX MEM: 471 Mbytes;  AVG MEM: 211 Mbytes
+```
+You can further customize this output to focus on particular dates, or parse the output further if you were running many jobs. Below is an example of how you can narrow down the dates, and output when jobs were submitted, the job ID, the RAM (memory) requested, the maximum/average amount of RAM (memory) used, and the reason a job failed (if applicable):
+
+```
+[jharvard@rhrcscli01:~]$ bhist -a -l -S 2025/12/20, | awk '
+/^Job </ {match($0,/Job <([0-9]+)/,m); jobid=m[1]; mem_req="MEM_REQ=NA"; reason=""}
+/Submitted from host/ {split($0,a,":"); submittime=a[1]":"a[2]":"a[3]}
+/MEMLIMIT/ {getline; gsub(/^[ \t]+/,""); mem_req="MEM_REQ=" $0}
+/Completed <exit>;/ {s=index($0,";"); reason=substr($0,s+1); gsub(/^[ \t]+/,"",reason)}
+/MAX MEM:/ {print submittime "\tJobID=" jobid "\t" mem_req "\t" $0 (reason?"\t"reason:"")}'
+
+Mon Jan  5 10:15:09	JobID=3083242	MEM_REQ=30 G 	MAX MEM: 30 Gbytes;  AVG MEM: 21.5 Gbytes
+Mon Jan  5 12:22:32	JobID=3083263	MEM_REQ=30 G 	MAX MEM: 30 Gbytes;  AVG MEM: 19.2 Gbytes
+Mon Jan  5 12:37:43	JobID=3083266	MEM_REQ=30 G 	MAX MEM: 30 Gbytes;  AVG MEM: 6.8 Gbytes
+Mon Jan  5 12:59:31	JobID=3083390	MEM_REQ=40 G 	MAX MEM: 33 Gbytes;  AVG MEM: 24.5 Gbytes
+Mon Jan  5 16:53:45	JobID=3083455	MEM_REQ=35 G 	MAX MEM: 35 Gbytes;  AVG MEM: 22.8 Gbytes
+Mon Jan  5 17:38:21	JobID=3083461	MEM_REQ=40 G 	MAX MEM: 33 Gbytes;  AVG MEM: 26.3 Gbytes
+```
+
+For more detailed information refer to the [official LSF
+documentation](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=reference-bhist) about `bhist`.
 
 ## Stata Temporary Files and Temp Storage {#stata-temporary-files-and-stata-tmp}
 
