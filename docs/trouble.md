@@ -15,7 +15,7 @@ networks, such as *Harvard Secure* or an Ethernet  connection from another Harva
 will not work; you must be connected to the **HBS** network.
 
 If you are connecting from outside the HBS network you must use a
-[VPN connection](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/two-step_vpn_qrg_updated_pdf_1.pdf).
+[VPN connection](https://www.hbs.edu/research-computing-services/Shared%20Documents/Grid/ivanti_connecting-to-vpn_rcs.pdf).
 If you suspect the VPN is not connected properly try re-installing the VPN client and restarting
 your computer.
 
