@@ -7,9 +7,10 @@ RCP is an innovative new platform designed to support the evolving needs of HBS 
   - **Extensible storage and compute power**, including graphics processing units (GPUs)
   - A suite of **data science and statistical** tools such as Jupyter Notebook, RStudio, Spyder, Stata, and Visual Studio Code, along with cloud-based services like Amazon SageMaker and SageMaker Canvas
   - A **project-based interface** informed by user experience research, and federated access to facilitate collaboration with team members and external collaborators
----
 
 In the coming months, you will see additional communciations from the RCS team around the Grid transition. Also note that if you are in need of a project space and your work doesn't require specific Grid-only configurations or tools, you may opt to create the project space in the RCP instead. If you request a project space on the Grid, RCS will reach out to discuss whether your project is a good fit for RCP, and are happy to discuss your project requirements to determine which platform is the best fit, or answer any other questions you may have. 
+
+---
 
 ## FAQs
 ??? note "Why is the HBS Research Grid being retired?"
