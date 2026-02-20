@@ -1,4 +1,4 @@
-# Transition from the Grid to the Research Computing Platform (RCP) in the Cloud
+# Transition from the HBSGrid to the Research Computing Platform (RCP) in the Cloud
 
 To support the evolving needs of HBS faculty researchers, the Resarch Computing Platform (RCP) in the Cloud will gradually, over the next year, replace the Grid as the primary research computing environment at the School. 
 
@@ -8,7 +8,7 @@ RCP is an innovative new platform designed to support the evolving needs of HBS 
   - A suite of **data science and statistical** tools such as Jupyter Notebook, RStudio, Spyder, Stata, and Visual Studio Code, along with cloud-based services like Amazon SageMaker and SageMaker Canvas
   - A **project-based interface** informed by user experience research, and federated access to facilitate collaboration with team members and external collaborators
 
-In the coming months, you will see additional communciations from the RCS team around the Grid transition. Also note that if you are in need of a project space and your work doesn't require specific Grid-only configurations or tools, you may opt to create the project space in the RCP instead. If you request a project space on the Grid, RCS will reach out to discuss whether your project is a good fit for RCP, and are happy to discuss your project requirements to determine which platform is the best fit, or answer any other questions you may have. 
+In the coming months, you will see email communciations from RCS and HBS IT Research Technology around the HBSGrid transition. Throughout, RCS is happy to answer any questions you may have. Please contact us at [research@hbs.edu](mailto:research@hbs.edu).
 
 ---
 
@@ -23,5 +23,5 @@ In the coming months, you will see additional communciations from the RCS team a
     A detailed migration timeline will be shared well in advance of any required transition. RCS and HBS IT Research Technology will work directly with research teams to plan and support each move to ensure continuity. 
 
 ??? note "What should I do if I am starting a new research project?"
-  Many new project spaces can be provisioned on the RCP. Please contact RCS to discuss your requirements and initiate setup. Additionally, if you request a new project space on the Grid, RCS may reach out to discuss whether the space can be set up on RCP. 
+  Many new project spaces can be provisioned on the RCP. If your work does not require specific HBSGrid-only configurations or tools, it may be worth starting in RCP instead. To determine if your project is a good fit for the RCP, please see the available software and tools [here](https://hbs-rcs.github.io/hbsrcp-docs/FAQs/#available-software-tools), or contact [research@hbs.edu](mailto:research@hbs.edu) with a description of your work. We’re happy to discuss your project requirements and help determine which platform is the best fit, or to answer any other questions you may have. If the HBSGrid is necessary for your project, we can proceed with your request there.
 
