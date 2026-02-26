@@ -8,7 +8,7 @@ RCP is an innovative new platform designed to support the evolving needs of HBS 
   - A suite of **data science and statistical** tools such as Jupyter Notebook, RStudio, Spyder, Stata, and Visual Studio Code, along with cloud-based services like Amazon SageMaker and SageMaker Canvas
   - A **project-based interface** informed by user experience research, and federated access to facilitate collaboration with team members and external collaborators
 
-In the coming months, you will see email communciations from RCS and HBS IT Research Technology around the HBSGrid transition. Throughout, RCS is happy to answer any questions you may have. Please contact us at [research@hbs.edu](mailto:research@hbs.edu).
+In the coming months, we will prioritize **archiving project spaces for projects are already completed** and **offering the RCP as an option for new project spaces**. Keep a look out for email communciations from RCS and HBS IT Research Technology around the HBSGrid transition. Throughout, RCS is happy to answer any questions you may have. Please contact us at [research@hbs.edu](mailto:research@hbs.edu).
 
 ---
 
@@ -18,9 +18,6 @@ In the coming months, you will see email communciations from RCS and HBS IT Rese
 
 ??? note "Do I need to take action today? Will my current projects and home directory be affected right now?" 
     No immediate action is required. All active and archived projects, along with home directories, on the HBSGrid remain fully accessible at this time. You may continue your work without interruption.  
-
-??? note "When will I need to migrate to the RCP?"
-    A detailed migration timeline will be shared well in advance of any required transition. RCS and HBS IT Research Technology will work directly with research teams to plan and support each move to ensure continuity. 
 
 ??? note "What should I do if I am starting a new research project?"
   Many new project spaces can be provisioned on the RCP. If your work does not require specific HBSGrid-only configurations or tools, it may be worth starting in RCP instead. To determine if your project is a good fit for the RCP, please see the available software and tools [here](https://hbs-rcs.github.io/hbsrcp-docs/FAQs/#available-software-tools), or contact [research@hbs.edu](mailto:research@hbs.edu) with a description of your work. We’re happy to discuss your project requirements and help determine which platform is the best fit, or to answer any other questions you may have. If the HBSGrid is necessary for your project, we can proceed with your request there.
