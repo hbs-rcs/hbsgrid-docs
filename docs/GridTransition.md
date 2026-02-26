@@ -8,7 +8,7 @@ RCP is an innovative new platform designed to support the evolving needs of HBS 
   - A suite of **data science and statistical** tools such as Jupyter Notebook, RStudio, Spyder, Stata, and Visual Studio Code, along with cloud-based services like Amazon SageMaker and SageMaker Canvas
   - A **project-based interface** informed by user experience research, and federated access to facilitate collaboration with team members and external collaborators
 
-In the coming months, we will prioritize **archiving project spaces for projects are already completed** and **offering the RCP as an option for new project spaces**. Keep a look out for email communciations from RCS and HBS IT Research Technology around the HBSGrid transition. Throughout, RCS is happy to answer any questions you may have. Please contact us at [research@hbs.edu](mailto:research@hbs.edu).
+In the coming months, we will prioritize **archiving project spaces for projects that are already completed** and **offering the RCP as an option for new project spaces**. Keep a look out for email communciations from RCS and HBS IT Research Technology around the HBSGrid transition. Throughout, RCS is happy to answer any questions you may have. Please contact us at [research@hbs.edu](mailto:research@hbs.edu).
 
 ---
 
