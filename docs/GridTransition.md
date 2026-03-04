@@ -20,5 +20,5 @@ In the coming months, we will prioritize **archiving project spaces for projects
     No immediate action is required. All active and archived projects, along with home directories, on the HBSGrid remain fully accessible at this time. You may continue your work without interruption.  
 
 ??? note "What should I do if I am starting a new research project?"
-  Many new project spaces can be provisioned on the RCP. If your work does not require specific HBSGrid-only configurations or tools, it may be worth starting in RCP instead. Please see the available software and tools [here](https://hbs-rcs.github.io/hbsrcp-docs/FAQs/#available-software-tools), or contact [research@hbs.edu](mailto:research@hbs.edu) with a description of your work. We’re happy to discuss your project requirements, or to answer any other questions you may have.
+  Many new project spaces can be provisioned on the RCP. Please see the available software and tools [here](https://hbs-rcs.github.io/hbsrcp-docs/FAQs/#available-software-tools), or contact [research@hbs.edu](mailto:research@hbs.edu) with a description of your work if you'd like to discuss using the RCP. We’re happy to discuss your project requirements, or to answer any other questions you may have.
 
