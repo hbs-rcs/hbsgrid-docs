@@ -126,11 +126,19 @@ the HBSGrid cluster.
     request more than this, your job will not run – it will sit in a
     `PEND` state.
 
+    To "turn on" the ability to parallelize, before your `parfor` code, please ensure you have a variant of the following code. This example instantiates 12 "workers" or cores:
+
+    ``` matlab
+    c = parcluster('local');
+    c.NumWorkers = 12;  
+    saveProfile(c);    
+    parpool(c, 12);
+    ```
+
     ### **Code Example**
 
     The following simple code illustrates the use of PCT to calculate pi
-    via a parallel Monte-Carlo method. This example also illustrates the
-    use of `parfor` (parallel `for`) loops. In this scheme,
+    via a parallel Monte-Carlo method. This example also illustrates how to instantiate workers by using `getenv('LSB_DJOB_NUMPROC')`, which reads the number of cores LSF assigned to the job in addition to using `parfor` (parallel `for`) loops. In this scheme,
     suitable `for` loops could be
     simply replaced by parallel `parfor` loops without other changes to the
     code:
