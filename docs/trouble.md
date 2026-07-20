@@ -6,7 +6,7 @@ Login issues are usually caused by one of three common problems, and are often e
 
 Connecting to the HBS Grid requires either a direct on-campus connection to the
 HBS network or a 
-[VPN connection](../media/ivanti_connecting-to-vpn_rcs.pdf) 
+[VPN connection](./media/ivanti_connecting-to-vpn_rcs.pdf) 
 if you are connecting remotely. 
 
 Ethernet connections from HBS offices or WiFi connections to *HBS Secure* 
@@ -15,7 +15,7 @@ networks, such as *Harvard Secure* or an Ethernet  connection from another Harva
 will not work; you must be connected to the **HBS** network.
 
 If you are connecting from outside the HBS network you must use a
-[VPN connection](../media/ivanti_connecting-to-vpn_rcs.pdf).
+[VPN connection](./media/ivanti_connecting-to-vpn_rcs.pdf).
 If you suspect the VPN is not connected properly try re-installing the VPN client and restarting
 your computer.
 

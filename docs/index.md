@@ -32,7 +32,7 @@ You can setup your account and connect via either GUI or terminal following the 
 
     1.  *If you do not yet have an HBS Grid account* [request one here](https://www.hbs.edu/research-computing-services/help/online-requests.aspx).
     2.  Connect to the HBS network, either directly if you are on-campus or
-        [connect via VPN](../media/ivanti_connecting-to-vpn_rcs.pdf)
+        [connect via VPN](./media/ivanti_connecting-to-vpn_rcs.pdf)
         otherwise.
     3. Follow the instructions below to connect either via GUI or terminal.
 
