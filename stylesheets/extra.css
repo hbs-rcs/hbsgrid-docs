@@ -1,0 +1,100 @@
+.md-grid {
+    max-width: 1000px; 
+}
+
+img.media-small {
+    width: 80%;
+}
+
+[data-md-color-scheme="hbs"] {
+    --md-primary-fg-color:        #48c4b7;
+    --md-accent-fg-color:         #a41034;
+    --md-primary-fg-color--light: #a41034;
+    --md-primary-fg-color--dark:  #000000;
+}
+
+.md-header {background-color: #000000;}
+.md-tabs {background-color: --md-primary-fg-color;}
+
+a {color: #a41034;}
+a:hover {color: #a41034; text-decoration: underline;}
+
+.md-typeset a {color: #a41034;}
+.md-typeset a:hover {color: #a41034; text-decoration: underline;}
+
+a.md-tabs__link {color: #000000; opacity: 1.0;}
+a:hover.md-tabs__link {color: #000000; text-decoration: underline;}
+
+a.md-source {color: #afafaf;}
+a.md-source:hover {color: #eeeeee; text-decoration: none;}
+
+a.md-footer__link {color: #ffffff;}
+a.md-footer__link:hover {color: #eeeeee; text-decoration: none;}
+
+[href^="http"]:not([href*="hbs-rcs.github.io/hbsgrid-docs"])::after {
+    content: '(external link)';
+    display: inline-block;
+    width: 0.85em;
+    height: 1em;
+    text-indent: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: url(/hbsgrid-docs/imgs/up-right-from-square-solid.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px auto;
+}
+
+a.md-header__button::after {
+    display: none !important;
+}
+
+a.md-logo::after {
+    display: none !important;
+}
+
+
+li.md-nav__item--active > nav:nth-child(3) > ul:nth-child(2) > li > a:nth-child(1)::after {
+    content: '>';
+    font-weight: bold;
+}
+
+a.md-nav__link--active:nth-child(3)::after {
+    content: '>';
+    font-weight: bold;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+nav.md-nav--secondary {
+    margin-left: 1.5em;
+}
+
+.md-header__button.md-logo {
+  margin: 0;
+  padding: 0;
+  padding-top: .1rem
+}
+
+.md-header__button.md-logo :is(img, svg) {
+  height: 1.6rem;
+}
+
+.md-header__button.md-logo :-webkit-any(img,svg) {
+    height: 1.6rem;
+}
+
+.md-tabs__item {
+  height: 1.2rem;
+}
+
+.md-tabs__link {
+  font-size: .7rem;
+  margin-top: 0.1rem;
+}
+
+
+img[src*="#inline"] {
+    height:1.5em;
+    vertical-align: text-bottom;
+}
