@@ -108,18 +108,18 @@ and **may result in unexpected permissions settings on the cluster**.
 
 ## Cloud storage data transfer {#transfer-data-fromto-cloud-storage} 
 
-!!! info inline end "Sync from the command-line"
-    `rclone` is also available as a command-line application that you can
-    use interactively in a terminal or in scripts. Refer to the
-    [rclone documentation](https://rclone.org/docs/) for details.
-
 If your data is in cloud storage (OneDrive, Dropbox etc.) you may wish to sync it directly from
 there. While the HBS Grid does not offer native *Dropbox*, *OneDrive*,
 or other cloud storage clients, you can use `rclone` to perform on-demand 
-data synchronization with all major cloud storage providers. Transferring data *from*
-cloud storage providers to the HBS Grid using this tool is generally reasonably fast and easy.
+data synchronization with all major cloud storage providers.
 
-!!! example "Sync your data from a cloud provider to the HBS Grid desktop"
+To use `rclone` on the HBSGrid, follow these steps:
+1. Open a Terminal and type `ml load rclone`. Type `rclone` to see the list of available commands.
+2. If you have not yet connected rclone to your other storage locations, type `rclone config`, and follow our directions [here](https://hbs-rcs.github.io/hbsrcp-docs/tutorials/rclone/) to configure rclone and set up a transfer (note: setting up and using rclone on the Grid is identical to these directions for the RCP).
+
+Refer to the [rclone documentation](https://rclone.org/docs/) for details.
+
+<!--!!! example "Sync your data from a cloud provider to the HBS Grid desktop"
 
     1.  Log in to the HBS Grid via *NoMachine*.
      
@@ -143,7 +143,7 @@ Your browser does not support the video tag.
 </video>
 
 Note that the demonstration video goes through the configuration step, which only needs to be done once.
-After that you can skip step 4 above, which greatly simplifies the process.
+After that you can skip step 4 above, which greatly simplifies the process.-->
 
 ## Globus data transfer {#transfer-data-using-globus}
 
