@@ -116,7 +116,6 @@ data synchronization with all major cloud storage providers.
 To use `rclone` on the HBSGrid, follow these steps:
 
 1. Open a Terminal and type `ml load rclone`. Type `rclone` to see the list of available commands.
-   
 2. If you have not yet connected rclone to your other storage locations, type `rclone config`, and follow our directions [here](https://hbs-rcs.github.io/hbsrcp-docs/tutorials/rclone/) to configure rclone and set up a transfer (note: setting up and using rclone on the Grid is identical to these directions for the RCP).
 
 Refer to the [rclone documentation](https://rclone.org/docs/) for details.
