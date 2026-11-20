@@ -1,4 +1,4 @@
-# New HBSGrid Guest Users: How to Set Up Your Research Computing Guest Account and Access the HBSGrid
+# **New** HBSGrid Guest Users: How to Set Up Your Research Computing Guest Account and Access the HBSGrid
 
 ## Before You Begin
 
@@ -48,7 +48,7 @@ After your account is created and Duo is activated, you’ll see a page that say
 
 ## Step 3: Install and Configure Ivanti VPN
 
-1. Download and install [Ivanti for Windows](link) or [macOS](link to add), accepting all default settings.
+1. Download and install Ivanti for [Windows](https://downloads.secure.ctfassets.net/beh2ph2tgbqk/1x8GfPyxaO4DaJS6SgrU75/52d37eeeaa640bcf1f9d7b07ee30057e/ps-pulse-win-22.8r6-b44527-64bit-installer.msi) or [macOS](https://downloads.secure.ctfassets.net/beh2ph2tgbqk/3pN8dyGs16ZSnrhgcpDga3/f791bf5f25fa7c11f5b7da8b4e25f428/ps-pulse-mac-22.8r6-b44527-installer.pkg.zip), accepting all default settings.
 2. Open the Ivanti application on your computer.
 3. Check whether **HBS VPN SSO** is listed as a connection:
    - **If HBS VPN SSO is listed:** Select it, then select **Connect**.
@@ -67,7 +67,7 @@ After your account is created and Duo is activated, you’ll see a page that say
 
 ## Install and Configure Ivanti Secure
 
-1. Install the updated version of Ivanti Secure for [Windows or macOS](link to add), accepting all default settings.
+1. Install the updated version of Ivanti Secure for [Windows](https://downloads.secure.ctfassets.net/beh2ph2tgbqk/1x8GfPyxaO4DaJS6SgrU75/52d37eeeaa640bcf1f9d7b07ee30057e/ps-pulse-win-22.8r6-b44527-64bit-installer.msi) or [macOS](https://downloads.secure.ctfassets.net/beh2ph2tgbqk/3pN8dyGs16ZSnrhgcpDga3/f791bf5f25fa7c11f5b7da8b4e25f428/ps-pulse-mac-22.8r6-b44527-installer.pkg.zip), accepting all default settings.
 2. Open the Ivanti application on your computer.
 3. Check whether **HBS VPN SSO** is listed as a connection:
    - **If HBS VPN SSO is listed:** Select it, then select **Connect**. Sign in with your HBS Guest Account and password, and approve the Duo Mobile push notification.
